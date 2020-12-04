@@ -1,0 +1,3153 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ieeetran
+\begin_preamble
+% for subfigures/subtables
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{diagbox}
+\usepackage{array}
+\end_preamble
+\options journal
+\use_default_options false
+\begin_modules
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex-natbib
+\cite_engine_type numerical
+\biblio_style jurabib
+\biblatex_bibstyle ieee
+\biblatex_citestyle numeric
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename Universidad de Montemorelos.jpg
+	lyxscale 7
+	scale 10
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 12cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename FIT.png
+	lyxscale 50
+	scale 140
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+Universidad de Montemorelos
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Facultad de Ingeniería y Tecnología
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Ingeniería en Sistemas Computacionales
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.6cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+Using Machine Learning for Automatic Classification of Plutonic Rocks with
+ Mobile Devices in indoor and outdoor spaces
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.8cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Sarah Hernández Serrano
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+1170469
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.8cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Asesor: Dr.
+ Germán Harvey Alférez Salinas
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.8cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Montemorelos, Nuevo León, México
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+22 de abril de 2020
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 8.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\color black
+De qué trata....
+\end_layout
+
+\begin_layout Keywords
+Histograms, etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Using Machine Learning for Automatic Classification of Plutonic Rocks with
+ Mobile Devices in indoor and outdoor spaces
+\end_layout
+
+\begin_layout Author
+Sarah
+\begin_inset space ~
+\end_inset
+
+Hernández
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+Germán
+\begin_inset space ~
+\end_inset
+
+H.
+\begin_inset space ~
+\end_inset
+
+Alférez
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sarah
+\begin_inset space ~
+\end_inset
+
+Hernández is a computer science engineering student at the School of Engineering
+ and Technology of Montemorelos University, Nuevo León, Mexico, e-mail:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "1170469@alumno.um.edu.mx"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Germán H.
+ Alferez, Ph.D., is the director of the Institute of Data Science and professor
+ at the School of Engineering and Technology of Montemorelos University,
+ Nuevo León, Mexico, e-mail: 
+\begin_inset CommandInset href
+LatexCommand href
+target "harveyalferez@um.edu.mx"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Special Paper Notice
+School of Engineering and Technology, Montemorelos University, Mexico
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Background
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Paragraph Start
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The 
+\series bold
+
+\backslash
+IEEEPARstart
+\series default
+ command is needed in the first paragraph of the document.
+\end_layout
+
+\end_inset
+
+ gneous rocks are one of three main types of rocks in the world.
+ Igneous rocks are classified according to how and where they were formed
+ (intrusive or extrusive), their texture, color, chemical composition, geometry
+ of the igneous body and their mineral composition (the minerals they contain,
+ usually described as being felsic, intermediate, mafic, or ultramafic).
+\end_layout
+
+\begin_layout Standard
+Plutonic rocks (intrusive igneous rocks) are formed when magma – hot molden
+ rock in the middle of the volcano – cools and solidifies below the Earth's
+ surface, while volcanic rocks (extrusive igneous rocks) are formed when
+ lava – hot molden rock leaving the volcano – cools and solidifies on the
+ Earth's surface.
+ Plutonic rocks cool much more slowly, and under higher pressure, because
+ they are on the ground.
+ So their crystals have greater conditions to become larger, usually visible
+ without microscope (phaneritic surface).
+ 
+\end_layout
+
+\begin_layout Standard
+Igneous rocks have a wide variety of uses, one important use is as stone
+ for buildings and statues.
+ The classification of the many types of different igneous rocks can provide
+ us with important information about the conditions under which they formed.
+ Their mineral and chemical makeup can be used to learn about the composition,
+ temperature and pressure that exists within the Earth’s mantle.
+ They can also tell us much about the tectonic environment, given that they
+ are closely linked to the convection of tectonic plates.
+\end_layout
+
+\begin_layout Subsection
+Problem Statement
+\end_layout
+
+\begin_layout Standard
+The sorting of images in external environments through mobile applications
+ may lose certain important characteristics when exposed to higher light
+ intensity.
+ Igneous rock classification equipment is very expensive, robust and time
+ consuming.
+ The perceived properties of the rocks also depend on the experience of
+ the observer with similar observations, [https://directives.sc.egov.usda.gov/OpenNo
+nWebContent.aspx?content=31848.wba] which makes it difficult for amateurs
+ – people who are inexperienced in rocks – to classify them.
+\end_layout
+
+\begin_layout Subsection
+Justification
+\end_layout
+
+\begin_layout Standard
+There are not iOS mobile applications that use deep learning for the automatic
+ classification of plutonic rocks with histograms.
+ Such solution could be an alternative to expensive traditional methods
+ for rock classification.
+ A mobile application for rock classification offers the flexibility to
+ carry out the classification of rocks in the field in real time.
+ In addition, it can be used by those who are just beginning to get into
+ the subject of rock classification.
+\end_layout
+
+\begin_layout Subsection
+Objectives
+\end_layout
+
+\begin_layout Standard
+The main objective is to create an iOS application for the classification
+ of igneous plutonic rocks in both outdoor and indoor environments.
+ This objective can be achieved with the following specific sub-objectives:
+\end_layout
+
+\begin_layout Itemize
+Extraction of image features using different extraction algorithms like
+ Gradient Oriented Histogram (HOG), and dominant color from the image dataset
+ provided by the University of Loma linda..
+\end_layout
+
+\begin_layout Itemize
+Extracted features will be used as an input to the Machine learning classifier.
+\end_layout
+
+\begin_layout Itemize
+Evaluate the classifier in terms of accuracy, F1 score, 
+\end_layout
+
+\begin_layout Subsection
+Hypothesis
+\end_layout
+
+\begin_layout Standard
+It is possible to implement an iOS application to classify igneous rocks
+ in both external and internal environments through the use of features
+ extraction algorithms.
+\end_layout
+
+\begin_layout Section
+Theoretical Foundation
+\end_layout
+
+\begin_layout Subsection
+Underpinnings of our Approach
+\end_layout
+
+\begin_layout Standard
+Our approach is based on the following concepts 
+\shape italic
+\emph on
+(see Fig.
+ 1
+\shape default
+\emph default
+).
+ [https://www.kdnuggets.com/2018/08/ai-knowledge-map-classify-ai-technologies.html]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename A. TODO ORDENADO/Imágenes documento/CMAP6.png
+	scale 59
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Underpinnings of our approach
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Xcode
+\end_layout
+
+\begin_layout Subsubsection
+Plutonic Rocks
+\end_layout
+
+\begin_layout Standard
+Plutonic rocks are coarse-grained crystalline igneous rocks formed by consolidat
+ion of molten rock material or magma below the Earth's surface (Latin Pluto,
+ god of the Underworld).
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Diorite
+\end_layout
+
+\begin_layout Standard
+Diorite, medium- to coarse-grained intrusive igneous rock that commonly
+ is composed of about two-thirds plagioclase feldspar and one-third dark-coloure
+d minerals, such as hornblende or biotite.
+ The presence of sodium-rich feldspar, oligoclase or andesine, in contrast
+ to calcium-rich plagioclase, labradorite or bytownite, is the main distinction
+ between diorite and gabbro.
+ [https://www.britannica.com/science/diorite]
+\end_layout
+
+\begin_layout Subparagraph
+Gabbro
+\end_layout
+
+\begin_layout Standard
+Gabbro, any of several medium- or coarse-grained rocks that consist primarily
+ of plagioclase feldspar and pyroxene.
+ They are found widely on the Earth and on the Moon as well.
+ Gabbros are sometimes quarried for dimension stone (the black granite of
+ commerce), and the San Marcos Gabbro of southern California is used for
+ gauge blocks, but the direct economic value of gabbro is minor.
+ Far more important are the primary mineralizations of nickel, chromium,
+ and platinum that occur almost exclusively in association with gabbroic
+ or related ultramafic (very silica-poor) rocks.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Granite
+\end_layout
+
+\begin_layout Standard
+Granite, coarse- or medium-grained intrusive igneous rock that is rich in
+ quartz and feldspar; it is the most common plutonic rock of the Earth’s
+ crust, forming by the cooling of magma (silicate melt) at depth.
+ Granite may occur in dikes or sills (tabular bodies injected in fissures
+ and inserted between other rocks), but more characteristically it forms
+ irregular masses of extremely variable size, ranging from less than eight
+ kilometres (five miles) in maximum dimension to larger masses (batholiths)
+ that are often hundreds or thousands of square kilometres in area.
+\end_layout
+
+\begin_layout Subparagraph
+Granodiorite
+\end_layout
+
+\begin_layout Standard
+Granodiorite, medium- to coarse-grained rock that is among the most abundant
+ intrusive igneous rocks.
+ It contains quartz and is distinguished from granite by its having more
+ plagioclase feldspar than orthoclase feldspar; its other mineral constituents
+ include hornblende, biotite, and augite.
+ The plagioclase (andesine) usually forms twinned crystals, sometimes wholly
+ encased by orthoclase.
+ Granodiorite is darker in colour than granite because of its greater plagioclas
+e content.
+\end_layout
+
+\begin_layout Subparagraph
+Monzodiorite
+\end_layout
+
+\begin_layout Standard
+Phaneritic crystalline igneous rock consisting of sodic plagioclase (An0
+ to An50), alkali feldspar, hornblende and biotite, with or without pyroxene,
+ and 0 to 5 percent quartz.
+ Includes rocks defined modally in QAPF field 9.
+ [https://inspire.ec.europa.eu/codelist/LithologyValue/monzodiorite]
+\end_layout
+
+\begin_layout Subparagraph
+Monzogranite
+\end_layout
+
+\begin_layout Standard
+It is a granitoid (a coarse grained igneous rock composed mostly of quartz,
+ Kspar (alkali-feldspar) and plagioclase), with subequal amounts of plagioclase
+ and Kspar.
+ More specifically a granite having an alkali-feldspar/total feldspar ratio
+ from 0.35-0.65 on the QAPF diagram.
+ Often called an adamellite, though this name has been used for other rocktypes
+ also.
+ [https://www.mindat.org/min-48160.html]
+\end_layout
+
+\begin_layout Subparagraph
+Monzonite
+\end_layout
+
+\begin_layout Standard
+Monzonite is an intermediate igneous intrusive rock composed of approximately
+ equal amounts of K–feldspars and Na–plagioclase with minor amount of quartz
+ (<5%) and ferromagnesian minerals (hornblende, biotite and pyroxene).
+ The rock seldom hosts gold and silver deposits, and uses as building stone
+ for monuments (The Mormon temple, Salt Lake City, Utah), and aids in mountainee
+ring.
+ [https://www.sciencedirect.com/topics/earth-and-planetary-sciences/monzonite]
+\end_layout
+
+\begin_layout Subparagraph
+Tonalite
+\end_layout
+
+\begin_layout Standard
+tonalite is typically medium-grained and equigranular, with randomly oriented
+ subhedral plagioclase grains and oriented aggregates of fine-grained biotite;
+ hornblende is absent and K-feldspar is uncommon.
+ Mafic enclaves are sporadically present, with irregular shapes attesting
+ to low strain during crystallization, consistent with interpretations from
+ quartz vein networks.
+ [https://www.sciencedirect.com/topics/earth-and-planetary-sciences/tonalite]
+\end_layout
+
+\begin_layout Subsubsection
+Image augmentation
+\end_layout
+
+\begin_layout Standard
+Image data augmentation is a technique that can be used to artificially
+ expand the size of a training dataset by creating modified versions of
+ images in the dataset.
+ Training deep learning neural network models on more data can result in
+ more skillful models, and the augmentation techniques can create variations
+ of the images that can improve the ability of the fit models to generalize
+ what they have learned to new images.The Keras deep learning neural network
+ library provides the capability to fit models using image data augmentation
+ via the ImageDataGenerator class.
+\end_layout
+
+\begin_layout Itemize
+Image data augmentation is used to expand the training dataset in order
+ to improve the performance and ability of the model to generalize.
+ 
+\end_layout
+
+\begin_layout Itemize
+Image data augmentation is supported in the Keras deep learning library
+ via the ImageDataGenerator class.
+ 
+\end_layout
+
+\begin_layout Itemize
+How to use shift, flip, brightness, and zoom image data augmentation.
+\end_layout
+
+\begin_layout Subsubsection
+Features extraction
+\end_layout
+
+\begin_layout Standard
+Scale Invariant Feature Transform (SIFT) is an image descriptor for image-based
+ matching developed by David Lowe (1999, 2004).
+ This descriptor algorithm is used to detect and describe local features
+ in digital images.
+ It locates certain key points and then furnishes them with quantitative
+ information (so-called descriptors) which can for example be used for object
+ recognition.
+ The descriptors are supposed to be invariant against various transformations
+ which might make images look different although they represent the same
+ object(s).
+ More about that below.
+ [http://weitz.de/sift/]
+\end_layout
+
+\begin_layout Subsubsection
+Histograms of Oriented Gradient
+\end_layout
+
+\begin_layout Standard
+Histogram of oriented gradients (HOG) is a feature descriptor used to detect
+ objects in computer vision and image processing.
+ The HOG descriptor technique counts occurrences of gradient orientation
+ in localized portions of an image - detection window, or region of interest
+ (ROI).
+ [https://software.intel.com/en-us/node/529070?language=de]
+\end_layout
+
+\begin_layout Standard
+Implementation of the HOG descriptor algorithm is as follows:
+\end_layout
+
+\begin_layout Enumerate
+Divide the image into small connected regions called cells, and for each
+ cell compute a histogram of gradient directions or edge orientations for
+ the pixels within the cell.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Discretize each cell into angular bins according to the gradient orientation.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Each cell's pixel contributes weighted gradient to its corresponding angular
+ bin.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Groups of adjacent cells are considered as spatial regions called blocks.
+ The grouping of cells into a block is the basis for grouping and normalization
+ of histograms.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Normalized group of histograms represents the block histogram.
+ The set of these block histograms represents the descriptor.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Support Vector Machine (SVM)
+\end_layout
+
+\begin_layout Standard
+A Support Vector Machine (SVM) is a discriminative classifier formally defined
+ by a separating hyperplane.
+ In other words, given labeled training data (supervised learning), the
+ algorithm outputs an optimal hyperplane which categorizes new examples.
+ In two dimentional space this hyperplane is a line dividing a plane in
+ two parts where in each class lay in either side.
+ [https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-th
+eory-f0812effc72]
+\end_layout
+
+\begin_layout Subsubsection
+Machine learning
+\end_layout
+
+\begin_layout Standard
+Machine learning is a method of data analysis that automates analytical
+ model building.
+ It is a branch of artificial intelligence based on the idea that systems
+ can learn from data, identify patterns and make decisions with minimal
+ human intervention [https://www.sas.com/en_us/insights/analytics/machine-learning.
+html].
+ Machine learning algorithms use statistics to find patterns in massive
+ amounts of data.
+ [https://www.technologyreview.com/2018/11/17/103781/what-is-machine-learning-we-d
+rew-you-another-flowchart/].
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Scikit-image library
+\end_layout
+
+\begin_layout Standard
+Scikit-image is a collection of algorithms for image processing using natively
+ NumPy arrays as image objects.
+ It is an open-source image processing library for the Python programming
+ language, available free of charge and free of restriction.
+ It includes algorithms for segmentation, geometric transformations, color
+ space manipulation, analysis, filtering, morphology, feature detection,
+ and more.
+ [https://scikit-image.org]
+\end_layout
+
+\begin_layout Subsubsection
+Tensorflow
+\end_layout
+
+\begin_layout Standard
+Transfer learning is a technique that reduces the time and computing resources
+ used when training from scratch.
+ Its main objective is to take advantage of data from a model that has already
+ been trained on a related task and extract information that may be useful,
+ and reuse it in a new model.
+ Most often when doing transfer learning, the weights of the original model
+ are not adjusted.
+ Instead the final layer is removed and a new (often fairly shallow) model
+ is trained on top of the output of the truncated model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tensorflowtl,Goodfellow-et-al-2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Dominant colour extraction
+\end_layout
+
+\begin_layout Standard
+The average color is the sum of all pixels divided by the number of pixels.
+ However, this approach may yield a colour different to the most prominent
+ visual color.
+ The dominant colour refers to the principal colours of an image and their
+ percent.
+ The K-Means algorithm works by separating the pixels into K groups (clusters)
+ of similarly coloured pixels.
+ The colors at each cluster center will reflect the average of the attributes
+ of all members of a cluster, and that will help us determine the dominant
+ colors in the image.
+\end_layout
+
+\begin_layout Subsection
+Related Work
+\end_layout
+
+\begin_layout Standard
+In [https://hd.media.mit.edu/tech-reports/TR-445.pdf] it is studied histograms
+ in the Ohta color space analyzed with simultaneous autoregressive models.
+ This method results in 90% correct classification when evaluated on a diverse
+ database of over 1300 images.
+ Their porpouse is to determine wheter a picture is depicted on indoor and
+ outdoor scene.
+\end_layout
+
+\begin_layout Standard
+Extraction features play important role to detect the object correctly.
+ In [https://www.researchgate.net/publication/275415171_Features_Extraction_for_Ob
+ject_Detection_Based_on_Interest_Point] a method is presented to extract
+ local features based on interest point which is used to detect key-points
+ within an image, then, compute histogram of gradient (HOG) for the region
+ surround that point.
+ Proposed method used speed-up robust feature (SURF) method as interest
+ point detector and exclude the descriptor.
+ The new descriptor is computed by using HOG method.
+ The proposed method got advantages of both mentioned methods.
+ To evaluate the proposed method, we used well-known dataset which is Caltech101.
+ The initial result is encouraging in spite of using a small data for training.
+\end_layout
+
+\begin_layout Standard
+In [https://www.sciencedirect.com/science/article/pii/S2590197419300187?via%3Dihub
+] it is explored three different machine learning approaches: Deep learning,
+ traditional machine learning using hand-crafted features and traditional
+ machine learning using hand-crafted and deep learning features.
+ Thorough investigation of state-of-the-art machine learning techniques
+ together with feature engineering, it is achieved 92% for the F1-score
+ when deep learning and classical texture features are combined.
+\end_layout
+
+\begin_layout Standard
+In [https://www.nature.com/articles/s41598-018-26200-2/], it is applied a
+ convolutional neural network (CNN) for the classification of volcanic ash.
+ The authors defined four basal particle shapes (blocky, vesicular, elongated,
+ rounded) generated by different eruption mechanisms (e.g., brittle fragmentation)
+, and then trained the CNN using particles composed of only one basal shape.
+ The CNN could recognize the basal shapes with over 90% accuracy.
+\end_layout
+
+\begin_layout Standard
+In [https://www.sciencedirect.com/science/article/pii/S0098300419301037],
+ machine learning technique is used to automate mineral grains recognition
+ from numerical images obtained with a simple optical microscope.
+ They used the generation of superpixels to extract features related to
+ a sand grain.
+ It is present a comparison of performances of several algorithms.
+ The overall obtained results are approximately 90%.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Subsection
+Methodology
+\end_layout
+
+\begin_layout Standard
+The IBM Foundational Methodology for Data Science is focused on data science
+ projects, hence the decision to follow this methodology on this research
+ work.
+ This methodology consists of ten stages that form an iterative process
+ for using data to uncover insights 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IBM2015"
+literal "false"
+
+\end_inset
+
+.
+ These stages are described in the context of this research work.
+\end_layout
+
+\begin_layout Subsubsection
+Problem Understanding
+\end_layout
+
+\begin_layout Standard
+The problem was understood as stated in Section I.B.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Analytic Approach
+\end_layout
+
+\begin_layout Standard
+Two DL image recognition topologies, MobileNet and Inception V3, were chosen
+ as the analytical approaches to classify the OCT images in two classes:
+ glaucomatous and non-glaucomatous.
+\end_layout
+
+\begin_layout Standard
+Inception V3 was chosen because of its high accuracy and relatively small
+ size compared to other deep neural network models 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Canziani2016"
+literal "false"
+
+\end_inset
+
+.
+ MobileNet was chosen based on the evaluation results presented in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Howard2017"
+literal "false"
+
+\end_inset
+
+, where its creators present and compare MobileNet to other topologies,
+ such as VGG16 and GoogleNet.
+ MobileNet showed a similar accuracy to other state-of-the-art topologies
+ while being considerably smaller in size and less compute intensive.
+ Moreover, transfer learning can be applied to MobileNet and Inception V3,
+ which can reduce the time and computing resources used when training from
+ scratch.
+\end_layout
+
+\begin_layout Subsubsection
+Data Requirements
+\end_layout
+
+\begin_layout Standard
+The required data consist of images of the RNFL Thickness Map that is part
+ of the OCT scan result of glaucomatous eyes and non-glaucomatous eyes.
+ Images must be in RGB, with an input size of 224 x 224 pixels for MobileNet
+ and 299 x 299 pixels for Inception V3.
+\end_layout
+
+\begin_layout Subsubsection
+Data Collection
+\end_layout
+
+\begin_layout Standard
+The OCT scan files were collected from a Zeiss OCT machine at the Instituto
+ de la Visión in PDF format, and classified and organized in folders by
+ an expert into two classes: 1) glaucomatous, and 2) non-glaucomatous.
+ This classification was carried out for both eyes.
+ With these images, we got a dataset of 333 files in total.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Data Understanding
+\end_layout
+
+\begin_layout Standard
+At this point, the dataset was conformed by PDF files as shown in Figure
+ 2.
+ Each one of these files contains the following structure: the top part
+ shows the information of the patient and the exam.
+ Then, there are five images corresponding to information about the right
+ eye, five images corresponding to information about the left eye, and in
+ between, a table and four charts comparing them.
+ Specifically, for both eyes, Section A in Figure 2 shows the RNFL Thickness
+ Map; Section B shows the RNFL Deviation Map; Section C and D show the Extracted
+ Horizontal Tomogram and the Extracted Vertical Tomogram, respectively;
+ and Section E shows the RNFL Circular Tomogram.
+ The table in Section F displays measures corresponding to both eyes.
+ Section G shows the Neuro-Retinal Rim Thickness, Section H shows the RNFL
+ Thickness, Section I shows the RNFL Quadrants, and Section J shows the
+ RNFL Clock Hours.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+\begin_inset Graphics
+	filename OCT C.png
+	scale 21
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sample of an OCT scan file
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Data Preparation
+\end_layout
+
+\begin_layout Standard
+Since this research work is focused on RNFL Thickness Map images, the PDF
+ files from the previous step were cropped to obtain only the RNFL Thickness
+ Map of the corresponding eye out of the files (see section A in Figure
+ 2).
+ The cropped images were saved as JPG files.
+ This action was carried out for images in both classes, glaucomatous and
+ non-glaucomatous, until completing the final dataset.
+ For instance, Figure 3 shows the images of non-glaucomatous left and right
+ eyes, and Figure 4 shows the images of glaucomatous left and right eyes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+\begin_inset Graphics
+	filename healthy.PNG
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Non-glaucomatous left and right eyes, respectively 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+\begin_inset Graphics
+	filename glaucoma.PNG
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Glaucomatous left and right eyes, respectively
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Originally, 333 images were collected for left and right eyes.
+ However, some of them were damaged.
+ An image was considered as damaged when it had black spots in which data
+ was missing.
+ Therefore, to train the networks with the MobileNet and Inception V3 algorithms
+ in the best way possible, the damaged parts of the image were cut out when
+ it was possible, as shown in Figure 5.
+ In the cases where the black spots occupied a large area of the image,
+ as in Figure 6, the image was cut off from the training and testing datasets.
+ 
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+\begin_inset Graphics
+	filename cutout.PNG
+	scale 24
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cut out image
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+\begin_inset Graphics
+	filename damaged1.jpg
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cut off image from the dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After cutting out and cutting off images, there were different amounts of
+ images per class in both eyes.
+ Specifically, there were 52 images of glaucomatous left eyes, 50 images
+ of non-glaucomatous left eyes, 51 images of glaucomatous right eyes, and
+ 57 images of non-glaucomatous right eyes.
+ In order to have the same number of images per class, images were removed
+ from the classes with more images to balance the number of images per class.
+ Therefore, in the training stage for each eye, 50 images were used per
+ class.
+ The classification was made in the prediction stage, using 15 images per
+ class, different than the ones used in the training stage, to avoid overfitting
+ (see Table 2 and Table 3).
+ In total, 260 images were used in the experiments.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Images used in the experiments (left eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{3}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backslashbox[10em]{
+\backslash
+B Stage}{
+\backslash
+B Class} 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\backslash
+makebox[7em]{
+\backslash
+B Glaucomatous}&
+\backslash
+makebox[7em]{
+\backslash
+B Non-glaucomatous}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Training & 50 & 50 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Prediction & 15 & 15 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Total number per class & 65 & 65 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Total number of images & 
+\backslash
+multicolumn{2}{c|}{
+\backslash
+B 130} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Images used in the experiments (right eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{3}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backslashbox[10em]{
+\backslash
+B Stage}{
+\backslash
+B Class} 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\backslash
+makebox[7em]{
+\backslash
+B Glaucomatous}&
+\backslash
+makebox[7em]{
+\backslash
+B Non-glaucomatous}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Training & 50 & 50 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Prediction & 15 & 15 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Total number per class & 65 & 65 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Total number of images & 
+\backslash
+multicolumn{2}{c|}{
+\backslash
+B 130} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Modeling
+\end_layout
+
+\begin_layout Standard
+Four models were generated, two trained with MobileNet, one for the left
+ eye and one for the right eye, and another two trained with Inception V3.
+ For instance, the command to retrain the model for left-eye images with
+ MobileNet is presented in Listing 1.
+ 
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "C:/Users/lizii/Desktop/comando1.txt"
+lstparams "captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},numbers=none,breaklines=true,breakatwhitespace=true,caption={Command to retrain the MobileNet algorithm with left-eye images}"
+
+\end_inset
+
+In the first line, the retrain script from the TensorFlow Hub repository
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/tensorflow/hub/blob/master/examples/image_retraining/
+\begin_inset Newline linebreak
+\end_inset
+
+retrain.py
+\end_layout
+
+\end_inset
+
+ is executed.
+ This script retrains the top layer in the model, which is capable of recognizin
+g specific classes of images.
+ Lines 2 and 3 create the directory where the bottleneck files are going
+ to be stored.
+ A bottleneck is the layer just before the final output layer that actually
+ does the classification.
+ Every image is reused multiple times during the training stage.
+ Therefore, calculation operations in the layers behind the bottleneck for
+ each image take a significant amount of time.
+ Since these lower layers of the network are not modified, their outputs
+ can be cached and reused.
+ These outputs are the 
+\begin_inset Quotes eld
+\end_inset
+
+bottleneck files
+\begin_inset Quotes erd
+\end_inset
+
+ that are stored.
+ In case of rerunning the script, these files are reused.
+\end_layout
+
+\begin_layout Standard
+In line 4 the number of training steps is declared.
+ Line 5 indicates the directory where the model is stored.
+ In lines 6 and 7 the training summaries directory is created.
+ This directory stores the training progress reports that Tensorboard is
+ monitoring.
+ Lines 8-11 indicate the directories where the output labels and graphs
+ are going to be sent to.
+ Line 12 indicates the architecture to be used.
+ In the case of MobileNet, the 
+\begin_inset Quotes eld
+\end_inset
+
+mobilenet_1.0_224
+\begin_inset Quotes erd
+\end_inset
+
+ parameter is used.
+ In the case of Inception V3, the parameter 
+\begin_inset Quotes eld
+\end_inset
+
+inception_v3
+\begin_inset Quotes erd
+\end_inset
+
+ is used .
+ Finally, line 13 indicates the directory of the training dataset.
+\end_layout
+
+\begin_layout Standard
+In lines 2, 5, 6, 8, and 10, the directory 
+\begin_inset Quotes eld
+\end_inset
+
+mobile_v1_100_224
+\begin_inset Quotes erd
+\end_inset
+
+ changes to 
+\begin_inset Quotes eld
+\end_inset
+
+inceptionv3
+\begin_inset Quotes erd
+\end_inset
+
+ when using Inception V3.
+ In lines 2, 6, 8, 10, and 13, the directory 
+\begin_inset Quotes eld
+\end_inset
+
+OS
+\begin_inset Quotes erd
+\end_inset
+
+ changes to 
+\begin_inset Quotes eld
+\end_inset
+
+OD
+\begin_inset Quotes erd
+\end_inset
+
+ when training with right-eye images.
+\end_layout
+
+\begin_layout Subsection
+Results
+\end_layout
+
+\begin_layout Standard
+This section covers the evaluation stage of the methodology followed in
+ this research work.
+ Specifically, it shows the results obtained with the MobileNet and Inception
+ V3 models.
+ 
+\end_layout
+
+\begin_layout Standard
+The MobileNet and Inception V3 models were retrained using Python v3.6.9,
+ TensorFlow v1.14.0, and Anaconda v2019.07.
+ A personal laptop with an Intel(R) Core(TM) i5-6200U CPU and 12 GB RAM
+ was used for the training and evaluation of the models.
+ Both models were retrained using the retrain script with the training images
+ dataset.
+ For the testing stage,15 different images for each eye (15 images for the
+ right eye and 15 for the left eye) were used per class.
+ Table 4 and 5 show the confusion matrices of both eyes with MobileNet.
+ Table 6 and 7 show the confusion matrices of both eyes with Inception V3,
+ both having equal results.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Binary-class confusion matrix of MobileNet (left eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{3}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backslashbox[10em]{Actual}{Prediction} 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\backslash
+makebox[7em]{Glaucomatous}&
+\backslash
+makebox[7em]{Non-glaucomatous}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 12 & 3 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 1 & 14 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Binary-class confusion matrix of MobileNet (right eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{3}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backslashbox[10em]{Actual}{Prediction} 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\backslash
+makebox[7em]{Glaucomatous}&
+\backslash
+makebox[7em]{Non-glaucomatous}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 14 & 1 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 2 & 13 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Binary-class confusion matrix of Inception V3 (left eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{3}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backslashbox[10em]{Actual}{Prediction} 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\backslash
+makebox[7em]{Glaucomatous}&
+\backslash
+makebox[7em]{Non-glaucomatous}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 13 & 2 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 1 & 14 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Binary-class confusion matrix of Inception V3 (right eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{3}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backslashbox[10em]{Actual}{Prediction} 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\backslash
+makebox[7em]{Glaucomatous}&
+\backslash
+makebox[7em]{Non-glaucomatous}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 13 & 2 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 1 & 14 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tables 8-11 show the evaluation results of the classification model in terms
+ of precision, recall, and F1 score.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results obtained from the evaluation of MobileNet (left eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1 Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 0.82 & 0.93 & 0.87 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 0.92 & 0.80 & 0.86 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.87 & 
+\backslash
+B 0.87 & 
+\backslash
+B 0.87 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results obtained from the evaluation of MobileNet (right eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1 Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 0.93 & 0.87 & 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 0.88 & 0.93 & 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.90 & 
+\backslash
+B 0.90 & 
+\backslash
+B 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results obtained from the evaluation of Inception V3 (left eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1 Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 0.88 & 0.93 & 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 0.93 & 0.87 & 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.90 & 
+\backslash
+B 0.90 & 
+\backslash
+B 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results obtained from the evaluation of Inception V3 (right eye)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1 Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Glaucomatous & 0.88 & 0.93 & 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+Non-glaucomatous & 0.93 & 0.87 & 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.90 & 
+\backslash
+B 0.90 & 
+\backslash
+B 0.90 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Discussion
+\end_layout
+
+\begin_layout Standard
+In the results in Tables 8-11, the MobileNet and Inception V3 algorithms
+ show promising results for the two classes with images of both eyes.
+ The Inception V3 model showed slight better average results than the MobileNet
+ model in the case of classifying left eye images.
+ In average, the evaluation results for right eye images were the same for
+ both models.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusions and Future Work
+\end_layout
+
+\begin_layout Standard
+In this research work, the MobileNet and Inception V3 algorithms were used
+ to create two classification models for glaucoma detection of Latino population.
+ Specifically, the MobileNet and Inception V3 models were retrained for
+ both eyes, with a total of 200 images.
+ For the testing stage, 60 images were used, 
+\color black
+and the average results were satisfactory in both models.
+ Specifically, the Inception V3 model showed slight better average results
+ than the MobileNet model in the case of classifying left eye images.
+ In average, the evaluation results for right eye images were the same for
+ both models.
+ The evaluation results of the MobileNet model for the left eye were: accuracy:
+ 86%, precision: 87%, recall: 87%, and F1 score: 87%.
+ The evaluation results of the MobileNet model for the right eye were: accuracy:
+ 90%, precision: 90%, recall: 90%, and F1 score: 90%.
+ The evaluation results of the Inception V3 model for the left eye were:
+ accuracy: 90%, precision: 90%, recall: 90%, and F1 score: 90%.
+ The evaluation results of the Inception V3 model for the right eye were:
+ accuracy: 90%, precision: 90%, recall: 90%, and F1 score: 90%.
+
+\color inherit
+ As future work, we expect to extend this research work with a larger dataset
+ of glaucoma and non glaucoma OCT images of Latino patients, obtained from
+ different eye care centers in Mexico.
+ This model will be deployed in a clinical environment.
+ Also, we expect to improve it based on the feedback from ophthalmologists
+ who use it to make classifications.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "Glaucoma"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
