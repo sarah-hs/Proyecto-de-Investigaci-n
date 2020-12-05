@@ -1,0 +1,1343 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{diagbox}
+\usepackage{array}
+\end_preamble
+\options journal
+\use_default_options false
+\begin_modules
+graphicboxes
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex-natbib
+\cite_engine_type numerical
+\biblio_style jurabib
+\biblatex_bibstyle ieee
+\biblatex_citestyle numeric
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename Images/Logo_UM.png
+	lyxscale 7
+	width 2.5cm
+	height 2.5cm
+	keepAspectRatio
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 12cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Logo_FIT.png
+	lyxscale 75
+	width 2.5cm
+	height 2.5cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+Universidad de Montemorelos
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Facultad de Ingeniería y Tecnología
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Ingeniería en Sistemas Computacionales
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.6cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+Extraction of Color Feature for Automatic Classification of Plutonic Rocks
+ with iOS Devices
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.6cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Sarah Hernández Serrano
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+1170469
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.6cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Asesor: Dr.
+ Germán Harvey Alférez Salinas
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.6cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Montemorelos, Nuevo León, México
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+00 de mayo de 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 8.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+De qué trata....
+\end_layout
+
+\begin_layout Keywords
+Machine Learning, Color Extraction, iOS Devices, Dominant Colors, K-means
+ Clustering, Logistic Regression, K-Nearest Neighbors, Support Vector Machine,
+ Decision Trees.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Extraction of Color Feature for Automatic Classification of Plutonic Rocks
+ with iOS Devices
+\end_layout
+
+\begin_layout Author
+Sarah
+\begin_inset space ~
+\end_inset
+
+Hernández,
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+Germán
+\begin_inset space ~
+\end_inset
+
+H.
+\begin_inset space ~
+\end_inset
+
+Alférez
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sarah
+\begin_inset space ~
+\end_inset
+
+Hernández is a computer science engineering student at the School of Engineering
+ and Technology of Montemorelos University, Nuevo León, Mexico, e-mail:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "1170469@alumno.um.edu.mx"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Germán H.
+ Alferez, Ph.D., is the director of the Institute of Data Science and professor
+ at the School of Engineering and Technology of Montemorelos University,
+ Nuevo León, Mexico, e-mail: 
+\begin_inset CommandInset href
+LatexCommand href
+target "harveyalferez@um.edu.mx"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Special Paper Notice
+School of Engineering and Technology, Montemorelos University, Mexico
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Background
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Paragraph Start
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The 
+\series bold
+
+\backslash
+IEEEPARstart
+\series default
+ command is needed in the first paragraph of the document.
+\end_layout
+
+\end_inset
+
+ gneous rocks are one of three main types of rocks in the world.
+ Igneous rocks are classified according to how and where they were formed
+ (intrusive or extrusive), their texture, color, chemical composition, geometry
+ of the igneous body and their mineral composition (the minerals they contain,
+ usually described as being felsic, intermediate, mafic, or ultramafic).
+ Plutonic rocks (intrusive igneous rocks) are formed when magma – hot molden
+ rock in the middle of the volcano – cools and solidifies below the Earth’s
+ surface, while volcanic rocks (extrusive igneous rocks) are formed when
+ lava – hot molden rock leaving the volcano – cools and solidifies on the
+ Earth’s surface.
+ Plutonic rocks cool much more slowly, and under higher pressure, because
+ they are on the ground.
+ So their crystals have greater conditions to become larger, usually visible
+ without microscope (phaneritic surface).
+ Igneous rocks have a wide variety of uses, one important use is as stone
+ for buildings and statues.
+ The classification of the many types of different igneous rocks can provide
+ us with important information about the conditions under which they formed.
+ Their mineral and chemical makeup can be used to learn about the composition,
+ temperature and pressure that exists within the Earth’s mantle.
+ They can also tell us much about the tectonic environment, given that they
+ are closely linked to the convection of tectonic plates.
+ 
+\end_layout
+
+\begin_layout Subsection
+Problem Statement
+\end_layout
+
+\begin_layout Standard
+Igneous rock classification equipment is very expensive, robust and time
+ consuming.
+ The perceived properties of the rocks also depend on the experience of
+ the observer with similar observations [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://directives.sc.egov.usda.gov/OpenNonWebContent.aspx?content=31848.wba"
+literal "false"
+
+\end_inset
+
+], which makes it difficult for amateurs – people who are inexperienced
+ in rocks – to classify them.
+ The training of Machine Learning models can also involve a lot of computational
+ processing and time due to the large amount of image features that posses
+ an image.
+\end_layout
+
+\begin_layout Subsection
+Justification
+\end_layout
+
+\begin_layout Standard
+There are not iOS mobile applications that use Machine Learning for the
+ automatic classification of plutonic rocks with color extraction.
+ Color extraction allow to Mahine Learning models to reduce de amount of
+ data to be processed.
+ Such solution could be an alternative to expensive traditional methods
+ for rock classification.
+ A mobile application for rock classification offers the flexibility to
+ carry out the classification of rocks in the field in real time.
+ In addition, it can be used by those who are just beginning to get into
+ the subject of rock classification along with some experts who want to
+ determine more clearly the main colors present in an image for rock observation.
+\end_layout
+
+\begin_layout Subsection
+Objectives
+\end_layout
+
+\begin_layout Standard
+The main objective is to obtain the main colors from images for the creation
+ of an iOS application to classify igneous plutonic rocks.
+ This objective can be achieved with the following specific sub-objectives:
+\end_layout
+
+\begin_layout Itemize
+Extraction of main dominant colors feature through K-means clustering method
+ from the image dataset provided by the University of Loma Linda.
+\end_layout
+
+\begin_layout Itemize
+Determine the best k number of clusters for K-means.
+\end_layout
+
+\begin_layout Itemize
+Extracted colors and their percentages will be used as an input to the Machine
+ Learning algorithm for classification.
+\end_layout
+
+\begin_layout Itemize
+Validate the K-Nearest Neighbors, Logistic regression, Support Vector Machine
+ and Convolutional Neural Network models in terms of precision, recall,
+ and F1 score.
+\end_layout
+
+\begin_layout Itemize
+Test the effectiveness of the best models with new color data from rock
+ images.
+\end_layout
+
+\begin_layout Itemize
+Implement the best suited Machine Learning Model in an iOS application through
+ TensorflowLite pod and a Swift adaptaion of K-means clustering method.
+\end_layout
+
+\begin_layout Itemize
+Test effectiveness of the application with new rock images.
+\end_layout
+
+\begin_layout Subsection
+Hypothesis
+\end_layout
+
+\begin_layout Standard
+It is possible to implement an iOS application that implements Machine Learning
+ to extract dominant image colors and classify with them the types of plutonic
+ igneous rocks.
+\end_layout
+
+\begin_layout Section
+Theoretical Foundation
+\end_layout
+
+\begin_layout Subsection
+Underpinnings of our Approach
+\end_layout
+
+\begin_layout Standard
+Our approach is based on the following concepts 
+\shape italic
+\emph on
+(see Fig.
+ 1
+\shape default
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Map of concepts.png
+	lyxscale 20
+	width 9cm
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Underpinnings of our approach
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Plutonic Rocks
+\end_layout
+
+\begin_layout Standard
+Also called intrusive rocks.
+ They form when magma is trapped deep inside the Earth.
+ Great globs of molten rock rise toward the surface.
+ Some of the magma may feed volcanoes on the Earth's surface, but most remains
+ trapped below, where it cools very slowly over many thousands or millions
+ of years until it solidifies.
+ Slow cooling means the individual mineral grains have a very long time
+ to grow, so they grow to a relatively large size.
+ Intrusive rocks have a coarse grained texture [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.usgs.gov/faqs/what-are-igneous-rocks?qt-news_science_products=0#qt-news_science_products"
+literal "false"
+
+\end_inset
+
+].
+ 
+\end_layout
+
+\begin_layout Standard
+This project analyze the following four types of plutonic rocks:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Granite is rich in quartz (a pink rock crystal [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.britannica.com/science/quartz"
+literal "false"
+
+\end_inset
+
+]) and feldspar; it is the most common plutonic rock of the Earth’s crust,
+ forming by the cooling of magma at depth.
+ The principal constituent of granite is feldspar [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.britannica.com/science/granite"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Granodiorite is among the most abundant intrusive igneous rocks.
+ The mode of formation and occurrence, physical appearance, and mineralic
+ composition and texture of granodiorite are much like those of granite.
+ Granodiorite is darker in colour and is distinguished from granite by its
+ having more plagioclase feldspar than orthoclase feldspar [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.britannica.com/science/granodiorite"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Gabbro is exceedingly variable in mineralogy and composition, dark in colour,
+ and often intimately associated with magnetite (iron) and ilmenite (titanium)
+ mineralizations.
+ Gabbros are found widely on the Earth and on the Moon as well.
+ Gabbros are sometimes quarried for dimension stone (the black granite of
+ commerce), and the San Marcos Gabbro of southern California is used for
+ gauge blocks, but the direct economic value of gabbro is minor [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.britannica.com/science/gabbro"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Diorite has about the same structural properties as granite but, perhaps
+ because of its darker colour and more limited supply, is rarely used as
+ an ornamental and building material.
+ It is one of the dark gray stones that is sold commercially as black granite.
+ Commonly is composed of about two-thirds plagioclase feldspar and one-third
+ dark-coloured minerals, such as hornblende or biotite.
+ The presence of sodium-rich feldspar, oligoclase or andesine, in contrast
+ to calcium-rich plagioclase, labradorite or bytownite, is the main distinction
+ between diorite and gabbro [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.britannica.com/science/diorite"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Paragraph*
+
+\series medium
+In the commercial stone industry most of the subtypes of these four rocks
+ will be called as granite [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://geology.com/rocks/granite.shtml"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Dominant colors
+\end_layout
+
+\begin_layout Standard
+The dominant colors concept not refers to the average color.
+ Meanwhile the average color of an image is the sum of all pixels colors
+ divided by the number of its pixels, the dominant colors refers to the
+ principal colors presented in an image and their percent.
+ In this project the four main colors in the image are selected with histograms
+ provided by the application of K-means clustering to the numerical value
+ of the colors from an image pixels in terms of RGB (red, blue, and green
+ color model).
+\end_layout
+
+\begin_layout Subsubsection
+K-means clustering
+\end_layout
+
+\begin_layout Standard
+The K-Means clustering method works by separating the pixels into K groups
+ (clusters) of similarly coloured pixels.
+ The colors at each cluster center will reflect the average of the attributes
+ of all members of a cluster, and that will help us determine the dominant
+ colors in the image.
+\end_layout
+
+\begin_layout Subsubsection
+Machine Learning
+\end_layout
+
+\begin_layout Standard
+It is a method of data analysis that automates analytical model building.
+ It is a branch of artificial intelligence based on the idea that systems
+ can learn from data, identify patterns and make decisions with minimal
+ human intervention [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sas.com/en_us/insights/analytics/machine- learning.html"
+literal "false"
+
+\end_inset
+
+].
+ Machine learning algorithms use statistics to find patterns in massive
+ amounts of data [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.technologyreview.com/2018/11/17/103781/what- is-machine-learning-we-drew-you-another-flowchart/"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Support Vector Mahine (SVM)
+\end_layout
+
+\begin_layout Standard
+Is a discriminative classifier formally defined by a separating hyperplane.
+ In other words, given labeled training data (supervised learning), the
+ algorithm outputs an optimal hyperplane which categorizes new examples.
+ In two dimentional space this hyperplane is a line dividing a plane in
+ two parts where in each class lay in either side.
+ [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Logistic Regression
+\end_layout
+
+\begin_layout Standard
+Is a discriminative classifier formally defined by a separating hyperplane.
+ In other words, given labeled training data (supervised learning), the
+ algorithm outputs an optimal hyperplane which categorizes new examples.
+ In two dimentional space this hyperplane is a line dividing a plane in
+ two parts where in each class lay in either side.
+ [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Decision Trees
+\end_layout
+
+\begin_layout Standard
+Is a discriminative classifier formally defined by a separating hyperplane.
+ In other words, given labeled training data (supervised learning), the
+ algorithm outputs an optimal hyperplane which categorizes new examples.
+ In two dimentional space this hyperplane is a line dividing a plane in
+ two parts where in each class lay in either side.
+ [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+K-Nearest Neighbors
+\end_layout
+
+\begin_layout Standard
+Is a discriminative classifier formally defined by a separating hyperplane.
+ In other words, given labeled training data (supervised learning), the
+ algorithm outputs an optimal hyperplane which categorizes new examples.
+ In two dimentional space this hyperplane is a line dividing a plane in
+ two parts where in each class lay in either side.
+ [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Convolutional Neural Network
+\end_layout
+
+\begin_layout Standard
+A Convolutional Neural Network (CNN), is a class of artificial neural networks
+ that specializes in processing data that has a grid-like topology, such
+ as an image.
+ A CNN typically has three layers: a convolutional layer, pooling layer,
+ and fully connected layer:
+\end_layout
+
+\begin_layout Enumerate
+The convolution layer is the core building block of the CNN.
+ It carries the main portion of the network’s computational load.
+ This layer performs a dot product between two matrices, where one matrix
+ is the set of learnable parameters otherwise known as a kernel, and the
+ other matrix is the restricted portion of the receptive field.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The pooling layer replaces the output of the network at certain locations
+ by deriving a summary statistic of the nearby outputs.
+ This helps in reducing the spatial size of the representation, which decreases
+ the required amount of computation and weights.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In the fully connected layer, the pooling operation is processed on every
+ slice of the representation individually.
+ Neurons in this layer have full connectivity with all neurons in the preceding
+ and succeeding layer as seen in regular fully convolutional neural network.
+ This is why it can be computed as usual by a matrix multiplication followed
+ by a bias effect.
+ The fully connected layer helps map the representation between the input
+ and the output.
+\end_layout
+
+\begin_layout Subsubsection
+Model evaluation metrics
+\end_layout
+
+\begin_layout Standard
+Evaluating a model is a core part of building an effective machine learning
+ project.
+ For this purpose are used the following four metrics [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234"
+literal "false"
+
+\end_inset
+
+]:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Accuracy is what we usually mean, when we use the term accuracy.
+ It is the ratio of number of correct predictions to the total number of
+ input samples.
+ 
+\begin_inset Formula 
+\[
+Accuracy=\frac{CorrectPredictions}{MadePredictions}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Precision It is the number of correct positive results divided by the number
+ of positive results predicted by the classifier.
+\begin_inset Formula 
+\[
+Precision=\frac{TP}{TP+FP}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Recall It is the number of correct positive results divided by the number
+ of all relevant samples (all samples that should have been identified as
+ positive).
+ 
+\begin_inset Formula 
+\[
+Recall=\frac{TP}{TP+FN}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+F1-score It is used to measure a test’s accuracy, the Harmonic Mean between
+ precision and recall.
+ It tells you how precise your classifier is (how many instances it classifies
+ correctly), as well as how robust it is (it does not miss a significant
+ number of instances).
+ The greater the F1 Score, the better is the performance of our model.
+ 
+\begin_inset Formula 
+\[
+F1=2*\frac{Precision*Recall}{Precision+Recall}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tensorflow
+\end_layout
+
+\begin_layout Standard
+TensorFlow was developed in 2011 by the Google Brain Team.
+ It is an open-source software library for numerical computation that uses
+ data flow graphs.
+ TensorFlow enables ML practitioners to do data-intensive computing with
+ robust implementations of widely used DL algorithms.
+ TensorFlow offers a very flexible architecture that enables to deploy computati
+on to one or more CPUs or GPUs in a desktop, server, or mobile device with
+ a single API.
+ It has a comprehensive, flexible ecosystem of tools, libraries and community
+ resources that allows researchers and developers to push the state-of-the-art
+ in ML, and easily build and deploy ML powered applications.
+\end_layout
+
+\begin_layout Subsubsection
+Swift
+\end_layout
+
+\begin_layout Standard
+Swift is an open source programming language designed for macOS, iOS, watchOS,
+ tvOS and beyond.
+ Swift already supports all Apple platforms and Linux, with community members
+ actively working to port to even more platforms [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://developer.apple.com/swift/"
+literal "false"
+
+\end_inset
+
+].
+ In 2010, Apple started developing Swift, a new programming language that
+ would rival Objective-C in a few areas--specifically, type safety, security,
+ and better on-hardware performance.
+ Swift is more than 2.6x faster than Objective-C and more than 8.4x faster
+ than Python.
+ Swift 1.0 was released in September 2014 [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.techrepublic.com/article/apples-swift-programming-language-the-smart-persons-guide/"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Xcode
+\end_layout
+
+\begin_layout Standard
+A long-standing tool for app production, Xcode is a well-known integrated
+ development environment (IDE), enabling developers to write the code and
+ compile apps that can be used on a variety of different devices and operating
+ systems [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://appleinsider.com/inside/xcode"
+literal "false"
+
+\end_inset
+
+].
+ It also includes a unified macOS SDK that includes all the frameworks,
+ compilers, debuggers, and other tools you need to build apps that run natively
+ on Apple Silicon and the Intel x86_64 CPU [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://developer.apple.com/xcode/"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsubsection
+Tensorflow Lite pod
+\end_layout
+
+\begin_layout Standard
+hjvjhbkj
+\end_layout
+
+\begin_layout Subsection
+Related Work
+\end_layout
+
+\begin_layout Standard
+In [https://hd.media.mit.edu/tech-reports/TR-445.pdf] it is studied histograms
+ in the Ohta color space analyzed with si- multaneous autoregressive models.
+ This method results in 90% correct classification when evaluated on a diverse
+ database of over 1300 images.
+ Their porpouse is to determine wheter a picture is depicted on indoor and
+ outdoor scene.
+ Extraction features play important role to detect the object correctly.
+\end_layout
+
+\begin_layout Standard
+In [https://www.researchgate.net/publication/275415171_Features_Extraction_
+ a method is presented to extract local features based on interest point
+ which is used to detect key-points within an image, then, compute histogram
+ of gradient (HOG) for the region surround that point.
+ Proposed method used speed-up robust feature (SURF) method as interest
+ point detector and exclude the descriptor.
+ The new descriptor is computed by using HOG method.
+ The proposed method got advantages of both mentioned methods.
+ To evaluate the proposed method, we used well-known dataset which is Caltech101.
+ The initial result is encouraging in spite of using a small data for training.
+\end_layout
+
+\begin_layout Standard
+In [https://www.sciencedirect.com/science/article/pii/S259019741930018 it
+ is explored three different machine learning approaches: Deep learning,
+ traditional machine learning using hand-crafted features and traditional
+ machine learning using hand-crafted and deep learning features.
+ Thorough investigation of state- of-the-art machine learning techniques
+ together with feature engineering, it is achieved 92% for the F1-score
+ when deep learning and classical texture features are combined.
+\end_layout
+
+\begin_layout Standard
+In [https://www.nature.com/articles/s41598-018-26200-2/], it is applied a
+ convolutional neural network (CNN) for the classification of volcanic ash.
+ The authors defined four basal particle shapes (blocky, vesicular, elongated,
+ rounded) generated by different eruption mechanisms (e.g., brittle fragmentation)
+, and then trained the CNN using particles composed of only one basal shape.
+ The CNN could recognize the basal shapes with over 90% accuracy.
+\end_layout
+
+\begin_layout Standard
+In [https://www.sciencedirect.com/science/article/pii/S009830041930103 machine
+ learning technique is used to automate mineral grains recognition from
+ numerical images obtained with a simple optical microscope.
+ They used the generation of superpixels to extract features related to
+ a sand grain.
+ It is present a comparison of performances of several algorithms.
+ The overall obtained results are approximately 90%.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Subsection
+Methodology
+\end_layout
+
+\begin_layout Subsubsection
+Data description
+\end_layout
+
+\begin_layout Subsubsection
+Data Preparation
+\end_layout
+
+\begin_layout Subsubsection
+Color extraction
+\end_layout
+
+\begin_layout Subsubsection
+Classification and evaluation of different classifiers
+\end_layout
+
+\begin_layout Subsubsection
+Developing iOS application with the best suited model
+\end_layout
+
+\begin_layout Subsection
+Results
+\end_layout
+
+\begin_layout Subsection
+Discussion
+\end_layout
+
+\begin_layout Section
+Conclusions and Future Work
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "biblatex-examples"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
