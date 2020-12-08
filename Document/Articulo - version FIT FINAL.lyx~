@@ -7,6 +7,8 @@
 \textclass IEEEtran
 \begin_preamble
 % for subfigures/subtables
+\usepackage{titlesec}
+\titlespacing{\subsubsection}{0pt}{0.6em}{0pt}
 \usepackage[caption=false,font=footnotesize]{subfig}
 \usepackage{diagbox}
 \usepackage{array}
@@ -35,7 +37,7 @@ graphicboxes
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command bibtex
 \index_command default
 \float_placement tbh
@@ -423,7 +425,7 @@ Sarah
 \begin_inset space ~
 \end_inset
 
-Hernández,
+Hernández
 \begin_inset space ~
 \end_inset
 
@@ -580,9 +582,11 @@ literal "false"
 
 ], which makes it difficult for amateurs – people who are inexperienced
  in rocks – to classify them.
- The training of Machine Learning models can also involve a lot of computational
- processing and time due to the large amount of image features that posses
- an image.
+ Also, images tipically have a great number of features like color, texture,
+ and intensity.
+ The training of machine learning models can involve a lot of computational
+ processing and time due to the large amount of features that posses an
+ image.
 \end_layout
 
 \begin_layout Subsection
@@ -592,8 +596,6 @@ Justification
 \begin_layout Standard
 There are not iOS mobile applications that use Machine Learning for the
  automatic classification of plutonic rocks with color extraction.
- Color extraction allow to Mahine Learning models to reduce de amount of
- data to be processed.
  Such solution could be an alternative to expensive traditional methods
  for rock classification.
  A mobile application for rock classification offers the flexibility to
@@ -652,7 +654,7 @@ Hypothesis
 \end_layout
 
 \begin_layout Standard
-It is possible to implement an iOS application that implements Machine Learning
+It is possible to implement an iOS application that uses Machine Learning
  to extract dominant image colors and classify with them the types of plutonic
  igneous rocks.
 \end_layout
@@ -710,7 +712,7 @@ Underpinnings of our approach
 \end_layout
 
 \begin_layout Subsubsection
-Plutonic Rocks
+Plutonic rocks
 \end_layout
 
 \begin_layout Standard
@@ -824,7 +826,7 @@ literal "false"
 ].
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Standard
 
 \series medium
 In the commercial stone industry most of the subtypes of these four rocks
@@ -841,14 +843,14 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Dominant colors
+Dominnat colors
 \end_layout
 
 \begin_layout Standard
 The dominant colors concept not refers to the average color.
  Meanwhile the average color of an image is the sum of all pixels colors
  divided by the number of its pixels, the dominant colors refers to the
- principal colors presented in an image and their percent.
+ principal colors presented in an image and their percentage.
  In this project the four main colors in the image are selected with histograms
  provided by the application of K-means clustering to the numerical value
  of the colors from an image pixels in terms of RGB (red, blue, and green
@@ -925,16 +927,27 @@ Logistic Regression
 \end_layout
 
 \begin_layout Standard
-Is a discriminative classifier formally defined by a separating hyperplane.
- In other words, given labeled training data (supervised learning), the
- algorithm outputs an optimal hyperplane which categorizes new examples.
- In two dimentional space this hyperplane is a line dividing a plane in
- two parts where in each class lay in either side.
+Logistic Regression is a machine learning algorithm almost used for binary
+ classification problems (problems with two class values) when the dependent
+ variable (target) is categorical [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc"
+literal "false"
+
+\end_inset
+
+].
+ Logistic regression is named for the function used at the core of the method,
+ the logistic function, also called the sigmoid function, was developed
+ by statisticians to describe properties of population growth in ecology,
+ rising quickly and maxing out at the carrying capacity of the environment
  [
 \begin_inset CommandInset href
 LatexCommand href
 name "link"
-target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+target "https://machinelearningmastery.com/logistic-regression-for-machine-learning/"
 literal "false"
 
 \end_inset
@@ -947,16 +960,63 @@ Decision Trees
 \end_layout
 
 \begin_layout Standard
-Is a discriminative classifier formally defined by a separating hyperplane.
- In other words, given labeled training data (supervised learning), the
- algorithm outputs an optimal hyperplane which categorizes new examples.
- In two dimentional space this hyperplane is a line dividing a plane in
- two parts where in each class lay in either side.
+It is a non-parametric supervised learning method [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://scikit-learn.org/stable/modules/tree.html"
+literal "false"
+
+\end_inset
+
+].
+ A decision tree consists of split nodes and leaf nodes.
+ Each split node performs a split decision and routes a data sample x to
+ the left child node or to the right child node [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://doi.org/10.1016/B978-0-12-817358-9.00010-X"
+literal "false"
+
+\end_inset
+
+] [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/B978012817358900010X"
+literal "false"
+
+\end_inset
+
+].
+ In the tree structures, leaves represent classifications (also referred
+ to as labels), nonleaf nodes are features, and branches represent conjunctions
+ of features that lead to the classifications [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://doi.org/10.1016/B978-0-12-411519-4.00017-3"
+literal "false"
+
+\end_inset
+
+] [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/B9780124115194000173"
+literal "false"
+
+\end_inset
+
+].
  [
 \begin_inset CommandInset href
 LatexCommand href
 name "link"
-target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+target "https://www.sciencedirect.com/topics/computer-science/decision-trees"
 literal "false"
 
 \end_inset
@@ -969,16 +1029,18 @@ K-Nearest Neighbors
 \end_layout
 
 \begin_layout Standard
-Is a discriminative classifier formally defined by a separating hyperplane.
- In other words, given labeled training data (supervised learning), the
- algorithm outputs an optimal hyperplane which categorizes new examples.
- In two dimentional space this hyperplane is a line dividing a plane in
- two parts where in each class lay in either side.
- [
+It is another machine learning method in which its priniciple is to find
+ a predefined number of training samples closest in distance to the new
+ point, and predict the label from these.
+ Despite its simplicity, nearest neighbors has been successful in a large
+ number of classification and regression problems, including handwritten
+ digits and satellite image scenes.
+ Being a non-parametric method, it is often successful in classification
+ situations where the decision boundary is very irregular [
 \begin_inset CommandInset href
 LatexCommand href
 name "link"
-target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
+target "https://scikit-learn.org/stable/modules/neighbors.html"
 literal "false"
 
 \end_inset
@@ -991,39 +1053,22 @@ Convolutional Neural Network
 \end_layout
 
 \begin_layout Standard
-A Convolutional Neural Network (CNN), is a class of artificial neural networks
- that specializes in processing data that has a grid-like topology, such
- as an image.
- A CNN typically has three layers: a convolutional layer, pooling layer,
- and fully connected layer:
-\end_layout
+A Convolutional neural network (CNN) is a computational model that has one
+ or more convolutional layers and are used mainly for image processing,
+ classification, segmentation and also for other auto correlated data.
+ A convolution is essentially sliding a filter over the input.
+ Each pixel is multiplied by the corresponding value in the filter, then
+ the result is summed up for a single value for simplicity representing
+ a grid cell, like a pixel, in the output map [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://towardsdatascience.com/an-introduction-to-convolutional-neural-networks-eb0b60b58fd7"
+literal "false"
 
-\begin_layout Enumerate
-The convolution layer is the core building block of the CNN.
- It carries the main portion of the network’s computational load.
- This layer performs a dot product between two matrices, where one matrix
- is the set of learnable parameters otherwise known as a kernel, and the
- other matrix is the restricted portion of the receptive field.
- 
-\end_layout
+\end_inset
 
-\begin_layout Enumerate
-The pooling layer replaces the output of the network at certain locations
- by deriving a summary statistic of the nearby outputs.
- This helps in reducing the spatial size of the representation, which decreases
- the required amount of computation and weights.
- 
-\end_layout
-
-\begin_layout Enumerate
-In the fully connected layer, the pooling operation is processed on every
- slice of the representation individually.
- Neurons in this layer have full connectivity with all neurons in the preceding
- and succeeding layer as seen in regular fully convolutional neural network.
- This is why it can be computed as usual by a matrix multiplication followed
- by a bias effect.
- The fully connected layer helps map the representation between the input
- and the output.
+].
 \end_layout
 
 \begin_layout Subsubsection
@@ -1115,17 +1160,21 @@ Tensorflow
 \end_layout
 
 \begin_layout Standard
-TensorFlow was developed in 2011 by the Google Brain Team.
- It is an open-source software library for numerical computation that uses
- data flow graphs.
- TensorFlow enables ML practitioners to do data-intensive computing with
- robust implementations of widely used DL algorithms.
- TensorFlow offers a very flexible architecture that enables to deploy computati
-on to one or more CPUs or GPUs in a desktop, server, or mobile device with
- a single API.
- It has a comprehensive, flexible ecosystem of tools, libraries and community
- resources that allows researchers and developers to push the state-of-the-art
- in ML, and easily build and deploy ML powered applications.
+TensorFlow is an open-source library developed by Google and has become
+ very popular with Machine Learning.
+ TensorFlow offers APIs that facilitates Machine Learning.
+ TensorFlow also has a faster compilation time than other Deep Learning
+ libraries such as Keras and Touch.
+ TensorFlow supports both CPU and GPU computing devices [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://medium.com/datadriveninvestor/what-exactly-is-tensorflow-80a90162d5f1"
+literal "false"
+
+\end_inset
+
+].
 \end_layout
 
 \begin_layout Subsubsection
@@ -1196,11 +1245,30 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Tensorflow Lite pod
+Tensorflow Lite
 \end_layout
 
 \begin_layout Standard
-hjvjhbkj
+TensorFlow Lite is a set of tools to help developers run TensorFlow models
+ on mobile, embedded, and IoT devices.
+ It enables on-device machine learning inference with low latency and a
+ small binary size.
+\end_layout
+
+\begin_layout Standard
+TensorFlow Lite consists of two main components:
+\end_layout
+
+\begin_layout Itemize
+The TensorFlow Lite interpreter, which runs specially optimized models on
+ many different hardware types, including mobile phones, embedded Linux
+ devices, and microcontrollers.
+\end_layout
+
+\begin_layout Itemize
+The TensorFlow Lite converter, which converts TensorFlow models into an
+ efficient form for use by the interpreter, and can introduce optimizations
+ to improve binary size and performance.
 \end_layout
 
 \begin_layout Subsection
@@ -1208,8 +1276,17 @@ Related Work
 \end_layout
 
 \begin_layout Standard
-In [https://hd.media.mit.edu/tech-reports/TR-445.pdf] it is studied histograms
- in the Ohta color space analyzed with si- multaneous autoregressive models.
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://hd.media.mit.edu/tech-reports/TR-445.pdf"
+literal "false"
+
+\end_inset
+
+] it is studied histograms in the Ohta color space analyzed with si- multaneous
+ autoregressive models.
  This method results in 90% correct classification when evaluated on a diverse
  database of over 1300 images.
  Their porpouse is to determine wheter a picture is depicted on indoor and
@@ -1218,8 +1295,16 @@ In [https://hd.media.mit.edu/tech-reports/TR-445.pdf] it is studied histograms
 \end_layout
 
 \begin_layout Standard
-In [https://www.researchgate.net/publication/275415171_Features_Extraction_
- a method is presented to extract local features based on interest point
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.researchgate.net/publication/275415171_Features_Extraction_"
+literal "false"
+
+\end_inset
+
+] a method is presented to extract local features based on interest point
  which is used to detect key-points within an image, then, compute histogram
  of gradient (HOG) for the region surround that point.
  Proposed method used speed-up robust feature (SURF) method as interest
@@ -1231,8 +1316,16 @@ In [https://www.researchgate.net/publication/275415171_Features_Extraction_
 \end_layout
 
 \begin_layout Standard
-In [https://www.sciencedirect.com/science/article/pii/S259019741930018 it
- is explored three different machine learning approaches: Deep learning,
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/S259019741930018"
+literal "false"
+
+\end_inset
+
+] it is explored three different machine learning approaches: Deep learning,
  traditional machine learning using hand-crafted features and traditional
  machine learning using hand-crafted and deep learning features.
  Thorough investigation of state- of-the-art machine learning techniques
@@ -1241,8 +1334,17 @@ In [https://www.sciencedirect.com/science/article/pii/S259019741930018 it
 \end_layout
 
 \begin_layout Standard
-In [https://www.nature.com/articles/s41598-018-26200-2/], it is applied a
- convolutional neural network (CNN) for the classification of volcanic ash.
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.nature.com/articles/s41598-018-26200-2/"
+literal "false"
+
+\end_inset
+
+], it is applied a convolutional neural network (CNN) for the classification
+ of volcanic ash.
  The authors defined four basal particle shapes (blocky, vesicular, elongated,
  rounded) generated by different eruption mechanisms (e.g., brittle fragmentation)
 , and then trained the CNN using particles composed of only one basal shape.
@@ -1250,9 +1352,17 @@ In [https://www.nature.com/articles/s41598-018-26200-2/], it is applied a
 \end_layout
 
 \begin_layout Standard
-In [https://www.sciencedirect.com/science/article/pii/S009830041930103 machine
- learning technique is used to automate mineral grains recognition from
- numerical images obtained with a simple optical microscope.
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+literal "false"
+
+\end_inset
+
+] machine learning technique is used to automate mineral grains recognition
+ from numerical images obtained with a simple optical microscope.
  They used the generation of superpixels to extract features related to
  a sand grain.
  It is present a comparison of performances of several algorithms.
@@ -1271,20 +1381,1557 @@ Methodology
 Data description
 \end_layout
 
+\begin_layout Standard
+The original images were provided by the Geoscience Institute from the Universit
+y of Loma Linda.
+ There were selected four classes of plutonics rocks from it.
+ That classes were granite, granodiorite, gabbro, and diorite with a total
+ of 81 images.
+ Table 1 shows the number of images per class.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of Logistic Regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{5}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[7em]{
+\backslash
+B Class} &
+\backslash
+makebox[7em]{
+\backslash
+B Number of images}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granite & 16 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granodiorite & 21 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Gabbro & 19 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Diorite & 25 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Total images & 
+\backslash
+B 81 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Data Preparation
+\end_layout
+
+\begin_layout Standard
+At this step the images were processed with a function that iterates over
+ the images directory.
+ It is necessary the images are in folders groped by their rock class.
+ This function returns a tuple composed of a features array and an array
+ of label classes in string format.
+ It is shown in listing 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/load images.txt"
+lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to load images},label={load images}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In lines 22 to 34, the string path is converted to a directory and supported
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+load_images_from_directory
+\begin_inset Quotes erd
+\end_inset
+
+ function (lines 6 to 20) that extracts the images from a folder.
+ In line 13 the images are loaded with Image.open function imported from
+ PIL package.
+ In line 14 there is used the ImageOps.fit function from PIL package to crop
+ the image to fill the center and not lost the aspect ratio.
+ This step is very important because you can choose the right size and aspect
+ of the image.
 \end_layout
 
 \begin_layout Subsubsection
 Color extraction
 \end_layout
 
+\begin_layout Standard
+One of the most important features in the classification of plutonic rocks
+ is the color.
+ That is why in this process it is minimized the number of features that
+ will serve as input to our models by just selecting the dominant colors.
+\end_layout
+
+\begin_layout Standard
+First, it was created a function in python that receives an array of three
+ dimensions representinng the image pixels, and returns an array of sixteen
+ elements (the four RGB main colors and their percentage).
+ The number of main extracted colors is determined by the number of clusters
+ in the K-means algortihm.
+ In listing 2 this number is stored in 
+\begin_inset Quotes eld
+\end_inset
+
+CLUSTERS
+\begin_inset Quotes erd
+\end_inset
+
+ variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/get dominant colors function.txt"
+lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to extract dominant colors from an image},label={get dominant colors function}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In line 5, the input image is reshaped into a two dimensional array, multiplying
+ width and height as the first new dimension and selecting the number of
+ color channels as the second dimension.
+\end_layout
+
+\begin_layout Standard
+In line 6 the Kmeans method is used.
+ It works by separating the pixels into K groups (clusters) of similarly
+ coloured pixels.
+ The colors at each cluster center will reflect the average of the attributes
+ of all members of that cluster, helping us to determine the dominant color
+ in that cluster.
+\end_layout
+
+\begin_layout Standard
+In lines 8, 9, and 10, the percentage of each cluster color in the image
+ are calculated by creating a histogram of the k-means algorithm labels,
+ that stores the number of pixels in each cluster.
+ After that, each element in the histogram array is divided into the total
+ of pixels (the sum of the value of the histogram elements) and we get an
+ array of four percentages, one per cluster.
+\end_layout
+
+\begin_layout Standard
+In line 16, the zip of colors and percenatges is iterated to create an one
+ dimensional array of sixteen elements that is the three RGB values of each
+ cluster color followed by the percent of that main color present in the
+ image.
+\end_layout
+
+\begin_layout Standard
+In listing 3, the original array of image data is iterated to extract the
+ dominant colors with the previous explained function in listing 2, and
+ added to a new array of only extracted main colors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/Iterate in data to extract colors.txt"
+lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Iterate original data to extract dominant colors},label={Iterate in data to extract colors}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, in listing 3 line 6, these extracted colors and their rock type
+ labels will be saved in a csv file that will be used to train the models
+ of the experiment.
+\end_layout
+
 \begin_layout Subsubsection
 Classification and evaluation of different classifiers
 \end_layout
 
+\begin_layout Standard
+Five machine learning algortihms were trained for this experiment.
+ They are Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
+ Vector Machines, and a Convolutional Neural Network.
+ First, the data extracted from csv was stored in numpy array to normalize
+ them and train models.
+ Below, listing 4 presents this process and the paremeters used to train
+ each model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/train models.txt"
+lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Normalizing data and training models},label={train models}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lines 2 to 4 are the importing, declaration and fitting of the Logistic
+ Regression algorithm.
+ Lines 7 to 9 and lines 12 to 14 shows the K-Nearest Neighbors and Decision
+ Trees algorithms respectively.
+ And finally, the Support Vector machine and Convolutional Neural Networks
+ are in lines 17 to 19 and 22 to 30 respectively.
+\end_layout
+
+\begin_layout Standard
+The algorithms are evaluated in terms of accuracy, precision, recall and
+ F1-score.
+ Table 2 shows the accuracy of each model.
+ Tables 3-7 show the results of each model evaluation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of Logistic Regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{2}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[8em]{
+\backslash
+B Model} &
+\backslash
+makebox[3.5em]{
+\backslash
+B Accuracy} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Logistic Regression & 0.29 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+K-Nearest Neighbors & 0.82 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Decision Trees & 0.70 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Support Vector Machine & 0.41 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Convolutional Neural Network & 0.41 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.52 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of Logistic Regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1-Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granite & 1.00 & 1.00 & 1.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granodiorite & 0.86 & 1.00 & 0.92 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Gabbro &  0.50 & 1.00 & 0.67 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Diorite & 1.00 & 0.57 & 0.73 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.84 & 
+\backslash
+B 0.89 & 
+\backslash
+B 0.83 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of K-Nearest Neighbors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1-Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granite & 1.00 & 1.00 & 1.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granodiorite & 0.86 & 1.00 & 0.92 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Gabbro & 0.50 & 1.00 & 0.67 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Diorite & 1.00 & 0.57 & 0.73 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.84 & 
+\backslash
+B 0.89 & 
+\backslash
+B 0.83 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of Decision Trees
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1-Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granite & 1.00 & 0.50 & 0.67 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granodiorite & 0.62 & 0.83 & 0.71 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Gabbro & 1.00 & 1.00 & 1.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Diorite & 0.67 & 0.57 & 0.62 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.82 & 
+\backslash
+B 0.73 & 
+\backslash
+B 0.75 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of Support Vector Machine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1-Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granite & 0.50 & 0.50 & 0.50 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granodiorite & 0.40 & 0.67 & 0.50 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Gabbro & 0.40 & 1.00 & 0.57 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Diorite & 0.00 & 0.00 & 0.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.33 & 
+\backslash
+B 0.54 & 
+\backslash
+B 0.39 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results of Convolutional Neural Network
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newrobustcmd{
+\backslash
+B}{
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|l|*{4}{c|}}
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[5em]{
+\backslash
+B Class} &
+\backslash
+makebox[5em]{
+\backslash
+B Precision} &
+\backslash
+makebox[5em]{
+\backslash
+B Recall} &
+\backslash
+makebox[5em]{
+\backslash
+B F1-Score}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granite & 0.00 & 0.00 & 0.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Granodiorite & 0.42 & 0.83 & 0.56 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Gabbro & 0.40 & 1.00 & 0.57 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+Diorite & 0.00 & 0.00 & 0.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+B Average & 
+\backslash
+B 0.20 & 
+\backslash
+B 0.46 & 
+\backslash
+B 0.28 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Developing iOS application with the best suited model
+\end_layout
+
+\begin_layout Standard
+To develope this application it was used a pod from Tensorflow Lite and
+ the DominantColor pod for dominant color extraction in Swift 5.0 that implements
+ K-means algorithm.
 \end_layout
 
 \begin_layout Subsection
