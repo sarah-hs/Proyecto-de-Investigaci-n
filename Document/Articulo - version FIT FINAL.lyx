@@ -210,8 +210,8 @@ Ingeniería en Sistemas Computacionales
 
 \series bold
 \size huge
-Extraction of Color Feature for Automatic Classification of Plutonic Rocks
- with iOS Devices
+Automatic classification of plutonic rocks with machine learning applied
+ to extracted colors on iOS devices
 \end_layout
 
 \begin_layout Standard
@@ -335,13 +335,41 @@ begin{titlepage}
 \end_layout
 
 \begin_layout Abstract
-De qué trata....
+The classification of the many types of different igneous rocks can provide
+ us with important information about the conditions under they were formed.
+ However, igneous rock classification equipment is very expensive and time
+ consuming, in addition, it is necesssary to have a great knowledge about
+ the properties of rocks to classify them which makes it difficult for amateurs.
+ A mobile application for rock classification offers the flexibility to
+ carry out the classification of rocks on real time with no need of having
+ a wide knowledge on the field.
+ There are two main contributions of this project.
+ The first one is an iOS application that uses machine learning to classify
+ rocks.
+ In order to use the best suited algorithm in the application the effectiveness
+ of the Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
+ Vector Machine, and Convolutional Neural Network algorithms is compared.
+ The training of machine learning algorithms can involve a lot of computational
+ processing and time due to the large amount of features that an image posses,
+ for that reason the second contribution is to reduce the number of image
+ features extracting just the four main colors from rock images to train
+ the algorithms.
+ To this end, the kmeans clustering method was used.
+ The evaluation results of the algortihms are the following: for Logistic
+ Regression 29% of accuracy, 84% of precision, 89% of recall, and 83% of
+ F1-score; for K-Nearest Neighbors 82% of accuracy, 84% of precision, 89%
+ of recall, and 83% of F1-score; for Decision Trees 70% of accuracy, 82%
+ of precision, 73% of recall, and 75% of F1-score; for Support Vector Machine
+ 41% of accuracy, 33% of precision, 54% of recall, and 39% of F1-score;
+ for Convolutional Neural Network 41% of accuracy, 20% of precision, 46%
+ of recall, and 28% of F1-score.
+ The best results were achieved with K-Nearest Neighbors algorithm.
 \end_layout
 
 \begin_layout Keywords
 Machine Learning, Color Extraction, iOS Devices, Dominant Colors, K-means
  Clustering, Logistic Regression, K-Nearest Neighbors, Support Vector Machine,
- Decision Trees.
+ Convolutional Neural Network, Decision Trees.
 \end_layout
 
 \begin_layout Standard
@@ -416,8 +444,8 @@ end{titlepage}
 \end_layout
 
 \begin_layout Title
-Extraction of Color Feature for Automatic Classification of Plutonic Rocks
- with iOS Devices
+Automatic classification of plutonic rocks with machine learning applied
+ to extracted colors on iOS devices
 \end_layout
 
 \begin_layout Author
@@ -843,7 +871,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Dominnat colors
+Dominant colors
 \end_layout
 
 \begin_layout Standard
