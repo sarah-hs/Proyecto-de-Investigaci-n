@@ -21,7 +21,7 @@ graphicboxes
 \maintain_unincluded_children false
 \language english
 \language_package none
-\inputencoding auto
+\inputencoding ascii
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -328,7 +328,7 @@ begin{titlepage}
 
 \series bold
 \size larger
-\begin_inset VSpace 8.5cm
+\begin_inset VSpace 7cm
 \end_inset
 
 
@@ -346,7 +346,7 @@ The classification of the many types of different igneous rocks can provide
  There are two main contributions of this project.
  The first one is an iOS application that uses machine learning to classify
  rocks.
- In order to use the best suited algorithm in the application the effectiveness
+ In order to use the best suited algorithm in the application, the effectiveness
  of the Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
  Vector Machine, and Convolutional Neural Network algorithms is compared.
  The training of machine learning algorithms can involve a lot of computational
@@ -354,8 +354,8 @@ The classification of the many types of different igneous rocks can provide
  for that reason the second contribution is to reduce the number of image
  features extracting just the four main colors from rock images to train
  the algorithms.
- To this end, the kmeans clustering method was used.
- The evaluation results of the algortihms are the following: for Logistic
+ To this end, the K-means clustering method was used.
+ The evaluation results of the algorithms are the following: for Logistic
  Regression 29% of accuracy, 84% of precision, 89% of recall, and 83% of
  F1-score; for K-Nearest Neighbors 82% of accuracy, 84% of precision, 89%
  of recall, and 83% of F1-score; for Decision Trees 70% of accuracy, 82%
@@ -659,7 +659,7 @@ Extracted colors and their percentages will be used as an input to the Machine
 
 \begin_layout Itemize
 Validate the K-Nearest Neighbors, Logistic regression, Support Vector Machine
- and Convolutional Neural Network models in terms of precision, recall,
+ and Convolutional Neural Network algorithms in terms of precision, recall,
  and F1 score.
 \end_layout
 
@@ -745,129 +745,289 @@ Plutonic rocks
 
 \begin_layout Standard
 Also called intrusive rocks.
- They form when magma is trapped deep inside the Earth.
- Great globs of molten rock rise toward the surface.
+ They have a coarse grained texture and form when magma is trapped deep
+ inside the Earth.
  Some of the magma may feed volcanoes on the Earth's surface, but most remains
  trapped below, where it cools very slowly over many thousands or millions
- of years until it solidifies.
- Slow cooling means the individual mineral grains have a very long time
- to grow, so they grow to a relatively large size.
- Intrusive rocks have a coarse grained texture [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.usgs.gov/faqs/what-are-igneous-rocks?qt-news_science_products=0#qt-news_science_products"
+ of years until it solidifies 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "USGS-Igneous"
 literal "false"
 
 \end_inset
 
-].
- 
+.
 \end_layout
 
 \begin_layout Standard
 This project analyze the following four types of plutonic rocks:
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Granite is rich in quartz (a pink rock crystal [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.britannica.com/science/quartz"
+\begin_layout Paragraph
+Granite
+\end_layout
+
+\begin_layout Standard
+Is rich in quartz (a pink rock crystal 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Britannica-Quartz"
 literal "false"
 
 \end_inset
 
-]) and feldspar; it is the most common plutonic rock of the Earth’s crust,
+) and feldspar; it is the most common plutonic rock of the Earth’s crust,
  forming by the cooling of magma at depth.
- The principal constituent of granite is feldspar [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.britannica.com/science/granite"
+ The principal constituent of granite is feldspar 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Britannica-Granite"
 literal "false"
 
 \end_inset
 
-].
+.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Granodiorite is among the most abundant intrusive igneous rocks.
- The mode of formation and occurrence, physical appearance, and mineralic
- composition and texture of granodiorite are much like those of granite.
+\begin_layout Paragraph
+Granodiorite
+\end_layout
+
+\begin_layout Standard
+It is among the most abundant intrusive igneous rocks.
+ The mode of formation, its physical appearance, texture, and mineralic
+ composition are much like those of granite.
  Granodiorite is darker in colour and is distinguished from granite by its
- having more plagioclase feldspar than orthoclase feldspar [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.britannica.com/science/granodiorite"
+ having more plagioclase feldspar than orthoclase feldspar 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Britannica-Granodiorite"
 literal "false"
 
 \end_inset
 
-].
+.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Gabbro is exceedingly variable in mineralogy and composition, dark in colour,
- and often intimately associated with magnetite (iron) and ilmenite (titanium)
+\begin_layout Paragraph
+Gabbro
+\end_layout
+
+\begin_layout Standard
+Is exceedingly variable in mineralogy and composition, dark in colour, and
+ often intimately associated with magnetite (iron) and ilmenite (titanium)
  mineralizations.
- Gabbros are found widely on the Earth and on the Moon as well.
- Gabbros are sometimes quarried for dimension stone (the black granite of
- commerce), and the San Marcos Gabbro of southern California is used for
- gauge blocks, but the direct economic value of gabbro is minor [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.britannica.com/science/gabbro"
+ Gabbros are found widely on the Earth and on the Moon as well 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Britannica-Gabbro"
 literal "false"
 
 \end_inset
 
-].
+.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Diorite has about the same structural properties as granite but, perhaps
- because of its darker colour and more limited supply, is rarely used as
- an ornamental and building material.
- It is one of the dark gray stones that is sold commercially as black granite.
+\begin_layout Paragraph
+Diorite
+\end_layout
+
+\begin_layout Standard
+Has about the same structural properties as granite but darker colour and
+ more limited supply.
  Commonly is composed of about two-thirds plagioclase feldspar and one-third
  dark-coloured minerals, such as hornblende or biotite.
  The presence of sodium-rich feldspar, oligoclase or andesine, in contrast
  to calcium-rich plagioclase, labradorite or bytownite, is the main distinction
- between diorite and gabbro [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.britannica.com/science/diorite"
+ between diorite and gabbro 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Britannica-Diorite"
 literal "false"
 
 \end_inset
 
-].
+.
+\end_layout
+
+\begin_layout Subsubsection
+Machine Learning
 \end_layout
 
 \begin_layout Standard
-
-\series medium
-In the commercial stone industry most of the subtypes of these four rocks
- will be called as granite [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://geology.com/rocks/granite.shtml"
+It is a branch of artificial intelligence based on the idea that systems
+ can learn from data, identify patterns and make decisions with minimal
+ human intervention 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SAS-ML"
 literal "false"
 
 \end_inset
 
-].
+.
+ Machine learning algorithms use statistics to find patterns in massive
+ amounts of data 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TechRev-ML"
+literal "false"
+
+\end_inset
+
+.
+ There are two main types of machine learning algorithms:
+\end_layout
+
+\begin_layout Paragraph
+Supervised learning
+\end_layout
+
+\begin_layout Standard
+Are algorithms that consist in generate a function which maps input features
+ to desired output labels.
+ Given a set of features the labels are to be predicted.
+ An algorithm will be trained until it achieves a desired level of accuracy
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Vidhya-ML"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Logistic Regression algorithm is almost used for binary classification problems
+ (problems with two class output values) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TowardsDS-LogisticR"
+literal "false"
+
+\end_inset
+
+.
+ It is named for the function used at the core of the method, the logistic
+ function, was developed by statisticians to describe properties of population
+ growth in ecology, rising quickly and maxing out at the carrying capacity
+ of the environment 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Brownlee-2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+K-Nearest Neighbors is an algorithm in which its priniciple is to find a
+ predefined number of training samples closest in distance to the new point,
+ and predict the label from these.
+ Despite its simplicity, nearest neighbors has been successful in a large
+ number of classification and regression problems, including handwritten
+ digits and satellite image scenes.
+ Being a non-parametric method, it is often successful in classification
+ situations where the decision boundary is very irregular 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sklearn-KNN"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Decision Trees algorithm consists of split nodes and leaf nodes.
+ Each split node performs a split decision and routes a data sample x to
+ the left child node or to the right child node 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "REINDERS201965"
+literal "false"
+
+\end_inset
+
+.
+ In the tree structures, leaves represent the labels, nonleaf nodes are
+ the input features, and branches represent conjunctions of features that
+ lead to the classifications 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TAN2015493"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Support Vector Machine algorithm is formally defined by a separating hyperplane.
+ In other words, given labeled training data, the algorithm outputs an optimal
+ hyperplane which categorizes new examples.
+ In two dimentional space this hyperplane is a line dividing a plane in
+ two parts where in each class lay in either side 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "medium-SVM"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Convolutional Neural Network is a computational model that has one or more
+ convolutional layers and are used mainly for image processing, classification,
+ segmentation and also for other auto correlated data.
+ A convolution is essentially sliding a filter over the input.
+ Each pixel is multiplied by the corresponding value in the filter, then
+ the result is summed up for a single value for simplicity representing
+ a grid cell, like a pixel, in the output map 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TowardsDS-CNN"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Unsupervised learning
+\end_layout
+
+\begin_layout Standard
+These algorithms are designed to identify patterns in the structure of the
+ data.
+ Unsupervised learning is used for clustering population in different groups
+ with similar characteristics 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Vidhya-ML,medium-ML"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+K-means algorithm works by separating the pixels into K groups (clusters)
+ of similarly coloured pixels.
+ The colors at each cluster center will reflect the average of the attributes
+ of all members of a cluster, and that will help us determine the dominant
+ colors in the image.
 \end_layout
 
 \begin_layout Subsubsection
@@ -886,304 +1046,10 @@ The dominant colors concept not refers to the average color.
 \end_layout
 
 \begin_layout Subsubsection
-K-means clustering
+Underlying technologies
 \end_layout
 
-\begin_layout Standard
-The K-Means clustering method works by separating the pixels into K groups
- (clusters) of similarly coloured pixels.
- The colors at each cluster center will reflect the average of the attributes
- of all members of a cluster, and that will help us determine the dominant
- colors in the image.
-\end_layout
-
-\begin_layout Subsubsection
-Machine Learning
-\end_layout
-
-\begin_layout Standard
-It is a method of data analysis that automates analytical model building.
- It is a branch of artificial intelligence based on the idea that systems
- can learn from data, identify patterns and make decisions with minimal
- human intervention [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sas.com/en_us/insights/analytics/machine- learning.html"
-literal "false"
-
-\end_inset
-
-].
- Machine learning algorithms use statistics to find patterns in massive
- amounts of data [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.technologyreview.com/2018/11/17/103781/what- is-machine-learning-we-drew-you-another-flowchart/"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-Support Vector Mahine (SVM)
-\end_layout
-
-\begin_layout Standard
-Is a discriminative classifier formally defined by a separating hyperplane.
- In other words, given labeled training data (supervised learning), the
- algorithm outputs an optimal hyperplane which categorizes new examples.
- In two dimentional space this hyperplane is a line dividing a plane in
- two parts where in each class lay in either side.
- [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://medium.com/machine-learning-101/chapter- 2-svm-support-vector-machine-theory-f0812effc72"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-Logistic Regression
-\end_layout
-
-\begin_layout Standard
-Logistic Regression is a machine learning algorithm almost used for binary
- classification problems (problems with two class values) when the dependent
- variable (target) is categorical [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc"
-literal "false"
-
-\end_inset
-
-].
- Logistic regression is named for the function used at the core of the method,
- the logistic function, also called the sigmoid function, was developed
- by statisticians to describe properties of population growth in ecology,
- rising quickly and maxing out at the carrying capacity of the environment
- [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://machinelearningmastery.com/logistic-regression-for-machine-learning/"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-Decision Trees
-\end_layout
-
-\begin_layout Standard
-It is a non-parametric supervised learning method [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://scikit-learn.org/stable/modules/tree.html"
-literal "false"
-
-\end_inset
-
-].
- A decision tree consists of split nodes and leaf nodes.
- Each split node performs a split decision and routes a data sample x to
- the left child node or to the right child node [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://doi.org/10.1016/B978-0-12-817358-9.00010-X"
-literal "false"
-
-\end_inset
-
-] [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/B978012817358900010X"
-literal "false"
-
-\end_inset
-
-].
- In the tree structures, leaves represent classifications (also referred
- to as labels), nonleaf nodes are features, and branches represent conjunctions
- of features that lead to the classifications [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://doi.org/10.1016/B978-0-12-411519-4.00017-3"
-literal "false"
-
-\end_inset
-
-] [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/B9780124115194000173"
-literal "false"
-
-\end_inset
-
-].
- [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/topics/computer-science/decision-trees"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-K-Nearest Neighbors
-\end_layout
-
-\begin_layout Standard
-It is another machine learning method in which its priniciple is to find
- a predefined number of training samples closest in distance to the new
- point, and predict the label from these.
- Despite its simplicity, nearest neighbors has been successful in a large
- number of classification and regression problems, including handwritten
- digits and satellite image scenes.
- Being a non-parametric method, it is often successful in classification
- situations where the decision boundary is very irregular [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://scikit-learn.org/stable/modules/neighbors.html"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-Convolutional Neural Network
-\end_layout
-
-\begin_layout Standard
-A Convolutional neural network (CNN) is a computational model that has one
- or more convolutional layers and are used mainly for image processing,
- classification, segmentation and also for other auto correlated data.
- A convolution is essentially sliding a filter over the input.
- Each pixel is multiplied by the corresponding value in the filter, then
- the result is summed up for a single value for simplicity representing
- a grid cell, like a pixel, in the output map [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://towardsdatascience.com/an-introduction-to-convolutional-neural-networks-eb0b60b58fd7"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-Model evaluation metrics
-\end_layout
-
-\begin_layout Standard
-Evaluating a model is a core part of building an effective machine learning
- project.
- For this purpose are used the following four metrics [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234"
-literal "false"
-
-\end_inset
-
-]:
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Accuracy is what we usually mean, when we use the term accuracy.
- It is the ratio of number of correct predictions to the total number of
- input samples.
- 
-\begin_inset Formula 
-\[
-Accuracy=\frac{CorrectPredictions}{MadePredictions}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Precision It is the number of correct positive results divided by the number
- of positive results predicted by the classifier.
-\begin_inset Formula 
-\[
-Precision=\frac{TP}{TP+FP}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Recall It is the number of correct positive results divided by the number
- of all relevant samples (all samples that should have been identified as
- positive).
- 
-\begin_inset Formula 
-\[
-Recall=\frac{TP}{TP+FN}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-F1-score It is used to measure a test’s accuracy, the Harmonic Mean between
- precision and recall.
- It tells you how precise your classifier is (how many instances it classifies
- correctly), as well as how robust it is (it does not miss a significant
- number of instances).
- The greater the F1 Score, the better is the performance of our model.
- 
-\begin_inset Formula 
-\[
-F1=2*\frac{Precision*Recall}{Precision+Recall}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Tensorflow
 \end_layout
 
@@ -1193,86 +1059,18 @@ TensorFlow is an open-source library developed by Google and has become
  TensorFlow offers APIs that facilitates Machine Learning.
  TensorFlow also has a faster compilation time than other Deep Learning
  libraries such as Keras and Touch.
- TensorFlow supports both CPU and GPU computing devices [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://medium.com/datadriveninvestor/what-exactly-is-tensorflow-80a90162d5f1"
+ TensorFlow supports both CPU and GPU computing devices 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "medium-TF"
 literal "false"
 
 \end_inset
 
-].
+.
 \end_layout
 
-\begin_layout Subsubsection
-Swift
-\end_layout
-
-\begin_layout Standard
-Swift is an open source programming language designed for macOS, iOS, watchOS,
- tvOS and beyond.
- Swift already supports all Apple platforms and Linux, with community members
- actively working to port to even more platforms [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://developer.apple.com/swift/"
-literal "false"
-
-\end_inset
-
-].
- In 2010, Apple started developing Swift, a new programming language that
- would rival Objective-C in a few areas--specifically, type safety, security,
- and better on-hardware performance.
- Swift is more than 2.6x faster than Objective-C and more than 8.4x faster
- than Python.
- Swift 1.0 was released in September 2014 [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.techrepublic.com/article/apples-swift-programming-language-the-smart-persons-guide/"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
-Xcode
-\end_layout
-
-\begin_layout Standard
-A long-standing tool for app production, Xcode is a well-known integrated
- development environment (IDE), enabling developers to write the code and
- compile apps that can be used on a variety of different devices and operating
- systems [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://appleinsider.com/inside/xcode"
-literal "false"
-
-\end_inset
-
-].
- It also includes a unified macOS SDK that includes all the frameworks,
- compilers, debuggers, and other tools you need to build apps that run natively
- on Apple Silicon and the Intel x86_64 CPU [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://developer.apple.com/xcode/"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Tensorflow Lite
 \end_layout
 
@@ -1280,7 +1078,15 @@ Tensorflow Lite
 TensorFlow Lite is a set of tools to help developers run TensorFlow models
  on mobile, embedded, and IoT devices.
  It enables on-device machine learning inference with low latency and a
- small binary size.
+ small binary size 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TF-TFLite"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1297,6 +1103,69 @@ The TensorFlow Lite interpreter, which runs specially optimized models on
 The TensorFlow Lite converter, which converts TensorFlow models into an
  efficient form for use by the interpreter, and can introduce optimizations
  to improve binary size and performance.
+\end_layout
+
+\begin_layout Paragraph
+Swift
+\end_layout
+
+\begin_layout Standard
+Swift is an open source programming language designed for macOS, iOS, watchOS,
+ tvOS and beyond.
+ Swift already supports all Apple platforms and Linux, with community members
+ actively working to port to even more platforms 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Apple-Swift"
+literal "false"
+
+\end_inset
+
+.
+ In 2010, Apple started developing Swift, a new programming language that
+ would rival Objective-C in a few areas--specifically, type safety, security,
+ and better on-hardware performance.
+ Swift is more than 2.6x faster than Objective-C and more than 8.4x faster
+ than Python.
+ Swift 1.0 was released in September 2014 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TechRep-Swift"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Xcode
+\end_layout
+
+\begin_layout Standard
+A long-standing tool for app production, Xcode is a well-known integrated
+ development environment (IDE), enabling developers to write the code and
+ compile apps that can be used on a variety of different devices and operating
+ systems 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AInsider-Xcode"
+literal "false"
+
+\end_inset
+
+.
+ It also includes a unified macOS SDK that includes all the frameworks,
+ compilers, debuggers, and other tools you need to build apps that run natively
+ on Apple Silicon and the Intel x86_64 CPU 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Apple-Xcode"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2963,6 +2832,50 @@ To develope this application it was used a pod from Tensorflow Lite from
  that implements K-means algorithm.
 \end_layout
 
+\begin_layout Standard
+Evaluating a model is a core part of building an effective machine learning
+ project.
+ For this purpose are used the following four metrics [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234"
+literal "false"
+
+\end_inset
+
+]:
+\end_layout
+
+\begin_layout Standard
+Accuracy is what we usually mean, when we use the term accuracy.
+ It is the ratio of number of correct predictions to the total number of
+ input samples.
+ 
+\end_layout
+
+\begin_layout Standard
+Precision It is the number of correct positive results divided by the number
+ of positive results predicted by the classifier.
+\end_layout
+
+\begin_layout Standard
+Recall It is the number of correct positive results divided by the number
+ of all relevant samples (all samples that should have been identified as
+ positive).
+ 
+\end_layout
+
+\begin_layout Standard
+F1-score It is used to measure a test’s accuracy, the Harmonic Mean between
+ precision and recall.
+ It tells you how precise your classifier is (how many instances it classifies
+ correctly), as well as how robust it is (it does not miss a significant
+ number of instances).
+ The greater the F1 Score, the better is the performance of our model.
+ 
+\end_layout
+
 \begin_layout Subsection
 Results
 \end_layout
@@ -3008,7 +2921,8 @@ status collapsed
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "biblatex-examples"
+bibfiles "Rocks"
+options "bibtotoc"
 
 \end_inset
 
