@@ -354,7 +354,7 @@ The classification of the many types of different igneous rocks can provide
  for that reason the second contribution is to reduce the number of image
  features extracting just the four main colors from rock images to train
  the algorithms.
- To this end, the K-means clustering method was used.
+ To this end, the k-means clustering method was used.
  The evaluation results of the algorithms are the following: for Logistic
  Regression 29% of accuracy, 84% of precision, 89% of recall, and 83% of
  F1-score; for K-Nearest Neighbors 82% of accuracy, 84% of precision, 89%
@@ -367,9 +367,10 @@ The classification of the many types of different igneous rocks can provide
 \end_layout
 
 \begin_layout Keywords
-Machine Learning, Color Extraction, iOS Devices, Dominant Colors, K-means
- Clustering, Logistic Regression, K-Nearest Neighbors, Support Vector Machine,
- Convolutional Neural Network, Decision Trees.
+Machine Learning, Color Extraction, iOS Devices, Rock Classification, Features
+ Reduction, Dominant Colors, K-means Clustering, Logistic Regression, K-Nearest
+ Neighbors, Support Vector Machine, Convolutional Neural Network, Decision
+ Trees.
 \end_layout
 
 \begin_layout Standard
@@ -566,29 +567,84 @@ IEEEPARstart
 
 \end_inset
 
- gneous rocks are one of three main types of rocks in the world.
- Igneous rocks are classified according to how and where they were formed
- (intrusive or extrusive), their texture, color, chemical composition, geometry
- of the igneous body and their mineral composition (the minerals they contain,
- usually described as being felsic, intermediate, mafic, or ultramafic).
- Plutonic rocks (intrusive igneous rocks) are formed when magma – hot molden
- rock in the middle of the volcano – cools and solidifies below the Earth’s
- surface, while volcanic rocks (extrusive igneous rocks) are formed when
- lava – hot molden rock leaving the volcano – cools and solidifies on the
- Earth’s surface.
- Plutonic rocks cool much more slowly, and under higher pressure, because
- they are on the ground.
- So their crystals have greater conditions to become larger, usually visible
- without microscope (phaneritic surface).
- Igneous rocks have a wide variety of uses, one important use is as stone
- for buildings and statues.
- The classification of the many types of different igneous rocks can provide
- us with important information about the conditions under which they formed.
- Their mineral and chemical makeup can be used to learn about the composition,
- temperature and pressure that exists within the Earth’s mantle.
+ gneous rocks are one of the three main types of rocks in the world and
+ also the most common.
+ They have a wide variety of uses, one important use is as stone for buildings
+ and statues 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NGS-2019,Lumen-Schulte"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Plutonic rocks are a type of igneous rock formed when magma in the middle
+ of the volcano cools and solidifies below the Earth’s surface 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Study-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The classification of different igneous rocks can provide us with important
+ information about the conditions under which they formed.
  They can also tell us much about the tectonic environment, given that they
  are closely linked to the convection of tectonic plates.
- 
+ Their mineral and chemical makeup can be used to learn about the composition,
+ temperature and pressure that exists within the Earth’s mantle 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Williams-2015"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Rock color is an attribute of visual perception that can be described by
+ color names.
+ Color changes in rocks may indicate changes in the rock’s mineral assemblage,
+ texture, organic carbon content (shales), or other properties 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NRCS-2012"
+literal "false"
+
+\end_inset
+
+.
+ That is why color is a key property for rock classification.
+\end_layout
+
+\begin_layout Standard
+Machine learning, a branch of artificial intelligence, is becoming an appealing
+ tool in various fields of earth sciences, especially in predictions and
+ resources estimation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cate2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This research work uses machine learning to extract the main dominant colors
+ from rock images and also classify with them new rocks into four types
+ of plutonic rocks: granite, granodiorite, gabbro and diorite.
 \end_layout
 
 \begin_layout Subsection
@@ -596,25 +652,24 @@ Problem Statement
 \end_layout
 
 \begin_layout Standard
-Igneous rock classification equipment is very expensive, robust and time
- consuming.
- The perceived properties of the rocks also depend on the experience of
- the observer with similar observations [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://directives.sc.egov.usda.gov/OpenNonWebContent.aspx?content=31848.wba"
+Igneous rock classification equipment is very expensive and time consuming,
+ in addition, it is necesssary to have a great knowledge about the properties
+ of rocks to classify them which makes it difficult for amateurs – people
+ who are inexperienced in rocks.
+\end_layout
+
+\begin_layout Standard
+Color property is difficult to describe because perceived colors in rocks
+ also depend on the observer's experience with similar observations; so
+ a color may often be named differently by different persons 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NRCS-2012"
 literal "false"
 
 \end_inset
 
-], which makes it difficult for amateurs – people who are inexperienced
- in rocks – to classify them.
- Also, images tipically have a great number of features like color, texture,
- and intensity.
- The training of machine learning models can involve a lot of computational
- processing and time due to the large amount of features that posses an
- image.
+.
 \end_layout
 
 \begin_layout Subsection
@@ -622,15 +677,29 @@ Justification
 \end_layout
 
 \begin_layout Standard
-There are not iOS mobile applications that use Machine Learning for the
- automatic classification of plutonic rocks with color extraction.
+A mobile application that uses machine learning for the automatic classification
+ of plutonic rocks offers the flexibility to carry out the classification
+ of rocks on real time.
  Such solution could be an alternative to expensive traditional methods
- for rock classification.
- A mobile application for rock classification offers the flexibility to
- carry out the classification of rocks in the field in real time.
- In addition, it can be used by those who are just beginning to get into
- the subject of rock classification along with some experts who want to
- determine more clearly the main colors present in an image for rock observation.
+ for rock classification and can be used by those who are beginning into
+ the field of rocks.
+\end_layout
+
+\begin_layout Standard
+Extracting color from rock images allows geologists to more accurately detect
+ color changes in rocks.
+ In addition, the machine learning algorithms used within the application
+ can be trained with the extracted colors to reduce the number of features
+ in the images and consequently decrease the time and computational processing
+ during training 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sen-2015"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -638,43 +707,37 @@ Objectives
 \end_layout
 
 \begin_layout Standard
-The main objective is to obtain the main colors from images for the creation
- of an iOS application to classify igneous plutonic rocks.
- This objective can be achieved with the following specific sub-objectives:
+The main objective is to create an iOS application that uses machine learning
+ to extract the dominant colors from images and classify with them plutonic
+ rocks.
+ This objective can be achieved with the following sub-objectives:
 \end_layout
 
 \begin_layout Itemize
-Extraction of main dominant colors feature through K-means clustering method
- from the image dataset provided by the University of Loma Linda.
+Determine the best k number of clusters to use in the k-means clustering
+ machine learning method to extract the dominant colors from rock images.
 \end_layout
 
 \begin_layout Itemize
-Determine the best k number of clusters for K-means.
+Extracted colors and their percentages will be used as an input to train
+ the following machine learning algorithms: Logistic regression, K-Nearest
+ Neighbors, Decision Trees, Support Vector Machine, and Convolutional Neural
+ Network.
 \end_layout
 
 \begin_layout Itemize
-Extracted colors and their percentages will be used as an input to the Machine
- Learning algorithm for classification.
+Validate the algorithms in terms of precision, recall, and F1 score.
 \end_layout
 
 \begin_layout Itemize
-Validate the K-Nearest Neighbors, Logistic regression, Support Vector Machine
- and Convolutional Neural Network algorithms in terms of precision, recall,
- and F1 score.
-\end_layout
-
-\begin_layout Itemize
-Test the effectiveness of the best models with new color data from rock
+Test the effectiveness of the best algorithm with new color data from rock
  images.
 \end_layout
 
 \begin_layout Itemize
-Implement the best suited Machine Learning Model in an iOS application through
- TensorflowLite pod and a Swift adaptaion of K-means clustering method.
-\end_layout
-
-\begin_layout Itemize
-Test effectiveness of the application with new rock images.
+Implement the best suited machine learning algorithm in the iOS application
+ with the implementation of the TensorflowLite pod and a Swift adaptation
+ of the k-means algorithm.
 \end_layout
 
 \begin_layout Subsection
@@ -682,9 +745,11 @@ Hypothesis
 \end_layout
 
 \begin_layout Standard
-It is possible to implement an iOS application that uses Machine Learning
- to extract dominant image colors and classify with them the types of plutonic
- igneous rocks.
+It is possible to extract the dominant colors from rock images with the
+ implementation of k-means machine learning algorithm.
+ Also it is possible to train well a machine learning algorithm with just
+ the extracted colors and classify with them new rock data into granite,
+ granodiorite, gabbro, and diorite plutonic rock types.
 \end_layout
 
 \begin_layout Section
@@ -902,7 +967,7 @@ literal "false"
 
 \begin_layout Itemize
 Logistic Regression algorithm is almost used for binary classification problems
- (problems with two class output values) 
+ (problems with two labels) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "TowardsDS-LogisticR"
@@ -946,8 +1011,8 @@ literal "false"
 
 \begin_layout Itemize
 Decision Trees algorithm consists of split nodes and leaf nodes.
- Each split node performs a split decision and routes a data sample x to
- the left child node or to the right child node 
+ Each split node performs a split decision and routes a data sample either
+ to the left or the right child node 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "REINDERS201965"
@@ -1023,11 +1088,20 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-K-means algorithm works by separating the pixels into K groups (clusters)
- of similarly coloured pixels.
- The colors at each cluster center will reflect the average of the attributes
- of all members of a cluster, and that will help us determine the dominant
- colors in the image.
+K-means algorithm works by taking data points as input and grouping them
+ into k clusters.
+ This process of grouping is the training phase of the learning algorithm.
+ The result would be a model that takes a data sample as input and returns
+ the cluster that the new data point belongs to, according the training
+ that the model went through 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlMasri-2019"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1035,14 +1109,11 @@ Dominant colors
 \end_layout
 
 \begin_layout Standard
-The dominant colors concept not refers to the average color.
- Meanwhile the average color of an image is the sum of all pixels colors
- divided by the number of its pixels, the dominant colors refers to the
- principal colors presented in an image and their percentage.
- In this project the four main colors in the image are selected with histograms
- provided by the application of K-means clustering to the numerical value
- of the colors from an image pixels in terms of RGB (red, blue, and green
- color model).
+The dominant colors refers to the principal colors presented in an image.
+ This colors are selected grouping the image pixels in a certain number
+ of groups according to their color.
+ The average color of each group and the percentage of pixels in them are
+ the dominant colors and dominant colors´ percentages.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1173,16 +1244,15 @@ Related Work
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://hd.media.mit.edu/tech-reports/TR-445.pdf"
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Szummer"
 literal "false"
 
 \end_inset
 
-] it is studied histograms in the Ohta color space analyzed with si- multaneous
+ it is studied histograms in the Ohta color space analyzed with si- multaneous
  autoregressive models.
  This method results in 90% correct classification when evaluated on a diverse
  database of over 1300 images.
@@ -1192,16 +1262,15 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.researchgate.net/publication/275415171_Features_Extraction_"
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ahsan2013"
 literal "false"
 
 \end_inset
 
-] a method is presented to extract local features based on interest point
+ a method is presented to extract local features based on interest point
  which is used to detect key-points within an image, then, compute histogram
  of gradient (HOG) for the region surround that point.
  Proposed method used speed-up robust feature (SURF) method as interest
@@ -1231,21 +1300,74 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.nature.com/articles/s41598-018-26200-2/"
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Shoji2018"
 literal "false"
 
 \end_inset
 
-], it is applied a convolutional neural network (CNN) for the classification
+, it is applied a convolutional neural network (CNN) for the classification
  of volcanic ash.
  The authors defined four basal particle shapes (blocky, vesicular, elongated,
  rounded) generated by different eruption mechanisms (e.g., brittle fragmentation)
 , and then trained the CNN using particles composed of only one basal shape.
  The CNN could recognize the basal shapes with over 90% accuracy.
+\end_layout
+
+\begin_layout Standard
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+literal "false"
+
+\end_inset
+
+] machine learning technique is used to automate mineral grains recognition
+ from numerical images obtained with a simple optical microscope.
+ They used the generation of superpixels to extract features related to
+ a sand grain.
+ It is present a comparison of performances of several algorithms.
+ The overall obtained results are approximately 90%.
+\end_layout
+
+\begin_layout Standard
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+literal "false"
+
+\end_inset
+
+] machine learning technique is used to automate mineral grains recognition
+ from numerical images obtained with a simple optical microscope.
+ They used the generation of superpixels to extract features related to
+ a sand grain.
+ It is present a comparison of performances of several algorithms.
+ The overall obtained results are approximately 90%.
+\end_layout
+
+\begin_layout Standard
+In [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+literal "false"
+
+\end_inset
+
+] machine learning technique is used to automate mineral grains recognition
+ from numerical images obtained with a simple optical microscope.
+ They used the generation of superpixels to extract features related to
+ a sand grain.
+ It is present a comparison of performances of several algorithms.
+ The overall obtained results are approximately 90%.
 \end_layout
 
 \begin_layout Standard
@@ -1274,13 +1396,16 @@ Results
 Methodology
 \end_layout
 
+\begin_layout Standard
+Each of the steps in this research is described below:
+\end_layout
+
 \begin_layout Subsubsection
 Data description
 \end_layout
 
 \begin_layout Standard
-The original images were provided by the Geoscience Institute from the Universit
-y of Loma Linda.
+The original images were provided by the Loma Linda University.
  There were selected four classes of plutonics rocks from it.
  That classes were granite, granodiorite, gabbro, and diorite with a total
  of 81 images.
@@ -1297,7 +1422,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Results of Logistic Regression
+Number of images per class
 \end_layout
 
 \end_inset
@@ -1437,7 +1562,7 @@ hline
 
 
 \backslash
-B Total images & 
+B Total of images & 
 \backslash
 B 81 
 \backslash
@@ -1471,27 +1596,15 @@ end{tabular}
 \end_layout
 
 \begin_layout Subsubsection
-Data Preparation
+Data preparation
 \end_layout
 
 \begin_layout Standard
-At this step the images were processed with a function that iterates over
+In this step the images were processed with a function that iterates over
  the images directory.
- It is necessary the images are in folders groped by their rock class.
  This function returns a tuple composed of a features array and an array
  of label classes in string format.
  It is shown in listing 1.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/load images.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to load images},label={load images}"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1505,12 +1618,27 @@ load_images_from_directory
 \end_inset
 
  function (lines 6 to 20) that extracts the images from a folder.
+ It assigns a label to each image according to the folder that contains
+ it.
+ For that reason it is necessary that all the images are grouped according
+ to the type of rock to which they belong..
  In line 13 the images are loaded with Image.open function imported from
  PIL package.
  In line 14 there is used the ImageOps.fit function from PIL package to crop
- the image to fill the center and not lost the aspect ratio.
+ the image to fill the center and not lose the aspect ratio.
  This step is very important because you can choose the right size and aspect
  of the image.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/load images.txt"
+lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to load images},label={load images}"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1518,18 +1646,20 @@ Color extraction
 \end_layout
 
 \begin_layout Standard
-One of the most important features in the classification of plutonic rocks
- is the color.
- That is why in this process it is minimized the number of features that
- will serve as input to our models by just selecting the dominant colors.
+K-means algorithm works by separating the pixels into K groups (clusters)
+ of similarly coloured pixels.
+ The colors at each cluster center will reflect the average of the attributes
+ of all members of a cluster, and that will help us determine the dominant
+ colors in the image.
 \end_layout
 
 \begin_layout Standard
-First, it was created a function in python that receives an array of three
- dimensions representinng the image pixels, and returns an array of sixteen
- elements (the four RGB main colors and their percentage).
+First, a function in Python was created.
+ That function receives an array of three dimensions representinng the image
+ pixels, and returns an array of sixteen elements (the four RGB main colors
+ and their percentage).
  The number of main extracted colors is determined by the number of clusters
- in the K-means algortihm.
+ in the k-means algortihm.
  In listing 2 this number is stored in 
 \begin_inset Quotes eld
 \end_inset
@@ -1559,7 +1689,7 @@ In line 5, the input image is reshaped into a two dimensional array, multiplying
 \end_layout
 
 \begin_layout Standard
-In line 6 the Kmeans method is used.
+In line 6 the k-means algorithm is used.
  It works by separating the pixels into K groups (clusters) of similarly
  coloured pixels.
  The colors at each cluster center will reflect the average of the attributes
@@ -1614,7 +1744,7 @@ Classification and evaluation of different classifiers
 Five machine learning algortihms were trained for this experiment.
  They are Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
  Vector Machines, and a Convolutional Neural Network.
- First, the data extracted from csv was stored in numpy array to normalize
+ First, the data extracted from CSV was stored in Numpy array to normalize
  them and train models.
  Below, listing 4 presents this process and the paremeters used to train
  each model.
@@ -1651,13 +1781,13 @@ The algorithms are evaluated in terms of accuracy, precision, recall and
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Results of Logistic Regression
+Results of the algorithms in terms of accuracy
 \end_layout
 
 \end_inset
@@ -2822,7 +2952,7 @@ end{tabular}
 \end_layout
 
 \begin_layout Subsubsection
-Developing iOS application with the best suited model
+Creation of iOS application for rock classification
 \end_layout
 
 \begin_layout Standard

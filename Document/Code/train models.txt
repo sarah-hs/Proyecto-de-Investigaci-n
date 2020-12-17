@@ -3,7 +3,7 @@ from sklearn.linear_model import LogisticRegression
 logReg = LogisticRegression(solver='lbfgs')
 logReg.fit(xtrainNorm, ytrain)
 
-#   KNN
+#   K-Nearest Neighbors
 from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(xtrainNorm, ytrain)
@@ -18,7 +18,7 @@ from sklearn.svm import SVC
 svmc = SVC(gamma='auto')
 svmc.fit(xtrainNorm, ytrain)
 
-# Convolutional Neural Networks
+# Convolutional Neural Network
 model = Sequential()
 model.add(Conv1D(filters=32, kernel_size=2, activation='relu', input_shape=(n_timesteps,n_features)))
 model.add(Conv1D(filters=32, kernel_size=2, activation='relu'))
