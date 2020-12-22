@@ -335,18 +335,18 @@ begin{titlepage}
 \end_layout
 
 \begin_layout Abstract
-The classification of different igneous rocks can provide us with important
- information about the conditions under they formed and the tectonic environment.
+The classification of different rocks can provide us with important information
+ about the conditions under they formed and the tectonic environment.
  Color is a key property for rock classification, however, it is difficult
  to describe because a color may be named differently by different persons.
- Igneous rock classification equipment is very expensive and time consuming,
- in addition, it is necesssary to have a great knowledge about the rocks
- to classify them which makes it difficult for amateurs.
+ Rock classification equipment is very expensive and time consuming, in
+ addition, it is necesssary to have a great knowledge about the rocks to
+ classify them which makes it difficult for amateurs.
  A mobile application offers the flexibility to carry out the classification
  of rocks on real time with no need of having a wide knowledge on the field.
  There are two main contributions of this project.
  The first one is an iOS application that uses machine learning to classify
- rocks.
+ plutonic rocks into granite, granodiorite, gabbro, and diorite types.
  In order to use the best suited machine learning algorithm in the application,
  the effectiveness of the Logistic Regression, K-Nearest Neighbors, Decision
  Trees, Support Vector Machine, and Convolutional Neural Network algorithms
@@ -727,7 +727,8 @@ Extracted colors and their percentages will be used as an input to train
 \end_layout
 
 \begin_layout Itemize
-Validate the algorithms in terms of precision, recall, and F1 score.
+Validate the algorithms to get the best suited algorithm for the mobile
+ application.
 \end_layout
 
 \begin_layout Itemize
@@ -736,8 +737,7 @@ Test the effectiveness of the best algorithm with new color data from rock
 \end_layout
 
 \begin_layout Itemize
-Implement the best suited machine learning algorithm in the iOS application
- with TensorflowLite pod and a Swift adaptation of the k-means algorithm.
+Implement the best suited machine learning algorithm in the iOS application.
 \end_layout
 
 \begin_layout Subsection
@@ -1125,8 +1125,18 @@ Tensorflow
 \end_layout
 
 \begin_layout Standard
-TensorFlow is an open-source library developed by Google and has become
- very popular with Machine Learning.
+TensorFlow
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+TensorFlow
+\end_layout
+
+\end_inset
+
+ is an open-source library developed by Google and has become very popular
+ with Machine Learning.
  TensorFlow offers APIs that facilitates Machine Learning.
  TensorFlow also has a faster compilation time than other Deep Learning
  libraries such as Keras and Touch.
@@ -1479,7 +1489,8 @@ Methodology
 \end_layout
 
 \begin_layout Standard
-Each of the steps in this research is described below:
+This section details each of the steps followed to obtain the best machine
+ learning algorithm for the mobile application.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1677,6 +1688,10 @@ end{tabular}
 
 \end_layout
 
+\begin_layout Standard
+The images used in the following experiments are available online .
+\end_layout
+
 \begin_layout Subsubsection
 Data preparation
 \end_layout
@@ -1819,7 +1834,11 @@ Finally, in listing 3 line 6, these extracted colors and their rock type
 \end_layout
 
 \begin_layout Subsubsection
-Classification and evaluation of different classifiers
+Normalize extracted colors data
+\end_layout
+
+\begin_layout Subsubsection
+Training of the different algorithms
 \end_layout
 
 \begin_layout Standard
@@ -1827,9 +1846,9 @@ Five machine learning algortihms were trained for this experiment.
  They are Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
  Vector Machines, and a Convolutional Neural Network.
  First, the data extracted from CSV was stored in Numpy array to normalize
- them and train models.
+ them and train the algorithms.
  Below, listing 4 presents this process and the paremeters used to train
- each model.
+ each classifier.
 \end_layout
 
 \begin_layout Standard
@@ -1852,11 +1871,84 @@ Lines 2 to 4 are the importing, declaration and fitting of the Logistic
  are in lines 17 to 19 and 22 to 30 respectively.
 \end_layout
 
+\begin_layout Subsubsection
+Evaluation of the algorithms
+\end_layout
+
 \begin_layout Standard
-The algorithms are evaluated in terms of accuracy, precision, recall and
- F1-score.
- Table 2 shows the accuracy of each model.
- Tables 3-7 show the results of each model evaluation.
+Evaluating a model is a core part of building an effective machine learning
+ project.
+ For this purpose are used the following four metrics to evaluate the algorithms
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mishra2018"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Accuracy is the ratio of number of correct predictions to the total number
+ of input samples.
+\begin_inset Formula 
+\[
+Accuracy=\frac{CorrectPredictions}{PredictionsMade}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Precision is the number of correct positive results divided by the number
+ of positive results predicted by the classifier.
+\begin_inset Formula 
+\[
+Precision=\frac{TP}{TP+FP}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Recall is the number of correct positive results divided by the number of
+ all relevant samples (all samples that should have been identified as positive).
+ 
+\begin_inset Formula 
+\[
+Recall=\frac{TP}{TP+FN}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+F1-score is used to measure a test’s accuracy, the Harmonic Mean between
+ precision and recall.
+ It tells you how precise your classifier is (how many instances it classifies
+ correctly), as well as how robust it is (it does not miss a significant
+ number of instances).
+ The greater the F1 Score, the better is the performance of our model.
+\begin_inset Formula 
+\[
+F1=2*\frac{Precision*Recall}{Precision+Recall}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Table 2 shows the accuracy of all the algorithms.
 \end_layout
 
 \begin_layout Standard
@@ -2056,6 +2148,11 @@ end{tabular}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Tables 3-7 show the results of each model evaluation in terms of precision,
+ recall and F1-score.
 \end_layout
 
 \begin_layout Standard
@@ -3033,52 +3130,14 @@ end{tabular}
 
 \end_layout
 
-\begin_layout Standard
-Evaluating a model is a core part of building an effective machine learning
- project.
- For this purpose are used the following four metrics [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234"
-literal "false"
-
-\end_inset
-
-]:
+\begin_layout Subsection
+Results
 \end_layout
 
 \begin_layout Standard
-Accuracy is what we usually mean, when we use the term accuracy.
- It is the ratio of number of correct predictions to the total number of
- input samples.
- 
-\end_layout
-
-\begin_layout Standard
-Precision It is the number of correct positive results divided by the number
- of positive results predicted by the classifier.
-\end_layout
-
-\begin_layout Standard
-Recall It is the number of correct positive results divided by the number
- of all relevant samples (all samples that should have been identified as
- positive).
- 
-\end_layout
-
-\begin_layout Standard
-F1-score It is used to measure a test’s accuracy, the Harmonic Mean between
- precision and recall.
- It tells you how precise your classifier is (how many instances it classifies
- correctly), as well as how robust it is (it does not miss a significant
- number of instances).
- The greater the F1 Score, the better is the performance of our model.
- 
-\end_layout
-
-\begin_layout Subsubsection
-Creation of iOS application for rock classification
+Here are covered the results of the color extraction step presented in this
+ paper and the creation of the iOS mobile application with the implementation
+ of the best algorithm.
 \end_layout
 
 \begin_layout Standard
@@ -3088,16 +3147,67 @@ To develope this application it was used a pod from Tensorflow Lite from
  that implements K-means algorithm.
 \end_layout
 
-\begin_layout Subsection
-Results
+\begin_layout Standard
+In this study, four classification models were created with a convolutional
+ neural network developed with TensorFlow for the classification of plutonic
+ rocks.
+ Specifically, several images of gabbro, granite, and granodiorite samples
+ were used in the experiments, each class having 97 images.
+ The best result was obtained with the classification model for granite
+ and granodiorite.
+ The evaluation of this model was satisfactory, with an accuracy of 73.03%
+ and precision, recall, and F1 score values of 86%.
+ We created a mobile application for Android devices that uses this classificati
+on model to return the class of an image from a granite or granodiorite
+ rock sample.
+ As future work, a larger number of plutonic rock images will be obtained
+ for other classes.
+ With the extended dataset, we expect to extend our mobile application with
+ a new classification model able to classify rocks for a wide range of plutonic
+ rocks.
+ Also, we will avoid cutting out original pictures into several patches,
+ such as in the case of gabbro, in order to avoid low evaluation results
+ in the models trained with some image combinations.
+ 
 \end_layout
 
 \begin_layout Subsection
 Discussion
 \end_layout
 
+\begin_layout Standard
+We developed an Android mobile application capable of detecting two classes
+ of plutonic rocks (granite and granodi- orite).
+ The accuracy of the model was 73.03%.
+ The values for precision, recall, and F1 score were 86%.
+\end_layout
+
 \begin_layout Section
 Conclusions and Future Work
+\end_layout
+
+\begin_layout Standard
+In this study, four classification models were created with a convolutional
+ neural network developed with TensorFlow for the classification of plutonic
+ rocks.
+ Specifically, several images of gabbro, granite, and granodiorite samples
+ were used in the experiments, each class having 97 images.
+ The best result was obtained with the classification model for granite
+ and granodiorite.
+ The evaluation of this model was satisfactory, with an accuracy of 73.03%
+ and precision, recall, and F1 score values of 86%.
+ We created a mobile application for Android devices that uses this classificati
+on model to return the class of an image from a granite or granodiorite
+ rock sample.
+ As future work, a larger number of plutonic rock images will be obtained
+ for other classes.
+ With the extended dataset, we expect to extend our mobile application with
+ a new classification model able to classify rocks for a wide range of plutonic
+ rocks.
+ Also, we will avoid cutting out original pictures into several patches,
+ such as in the case of gabbro, in order to avoid low evaluation results
+ in the models trained with some image combinations.
+ 
 \end_layout
 
 \begin_layout Standard
