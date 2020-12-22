@@ -21,7 +21,7 @@
 }
 
 @Standard{Britannica-Quartz,
-  organization = {Encyclopædia Britannica},
+  organization = {Encyclop{æ}dia Britannica},
   title        = {Quartz},
   author       = {{Encyclopædia Britannica}},
   language     = {English},
@@ -33,7 +33,7 @@
 }
 
 @Standard{Britannica-Granite,
-  organization = {Encyclopædia Britannica},
+  organization = {Encyclop{æ}dia Britannica},
   title        = {Granite},
   author       = {{Encyclopædia Britannica}},
   language     = {English},
@@ -45,7 +45,7 @@
 }
 
 @Standard{Britannica-Granodiorite,
-  organization = {Encyclopædia Britannica},
+  organization = {Encyclop{æ}dia Britannica},
   title        = {Granodiorite},
   author       = {{Encyclopædia Britannica}},
   language     = {English},
@@ -57,7 +57,7 @@
 }
 
 @Standard{Britannica-Gabbro,
-  organization = {Encyclopædia Britannica},
+  organization = {Encyclop{æ}dia Britannica},
   title        = {Gabbro},
   author       = {{Encyclopædia Britannica}},
   language     = {English},
@@ -69,7 +69,7 @@
 }
 
 @Standard{Britannica-Diorite,
-  organization = {Encyclopædia Britannica},
+  organization = {Encyclop{æ}dia Britannica},
   title        = {Diorite},
   author       = {{Encyclopædia Britannica}},
   language     = {English},
@@ -410,11 +410,135 @@
   groups       = {2.1 Underpinnings of our Approach},
 }
 
+@Article{Ahsan2013,
+  author    = {Amin Mohamed Ahsan and Dzulkifli Bin Mohamad},
+  journal   = {{TELKOMNIKA} Indonesian Journal of Electrical Engineering},
+  title     = {Features {Extraction for Object Detection Based on Interest Point}},
+  year      = {2013},
+  month     = {may},
+  number    = {5},
+  volume    = {11},
+  doi       = {10.11591/telkomnika.v11i5.2508},
+  groups    = {2.2 Related work},
+  publisher = {Institute of Advanced Engineering and Science},
+}
+
+@Article{Shoji2018,
+  author    = {Daigo Shoji and Rina Noguchi and Shizuka Otsuki and Hideitsu Hino},
+  journal   = {Scientific Reports},
+  title     = {Classification of volcanic ash particles using a convolutional neural network and probability},
+  year      = {2018},
+  month     = {may},
+  number    = {1},
+  volume    = {8},
+  doi       = {10.1038/s41598-018-26200-2},
+  groups    = {2.2 Related work},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Misc{Szummer,
+  author = {M. Szummer and R. W. Picard},
+  title  = {Indoor-outdoor image classification},
+  doi    = {10.1109/caivd.1998.646032},
+  groups = {2.2 Related work},
+}
+
+@Article{Maitre2019,
+  author    = {Julien Maitre and K{\'{e}}vin Bouchard and L. Paul B{\'{e}}dard},
+  journal   = {Computers {\&} Geosciences},
+  title     = {Mineral grains recognition using computer vision and machine learning},
+  year      = {2019},
+  month     = {sep},
+  pages     = {84--93},
+  volume    = {130},
+  doi       = {10.1016/j.cageo.2019.05.009},
+  groups    = {2.2 Related work},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Cate2018,
+  author    = {Antoine Cat{\'{e}} and Ernst Schetselaar and Patrick Mercier-Langevin and Pierre-Simon Ross},
+  journal   = {Journal of Geochemical Exploration},
+  title     = {Classification of lithostratigraphic and alteration units from drillhole lithogeochemical data using machine learning: A case study from the {L}alor volcanogenic massive sulphide deposit, {Snow Lake, Manitoba, Canada}},
+  year      = {2018},
+  month     = may,
+  pages     = {216--228},
+  volume    = {188},
+  doi       = {10.1016/j.gexplo.2018.01.019},
+  groups    = {2.2 Related work},
+  publisher = {Elsevier {BV}},
+}
+
+@InCollection{Lary2018,
+  author    = {David J. Lary and Gebreab K. Zewdie and Xun Liu and Daji Wu and Estelle Levetin and Rebecca J. Allee and Nabin Malakar and Annette Walker and Hamse Mussa and Antonio Mannino and Dirk Aurin},
+  booktitle = {Earth Observation Open Science and Innovation},
+  publisher = {Springer International Publishing},
+  title     = {Machine {Learning Applications for Earth Observation}},
+  year      = {2018},
+  address   = {Cham},
+  editor    = {Mathieu, Pierre-Philippeand Aubrecht, Christoph},
+  isbn      = {978-3-319-65633-5},
+  pages     = {165--218},
+  abstract  = {Machine learning has found many applications in remote sensing. These applications range from retrieval algorithms to bias correction, from code acceleration to detection of disease in crops, from classification of pelagic habitats to rock type classification. As a broad subfield of artificial intelligence, machine learning is concerned with algorithms and techniques that allow computers to ``learn'' by example. The major focus of machine learning is to extract information from data automatically by computational and statistical methods. Over the last decade there has been considerable progress in developing a machine learning methodology for a variety of Earth Science applications involving trace gases, retrievals, aerosol products, land surface products, vegetation indices, and most recently, ocean applications. In this chapter, we will review some examples of how machine learning has already been useful for remote sensing and some likely future applications.},
+  doi       = {10.1007/978-3-319-65633-5_8},
+  groups    = {2.2 Related work},
+  url       = {https://doi.org/10.1007/978-3-319-65633-5_8},
+}
+
+@Article{Hasterok2019,
+  author    = {Hasterok, Derrick and Gard, Matthew and Bishop, Caleb and Kelsey, D.},
+  journal   = {Computers {\&} Geosciences},
+  title     = {Chemical identification of metamorphic protoliths using machine learning methods},
+  year      = {2019},
+  month     = {nov},
+  pages     = {56--68},
+  volume    = {132},
+  doi       = {10.1016/j.cageo.2019.07.004},
+  groups    = {2.2 Related work},
+  publisher = {Elsevier {BV}},
+}
+
+@InProceedings{Li2015,
+  author    = {Zhengqin Li and Jiansheng Chen},
+  booktitle = {2015 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+  title     = {Superpixel segmentation using {Linear Spectral Clustering}},
+  year      = {2015},
+  month     = {jun},
+  publisher = {{IEEE}},
+  doi       = {10.1109/cvpr.2015.7298741},
+  groups    = {2.2 Related work},
+}
+
+@InProceedings{Kavitha2016,
+  author    = {Jc Kavitha and A. Suruliandi},
+  booktitle = {2016 International Conference on Computing Technologies and Intelligent Data Engineering ({ICCTIDE}{\textquotesingle}16)},
+  title     = {Texture and color feature extraction for classification of melanoma using {SVM}},
+  year      = {2016},
+  month     = {jan},
+  publisher = {{IEEE}},
+  doi       = {10.1109/icctide.2016.7725347},
+  groups    = {2.2 Related work},
+}
+
+@Article{S.Patil2012,
+  author    = {Sandip S.Patil and Atul V. Dusane},
+  journal   = {International Journal of Computer Applications},
+  title     = {{Use of Color Feature Extraction Technique based on Color Distribution and Relevance Feedback for Content based Image Retrieval}},
+  year      = {2012},
+  month     = {aug},
+  number    = {17},
+  pages     = {9--12},
+  volume    = {52},
+  doi       = {10.5120/8293-1789},
+  groups    = {2.2 Related work},
+  publisher = {Foundation of Computer Science},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:
 0 AllEntriesGroup:;
-1 StaticGroup:1 Introduction\;0\;1\;0xb3b31aff\;\;Background, problem statement and justification\;;
+1 StaticGroup:1 Introduction\;0\;0\;0xb3b31aff\;\;Background, problem statement and justification\;;
 1 StaticGroup:2.1 Underpinnings of our Approach\;2\;1\;0x800080ff\;\;Concepts\;;
 1 StaticGroup:2.2 Related work\;0\;1\;0xff0000ff\;\;Similar articles\;;
 }

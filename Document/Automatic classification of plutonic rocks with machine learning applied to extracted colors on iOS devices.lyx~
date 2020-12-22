@@ -335,25 +335,26 @@ begin{titlepage}
 \end_layout
 
 \begin_layout Abstract
-The classification of the many types of different igneous rocks can provide
- us with important information about the conditions under they were formed.
- However, igneous rock classification equipment is very expensive and time
- consuming, in addition, it is necesssary to have a great knowledge about
- the properties of rocks to classify them which makes it difficult for amateurs.
- A mobile application for rock classification offers the flexibility to
- carry out the classification of rocks on real time with no need of having
- a wide knowledge on the field.
+The classification of different igneous rocks can provide us with important
+ information about the conditions under they formed and the tectonic environment.
+ Color is a key property for rock classification, however, it is difficult
+ to describe because a color may be named differently by different persons.
+ Igneous rock classification equipment is very expensive and time consuming,
+ in addition, it is necesssary to have a great knowledge about the rocks
+ to classify them which makes it difficult for amateurs.
+ A mobile application offers the flexibility to carry out the classification
+ of rocks on real time with no need of having a wide knowledge on the field.
  There are two main contributions of this project.
  The first one is an iOS application that uses machine learning to classify
  rocks.
- In order to use the best suited algorithm in the application, the effectiveness
- of the Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
- Vector Machine, and Convolutional Neural Network algorithms is compared.
+ In order to use the best suited machine learning algorithm in the application,
+ the effectiveness of the Logistic Regression, K-Nearest Neighbors, Decision
+ Trees, Support Vector Machine, and Convolutional Neural Network algorithms
+ is compared.
  The training of machine learning algorithms can involve a lot of computational
  processing and time due to the large amount of features that an image posses,
- for that reason the second contribution is to reduce the number of image
- features extracting just the four main colors from rock images to train
- the algorithms.
+ for that reason the second contribution is to reduce the number of features
+ in rock images extracting just the four main colors to train the algorithms.
  To this end, the k-means clustering method was used.
  The evaluation results of the algorithms are the following: for Logistic
  Regression 29% of accuracy, 84% of precision, 89% of recall, and 83% of
@@ -367,10 +368,10 @@ The classification of the many types of different igneous rocks can provide
 \end_layout
 
 \begin_layout Keywords
-Machine Learning, Color Extraction, iOS Devices, Rock Classification, Features
- Reduction, Dominant Colors, K-means Clustering, Logistic Regression, K-Nearest
- Neighbors, Support Vector Machine, Convolutional Neural Network, Decision
- Trees.
+Machine Learning, Color Extraction, iOS Devices, Geology, Rock Classification,
+ Features Reduction, Dominant Colors, K-means Clustering, Logistic Regression,
+ K-Nearest Neighbors, Support Vector Machine, Convolutional Neural Network,
+ Decision Trees.
 \end_layout
 
 \begin_layout Standard
@@ -783,7 +784,7 @@ status collapsed
 \begin_inset Graphics
 	filename Images/Map of concepts.png
 	lyxscale 20
-	width 9cm
+	width 100col%
 
 \end_inset
 
@@ -1112,8 +1113,8 @@ Dominant colors
 The dominant colors refers to the principal colors presented in an image.
  This colors are selected grouping the image pixels in a certain number
  of groups according to their color.
- The average color of each group and the percentage of pixels in them are
- the dominant colors and dominant colors´ percentages.
+ The average color of each group are the dominant colors and the number
+ of pixels in each group are the dominant colors´ percentage.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1244,148 +1245,230 @@ Related Work
 \end_layout
 
 \begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Szummer"
-literal "false"
+Below are described some project examples related with the topics presented
+ in this work.
+\end_layout
 
-\end_inset
-
- it is studied histograms in the Ohta color space analyzed with si- multaneous
- autoregressive models.
- This method results in 90% correct classification when evaluated on a diverse
- database of over 1300 images.
- Their porpouse is to determine wheter a picture is depicted on indoor and
- outdoor scene.
- Extraction features play important role to detect the object correctly.
+\begin_layout Subsubsection
+Machine learning in geoscience
 \end_layout
 
 \begin_layout Standard
-In 
+Over the last decade, there has been considerable progress in developing
+ methodologies based in machine learning for many of Earth Science applications
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Ahsan2013"
+key "Lary2018"
 literal "false"
 
 \end_inset
 
- a method is presented to extract local features based on interest point
- which is used to detect key-points within an image, then, compute histogram
- of gradient (HOG) for the region surround that point.
- Proposed method used speed-up robust feature (SURF) method as interest
- point detector and exclude the descriptor.
- The new descriptor is computed by using HOG method.
- The proposed method got advantages of both mentioned methods.
- To evaluate the proposed method, we used well-known dataset which is Caltech101.
- The initial result is encouraging in spite of using a small data for training.
-\end_layout
-
-\begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/S259019741930018"
-literal "false"
-
-\end_inset
-
-] it is explored three different machine learning approaches: Deep learning,
- traditional machine learning using hand-crafted features and traditional
- machine learning using hand-crafted and deep learning features.
- Thorough investigation of state- of-the-art machine learning techniques
- together with feature engineering, it is achieved 92% for the F1-score
- when deep learning and classical texture features are combined.
+.
+ The following articles apply machine learning to resolve geoscience problems
+ with images and geochemical data.
 \end_layout
 
 \begin_layout Standard
 In 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Shoji2018"
+key "Maitre2019"
 literal "false"
 
 \end_inset
 
-, it is applied a convolutional neural network (CNN) for the classification
- of volcanic ash.
- The authors defined four basal particle shapes (blocky, vesicular, elongated,
- rounded) generated by different eruption mechanisms (e.g., brittle fragmentation)
-, and then trained the CNN using particles composed of only one basal shape.
- The CNN could recognize the basal shapes with over 90% accuracy.
+, Maitre et al.
+ worked on the automated recognition of mineral grains based on machine
+ learning algorithms.
+ They used labeled data of different species of mineral grains (plagioclase,
+ augite, background, hypersthene, ilmenite, magnetite, titanite, hornblende)
+ to train the supervised algorithms of K-Nearest Neighbors (KNN), Random
+ Forest (RF), and Classification and Regression Trees (CART).
+ They reached efficient results with machine learning approach and also
+ compared them with Optical Microscopy and automated Scanning Electron Microscop
+y approaches.
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+To illustrate the power of multivariate classification with machine learning
+ methods applied on geochemical data, 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cate2018"
 literal "false"
 
 \end_inset
 
-] machine learning technique is used to automate mineral grains recognition
- from numerical images obtained with a simple optical microscope.
- They used the generation of superpixels to extract features related to
- a sand grain.
- It is present a comparison of performances of several algorithms.
- The overall obtained results are approximately 90%.
+ studies drillhole geochemical data from altered volcanic rocks (extrusive
+ igneous rocks) hosting the volcanogenic massive sulphide (VMS) Lalor deposit
+ in the Snow Lake area in Manitoba, Canada.
+ They tested the machine learning algortihms of K-Nearest Neighbors, Gaussian
+ naïve Bayesian, Support Vector Machine, Random Forest, Gradient Tree Boosting
+ in different sets of the geochemical variables to classify the volcanic
+ rocks units and their alteration type.
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hasterok2019"
 literal "false"
 
 \end_inset
 
-] machine learning technique is used to automate mineral grains recognition
- from numerical images obtained with a simple optical microscope.
- They used the generation of superpixels to extract features related to
- a sand grain.
- It is present a comparison of performances of several algorithms.
- The overall obtained results are approximately 90%.
+, the authors survey the eﬃcacy of several machine learning techniques to
+ predict the protolith class (igneous or sedimentary) for whole rock geochemical
+ analyses using 9 major oxides (SiO
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+, TiO
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+, Al
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+O
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+, FeO
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+
+\shape italic
+T
+\end_layout
+
+\end_inset
+
+, MgO, CaO, Na
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+O, K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+O, P
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+O
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+).
+ They compared the results with the obtained on chemical scatter plots.
+\end_layout
+
+\begin_layout Subsubsection
+Feature extraction from images used in machine learning
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
-literal "false"
-
-\end_inset
-
-] machine learning technique is used to automate mineral grains recognition
- from numerical images obtained with a simple optical microscope.
- They used the generation of superpixels to extract features related to
- a sand grain.
- It is present a comparison of performances of several algorithms.
- The overall obtained results are approximately 90%.
+The following articles show that the extraction of features play an important
+ role to detect objects with machine learning.
 \end_layout
 
 \begin_layout Standard
-In [
-\begin_inset CommandInset href
-LatexCommand href
-name "link"
-target "https://www.sciencedirect.com/science/article/pii/S009830041930103"
+Also in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Maitre2019"
 literal "false"
 
 \end_inset
 
-] machine learning technique is used to automate mineral grains recognition
- from numerical images obtained with a simple optical microscope.
- They used the generation of superpixels to extract features related to
- a sand grain.
- It is present a comparison of performances of several algorithms.
- The overall obtained results are approximately 90%.
+, the authors utilize feature extraction from superpixels to decrease the
+ complexity of image processing tasks before train the machine learning
+ algorithms.
+ The initial idea of this method is described in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Li2015"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The purpose in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kavitha2016"
+literal "false"
+
+\end_inset
+
+, is to classify dermoscopy images into melanoma and non-melanoma by considering
+ the texture and color features of an image.
+ Color histograms are used to extract the color features in three color
+ spaces namely RGB, HSV and OPP.
+ Support vector machine (SVM) is used for the process of classification.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "S.Patil2012"
+literal "false"
+
+\end_inset
+
+, the color feature extraction technique that considers the image color
+ distribution is used on a content-based image retrieval system (CBIR) to
+ search for digital images in a large dataset.
+ For the color feature extraction process they use the clustering method,
+ where fixed number of clusters and variable number of clusters are formed.
 \end_layout
 
 \begin_layout Section
@@ -1787,7 +1870,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Results of Logistic Regression
+Results of the algorithms in terms of accuracy
 \end_layout
 
 \end_inset
@@ -2951,17 +3034,6 @@ end{tabular}
 
 \end_layout
 
-\begin_layout Subsubsection
-Creation of iOS application for rock classification
-\end_layout
-
-\begin_layout Standard
-To develope this application it was used a pod from Tensorflow Lite from
- Tensorflow to read the tflite file of the exported model and the DominantColor
- pod from Indragie Karunaratne for dominant color extraction in Swift 5.0
- that implements K-means algorithm.
-\end_layout
-
 \begin_layout Standard
 Evaluating a model is a core part of building an effective machine learning
  project.
@@ -3004,6 +3076,17 @@ F1-score It is used to measure a test’s accuracy, the Harmonic Mean between
  number of instances).
  The greater the F1 Score, the better is the performance of our model.
  
+\end_layout
+
+\begin_layout Subsubsection
+Creation of iOS application for rock classification
+\end_layout
+
+\begin_layout Standard
+To develope this application it was used a pod from Tensorflow Lite from
+ Tensorflow to read the tflite file of the exported model and the DominantColor
+ pod from Indragie Karunaratne for dominant color extraction in Swift 5.0
+ that implements K-means algorithm.
 \end_layout
 
 \begin_layout Subsection
