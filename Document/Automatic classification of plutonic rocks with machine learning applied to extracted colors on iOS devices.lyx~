@@ -1126,11 +1126,11 @@ Tensorflow
 
 \begin_layout Standard
 TensorFlow
-\begin_inset Index idx
+\begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-TensorFlow
+https://www.tensorflow.org
 \end_layout
 
 \end_inset
@@ -1156,8 +1156,18 @@ Tensorflow Lite
 \end_layout
 
 \begin_layout Standard
-TensorFlow Lite is a set of tools to help developers run TensorFlow models
- on mobile, embedded, and IoT devices.
+TensorFlow Lite
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.tensorflow.org/lite
+\end_layout
+
+\end_inset
+
+ is a set of tools to help developers run TensorFlow models on mobile, embedded,
+ and IoT devices.
  It enables on-device machine learning inference with low latency and a
  small binary size 
 \begin_inset CommandInset citation
@@ -1191,7 +1201,17 @@ Swift
 \end_layout
 
 \begin_layout Standard
-Swift is an open source programming language designed for macOS, iOS, watchOS,
+Swift
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://swift.org
+\end_layout
+
+\end_inset
+
+ is an open source programming language designed for macOS, iOS, watchOS,
  tvOS and beyond.
  Swift already supports all Apple platforms and Linux, with community members
  actively working to port to even more platforms 
@@ -1224,7 +1244,17 @@ Xcode
 \end_layout
 
 \begin_layout Standard
-A long-standing tool for app production, Xcode is a well-known integrated
+Xcode
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://developer.apple.com/xcode/
+\end_layout
+
+\end_inset
+
+ is a long-standing tool for app production and a well-known integrated
  development environment (IDE), enabling developers to write the code and
  compile apps that can be used on a variety of different devices and operating
  systems 
@@ -1498,8 +1528,8 @@ Data description
 \end_layout
 
 \begin_layout Standard
-The original images were provided by the Loma Linda University.
- There were selected four classes of plutonics rocks from it.
+The original images were provided by the Loma Linda University and were
+ selected four classes of plutonics rocks from it.
  That classes were granite, granodiorite, gabbro, and diorite with a total
  of 81 images.
  Table 1 shows the number of images per class.
@@ -1689,7 +1719,17 @@ end{tabular}
 \end_layout
 
 \begin_layout Standard
-The images used in the following experiments are available online.
+The images used in the following experiments are available online
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/sarah-hs/Proyecto-de-Investigacion/tree/main/Rock-images
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3138,6 +3178,39 @@ Results
 Here are covered the results of the color extraction step presented in this
  paper and the creation of the iOS mobile application with the implementation
  of the best algorithm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dominant colors and average colors of sample images
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
