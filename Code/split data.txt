@@ -1,0 +1,10 @@
+import numpy as np
+data = np.loadtxt(CSV_FILE, delimiter=",")
+
+x = data[:, :-1]
+y = data[:, -1]
+
+# Val = 20%, test = 16%, train = 64%
+from sklearn.model_selection import train_test_split as splitter
+xtt, xval, ytt, yval = splitter(x,y,train_size=0.8,random_state=42)
+xtrain, xtest, ytrain, ytest = splitter(xtt,ytt,train_size=0.8,random_state=42)

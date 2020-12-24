@@ -1,0 +1,5 @@
+from sklearn.preprocessing import MinMaxScaler
+
+normalizer = MinMaxScaler()
+xtrainNorm = normalizer.fit_transform(xtrain)
+xtestNorm = normalizer.fit_transform(xtest)

@@ -1,0 +1,17 @@
+def load_images_from_directory(path, size):
+    paths = os.listdir(path)
+    x = []; y = []; files = [];
+    for folder in paths:
+        if(os.path.isfile(folder)):
+            print(folder, 'removed')
+            continue
+        images, filenames = load_images_from_folder(os.path.join(path, folder), size)
+        lbls = list(repeat(folder, len(images)))
+        x.extend(images)
+        y.extend(lbls)
+        files.extend(filenames)
+    return (x, y, files)
+
+IMG_PATH = '../Rock images/train'
+IMG_SIZE = (512, 512)
+x, y, files = load_images_from_directory(IMG_PATH, IMG_SIZE)
