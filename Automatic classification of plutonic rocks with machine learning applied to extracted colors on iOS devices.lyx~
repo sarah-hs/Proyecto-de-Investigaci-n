@@ -3689,7 +3689,7 @@ As shown in listing 9...
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/ImageClassifier.txt"
-lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,inputencoding={latin1},caption={ImageClassifier.swift},label={Image Classifier}"
+lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,inputencoding={latin9},caption={ImageClassifier.swift},label={Image Classifier}"
 
 \end_inset
 
