@@ -12,6 +12,11 @@
 \usepackage[caption=false,font=footnotesize]{subfig}
 \usepackage{diagbox}
 \usepackage{array}
+\usepackage{listings}
+\lstdefinelanguage{Swift}{language=bash,morekeywords={fix},}
+\usepackage{color}
+\definecolor{lightgray}{RGB}{248,248,248}
+\definecolor{darkgray}{RGB}{128,128,128}
 \end_preamble
 \options journal
 \use_default_options false
@@ -20,7 +25,7 @@ graphicboxes
 \end_modules
 \maintain_unincluded_children false
 \language english
-\language_package none
+\language_package default
 \inputencoding ascii
 \fontencoding global
 \font_roman "default" "default"
@@ -95,6 +100,7 @@ graphicboxes
 \papercolumns 2
 \papersides 1
 \paperpagestyle default
+\listings_params "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\scriptsize\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\scriptsize\ttfamily},xleftmargin={0.7cm},framexleftmargin={0.7em},numbersep=8pt,tabsize=3,backgroundcolor={\color{lightgray}},commentstyle={\color{darkgray}}"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -1796,7 +1802,7 @@ load_images_from_folder
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/load images from folder.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to load images from a folder},label={load images from folder}"
+lstparams "language=Python,caption={Function to load images from a folder},label={load images from folder}"
 
 \end_inset
 
@@ -1838,7 +1844,7 @@ Finally, in line 17, the rock images in the folder declared in line 15 are
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/load images from directory.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to load images from a directory},label={load images from directory}"
+lstparams "language=Python,caption={Function to load images from a directory},label={load images from directory}"
 
 \end_inset
 
@@ -1884,7 +1890,7 @@ In lines 11 to 16 the score obtained with each number of cluster is plotted
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/elbow method.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Determining the best number of clusters with the Elbow method},label={elbow method}"
+lstparams "language=Python,caption={Determining the best number of clusters with the Elbow method},label={elbow method}"
 
 \end_inset
 
@@ -1969,14 +1975,16 @@ The percentage of a cluster calculated in lines 8 to 10 is the number of
 \begin_layout Standard
 From lines 14 to 18 the center color in each cluster and its percentage
  is added to the features list that returns, in line 20, sixteen elements:
- the four main colors in RGB (red, color and green) format and their percentage.
+ the four main colors in RGB (red, color and green) format and their percentage
+ (see Fig.
+ 3).
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/get dominant colors.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Function to extract the dominant colors from a single image},label={get dominant colors}"
+lstparams "language=Python,caption={Function to extract the dominant colors from a single image},label={get dominant colors}"
 
 \end_inset
 
@@ -1993,18 +2001,40 @@ get_dominant_colors
 \begin_inset Quotes erd
 \end_inset
 
- function (see Fig.
- 3).
- These colors are added to a new array that, in line 6, is saved together
- with the rock labels in a CSV file used to train the algorithms of the
- next step.
+ function of listing 4.
+ These colors are added to a new array called 
+\begin_inset Quotes eld
+\end_inset
+
+extracted_colors
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In line 6, the extracted colors are saved together with their respective
+ rock label in a CSV file.
+ This file is used in the next step to train the machine learning algorithms.
+ The CSV is available online
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/sarah-hs/Color-extraction/blob/main/colors.csv
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/Iterate in data to extract colors.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Iterate original data to extract dominant colors},label={Iterate in data to extract colors}"
+lstparams "language=Python,caption={Iterate original data to extract dominant colors},label={Iterate in data to extract colors}"
 
 \end_inset
 
@@ -2022,7 +2052,7 @@ status collapsed
 \begin_inset Graphics
 	filename Images/Color extraction.png
 	lyxscale 30
-	width 90col%
+	width 87col%
 
 \end_inset
 
@@ -2058,12 +2088,23 @@ Training of the different algorithms
 Five machine learning algortihms were trained for this experiment.
  They are Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
  Vector Machines, and a Convolutional Neural Network.
+ The notebook is also available online
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 First, in listing 6, the main dominant colors data is loaded from the CSV
- file of the previous step into Numpy arrays and splitted into train, test
- and validation sets.
+ file of the previous step into x and y Numpy arrays and splitted into train,
+ test and validation sets.
 \end_layout
 
 \begin_layout Standard
@@ -2088,34 +2129,10 @@ At the end it was obtained the three sets with 20% for validation, 16% for
 \end_layout
 
 \begin_layout Standard
-The notebook and the CSV file are also available online
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://github.com/sarah-hs/Color-extraction/blob/main/colors.csv
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/split data.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Splitting the data in train and test},label={split data in test and train}"
+lstparams "language=Python,caption={Splitting the data in train and test},label={split data in test and train}"
 
 \end_inset
 
@@ -2209,7 +2226,7 @@ ytrain
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/train models.txt"
-lstparams "language=Python,breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={Normalizing data and training models},label={train models}"
+lstparams "language=Python,caption={Normalizing data and training models},label={train models}"
 
 \end_inset
 
@@ -2292,7 +2309,8 @@ The greater the F1-score, the better is the performance of our model.
 \end_layout
 
 \begin_layout Standard
-Table 2 shows the accuracy of all the trained algorithms.
+Table 2 shows the accuracy of all the trained algorithms evaluated with
+ the test set of the previous step.
 \end_layout
 
 \begin_layout Standard
@@ -3481,7 +3499,7 @@ Results
 \begin_layout Standard
 Here is covered the creation process of the iOS mobile application for rock
  classification with dominant colors.
- The source code of the application is available online
+ The source code is available online
 \begin_inset Foot
 status collapsed
 
@@ -3496,8 +3514,8 @@ https://github.com/sarah-hs/Rock-Classifer-iOS
 
 \begin_layout Standard
 The interface of the application is very easy.
- The user just need to take a picture of an image or select one from the
- photo library and see its dominant colors and average color (see Fig.
+ The user just need to take a picture of a rock or select one from the photo
+ library and see its dominant colors and average color (see Fig.
  4).
 \end_layout
 
@@ -3543,7 +3561,7 @@ It is worth mentioning that once an image has been loaded, the user can
 \end_layout
 
 \begin_layout Standard
-Once the image was loaded the user will press the classify button and the
+When the image is loaded, the user can press the classify button and the
  results of granite, granodiorite, gabbro and diorite will be displayed
  (see Fig.
  5).
@@ -3585,6 +3603,50 @@ Results displayed
 \end_layout
 
 \begin_layout Standard
+Next is the application's workflow (see Fig.
+ 6).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Elbow curve 1.png
+	lyxscale 20
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Workflow of the mobile application for rock classification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 As it is shown in the 
 \begin_inset Quotes eld
 \end_inset
@@ -3599,27 +3661,27 @@ evaluation of the algorithms
 \end_layout
 
 \begin_layout Standard
-To develope the iOS application it was used the TensorflowLite pod from
- Tensorflow and the DominantColor pod from Indragie Karunaratne.
- 
+To develope the iOS application were used the following pod dependencies:
+\end_layout
+
+\begin_layout Itemize
+The TensorFlowLite pod from Tensorflow is a dependency that allows to read
+ an exported machine learning model from a 'tflite' file when the application
+ starts.
+ This way, the model can be used for classification.
+\end_layout
+
+\begin_layout Itemize
+An adaptation of the DominantColor pod from Indragie Karunaratne.
+ This dependency implements K-means algorithm to extract the dominant colors
+ of new images in real-time with Swift, the language to develope iOS and
+ macOS applications.
+ It allows the exported model to classify rocks with the dominant colors.
 \end_layout
 
 \begin_layout Standard
-The TensorFlowLite pod is a dependency that allows to read an exported machine
- learning model from a 'tflite' file when an application starts.
-\end_layout
-
-\begin_layout Standard
-When new images are taken within the application it is necessary to extract
- their dominant colors to classify them.
- The DominantColor pod implements K-means algorithm to extract the dominant
- colors of new images in real-time with Swift, the language to develope
- iOS and macOS applications.
-\end_layout
-
-\begin_layout Standard
-The application works the classification with the following main Swift files:
- ViewController.swift
+The application works the classification with three main Swift files: ViewContro
+ller.swift
 \begin_inset Foot
 status collapsed
 
@@ -3650,7 +3712,7 @@ http://bit.ly/3n06YDy
 \end_inset
 
 .
- Below are described each of these files.
+ The following describes each of them.
 \end_layout
 
 \begin_layout Paragraph
@@ -3658,19 +3720,19 @@ View controller
 \end_layout
 
 \begin_layout Standard
-This file is the link between the user view and the machine learning model.
+This file is the link between the user view and the ImageClassifier class.
 \end_layout
 
 \begin_layout Standard
-The following variables were used in the ImageClassifer class to load the
- model.
+The following variables were used in the ViewController visualize the image
+ and send it to the .
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/ViewController.txt"
-lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={ViewController.swift},label={View Controller}"
+lstparams "escapeinside={*}{*},language=bash,morekeywords={class, static, enum,typealias,private,var,guard,func,init,self,try,switch,fileprivate},keywordsprefix={@},caption={ViewController.swift},label={View Controller}"
 
 \end_inset
 
@@ -3689,7 +3751,7 @@ As shown in listing 9...
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/ImageClassifier.txt"
-lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={ImageClassifier.swift},label={Image Classifier}"
+lstparams "escapeinside={*}{*},language=bash,morekeywords={class, static, enum,typealias,private,var,guard,func,init,self,try,switch,fileprivate},keywordsprefix={@},caption={ImageClassifier.swift},label={Image Classifier}"
 
 \end_inset
 
@@ -3708,7 +3770,7 @@ HEre was used a function..
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/DominantColors.txt"
-lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={DominantColors.swift},label={Dominant Colors}"
+lstparams "escapeinside={*}{*},language=bash,morekeywords={class, static, enum,typealias,private,var,guard,func,init,self,try,switch,fileprivate},keywordsprefix={@},caption={DominantColors.swift},label={Dominant Colors}"
 
 \end_inset
 

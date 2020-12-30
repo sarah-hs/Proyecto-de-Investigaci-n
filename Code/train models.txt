@@ -1,25 +1,25 @@
-#   Logistic Regression
+#	Logistic Regression
 from sklearn.linear_model import LogisticRegression
 logReg = LogisticRegression()
 logReg.fit(xtrain, ytrain)
 
-#   K-Nearest Neighbors
+#	K-Nearest Neighbors
 from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(xtrain, ytrain)
 
-#   Decision Trees
+#	Decision Trees
 from sklearn.tree import DecisionTreeClassifier
 decisionTree = DecisionTreeClassifier(class_weight='balanced')
 decisionTree.fit(xtrain, ytrain)
 
-#   Support Vector Machines
+#	Support Vector Machines
 from sklearn.svm import SVC
 svmc = SVC()
 svmc.fit(xtrain, ytrain)
 
 
-# Convolutional Neural Network
+#	Convolutional Neural Network
 import tensorflow as tf
 from matplotlib import pyplot
 from tensorflow.keras.models import Sequential

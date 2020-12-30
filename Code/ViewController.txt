@@ -5,21 +5,22 @@ private var extractedImage: UIImage?
 private var averageImage: UIImage?
 
 @IBAction func classify(_ sender: Any) {
-    label_results.text = "Classifying..."
-    guard let classifier = self.classifier else { return }
-    guard targetImage != nil else {
-          label_results.text = "Invalid image."
-          return
-    }
-    self.extractedImage = self.targetImage?.getMainColors(size: imageView.frame.size)
-    self.averageImage = self.targetImage?.getAverageColor(size: imageView.frame.size)
+	label_results.text = "Classifying..."
+	guard let classifier = self.classifier else { return }
+	guard targetImage != nil else {
+		label_results.text = "Invalid image."
+		return
+	}
+	self.extractedImage = self.targetImage?.getMainColors(size: imageView.frame.size)
+	self.averageImage = self.targetImage?.getAverageColor(size: imageView.frame.size)
 
-    classifier.classify(image: targetImage!) { result in
-        switch result {
-            case let .success(classificationResult):
-                self.label_results.text = classificationResult
-            case .error(_):
-                self.label_results.text = "Failed to classify drawing."
-        }
-    }
+	classifier.classify(image: targetImage!) {
+		result in
+		switch result {
+			case let .success(classificationResult):
+				self.label_results.text = classificationResult
+			case .error(_):
+				self.label_results.text = "Failed to classify drawing."
+		}
+	}
 }
