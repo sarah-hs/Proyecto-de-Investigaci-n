@@ -2021,8 +2021,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename Images/Color extraction.png
-	lyxscale 10
-	width 110col%
+	lyxscale 30
+	width 90col%
 
 \end_inset
 
@@ -2292,7 +2292,7 @@ The greater the F1-score, the better is the performance of our model.
 \end_layout
 
 \begin_layout Standard
-Table 2 shows the accuracy of all the algorithms.
+Table 2 shows the accuracy of all the trained algorithms.
 \end_layout
 
 \begin_layout Standard
@@ -3479,9 +3479,8 @@ Results
 \end_layout
 
 \begin_layout Standard
-Here is covered the creation process of the iOS mobile application with
- the implementation of the best suited algorithm trained with the colors
- extracted from rock images.
+Here is covered the creation process of the iOS mobile application for rock
+ classification with dominant colors.
  The source code of the application is available online
 \begin_inset Foot
 status collapsed
@@ -3532,13 +3531,15 @@ User interface
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+It is worth mentioning that once an image has been loaded, the user can
+ access the visualization of the original image, the 4 dominant colors extracted
+, and the average color of the processed image.
 \end_layout
 
 \begin_layout Standard
@@ -3578,10 +3579,6 @@ Results displayed
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -3596,20 +3593,9 @@ evaluation of the algorithms
 \begin_inset Quotes erd
 \end_inset
 
- step from the methodology, the algorithm with the best results was K-Nearest
- Neighbors.
- In order to use this algorithm in the mobile application the steps described
- in the TensorFlow Lite guide
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://www.tensorflow.org/lite/guide/get_started
-\end_layout
-
-\end_inset
-
- were followed to convert and export the model to the '.tflite' file format.
+ step from methodology, the algorithm with the best evaluation results was
+ K-Nearest Neighbors.
+ It was the algorithm implemented in the mobile application.
 \end_layout
 
 \begin_layout Standard
@@ -3619,13 +3605,114 @@ To develope the iOS application it was used the TensorflowLite pod from
 \end_layout
 
 \begin_layout Standard
-The TensorFlowLite pod is a dependency that allows to read an exported model
- from a 'tflite' file.
- When new images are taken within the application it is necessary to extract
+The TensorFlowLite pod is a dependency that allows to read an exported machine
+ learning model from a 'tflite' file when an application starts.
+\end_layout
+
+\begin_layout Standard
+When new images are taken within the application it is necessary to extract
  their dominant colors to classify them.
  The DominantColor pod implements K-means algorithm to extract the dominant
  colors of new images in real-time with Swift, the language to develope
  iOS and macOS applications.
+\end_layout
+
+\begin_layout Standard
+The application works the classification with the following main Swift files:
+ ViewController.swift
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://bit.ly/2L5Xrxu
+\end_layout
+
+\end_inset
+
+, ImageClassifier.swift
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://bit.ly/3rCLWOR
+\end_layout
+
+\end_inset
+
+, and DominantColors.swift
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://bit.ly/3n06YDy
+\end_layout
+
+\end_inset
+
+.
+ Below are described each of these files.
+\end_layout
+
+\begin_layout Paragraph
+View controller
+\end_layout
+
+\begin_layout Standard
+This file is the link between the user view and the machine learning model.
+\end_layout
+
+\begin_layout Standard
+The following variables were used in the ImageClassifer class to load the
+ model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/ViewController.txt"
+lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={ViewController.swift},label={View Controller}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Image classifier
+\end_layout
+
+\begin_layout Standard
+As shown in listing 9...
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/ImageClassifier.txt"
+lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,inputencoding={latin1},caption={ImageClassifier.swift},label={Image Classifier}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Dominant colors
+\end_layout
+
+\begin_layout Standard
+HEre was used a function..
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/DominantColors.txt"
+lstparams "breaklines=true,captionpos=b,aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\\scriptsize\\ttfamily},breakatwhitespace=true,numbers=left,numberstyle={\\scriptsize\\ttfamily},xleftmargin={0.9cm},numbersep=8pt,caption={DominantColors.swift},label={Dominant Colors}"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
