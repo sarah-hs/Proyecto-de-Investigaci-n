@@ -872,8 +872,17 @@ Objectives
 
 \begin_layout Standard
 The main objective is to create an iOS application that uses machine learning
- to extract the dominant colors from images and classify with them plutonic
- rocks.
+ to extract the dominant colors from images and 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+use these colors to
+\end_layout
+
+\end_inset
+
+ classify plutonic rocks.
  This objective can be achieved with the following sub-objectives:
 \end_layout
 
@@ -883,6 +892,15 @@ Determine the best k number of clusters to use in the k-means clustering
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Este objetivo debe comenzar con un verbo en infinito 
+\end_layout
+
+\end_inset
+
 Extracted colors and their percentages will be used as an input to train
  the following machine learning algorithms: Logistic regression, K-Nearest
  Neighbors, Decision Trees, Support Vector Machine, and Convolutional Neural
@@ -897,10 +915,29 @@ Validate the algorithms to get the best suited algorithm for the mobile
 \begin_layout Itemize
 Test the effectiveness of the best algorithm with new color data from rock
  images.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Este objetivo no se entiende
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Implement the best suited machine learning algorithm in the iOS application.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Deploy the most suitable classification model in an iOS mobile device.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -913,6 +950,20 @@ It is possible to extract the dominant colors from rock images with the
  Also it is possible to train well a machine learning algorithm with just
  the extracted colors and classify with them new rock data into granite,
  granodiorite, gabbro, and diorite plutonic rock types.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Te invito a re-escribir esto.
+ La hipótesis tiene que ver con el entrenamiento de un modelo de machine
+ learning usando colores dominantes.
+ Ahora, esto es muy confuso.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -939,7 +990,7 @@ Our approach is based on the following concepts
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -972,7 +1023,17 @@ Plutonic rocks
 \end_layout
 
 \begin_layout Standard
-Also called intrusive rocks.
+Also called intrusive rocks 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Por fa utiliza aquí la definición que utilizamos con Elías
+\end_layout
+
+\end_inset
+
+.
  They have a coarse grained texture and form when magma is trapped deep
  inside the Earth.
  Some of the magma may feed volcanoes on the Earth's surface, but most remains
@@ -990,6 +1051,18 @@ literal "false"
 
 \begin_layout Standard
 This project analyze the following four types of plutonic rocks:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Aquí también utiliza las definiciones que utilizamos con Elías, no estas.
+ Las definiciones fueron validadas por el equipo de geólogos en LLU.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1113,11 +1186,10 @@ Supervised learning
 \end_layout
 
 \begin_layout Standard
-Are algorithms that consist in generate a function which maps input features
+Supervised learning algorithms generate a function which maps input features
  to desired output labels.
  Given a set of features the labels are to be predicted.
- An algorithm will be trained until it achieves a desired level of accuracy
- 
+ An algorithm is trained until it achieves a desired level of accuracy 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Vidhya-ML"
@@ -1126,6 +1198,19 @@ literal "false"
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Falta decir, a continuación se describen algunos algoritmos populares de
+ aprendizaje supervisado.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1211,6 +1296,20 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ojo, no uilices referencias de sitios web en las definiciones.
+ Para eso hay libros y artículos científicos.
+ Por fa ajusta y complementa esta parte con las definiciones que dio Oscar
+ en el documento que también estamos preparando.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1251,6 +1350,19 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esto no está bien: una viñeta suelta.
+ Por favor une las ideas entre párrafos.
+ Puedes decir que entre los diferentes algoritmos de clustering se encuentra
+ el K-means...
+ 
+\end_layout
+
+\end_inset
+
 K-means algorithm works by taking data points as input and grouping them
  into k clusters.
  This process of grouping is the training phase of the learning algorithm.
@@ -1276,7 +1388,18 @@ The dominant colors refers to the principal colors presented in an image.
  This colors are selected grouping the image pixels in a certain number
  of groups according to their color.
  The average color of each group are the dominant colors and the number
- of pixels in each group are the dominant colors´ percentage.
+ of pixels in each group are the dominant colors' percentage.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esta explicación está muy light.
+ ¿Qué decir de RGB, por ejemplo?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1337,10 +1460,6 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Paragraph
-Tensorflow Lite
-\end_layout
-
 \begin_layout Standard
 TensorFlow Lite
 \begin_inset Foot
@@ -1364,22 +1483,12 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-TensorFlow Lite consists of two main components:
-\end_layout
-
-\begin_layout Itemize
-The TensorFlow Lite interpreter, which runs specially optimized models on
- many different hardware types, including mobile phones, embedded Linux
- devices, and microcontrollers.
-\end_layout
-
-\begin_layout Itemize
-The TensorFlow Lite converter, which converts TensorFlow models into an
- efficient form for use by the interpreter, and can introduce optimizations
- to improve binary size and performance.
+ TensorFlow Lite consists of two main components: 1) The TensorFlow Lite
+ interpreter, which runs specially optimized models on many different hardware
+ types, including mobile phones, embedded Linux devices, and microcontrollers;
+ and 2) the TensorFlow Lite converter, which converts TensorFlow models
+ into an efficient form for use by the interpreter, and can introduce optimizati
+ons to improve binary size and performance.
 \end_layout
 
 \begin_layout Paragraph
@@ -1471,6 +1580,17 @@ Related Work
 \begin_layout Standard
 Below are described some project examples related with the topics presented
  in this work.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Project examples? Favor arreglar esta oración introductoria.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1631,17 +1751,32 @@ O
  They compared the results with the obtained on chemical scatter plots.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Creo que el único estudio que deberías dejar aquí es el de Maitre 2019.
+ Los demás no guardan una relación cercana con este trabajo.
+ Por favor también añade el siguiente trabajo: Ran, X., Xue, L., Zhang, Y.,
+ Liu, Z., Sang, X., He, J., 2019.
+ Rock classifi- cation from field image patches analyzed using a deep convolutio
+nal neural network.
+ Mathematics 7.
+ URL: https://www.mdpi.com/2227-7390/7/8/ 755, doi:10.3390/math7080755.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Feature extraction from images used in machine learning
 \end_layout
 
 \begin_layout Standard
-The following articles show that the extraction of features play an important
- role to detect objects with machine learning.
-\end_layout
-
-\begin_layout Standard
-Also in 
+In 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Maitre2019"
@@ -1649,9 +1784,8 @@ literal "false"
 
 \end_inset
 
-, the authors utilize feature extraction from superpixels to decrease the
- complexity of image processing tasks before train the machine learning
- algorithms.
+, the authors use feature extraction from superpixels to decrease the complexity
+ of image processing tasks before train the machine learning algorithms.
  The initial idea of this method is described in 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1696,6 +1830,25 @@ literal "false"
  where fixed number of clusters and variable number of clusters are formed.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Dos cosas: Primero, los resumenes de estos trabajos están muy pobres.
+ Favor decir más acerca de estos trabajos (mira como lo hicimos con Kevin,
+ Liza o Elías).
+ Segundo, al final es importante concluir con un párrafo que sirva para
+ mostrar las falencias de estos trabajos y por qué el presente trabajo es
+ importante para cubrir estas falencias.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Results
 \end_layout
@@ -1714,10 +1867,19 @@ Data description
 \end_layout
 
 \begin_layout Standard
-The original images were provided by the Loma Linda University and were
- selected four classes of plutonics rocks from it.
- That classes were granite, granodiorite, gabbro, and diorite with a total
- of 81 images.
+The original images were provided by the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Department of Earth and Biological Sciences, Loma Linda University
+\end_layout
+
+\end_inset
+
+.
+ The dataset contains images of four classes of plutonic rocks: granite,
+ granodiorite, gabbro, and diorite with a total of 81 images.
  The images used in the following experiments are available online
 \begin_inset Foot
 status collapsed
@@ -1729,18 +1891,14 @@ https://github.com/sarah-hs/Color-extraction/tree/main/Rock-images
 \end_inset
 
 .
- They are separated into subfolders depending on the class they belong to.
-\end_layout
-
-\begin_layout Standard
-Table 1 shows the number of images per class.
+ Table 1 shows the number of images per class.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
