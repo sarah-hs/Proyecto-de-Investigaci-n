@@ -1867,10 +1867,19 @@ Data description
 \end_layout
 
 \begin_layout Standard
-The original images were provided by the Loma Linda University and were
- selected four classes of plutonics rocks from it.
- That classes were granite, granodiorite, gabbro, and diorite with a total
- of 81 images.
+The original images were provided by the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Department of Earth and Biological Sciences, Loma Linda University
+\end_layout
+
+\end_inset
+
+.
+ The dataset contains images of four classes of plutonic rocks: granite,
+ granodiorite, gabbro, and diorite with a total of 81 images.
  The images used in the following experiments are available online
 \begin_inset Foot
 status collapsed
@@ -1882,18 +1891,14 @@ https://github.com/sarah-hs/Color-extraction/tree/main/Rock-images
 \end_inset
 
 .
- They are separated into subfolders depending on the class they belong to.
-\end_layout
-
-\begin_layout Standard
-Table 1 shows the number of images per class.
+ Table 1 shows the number of images per class.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
