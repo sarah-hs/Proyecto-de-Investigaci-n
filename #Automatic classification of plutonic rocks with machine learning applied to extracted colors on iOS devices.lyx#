@@ -801,10 +801,7 @@ status open
 Este es un buen argumento que se puede usar en la subsección anterior o
  aun en el abstract.
  Aquí está bien, pero no está hilado.
- Básicamente, debes conectar adecuadamente las oraciones y los párrafos.
- Ahora el documento se ve como que has puesto muchas ideas sueltas y ya.
- Ahora hay que conectarlas.
- 
+ Básicamente, debes conectar ade
 \end_layout
 
 \end_inset
@@ -819,18 +816,7 @@ Justification
 \begin_layout Standard
 A mobile application that uses machine learning for the automatic classification
  of plutonic rocks offers the flexibility to carry out the classification
- of rocks on real time 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Esta primera oración no es una justificación.
- Mira como lo hemos hecho con otros estudiantes
-\end_layout
-
-\end_inset
-
-.
+ of rocks on real time.
  Such solution could be an alternative to expensive traditional methods
  for rock classification and can be used by those who are beginning into
  the field of rocks.
@@ -841,20 +827,8 @@ Extracting color from rock images allows geologists to more accurately detect
  color changes in rocks.
  In addition, the machine learning algorithms used within the application
  can be trained with the extracted colors to reduce the number of features
- in the images and 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-consequently decrease the time and computational processing during training
- POR FA esto NO.
- De hecho, no queremos comparar si el tiempo de computación es menor.
- 
-\end_layout
-
-\end_inset
-
- 
+ in the images and consequently decrease the time and computational processing
+ during training 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Sen-2015"

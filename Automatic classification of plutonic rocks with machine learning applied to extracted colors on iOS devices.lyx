@@ -341,43 +341,135 @@ begin{titlepage}
 \end_layout
 
 \begin_layout Abstract
-The classification of different rocks can provide us with important information
+The classification of different rocks can provide important information
  about the conditions under they formed and the tectonic environment.
  Color is a key property for rock classification, however, it is difficult
- to describe because a color may be named differently by different persons.
- Rock classification equipment is very expensive and time consuming, in
- addition, it is necesssary to have a great knowledge about the rocks to
- classify them which makes it difficult for amateurs.
- A mobile application offers the flexibility to carry out the classification
- of rocks on real time with no need of having a wide knowledge on the field.
- There are two main contributions of this project.
- The first one is an iOS application that uses machine learning to classify
- plutonic rocks into granite, granodiorite, gabbro, and diorite types.
+ to describe because a color may be named differently by different persons
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No se entiende esta oración
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Moreover, 
+\end_layout
+
+\end_inset
+
+the equipment for rock classification is expensive, which makes this equipment
+ prohibitive to geology students and amateurs.
+ The contribution of this research work is twofold.
+ First, we present an iOS application that uses machine learning to classify
+ images of the following plutonic rocks: granite, granodiorite, gabbro,
+ and diorite.
  In order to use the best suited machine learning algorithm in the application,
  the effectiveness of the Logistic Regression, K-Nearest Neighbors, Decision
  Trees, Support Vector Machine, and Convolutional Neural Network algorithms
- is compared.
- The training of machine learning algorithms can involve a lot of computational
- processing and time due to the large amount of features that an image posses,
- for that reason the second contribution is to reduce the number of features
+ is compared 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esta oración no se entiende bien
+\end_layout
+
+\end_inset
+
+.
+ Second, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+since the training of machine learning algorithms can involve a lot of computati
+onal processing and time due to the large amount of features that an image
+ posses ESTA NO es una buena razón.
+ Recuerda que la razón consiste en centrarnos en clasificar de acuerdo al
+ color, que es una feature esencial de las plutonic rocks.
+ 
+\end_layout
+
+\end_inset
+
+, for that reason the second contribution is to reduce the number of features
  in rock images extracting just the four main colors to train the algorithms.
- To this end, the k-means clustering method was used.
- The evaluation results of the algorithms are the following: for Logistic
- Regression 29% of accuracy, 84% of precision, 89% of recall, and 83% of
- F1-score; for K-Nearest Neighbors 82% of accuracy, 84% of precision, 89%
- of recall, and 83% of F1-score; for Decision Trees 70% of accuracy, 82%
- of precision, 73% of recall, and 75% of F1-score; for Support Vector Machine
- 41% of accuracy, 33% of precision, 54% of recall, and 39% of F1-score;
- for Convolutional Neural Network 41% of accuracy, 20% of precision, 46%
- of recall, and 28% of F1-score.
- The best results were achieved with K-Nearest Neighbors algorithm.
+ To this end, the k-means clustering method was used 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+aquí es suficiente con hablar acerca de los resultados del mejor algoritmo
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Además, es MUY importante y NECESARIO mostrar aquí cuáles fueron los resultados
+ de la herramienta 
+\begin_inset Quotes eld
+\end_inset
+
+in the field
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Keywords
-Machine Learning, Color Extraction, iOS Devices, Geology, Rock Classification,
- Features Reduction, Dominant Colors, K-means Clustering, Logistic Regression,
- K-Nearest Neighbors, Support Vector Machine, Convolutional Neural Network,
- Decision Trees.
+Machine Learning, Color Extraction, iOS Devices, Rock Classification, Features
+ Reduction
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Mira que en el abstract no mencionas este término
+\end_layout
+
+\end_inset
+
+, Dominant Colors 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+tampoco este
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Creo que puedes mejorar mucho más el abstract.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -576,20 +668,7 @@ IEEEPARstart
 
  gneous rocks are one of the three main types of rocks in the world and
  also the most common.
- They have a wide variety of uses, one important use is as stone for buildings
- and statues 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "NGS-2019,Lumen-Schulte"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Plutonic rocks are a type of igneous rock formed when magma in the middle
+ Plutonic rocks are a type of igneous rock formed when magma in the middle
  of the volcano cools and solidifies below the Earth’s surface 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -602,10 +681,24 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The classification of different igneous rocks can provide us with important
- information about the conditions under which they formed.
- They can also tell us much about the tectonic environment, given that they
- are closely linked to the convection of tectonic plates.
+The classification of different igneous rocks
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+la redacción es confusa pues comenzaste hablando de plutonic rocks y luego
+ saltaste a igneous rocks.
+ Por fa hila bien estos conceptos.
+ Puedes ver el artículo con Elías para ver cómo los hilamos.
+ 
+\end_layout
+
+\end_inset
+
+ can provide us with important information about the conditions under which
+ they formed.
+ They can also tell about the tectonic environment, given that they are
+ closely linked to the convection of tectonic plates.
  Their mineral and chemical makeup can be used to learn about the composition,
  temperature and pressure that exists within the Earth’s mantle 
 \begin_inset CommandInset citation
@@ -652,6 +745,19 @@ literal "false"
 This research work uses machine learning to extract the main dominant colors
  from rock images and also classify with them new rocks into four types
  of plutonic rocks: granite, granodiorite, gabbro and diorite.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Las tres últimas oraciones están totalmente desconectadas.
+ Por favor conéctalas.
+ Por qué machine learning en esta investigación? Por qué se clasificará
+ únicamente en término de colores?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -660,9 +766,20 @@ Problem Statement
 
 \begin_layout Standard
 Igneous rock classification equipment is very expensive and time consuming,
- in addition, it is necesssary to have a great knowledge about the properties
+ in addition, it is necessary to have a great knowledge about the properties
  of rocks to classify them which makes it difficult for amateurs – people
  who are inexperienced in rocks.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Mira como lo escribí en el abstract y arréglalo.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -677,6 +794,22 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Este es un buen argumento que se puede usar en la subsección anterior o
+ aun en el abstract.
+ Aquí está bien, pero no está hilado.
+ Básicamente, debes conectar adecuadamente las oraciones y los párrafos.
+ Ahora el documento se ve como que has puesto muchas ideas sueltas y ya.
+ Ahora hay que conectarlas.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -686,7 +819,18 @@ Justification
 \begin_layout Standard
 A mobile application that uses machine learning for the automatic classification
  of plutonic rocks offers the flexibility to carry out the classification
- of rocks on real time.
+ of rocks on real time 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esta primera oración no es una justificación.
+ Mira como lo hemos hecho con otros estudiantes
+\end_layout
+
+\end_inset
+
+.
  Such solution could be an alternative to expensive traditional methods
  for rock classification and can be used by those who are beginning into
  the field of rocks.
@@ -697,8 +841,21 @@ Extracting color from rock images allows geologists to more accurately detect
  color changes in rocks.
  In addition, the machine learning algorithms used within the application
  can be trained with the extracted colors to reduce the number of features
- in the images and consequently decrease the time and computational processing
- during training 
+ in the images and 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+consequently decrease the time and computational processing during training
+ POR FA esto NO.
+ De hecho, no queremos comparar si el tiempo de computación es menor con
+ la nueva aproximación.
+ 
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Sen-2015"
