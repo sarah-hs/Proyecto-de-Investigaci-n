@@ -2084,7 +2084,17 @@ Data preparation
 \begin_layout Standard
 In this step the images were processed to extract the color values from
  image pixels.
- The notebook is available online
+ The notebook
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+with the source code
+\end_layout
+
+\end_inset
+
+ is available online
 \begin_inset Foot
 status collapsed
 
@@ -2095,10 +2105,7 @@ http://bit.ly/3pyh3JL
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-In listing 1, the 
+ In listing 1, the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2107,8 +2114,20 @@ load_images_from_folder
 \end_inset
 
  function showed in lines 6 to 18, is declared to process all the files
- with image extension ('.png', ’.jpg’, ’.jpeg’, ’.tiff’, ’.bmp’, ’.gif’) from
- a folder.
+ with image extension ('.png', ’.jpg’, ’.jpeg’, ’.tiff’, ’.bmp’, ’.gif’
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+esta explicación sobra pues solamente tienes un tipo de extensión en el
+ dataset.
+ Además, te invito a modificar el código para que solamente acepete pngs,
+ jpgs y pges
+\end_layout
+
+\end_inset
+
+) from a folder.
  It also crops the images to a given size as shown in line 13 because we
  need all images to be the same size to train the machine learning algorithms.
 \end_layout
@@ -2172,25 +2191,15 @@ Determining the best k number of clusters
 
 \begin_layout Standard
 The k-means algorithm was used to extract the dominant colors from the images.
- But fisrt of all, it was necessary to calculate the optimal number of clusters
- (groups of pixels with similar color) to use in the algorithm.
-\end_layout
-
-\begin_layout Standard
-In listing 3, the Elbow method is used for this purpose.
+ First, it was necessary to calculate the optimal number of clusters (groups
+ of pixels with similar color) to use in the algorithm.
+ In listing 3, the Elbow method is used for this purpose.
  This method consists of iterating in a range of possible cluster numbers
  to use in the k-means algorithm and determine the best number.
-\end_layout
-
-\begin_layout Standard
-In lines 4 to 9 it is iterated a cluster range between 2 and 20, at each
+ In lines 4 to 9 it is iterated a cluster range between 2 and 20, at each
  iteration k-means is trained with the image data declared in line 1 and
- one of the cluster numbers.
-\end_layout
-
-\begin_layout Standard
-In lines 11 to 16 the score obtained with each number of cluster is plotted
- 
+ one of the cluster numbers.In lines 11 to 16 the score obtained with each
+ number of cluster is plotted 
 \shape italic
 \emph on
 (see Fig.
@@ -2216,7 +2225,7 @@ lstparams "language=Python,caption={Determining the best number of clusters with
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2242,10 +2251,6 @@ The Elbow method showing the optimal k number of clusters
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2258,6 +2263,17 @@ Color extraction
 \begin_layout Standard
 Following is the process for extracting the dominant colors from the images
  processed in the data preparation step.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Favor arreglar la redacción de esta oración.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2273,22 +2289,13 @@ get_dominant_colors
  That function receives the pixel values of an image to train the k-means
  algorithm with 4 clusters, the number of clusters selected in the previous
  step.
-\end_layout
-
-\begin_layout Standard
-In line 6, k-means works by separating the pixels of that image into k groups
- (clusters) of similarly coloured pixels.
+ In line 6, k-means works by separating the pixels of that image into k
+ groups (clusters) of similarly coloured pixels.
  The colors at each cluster center reflect the average of the attributes
  of all members of a cluster.
-\end_layout
-
-\begin_layout Standard
-The percentage of a cluster calculated in lines 8 to 10 is the number of
+ The percentage of a cluster calculated in lines 8 to 10 is the number of
  pixels within that cluster.
-\end_layout
-
-\begin_layout Standard
-From lines 14 to 18 the center color in each cluster and its percentage
+ From lines 14 to 18 the center color in each cluster and its percentage
  is added to the features list that returns, in line 20, sixteen elements:
  the four main colors in RGB (red, color and green) format and their percentage
  (see Fig.
@@ -2326,10 +2333,7 @@ extracted_colors
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-In line 6, the extracted colors are saved together with their respective
+ In line 6, the extracted colors are saved together with their respective
  rock label in a CSV file.
  This file is used in the next step to train the machine learning algorithms.
  The CSV is available online
@@ -2400,10 +2404,31 @@ Training of the different algorithms
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Revisar la ortografía en todo el documento
+\end_layout
+
+\end_inset
+
 Five machine learning algortihms were trained for this experiment.
  They are Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
  Vector Machines, and a Convolutional Neural Network.
- The notebook is also available online
+ The notebook 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cuál notebook.
+ Favor ser siempre my explícita: el notebook que muestra el entrenamiento
+ y la validación...
+\end_layout
+
+\end_inset
+
+is also available online
 \begin_inset Foot
 status collapsed
 
@@ -2420,10 +2445,7 @@ https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
 First, in listing 6, the main dominant colors data is loaded from the CSV
  file of the previous step into x and y Numpy arrays and splitted into train,
  test and validation sets.
-\end_layout
-
-\begin_layout Standard
-From scikit learn the 
+ The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2431,16 +2453,13 @@ train_test_split
 \begin_inset Quotes erd
 \end_inset
 
- was used in line 9 to split the data and get a validation set with 20%
- of the data.
+ function was used in line 9 to split the data and get a validation set
+ with 20% of the data.
  In line 10, the other 80% of the split in line 9 was splitted again in
  20% for the test set and 80% for the train set.
-\end_layout
-
-\begin_layout Standard
-At the end it was obtained the three sets with 20% for validation, 16% for
- testing, and 64% for training from the total of the data.
- The train set will be used to train the algorithms.
+ Three sets were used in the experiments: 20% for validation, 16% for testing,
+ and 64% for training from the total of the data.
+ The train set was used to train the algorithms.
 \end_layout
 
 \begin_layout Standard
@@ -2455,12 +2474,9 @@ lstparams "language=Python,caption={Splitting the data in train and test},label=
 \end_layout
 
 \begin_layout Standard
-Below in listing 7, it is presents the training process and the paremeters
- used for each algorithm.
-\end_layout
-
-\begin_layout Standard
-Logistic Regression and Support Vector Machines were trained with the default
+Listing 7 presents the training process and the paremeters used for each
+ algorithm.
+ Logistic Regression and Support Vector Machines were trained with the default
  parameters presented in scikit learn
 \begin_inset Foot
 status collapsed
@@ -2482,6 +2498,24 @@ http://bit.ly/34R0NeM
 \end_inset
 
 , so there is no parameters in their declaration at lines 3 and 18.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No me gusta esto de decir que se usaron los 
+\begin_inset Quotes eld
+\end_inset
+
+default parameters
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2492,7 +2526,17 @@ As shown in line 8, K-Nearest-Neighbors was trained with 3 n_neighbors.
 
 \begin_layout Standard
 Decision Trees algorithm was trained in line 13 with the 'balanced' mode
- of class_weight.
+ of class_weight 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esto qué significa?
+\end_layout
+
+\end_inset
+
+.
  This mode uses the values of ytrain to automatically adjust the node weights
  inversely proportional to the class frequencies in the input data.
 \end_layout
@@ -2502,7 +2546,7 @@ The Convolutional Neural Network was build as shown in lines 29 to 37.
  It was used two convolutional layers of one dimension with 32 filters and
  a kernel size of 2x2 in lines 30 and 31, a dropout layer of 50% in line
  32, a one dimension max pooling layer of 2x2 in line 33, and two fully
- connected layers in lines 35 and 36 with 100 connections the fisrt layer
+ connected layers in lines 35 and 36 with 100 connections the first layer
  and the second with the number of rock classes used in this project that
  is 4.
  The model was compiled in line 37 with the ’categorical_crossentropy’ loss
@@ -2511,8 +2555,8 @@ The Convolutional Neural Network was build as shown in lines 29 to 37.
 \end_layout
 
 \begin_layout Standard
-All the algorithms are trained with the train sets loaded from the CSV in
- listing 6: 
+All the algorithms were trained with the train sets loaded from the CSV
+ in listing 6: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2528,9 +2572,28 @@ ytrain
 \begin_inset Quotes erd
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esta oración se debería mover a otra parte
+\end_layout
+
+\end_inset
+
 .
- In line 28 of listing 7, in order to train the Convolutionl Neural Network,
- it was necessary to try with several numbers of epochs and batches until
+ In line 28 of listing 7, in order to train the Convolutionl Neural Network
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No es necesario colocar este término en mayúscualas
+\end_layout
+
+\end_inset
+
+, it was necessary to try with several numbers of epochs and batches until
  the most optimal values were obtained.
  The training of each algortihm is showed in lines 4, 9, 14, 19, and 38
  respectively.
@@ -2632,7 +2695,7 @@ Table 2 shows the accuracy of all the trained algorithms evaluated with
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3813,7 +3876,18 @@ Results
 
 \begin_layout Standard
 Here is covered the creation process of the iOS mobile application for rock
- classification with dominant colors.
+ classification with dominant colors 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Esta primera oración es muy informal.
+ Por favor cámbiala
+\end_layout
+
+\end_inset
+
+.
  The source code is available online
 \begin_inset Foot
 status collapsed
@@ -3828,9 +3902,17 @@ https://github.com/sarah-hs/Rock-Classifer-iOS
 \end_layout
 
 \begin_layout Standard
-The interface of the application is very easy.
- The user just need to take a picture of a rock or select one from the photo
- library and see its dominant colors and average color (see Fig.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The user just need to take a picture MUY INFORMAL
+\end_layout
+
+\end_inset
+
+ of a rock or select one from the photo library and see its dominant colors
+ and average color (see Fig.
  4).
 \end_layout
 
@@ -3920,6 +4002,27 @@ Results displayed
 \begin_layout Standard
 Next is the application's workflow (see Fig.
  6).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Muy informal.
+ Por fa une todo este texto de una forma coherente.
+ Como lo mencioné anteriormente, 
+\begin_inset Quotes eld
+\end_inset
+
+lanzaste
+\begin_inset Quotes erd
+\end_inset
+
+ ideas sobre el texto pero estas ideas no están conectadas.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4036,11 +4139,39 @@ View controller
 
 \begin_layout Standard
 This file is the link between the user view and the ImageClassifier class.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Falta más 
+\begin_inset Quotes eld
+\end_inset
+
+carne
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 The following variables were used in the ViewController visualize the image
- and send it to the .
+ and send it to the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Falta explicar
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4060,6 +4191,16 @@ Image classifier
 
 \begin_layout Standard
 As shown in listing 9...
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4079,6 +4220,16 @@ Dominant colors
 
 \begin_layout Standard
 HEre was used a function..
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4086,6 +4237,20 @@ HEre was used a function..
 LatexCommand lstinputlisting
 filename "Code/DominantColors.txt"
 lstparams "escapeinside={*}{*},language=bash,morekeywords={class, static, enum,typealias,private,var,guard,func,init,self,try,switch,fileprivate},keywordsprefix={@},caption={DominantColors.swift},label={Dominant Colors}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Aquí falta lo más importante del documento: los resultados de la aplicación
+ al tomar fotos 
+\end_layout
 
 \end_inset
 
@@ -4108,6 +4273,28 @@ Five machine learning algorithms were trained with just the four dominant
  diorite).
  This application also allows the user to visualize the dominant colors
  and the average color in new images and detect changes in rock colors.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ojo que los resultados que muestras aquí son los resultados 
+\begin_inset Quotes eld
+\end_inset
+
+de laboratorio
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ahora, falta lo más importante: ¿cuáles son los resultados de la app al
+ tomar fotos a imágenes de rocas? Puedes tomar las fotos a imagenes en la
+ pantalla de tu compu.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

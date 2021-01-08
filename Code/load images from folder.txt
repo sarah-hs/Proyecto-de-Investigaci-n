@@ -6,7 +6,7 @@ from itertools import repeat
 def load_images_from_folder(folder, size):
 	images = []
 	for filename in os.listdir(folder):
-		if(not filename.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif'))):
+		if(not filename.lower().endswith(('.png', '.jpg', '.pge'))):
 			print(filename, 'removed')
 			continue
 		img = Image.open(os.path.join(folder,filename))

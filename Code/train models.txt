@@ -18,7 +18,6 @@ from sklearn.svm import SVC
 svmc = SVC()
 svmc.fit(xtrain, ytrain)
 
-
 #	Convolutional Neural Network
 import tensorflow as tf
 from matplotlib import pyplot
