@@ -1257,15 +1257,6 @@ Related Work
 \end_layout
 
 \begin_layout Standard
-Below are described some articles related with the topics presented in this
- work.
-\end_layout
-
-\begin_layout Subsubsection
-Machine learning in geoscience
-\end_layout
-
-\begin_layout Standard
 Over the last decade, there has been considerable progress in developing
  methodologies based in machine learning for many of Earth Science applications
  
@@ -1277,8 +1268,83 @@ literal "false"
 \end_inset
 
 .
- The following articles apply machine learning to resolve geoscience problems
- with images and geochemical data.
+ Below are described some articles related with the implementation of machine
+ learning in the classifcation of images into the geoscience field.
+\end_layout
+
+\begin_layout Subsubsection
+Machine learning in geoscience
+\end_layout
+
+\begin_layout Standard
+The following articles apply machine learning techniques to resolve problems
+ in the classification and recognition of rock and mineral images.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+En esta sección coloqué todas los artículos relacionados.
+ Aún no los he separado por temas ni colocado las falencias en ellos para
+ dedicar el tiempo en avanzar la parte de resultados y también para asegurar
+ primero que estos artículos sí se relacionan con el proyecto.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In some of this articles I found about the 
+\begin_inset Quotes eld
+\end_inset
+
+classification of rock lithology on geological surveys
+\begin_inset Quotes erd
+\end_inset
+
+.
+ However, I want to ask if it is a different type of rock classification
+ than the used in this work.
+ What do they mean by lithology?
+\end_layout
+
+\begin_layout Plain Layout
+I searched in web but couldn´t understand.
+ I just mentioned it in the articles below as rock classification.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ran2019"
+literal "false"
+
+\end_inset
+
+, Ran et al.
+ also worked on the classification of rocks from images using machine learning.
+ A total of 2290 images with typical rock characteristics of six rock types
+ (granite, limestone, conglomerate, sandstone, shale, mylonite) were obtained
+ from the Xingcheng Practical Teaching Base of Jilin University in Xingcheng,
+ China.
+ The images were labeled according to the clarity of the rock and were then
+ cropped into 14,589 sample patches of 512 × 512 pixels compressed to 128
+ × 128 pixels.
+ 60% of the patches of each type of rock were selected for the training
+ dataset, 20% for the validation dataset, and 20% for the testing dataset.
+ Finally, they proposed a deep CNNs model called RTCNNs that was compared
+ with four machine learning models testing their effectiveness of classification
+: SVM, AlexNet, GoogleLeNet Inception v3, and VGGNet-16.
+ The proposed model achieved the highest overall accuracy of 97.76% compared
+ with the other models.
 \end_layout
 
 \begin_layout Standard
@@ -1293,195 +1359,194 @@ literal "false"
 , Maitre et al.
  worked on the automated recognition of mineral grains based on machine
  learning algorithms.
- They used labeled data of different species of mineral grains (plagioclase,
- augite, background, hypersthene, ilmenite, magnetite, titanite, hornblende)
- to train the supervised algorithms of K-Nearest Neighbors (KNN), Random
- Forest (RF), and Classification and Regression Trees (CART).
- They reached efficient results with machine learning approach and also
- compared them with Optical Microscopy and automated Scanning Electron Microscop
-y approaches.
-\end_layout
-
-\begin_layout Standard
-To illustrate the power of multivariate classification with machine learning
- methods applied on geochemical data, 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Cate2018"
-literal "false"
-
-\end_inset
-
- studies drillhole geochemical data from altered volcanic rocks (extrusive
- igneous rocks) hosting the volcanogenic massive sulphide (VMS) Lalor deposit
- in the Snow Lake area in Manitoba, Canada.
- They tested the machine learning algortihms of K-Nearest Neighbors, Gaussian
- naïve Bayesian, Support Vector Machine, Random Forest, Gradient Tree Boosting
- in different sets of the geochemical variables to classify the volcanic
- rocks units and their alteration type.
+ An automated Scanning Electron Microscopy (SEM) was used to scan and assign
+ a mineral specie to each grain of a sample surface, containing approximately
+ 27 different mineral species (plagioclase, augite, background, hypersthene,
+ ilmenite, magnetite, titanite, hornblende, etc.) in diverse proportions,
+ based on its chemical signature.
+ This RGB picture was divided into 3192 sub-images of 600 × 600 pixels.
+ Then, a large mosaic image was constructed with several views of the same
+ surface taken with a stereo-zoom binocular microscope and also divided
+ in 3192 sub-images of 600 × 600 pixels.
+ Each image was segmented with the simple linear iterative clustering (SLIC)
+ algorithm and the obtained superpixels were tagged with a class label according
+ to the two predominant species showed in the SEM's scan.
+ Finally, from each superpixel were extracted the coordinates of the first
+ and second maximum peak in each RGB histogram utilizing 70% of the instances
+ to train the supervised machine learning algorithms of K-Nearest Neighbors
+ (KNN), Random Forest (RF), and Classification and Regression Trees (CART)
+ and 30 % were used to test the effectiveness of the algorithms using the
+ well-known indicators of the precision, recall, f1-score and the kappa
+ statistics.
+ The random forest algorithm gives the best results for the mineral species
+ classification with a global accuracy improved at 89%.
 \end_layout
 
 \begin_layout Standard
 In 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Hasterok2019"
+key "Fan2020"
 literal "false"
 
 \end_inset
 
-, the authors survey the eﬃcacy of several machine learning techniques to
- predict the protolith class (igneous or sedimentary) for whole rock geochemical
- analyses using 9 major oxides (SiO
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-, TiO
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-, Al
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-O
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-
-, FeO
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-
-\shape italic
-T
-\end_layout
-
-\end_inset
-
-, MgO, CaO, Na
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-O, K
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-O, P
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-O
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-
-).
- They compared the results with the obtained on chemical scatter plots.
-\end_layout
-
-\begin_layout Subsubsection
-Feature extraction from images used in machine learning
-\end_layout
-
-\begin_layout Standard
-The following articles show that the extraction of features play an important
- role to detect objects with machine learning.
-\end_layout
-
-\begin_layout Standard
-Also in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Maitre2019"
-literal "false"
-
-\end_inset
-
-, the authors utilize feature extraction from superpixels to decrease the
- complexity of image processing tasks before train the machine learning
- algorithms.
- The initial idea of this method is described in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Li2015"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The purpose in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Kavitha2016"
-literal "false"
-
-\end_inset
-
-, is to classify dermoscopy images into melanoma and non-melanoma by considering
- the texture and color features of an image.
- Color histograms are used to extract the color features in three color
- spaces namely RGB, HSV and OPP.
- Support Vector Machine (SVM) algorithm is used for the process of classificatio
-n.
+, Fan et al.
+ created a classification method for rock recognition based on the two lightweig
+ht CNNs, SqueezeNet and MobileNets combined with the transfer learning method.
+ They utilized the dataset of the China Geological Survey that includes
+ 28 categories of rock images taken by a smartphone camera.
+ A total of 3208 rock images were reduced to the size of 214 × 214 pixels:
+ 2566 images for the training set, 330 images for the validation set, and
+ 312 images for the test set.
+ After, two models based on MobileNet and SqueezeNet and pretrained with
+ ImageNet dataset were fine-tuned by the transfer learning method and trained
+ with the rock images using four different batch sizes (8, 16, 32 and 48).
+ Finally, a rock recognition software based on lightweight CNNs model was
+ developed for Android devices.
+ The CNNs models were analyzed in terms of their comparison with the standard
+ convolutional network structure of ResNet50 heavyweight model achieving
+ the occupation sizes of 19.6 M, 36.8 M, and 232.7 M for SqueezeNet, MobileNet
+ and ResNet50, and SqueezeNet being the fastest with 7 times faster than
+ ResNet50.
+ On android smartphones SqueezeNet and MobileNet models were analyzed in
+ terms of their space occupation, recognition accuracy and time obtaining:
+ the file sizes of 9.2 MB and 17.6 MB, the recognition accuracies of 94.55%
+ and 93.27%, and the execution time from 736 to 366 and 1218 to 523 millisecond
+ respectively.
 \end_layout
 
 \begin_layout Standard
 In 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "S.Patil2012"
+key "Cheng2017"
 literal "false"
 
 \end_inset
 
-, the color feature extraction technique that considers the image color
- distribution is used on a content-based image retrieval system (CBIR) to
- search for digital images in a large dataset.
- For the color feature extraction process they use the clustering method,
- where fixed number of clusters and variable number of clusters are formed.
+, Cheng and Guo proposed a Deep CNN to identify the rock granularity in
+ rock images under the colour spaces of HSV, YCbCr and RGB.
+ The rock images used were all feldspar sandstones collected from an oil
+ field in Ordos, they are divided into three types: coarse feldspar sandstones,
+ medium granular feldspar sandstone, and fine feldspar sandstone.
+ There were 1600 RGB images of each type using 1200 as the training set,
+ and the remaining 400 as the test set.
+ All the images were normalized to 224 × 224 pixels and converted to YCbCr
+ and HSV colour space.
+ The proposed CNN structure is a 6-layer structure, 4 layers are convoluted
+ and 2 layers are fully connected.
+ The convolution layers use ReLU as the activation function and the fully
+ connected layers do classification by the Softmax classifier.
+ The experimental data is loaded into memory by a batch size of 100.
+ Finally, the authors analyzed in terms of error rate different kernel sizes
+ for the four convolutional layers (11-7-5-3, 11-5-3-3, and 11-3-3-3), tested
+ the learning rates of 0.01, 0.001, 0.0005, 0.0001 for the best kernel sizes,
+ and applied cross-validation with the YCbCr, HSV, and RGB colour spaces.
+ The lowest error rates were obtained in the kernel sizes of 11-5-3-3 for
+ the convolutional layers of the model, the 0.0005 learning rate, and the
+ cross-validation of HSV color space.
+ In RGB colour space, the classification accuracy achieves 98.5% with high
+ efficiency.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Shoji2018"
+literal "false"
+
+\end_inset
+
+, Shoji et al.
+ created a machine learning model for quick and accurate rock recognition
+ with smartphones.
+ 30 different kinds of rocks were collected from multiple locations in East
+ China, and a total of 3,795 images were taken with sizes between 3M and
+ 6M.
+ According to the ratio of 8:1:1, images were randomly selected from rock
+ samples as the training data set, verification data set, and test data
+ set.
+ The parameters pretrained by ShuffleNet on the ImageNet data set were imported
+ by the transfer learning method.
+ In the training process, the default iteration step number was 3600, and
+ the learning rate was 0.008.
+ After training, the precision and running of the rock recognition model
+ based on ShuffleNet were compared with other models.
+ For the size of space occupied by the model, MobileNet, ShuffleNet, and
+ SqueezeNet required 34.5M, 18.2M, and 25M, respectively, but 219.4M is needed
+ for the ResNet50 model.
+ Finally, an android application was created written in the Java programming
+ language and runed on three android smartphones (Huawei, Samsung, and Oppo).
+ The accuracy of the recognition model based no ShuffleNet reached 97.65%
+ in the verification data set of PC and 95.30% on the test data set of the
+ smartphone.
+ The average recognition time of a single rock image was 786 milliseconds
+ and the model size was only 18.2 MB.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zhang2019"
+literal "false"
+
+\end_inset
+
+, Zhang et al.
+ worked on the intelligent identification for rock-mineral microscopic images
+ using ensemble machine learning algorithms (model stacking).
+ There were a total of 481 RGB images of four minerals: K-feldspar (Kf),
+ perthite (Pe), plagioclase (Pl), and quartz (Qz or Q) obtained using the
+ camera on the top of a microscope.
+ Because the four minerals exist together with other minerals, the target
+ images were cropped to cover them.
+ After, the images were processed to be 299 × 299 pixels.
+ The deep learning model based on Inception-v3 is adopted to extract high-level
+ features of quartz and feldspar microscopic images.
+ BBased on the extracted features, are generated by transfer learning using
+ the Inception-v3 model.
+ Based on the extracted features, logistic regression (LR), support vector
+ machine (SVM), random forest (RF), k-nearest neighbors, multilayer perceptron
+ (MLP), and gaussian naive Bayes (GNB) algorithms are applied to establish
+ the models.
+ LR, SVM, and MLP have a significant effect on extracted features, with
+ higher accuracy (90.0%, 90.6%, and 89.8%) than the other models, for that
+ reason, the new features generated by this three models are employed again
+ in a new instance of LR for the model stacking.
+ The result shows that the stacking model has a better performance than
+ the single models, with an accuracy of 90.9%.
+\end_layout
+
+\begin_layout Standard
+In [], the authors used deep learning for the automatic classification of
+ plutonic rocks in android devices.
+ The dataset contained 71 images of diorite, gabbro, granite, granodiorite,
+ monzodiorite, and tonalite which classification was based on petrographic
+ analysis of Cretaceous granitoids collected from Peru.
+ In order to increase the number of images for training a dataset of 846
+ images was generated from the first dataset with patches around 450 × 700
+ pixels to 900 × 1000 pixels.
+ A total of 423 images for training and 423 images for validation were used
+ to train a deep neural network with 4-layer structure: two convolutional,
+ and two fully connected layers.
+ After each convolutional layer it is a max pooling layer of 2×2 size, and
+ a flatten and a dropout of 50% layers were added before the fisrt and second
+ fully conected layers respectively.
+ Several combinations of rock classes were trained utilizing 100 epochs
+ and abatch size of 32.
+ The effectiveness of the model was evalueted in terms of precision, recall
+ and f1-score to determine the best combination of rock classes.The best
+ combination was with four classes of plutonic rocks (gabbro, diorite, granite
+ and granodiorite) achieving an accuracy value of 95%, an average precision
+ value of 96%, an average recall value of 453 95%, and an average F1 score
+ value of 95%.
+ Finnaly, an android applicaion was developed with the proposed model trained
+ with the best cobination of rocks.
+ The results of the application evaluation were: 70% for gabbro, 28.5% for
+ diorite, 100% for granodiorite, and 28.5% for granite.
 \end_layout
 
 \begin_layout Section
@@ -2004,7 +2069,7 @@ Training of the different algorithms
 Five machine learning algorithms were trained for this experiment.
  They are Logistic Regression, K-Nearest Neighbors, Decision Trees, Support
  Vector Machines, and a Convolutional Neural Network.
- The notebook showing tha training and validation process is also available
+ The notebook showing the training and validation process is also available
  online
 \begin_inset Foot
 status collapsed
@@ -3429,153 +3494,10 @@ Results
 \end_layout
 
 \begin_layout Standard
-Here is covered the creation process of the iOS mobile application for rock
- classification with dominant colors.
- The source code is available online
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://github.com/sarah-hs/Rock-Classifer-iOS
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The interface of the application is very easy.
- The user just need to take a picture of a rock or select one from the photo
- library and see its dominant colors and average color (see Fig.
- 4).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Images/App 1 Black.jpg
-	lyxscale 15
-	width 60col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-User interface
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-It is worth mentioning that once an image has been loaded, the user can
- access the visualization of the original image, the 4 dominant colors extracted
-, and the average color of the processed image.
-\end_layout
-
-\begin_layout Standard
-When the image is loaded, the user can press the classify button and the
- results of granite, granodiorite, gabbro and diorite will be displayed
- (see Fig.
- 5).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Images/App 2 Black.jpg
-	lyxscale 15
-	width 60col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Results displayed
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Next is the application's workflow (see Fig.
- 6).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Images/Elbow curve 1.png
-	lyxscale 20
-	width 90col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Workflow of the mobile application for rock classification
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+This section cover the creation process of a mobile application that classifies
+ four types of plutonic rocks with the dominant colors extracted from images
+ taken on iOS devices.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3613,38 +3535,54 @@ An adaptation of the DominantColor pod from Indragie Karunaratne.
 
 \begin_layout Standard
 The application works the classification with three main Swift files: ViewContro
-ller.swift
+ller.swift, ImageClassifier.swift, and DominantColors.swift.
+ The source code of the application is available online
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-http://bit.ly/2L5Xrxu
-\end_layout
-
-\end_inset
-
-, ImageClassifier.swift
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://bit.ly/3rCLWOR
-\end_layout
-
-\end_inset
-
-, and DominantColors.swift
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://bit.ly/3n06YDy
+https://github.com/sarah-hs/Rock-Classifer-iOS
 \end_layout
 
 \end_inset
 
 .
- The following describes each of them.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Workflow.png
+	lyxscale 50
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Application workflow
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
