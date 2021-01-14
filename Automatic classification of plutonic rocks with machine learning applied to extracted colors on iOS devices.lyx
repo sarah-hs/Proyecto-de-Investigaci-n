@@ -179,7 +179,7 @@ Universidad de Montemorelos
 
 \series bold
 \size larger
-\begin_inset VSpace 1cm
+\begin_inset VSpace 0.8cm
 \end_inset
 
 
@@ -205,7 +205,7 @@ Ingeniería en Sistemas Computacionales
 
 \series bold
 \size larger
-\begin_inset VSpace 1.6cm
+\begin_inset VSpace 1.4cm
 \end_inset
 
 
@@ -224,7 +224,7 @@ Automatic classification of plutonic rocks with machine learning applied
 
 \series bold
 \size larger
-\begin_inset VSpace 1.6cm
+\begin_inset VSpace 1.4cm
 \end_inset
 
 
@@ -250,7 +250,7 @@ Sarah Hernández Serrano
 
 \series bold
 \size larger
-\begin_inset VSpace 1.6cm
+\begin_inset VSpace 1.4cm
 \end_inset
 
 
@@ -266,10 +266,20 @@ Asesor: Dr.
 \end_layout
 
 \begin_layout Standard
+\align center
 
 \series bold
 \size larger
-\begin_inset VSpace 1.6cm
+Co-asesores: Dr.
+ Benjamin Clausen and Dra.
+ Ana María Martínez Ardila
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\begin_inset VSpace 1.4cm
 \end_inset
 
 
@@ -341,26 +351,24 @@ begin{titlepage}
 \end_layout
 
 \begin_layout Abstract
-The classification of different rocks can provide us with important information
- about the conditions under they formed and the tectonic environment.
- Color is a key property for rock classification, however, it is difficult
- to describe because perceived colors in rocks also depend on the observer's
- experience with similar observations; so a color may often be named differently
- by different persons.
+The classification of different rocks can provide important information
+ about the conditions under they were formed and their tectonic environment.
+ Color is a key property for rock classification.
+ However, it is difficult to describe them because perceived colors in rocks
+ also depend on the observer's experience with similar observations.
  Moreover, the equipment for rock classification is expensive, which makes
  this equipment prohibitive to geology students and amateurs.
  The contribution of this research work is twofold.
- First, we present an iOS application that uses machine learning to classify
+ First, since color is a key property for rock classification, feature reduction
+ was applied in rock images extracting just the four dominant colors before
+ training the machine learning algorithms; to this end, the k-means clustering
+ method was used.
+ Second, we present an iOS application that uses machine learning to classify
  images of the following plutonic rocks: granite, granodiorite, gabbro,
  and diorite.
- In order to use the best suited machine learning algorithm in the application,
- the effectiveness of the Logistic Regression, K-Nearest Neighbors, Decision
- Trees, Support Vector Machine, and Convolutional Neural Network algorithms
- is compared.
- Second, since color is a key property for rock classification, feature
- reduction was applied in rock images extracting just the four dominant
- colors before training the machine learning algorithms.
- To this end, the k-means clustering method was used.
+ Different machine learning models were created and evaluated with the Logistic
+ Regression, K-Nearest Neighbors, Decision Trees, Support Vector Machine,
+ and Convolutional Neural Network algorithms.
  The best results were achieved with K-Nearest Neighbors algorithm.
  The evaluation results of the algorithm are the following: 82% of accuracy,
  84% of precision, 89% of recall, and 83% of F1-score.
@@ -454,11 +462,7 @@ Sarah
 \begin_inset space ~
 \end_inset
 
-Hernández
-\begin_inset space ~
-\end_inset
-
-and
+Hernández,
 \begin_inset space ~
 \end_inset
 
@@ -470,7 +474,31 @@ H.
 \begin_inset space ~
 \end_inset
 
-Alférez
+Alférez,
+\begin_inset space ~
+\end_inset
+
+Benjamin
+\begin_inset space ~
+\end_inset
+
+Clausen
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+Ana
+\begin_inset space ~
+\end_inset
+
+M.
+\begin_inset space ~
+\end_inset
+
+Martínez 
 \begin_inset Foot
 status open
 
@@ -518,6 +546,45 @@ literal "false"
 \end_inset
 
 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Benjamin Clausen, Ph.D., is a professor at the Department of Earth and Biological
+ Sciences of Loma Linda University, California, United States, e-mail: 
+\begin_inset CommandInset href
+LatexCommand href
+target "bclausen@llu.edu"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ana M.
+ Martínez, Ph.D., is a professor at the Department of Earth and Biological
+ Sciences of Loma Linda University, California, United States, e-mail: 
+\begin_inset CommandInset href
+LatexCommand href
+target "anmartinez@llu.edu"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Special Paper Notice
@@ -551,10 +618,10 @@ T
 
 \end_inset
 
-he classification of different rocks can provide us with important information
- about the conditions under which they formed.
- They can also tell us much about the tectonic environment, given that they
- are closely linked to the convection of tectonic plates.
+he classification of different rocks can provide important information about
+ the conditions under which they were formed.
+ They can also tell us much about their tectonic environment, given that
+ they are closely linked to the convection of tectonic plates.
  Their mineral and chemical makeup can be used to learn about the composition,
  temperature and pressure that exists within the Earth’s mantle 
 \begin_inset CommandInset citation
@@ -571,9 +638,8 @@ literal "false"
 Plutonic rocks are a type of igneous rock (one of the three main types of
  rocks in the world and also the most common) formed when magma in the middle
  of the volcano cools and solidifies below the Earth’s surface.
- They come in many different sizes and colors, this is a characteristic
- of plutonic rocks, and have a wide variety of uses, an important use is
- as stone for buildings and statues 
+ They come in many different sizes and colors, and have a wide variety of
+ uses 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "NGS-2019,Study-2013"
@@ -585,10 +651,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-This project works by extracting the main dominant colors from plutonic
- rock images to classify them.
- Rock color is an attribute of visual perception that can be described by
- color names.
+Our contribution is twofold: extract the dominant colors of plutonic rock
+ images and use these information to classify them with the implemention
+ of machine learning.
  Color changes in rocks may indicate changes in the rock’s mineral assemblage,
  texture, organic carbon content (shales), or other properties 
 \begin_inset CommandInset citation
@@ -599,12 +664,9 @@ literal "false"
 \end_inset
 
 .
- That is why color is a key property for rock classification and was used
- in this work.
-\end_layout
-
-\begin_layout Standard
-Machine learning is a branch of artificial intelligence and is becoming
+ That is why color is a key property for rock classification.
+ In addition, machine learning, a branch of artificial intelligence, provides
+ easy classification of images whitin mobile applications and is becoming
  an appealing tool in various fields of earth sciences, especially in prediction
 s and resources estimation 
 \begin_inset CommandInset citation
@@ -615,10 +677,23 @@ literal "false"
 \end_inset
 
 .
- For that reason, we implemented machine learning algorithms in order to
- extract the dominant colors from rock images and also classify with them
- new rocks into four types of plutonic rocks: granite, granodiorite, gabbro
- and diorite.
+\end_layout
+
+\begin_layout Standard
+A previous work has be done by Elías L.
+ Vázquez and Germán H.
+ Alférez for the classification of [].
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+descripción del trabajo de Elías.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -626,8 +701,8 @@ Problem Statement
 \end_layout
 
 \begin_layout Standard
-The equipment for rock classification is expensive, which makes this equipment
- prohibitive to geology students and amateurs.
+The equipment for rock classification is expensive, which makes it prohibitive
+ to geology students and amateurs.
  In addtion, despite the fact that color is a key property for rock classificati
 on, it is an attribute difficult to describe because perceived colors in
  rocks also depend on the stimulus area and the observer's experience with
@@ -648,18 +723,16 @@ Justification
 \end_layout
 
 \begin_layout Standard
-There are three reasons to create an iOS mobile application that allows
- the classification of rocks through colors with machine learning.
+There are two reasons to create an iOS mobile application that allows the
+ classification of rocks through colors with machine learning.
  First, no such application exists.
  A mobile application offers the flexibility to carry out the classification
  on real time and could be an alternative to expensive traditional methods
  of rock classification.
- Second, machine learning provides easy classification of images within
- an application.
- Third and most important, the extraction of the dominant colors from rock
- images is useful to reduce the number of features in images during the
- training of machine learning algorithms and will allow geologists to more
- accurately detect color changes in rocks.
+ Second, the extraction of the dominant colors allows geologists to more
+ accurately detect color changes in rocks and is useful to reduce the number
+ of features in images used to train machine learning, which provides easy
+ classification of rocks within the application.
 \end_layout
 
 \begin_layout Subsection
@@ -667,36 +740,36 @@ Objectives
 \end_layout
 
 \begin_layout Standard
-The main objective is to create an iOS application that uses machine learning
- to extract the dominant colors from images and use these colors to classify
- plutonic rocks.
- This objective can be achieved with the following sub-objectives:
+The main objective of this research work is to create an iOS application
+ that uses machine learning to extract the dominant colors from images and
+ use these colors to classify plutonic rocks.
+ This objective is achieved with the following sub-objectives:
 \end_layout
 
 \begin_layout Itemize
 Determine the best k number of clusters to use in the k-means clustering
- machine learning method to extract the dominant colors from rock images.
+ machine learning method to extract the dominant colors from images of plutonic
+ rocks.
 \end_layout
 
 \begin_layout Itemize
-Use the extracted dominant colors and their percentage as input to train
- the following machine learning algorithms: Logistic regression, K-Nearest
- Neighbors, Decision Trees, Support Vector Machine, and Convolutional Neural
- Network.
+Use the extracted dominant colors and the percentage of pixels belonging
+ to each color cluster as the input to train the following machine learning
+ algorithms: Logistic regression (LR), K-Nearest Neighbors (KNN), Decision
+ Trees (DT), Support Vector Machine (SVM), and a Convolutional Neural Network
+ (CNN).
 \end_layout
 
 \begin_layout Itemize
-Validate the algorithms to get the best suited algorithm for the mobile
- application.
-\end_layout
-
-\begin_layout Itemize
-Deploy the most suitable classification model in an iOS mobile device.
+Validate the models generated to get the best suited to deploy the best
+ model on the iOS mobile application.
 \end_layout
 
 \begin_layout Itemize
 Test the effectiveness of the application with images taken from new plutonic
- rocks.
+ rocks to compare the results with our previous work in which a CNN was
+ trained with images using the whole set of features.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -705,8 +778,8 @@ Hypothesis
 
 \begin_layout Standard
 The training of a machine learning model with just the dominant colors extracted
- from rock images can provide us an effective way for the classification
- of rocks.
+ from rock images can provide an effective way for the classification of
+ plutonic rock images.
 \end_layout
 
 \begin_layout Section
@@ -781,18 +854,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-This project analyze the following four types of plutonic rocks:
-\end_layout
-
-\begin_layout Paragraph
-Granite
-\end_layout
-
-\begin_layout Standard
-Granite rocks are plutonic rocks with a granular texture, composed of similar
- amounts of quartz, potassium feldspar, and plagioclase as essential minerals,
- and smaller amounts of one or more minerals, such as biotite, muscovite
- or hornblende 
+According to 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RACEFEN-gg"
@@ -800,58 +862,33 @@ literal "false"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Paragraph
-Granodiorite
+, granite rocks are plutonic rocks with a granular texture, composed of
+ similar amounts of quartz, potassium feldspar, and plagioclase as essential
+ minerals, and smaller amounts of one or more minerals, such as biotite,
+ muscovite or hornblende.
 \end_layout
 
 \begin_layout Standard
-It is a plutonic rock of the granitoid family, characterized by quartz because
- plagioclase constitutes more than 2/3 of the total feldspars.
+Granodiorite is a plutonic rock of the granitoid family, characterized by
+ quartz because plagioclase constitutes more than 2/3 of the total feldspars.
  Generally, together with granite, it is the most abundant rock of the great
  batholiths.
- Its volcanic equivalent is dacite 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "RACEFEN-gg"
-literal "false"
-
-\end_inset
-
-.
+ Its volcanic equivalent is dacite.
  Granodiorite is similar to granite, but with less potassium feldspar and
  more plagioclase.
 \end_layout
 
-\begin_layout Paragraph
-Gabbro
-\end_layout
-
 \begin_layout Standard
-It is a plutonic rock composed mainly of calcium plagioclase and clinopyroxene
- or orthopiroxene, with or without olivine or amphibole.
+Gabbro is a plutonic rock composed mainly of calcium plagioclase and clinopyroxe
+ne or orthopiroxene, with or without olivine or amphibole.
  It is the intrusive equivalent of basalt.
  It is distinguished from diorite by the nature of plagioclase, which is
- higher in calcium than in sodium 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "RACEFEN-gg"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-Diorite
+ higher in calcium than in sodium.
 \end_layout
 
 \begin_layout Standard
-Has about the same structural properties as granite but darker colour and
- more limited supply.
+Diorite has about the same structural properties as granite but darker colour
+ and more limited supply.
  Commonly is composed of about two-thirds plagioclase feldspar and one-third
  dark-coloured minerals, such as hornblende or biotite.
  The presence of sodium-rich feldspar, oligoclase or andesine, in contrast
@@ -875,8 +912,6 @@ Machine Learning
 Machine learning is a branch of artificial intelligence that lies at the
  intersection of computer science, engineering, and statistics and often
  appears in other disciplines.
- Any field that needs to interpret and act on data can benefit from its
- techniques.
  Machine Learning systems can be classified according to the type of supervision
  they get during training 
 \begin_inset CommandInset citation
@@ -887,7 +922,7 @@ literal "false"
 \end_inset
 
 .
- There are two major categories:
+ In this way, there are two major categories:
 \end_layout
 
 \begin_layout Paragraph
@@ -895,8 +930,8 @@ Supervised learning
 \end_layout
 
 \begin_layout Standard
-In supervised learning, the training set you feed to the algorithm includes
- the desired solutions, called labels.
+In supervised learning, the training set fed to the algorithm includes the
+ desired solutions, called labels.
  A typical supervised learning task is classification 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -909,12 +944,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Below are described some common algorithms of supervised learning.
+Some common algorithms of supervised learning are described as follows:
 \end_layout
 
 \begin_layout Itemize
-Logistic Regression algorithm is commonly used to estimate the probability
- that an instance belongs to a particular class.
+Logistic Regression (LR) is commonly used to estimate the probability of
+ an instance to belong to a particular class.
  This model computes a weighted sum of the input features (plus a bias term)
  and outputs the logistic of this result.
  The logistic is a sigmoid function that outputs a number between 0 and
@@ -931,12 +966,9 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-K-Nearest Neighbors is an algorithm in which its priniciple is to find a
- predefined number of training samples closest in distance to the new point,
- and predict the label from these.
- Despite its simplicity, nearest neighbors has been successful in a large
- number of classification and regression problems, including handwritten
- digits and satellite image scenes.
+K-Nearest Neighbors (KNN) is a simple algorithm in which its priniciple
+ is to find a predefined number of training samples closest in distance
+ to the new point, and predict the label from these.
  Being a non-parametric method, it is often successful in classification
  situations where the decision boundary is very irregular 
 \begin_inset CommandInset citation
@@ -950,10 +982,10 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-Decision Trees algorithm consists of split nodes and leaf nodes.
+Decision Trees (DT) algorithm consists of split nodes and leaf nodes.
  Each split node performs a split decision and routes a data sample either
  to the left or the right child node.
- In the tree structures, leaves represent the labels, nonleaf nodes are
+ In the tree structures, leaves represent the labels, non-leaf nodes are
  the input features, and branches represent conjunctions of features that
  lead to the classifications 
 \begin_inset CommandInset citation
@@ -967,9 +999,9 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-Support Vector Machine algorithm is a powerful and versatile Machine Learning
- model, particularly well suited for classification of complex small- or
- medium-sized datasets.
+Support Vector Machine (SVM) algorithm is a powerful and versatile machine
+ learning model, particularly well suited for classification of complex
+ small- or medium-sized datasets.
  In this algorithm, the data is plotted in a n-dimensional space (number
  of features) and a decision boundary (hyperplane) split it into classes
  
@@ -985,7 +1017,7 @@ literal "false"
 
 \begin_layout Itemize
 Convolutional Neural Networks (CNNs) emerged from the study of the brain’s
- visual cortex, and they have been used in image recognition since the 1980s.
+ visual cortex.
  The most important building block is the convolutional layer.
  The CNN´s architecture consists of several connected layers allowing the
  network to concentrate on small low-level features in the first hidden
@@ -1007,11 +1039,7 @@ Unsupervised learning
 
 \begin_layout Standard
 In unsupervised learning the training data is unlabeled.
- The system tries to learn without a teacher.
-\end_layout
-
-\begin_layout Standard
-One of the most important unsupervised learning algorithms is k-means.
+ One of the most important unsupervised learning algorithms is k-means.
  K-means is a simple algorithm capable of clustering an unlabeled dataset
  very quickly and efficiently, often in just a few iterations.
  You have to specify the number of clusters k that the algorithm must find
@@ -1038,17 +1066,14 @@ The dominant colors refer to the principal colors presented in an image.
 \end_layout
 
 \begin_layout Standard
-This work and the vast majority of computer graphics applications use the
- RGB space because cathode ray computer monitors generate colors using those
- three components, red, green, and blue.
- In the RGB space, the light spectra of varying fractions of the three primary
+In the RGB space, the light spectra of varying fractions of the three primary
  colors referred to as channels, combine to make new colors.
  Each channel has intensity values from 0 to 1 that are scaled by the number
  of bits used to represent each component.
  The 24-bit color cube used in this research has components in the range
- 0–255.
- Each color in the color space can be represented as a three-value vector,
- for example (255, 127, 54) 
+ of 0–255.
+ Each color in the color space can be represented as a three-value vector
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Wallace2002"
@@ -1057,14 +1082,6 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Finally, the dominant colors of an image are selected grouping the image
- pixels in a certain number of k groups according to their color in the
- RGB color space.
- The average color of each group are the dominant colors and the number
- of pixels of that groups are the dominant colors´ percentage.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1076,7 +1093,7 @@ Scikit learn
 \end_layout
 
 \begin_layout Standard
-Scikit-learn is a Python module integrating a wide range of state-of-the-art
+Scikit-learn is a Python module that integrates a wide range of state-of-the-art
  machine learning algorithms for medium-scale supervised and unsupervised
  problems.
  This package focuses on bringing machine learning to non-specialists using
@@ -1109,10 +1126,10 @@ https://www.tensorflow.org
 
 \end_inset
 
- is an open-source library developed by Google and has become very popular
- with Machine Learning.
- TensorFlow offers APIs that facilitates Machine Learning.
- TensorFlow also has a faster compilation time than other Deep Learning
+ is an open-source library developed by Google.
+ It has become very popular because it provides APIs that facilitates machine
+ learning.
+ TensorFlow also has a faster compilation time than other deep learning
  libraries such as Keras and Touch.
  TensorFlow supports both CPU and GPU computing devices 
 \begin_inset CommandInset citation
@@ -1186,7 +1203,7 @@ https://swift.org
 \end_inset
 
  is an open source programming language designed for macOS, iOS, watchOS,
- tvOS and beyond.
+ tvOS, and more.
  Swift already supports all Apple platforms and Linux, with community members
  actively working to port to even more platforms 
 \begin_inset CommandInset citation
@@ -1268,32 +1285,10 @@ literal "false"
 \end_inset
 
 .
- Below are described some articles related with the implementation of machine
- learning in the classifcation of images into the geoscience field.
-\end_layout
-
-\begin_layout Subsubsection
-Machine learning in geoscience
-\end_layout
-
-\begin_layout Standard
-The following articles apply machine learning techniques to resolve problems
- in the classification and recognition of rock and mineral images.
+ We present relevant articles related to the implementation of machine learning
+ in the classifcation of images into the geoscience field.
 \begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-En esta sección coloqué todas los artículos relacionados.
- Aún no los he separado por temas ni colocado las falencias en ellos para
- dedicar el tiempo en avanzar la parte de resultados y también para asegurar
- primero que estos artículos sí se relacionan con el proyecto.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 In some of this articles I found about the 
@@ -1320,6 +1315,10 @@ I searched in web but couldn´t understand.
 
 \end_layout
 
+\begin_layout Subsubsection
+Rock lithology image classification using machine learning
+\end_layout
+
 \begin_layout Standard
 In 
 \begin_inset CommandInset citation
@@ -1331,18 +1330,16 @@ literal "false"
 
 , Ran et al.
  also worked on the classification of rocks from images using machine learning.
- A total of 2290 images with typical rock characteristics of six rock types
- (granite, limestone, conglomerate, sandstone, shale, mylonite) were obtained
- from the Xingcheng Practical Teaching Base of Jilin University in Xingcheng,
- China.
+ A total of 2,290 images with typical rock characteristics of six rock types
+ (granite, limestone, conglomerate, sandstone, shale, mylonite) were used
+ in the study.
  The images were labeled according to the clarity of the rock and were then
  cropped into 14,589 sample patches of 512 × 512 pixels compressed to 128
  × 128 pixels.
  60% of the patches of each type of rock were selected for the training
  dataset, 20% for the validation dataset, and 20% for the testing dataset.
- Finally, they proposed a deep CNNs model called RTCNNs that was compared
- with four machine learning models testing their effectiveness of classification
-: SVM, AlexNet, GoogleLeNet Inception v3, and VGGNet-16.
+ Finally, they proposed a deep CNN model that was compared with four machine
+ learning models: SVM, AlexNet, GoogleLeNet Inception v3, and VGGNet-16.
  The proposed model achieved the highest overall accuracy of 97.76% compared
  with the other models.
 \end_layout
@@ -1351,35 +1348,31 @@ literal "false"
 In 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Maitre2019"
+key "Cheng2017"
 literal "false"
 
 \end_inset
 
-, Maitre et al.
- worked on the automated recognition of mineral grains based on machine
- learning algorithms.
- An automated Scanning Electron Microscopy (SEM) was used to scan and assign
- a mineral specie to each grain of a sample surface, containing approximately
- 27 different mineral species (plagioclase, augite, background, hypersthene,
- ilmenite, magnetite, titanite, hornblende, etc.) in diverse proportions,
- based on its chemical signature.
- This RGB picture was divided into 3192 sub-images of 600 × 600 pixels.
- Then, a large mosaic image was constructed with several views of the same
- surface taken with a stereo-zoom binocular microscope and also divided
- in 3192 sub-images of 600 × 600 pixels.
- Each image was segmented with the simple linear iterative clustering (SLIC)
- algorithm and the obtained superpixels were tagged with a class label according
- to the two predominant species showed in the SEM's scan.
- Finally, from each superpixel were extracted the coordinates of the first
- and second maximum peak in each RGB histogram utilizing 70% of the instances
- to train the supervised machine learning algorithms of K-Nearest Neighbors
- (KNN), Random Forest (RF), and Classification and Regression Trees (CART)
- and 30 % were used to test the effectiveness of the algorithms using the
- well-known indicators of the precision, recall, f1-score and the kappa
- statistics.
- The random forest algorithm gives the best results for the mineral species
- classification with a global accuracy improved at 89%.
+, Cheng and Guo proposed a deep CNN to identify the rock granularity in
+ images under three color spaces.
+ The dataset contained 4,200 RGB images of feldspar sandstone rocks collected
+ from an oil field in Ordos and divided into three types: coarse, medium
+ granular, and fine feldspar sandstone.
+ The images were normalized to 224 × 224 pixels and converted to YCbCr and
+ HSV color spaces.
+ The proposed CNN was a 6-layer structure: 4 convoluted layers with ReLU
+ as the activation function and 2 fully connected layers with Softmax as
+ the classifier.
+ The model was trained for each color space with 75% of the experimental
+ data, a batch size of 100, and different kernel sizes and learning rates.
+ The lowest error rates were obtained with a learning rate of 0.0005, the
+ kernel sizes of 11, 5, 3, and 3 for each convolutional layer respectively,
+ and the cross-validation for HSV color space.
+ In RGB color space, the classification accuracy achieved 98.5%.
+\end_layout
+
+\begin_layout Paragraph
+Rock classification with machine learning on android devices
 \end_layout
 
 \begin_layout Standard
@@ -1392,62 +1385,23 @@ literal "false"
 \end_inset
 
 , Fan et al.
- created a classification method for rock recognition based on the two lightweig
-ht CNNs, SqueezeNet and MobileNets combined with the transfer learning method.
- They utilized the dataset of the China Geological Survey that includes
- 28 categories of rock images taken by a smartphone camera.
- A total of 3208 rock images were reduced to the size of 214 × 214 pixels:
- 2566 images for the training set, 330 images for the validation set, and
- 312 images for the test set.
- After, two models based on MobileNet and SqueezeNet and pretrained with
- ImageNet dataset were fine-tuned by the transfer learning method and trained
- with the rock images using four different batch sizes (8, 16, 32 and 48).
- Finally, a rock recognition software based on lightweight CNNs model was
- developed for Android devices.
- The CNNs models were analyzed in terms of their comparison with the standard
- convolutional network structure of ResNet50 heavyweight model achieving
- the occupation sizes of 19.6 M, 36.8 M, and 232.7 M for SqueezeNet, MobileNet
- and ResNet50, and SqueezeNet being the fastest with 7 times faster than
- ResNet50.
- On android smartphones SqueezeNet and MobileNet models were analyzed in
- terms of their space occupation, recognition accuracy and time obtaining:
- the file sizes of 9.2 MB and 17.6 MB, the recognition accuracies of 94.55%
- and 93.27%, and the execution time from 736 to 366 and 1218 to 523 millisecond
- respectively.
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Cheng2017"
-literal "false"
-
-\end_inset
-
-, Cheng and Guo proposed a Deep CNN to identify the rock granularity in
- rock images under the colour spaces of HSV, YCbCr and RGB.
- The rock images used were all feldspar sandstones collected from an oil
- field in Ordos, they are divided into three types: coarse feldspar sandstones,
- medium granular feldspar sandstone, and fine feldspar sandstone.
- There were 1600 RGB images of each type using 1200 as the training set,
- and the remaining 400 as the test set.
- All the images were normalized to 224 × 224 pixels and converted to YCbCr
- and HSV colour space.
- The proposed CNN structure is a 6-layer structure, 4 layers are convoluted
- and 2 layers are fully connected.
- The convolution layers use ReLU as the activation function and the fully
- connected layers do classification by the Softmax classifier.
- The experimental data is loaded into memory by a batch size of 100.
- Finally, the authors analyzed in terms of error rate different kernel sizes
- for the four convolutional layers (11-7-5-3, 11-5-3-3, and 11-3-3-3), tested
- the learning rates of 0.01, 0.001, 0.0005, 0.0001 for the best kernel sizes,
- and applied cross-validation with the YCbCr, HSV, and RGB colour spaces.
- The lowest error rates were obtained in the kernel sizes of 11-5-3-3 for
- the convolutional layers of the model, the 0.0005 learning rate, and the
- cross-validation of HSV color space.
- In RGB colour space, the classification accuracy achieves 98.5% with high
- efficiency.
+ created a method for rock lithology recognition on android devices based
+ on two lightweight CNNs.
+ A total of 3,208 images taken by a smartphone camera were selected from
+ the China Geological Survey dataset.
+ The images of 28 rock categories were reduced to 214 × 214 pixels and the
+ 80% were used to train two CNNs pretrained with ImageNet dataset based
+ on MobileNet and SqueezeNet models.
+ The achieved occupation sizes were 19.6 M and 36.8 M for MobileNet and SqueezeNet
+, and 232.7 M for a heavyweight ResNet50 model built to compare the models.
+ SqueezeNet was almost two times faster than MobileNet, and 7 times faster
+ than ResNet50.
+ A rock recognition software based on the trained models was developed for
+ Android devices.
+ The results for SqueezeNet and MobileNet on android smartphones were as
+ follows: the file sizes of 9.2 MB and 17.6 MB, the execution time from 736
+ to 366 and 1,218 to 523 millisecond, and the recognition accuracies of
+ 94.55% and 93.27%.
 \end_layout
 
 \begin_layout Standard
@@ -1460,30 +1414,51 @@ literal "false"
 \end_inset
 
 , Shoji et al.
- created a machine learning model for quick and accurate rock recognition
- with smartphones.
- 30 different kinds of rocks were collected from multiple locations in East
- China, and a total of 3,795 images were taken with sizes between 3M and
- 6M.
- According to the ratio of 8:1:1, images were randomly selected from rock
- samples as the training data set, verification data set, and test data
- set.
- The parameters pretrained by ShuffleNet on the ImageNet data set were imported
- by the transfer learning method.
- In the training process, the default iteration step number was 3600, and
- the learning rate was 0.008.
- After training, the precision and running of the rock recognition model
- based on ShuffleNet were compared with other models.
- For the size of space occupied by the model, MobileNet, ShuffleNet, and
- SqueezeNet required 34.5M, 18.2M, and 25M, respectively, but 219.4M is needed
- for the ResNet50 model.
- Finally, an android application was created written in the Java programming
- language and runed on three android smartphones (Huawei, Samsung, and Oppo).
- The accuracy of the recognition model based no ShuffleNet reached 97.65%
+ constructed a machine learning model for quick and accurate rock lithology
+ recognition with smartphones.
+ A total of 3,795 images were taken to 30 different kinds of rocks collected
+ from multiple locations in East China.
+ A proposed model was trained using 80% of the dataset, 3,600 iteration
+ steps, a learning rate of 0.008, and the parameters imported by the transfer
+ learning method from the ShuffleNet model pretrained with the ImageNet
+ dataset.
+ After ShuffleNet was compared with MobileNet, SqueezeNet, and ResNet50.
+ Each one occupied 34.5M, 18.2M, and 25M, and 219.4M respectively.
+ An android application was created in Java programming language and run
+ on three android smartphones (Huawei, Samsung, and Oppo).
+ The accuracy of the recognition model based on ShuffleNet reached 97.65%
  in the verification data set of PC and 95.30% on the test data set of the
  smartphone.
  The average recognition time of a single rock image was 786 milliseconds
  and the model size was only 18.2 MB.
+\end_layout
+
+\begin_layout Standard
+In [], the authors worked on the automatic classification of plutonic rocks
+ in android devices.
+ The dataset contained 71 images of diorite, gabbro, granite, granodiorite,
+ monzodiorite, and tonalite which classification was based on petrographic
+ analysis of Cretaceous granitoids collected from Peru.
+ To increase the number of images, a new dataset of 846 patches from around
+ 450 × 700 to 900 × 1000 pixels was generated from the first dataset.
+ A deep neural network was created with 4-layer structure: two convolutional,
+ and two fully connected layers.
+ After each convolutional layer it was a max pooling layer of 2×2 size,
+ and a flatten and a dropout layers before the fisrt and second fully conected
+ layers respectively.
+ Several combinations of the rock classes were trained with 50% of the image
+ patches, 100 epochs and a batch size of 32.
+ The best combination was with four classes of plutonic rocks (gabbro, diorite,
+ granite and granodiorite) achieving an accuracy of 95%, an average precision
+ of 96%, an average recall of 95%, and an average F1-score of 95%.
+ Finally, an android application was developed using the proposed model
+ trained with the best combination of rocks.
+ The application evaluation results were: 70% for gabbro, 28.5% for diorite,
+ 100% for granodiorite, and 28.5% for granite.
+\end_layout
+
+\begin_layout Subsubsection
+Mineral images recognition with machine learning
 \end_layout
 
 \begin_layout Standard
@@ -1496,57 +1471,80 @@ literal "false"
 \end_inset
 
 , Zhang et al.
- worked on the intelligent identification for rock-mineral microscopic images
- using ensemble machine learning algorithms (model stacking).
- There were a total of 481 RGB images of four minerals: K-feldspar (Kf),
- perthite (Pe), plagioclase (Pl), and quartz (Qz or Q) obtained using the
- camera on the top of a microscope.
- Because the four minerals exist together with other minerals, the target
- images were cropped to cover them.
- After, the images were processed to be 299 × 299 pixels.
- The deep learning model based on Inception-v3 is adopted to extract high-level
- features of quartz and feldspar microscopic images.
- BBased on the extracted features, are generated by transfer learning using
- the Inception-v3 model.
- Based on the extracted features, logistic regression (LR), support vector
- machine (SVM), random forest (RF), k-nearest neighbors, multilayer perceptron
- (MLP), and gaussian naive Bayes (GNB) algorithms are applied to establish
- the models.
- LR, SVM, and MLP have a significant effect on extracted features, with
- higher accuracy (90.0%, 90.6%, and 89.8%) than the other models, for that
- reason, the new features generated by this three models are employed again
- in a new instance of LR for the model stacking.
- The result shows that the stacking model has a better performance than
- the single models, with an accuracy of 90.9%.
+ worked on the intelligent identification for rock-mineral images using
+ ensemble machine learning algorithms (model stacking).
+ A total of 481 images of four minerals: K-feldspar (Kf), perthite (Pe),
+ plagioclase (Pl), and quartz (Qz or Q) were obtained with the camera on
+ the top of a microscope.
+ The target RGB images were cropped to cover the minerals and then processed
+ to be 299 × 299 pixels.
+ A deep learning model based on Inception-v3 was adopted to extract high-level
+ features from the images and train the LR, SVM, KNN, Random Forest (RF),
+ Multilayer Perceptron (MLP), and Gaussian Naive Bayes (GNB) algorithms.
+ LR, SVM, and MLP had a significant effect on extracted features, with higher
+ accuracy (90.0%, 90.6%, and 89.8%) than the other models.
+ The new features generated by this three models were employed for the model
+ stacking in a new instance of LR.
+ The stacking model showed a better performance than the single models,
+ with an accuracy of 90.9%.
 \end_layout
 
 \begin_layout Standard
-In [], the authors used deep learning for the automatic classification of
- plutonic rocks in android devices.
- The dataset contained 71 images of diorite, gabbro, granite, granodiorite,
- monzodiorite, and tonalite which classification was based on petrographic
- analysis of Cretaceous granitoids collected from Peru.
- In order to increase the number of images for training a dataset of 846
- images was generated from the first dataset with patches around 450 × 700
- pixels to 900 × 1000 pixels.
- A total of 423 images for training and 423 images for validation were used
- to train a deep neural network with 4-layer structure: two convolutional,
- and two fully connected layers.
- After each convolutional layer it is a max pooling layer of 2×2 size, and
- a flatten and a dropout of 50% layers were added before the fisrt and second
- fully conected layers respectively.
- Several combinations of rock classes were trained utilizing 100 epochs
- and abatch size of 32.
- The effectiveness of the model was evalueted in terms of precision, recall
- and f1-score to determine the best combination of rock classes.The best
- combination was with four classes of plutonic rocks (gabbro, diorite, granite
- and granodiorite) achieving an accuracy value of 95%, an average precision
- value of 96%, an average recall value of 453 95%, and an average F1 score
- value of 95%.
- Finnaly, an android applicaion was developed with the proposed model trained
- with the best cobination of rocks.
- The results of the application evaluation were: 70% for gabbro, 28.5% for
- diorite, 100% for granodiorite, and 28.5% for granite.
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Maitre2019"
+literal "false"
+
+\end_inset
+
+, Maitre et al.
+ worked on the automated recognition of mineral grains based on supervised
+ machine learning.
+ A large mosaic RGB image was constructed with several views of a sample
+ surface taken with a stereo-zoom binocular microscope.
+ The sample surface contained grains of 27 different mineral species (plagioclas
+e, augite, background, hypersthene, ilmenite, magnetite, titanite, hornblende,
+ etc.) and was scanned with an automated Scanning Electron Microscopy (SEM)
+ that assigned to each grain a mineral specie based on its chemical signature.
+ Both images were divided in 3,192 sub-images of 600 × 600 pixels.
+ To label the grains of the mosaic image, the simple linear iterative clustering
+ (SLIC) algorithm was applied for superpixel segmentation to match each
+ superpixel of the mosaic's sub-images with the superpixels of the SEM's
+ scan sub-images.
+ From the computed RGB superpixel histograms, the color intensity (quantile)
+ and peak intensity (ratio between the number of pixels in the first and
+ second maximum bins to total number of pixels) were extracted as features
+ for each superpixels.
+ KNN, RF, and Classification and Regression Trees (CART) algorithms were
+ trained with 70% of the extracted features, and tested with the other 30%
+ using the kappa statistics, precision, recall, and f1-score indicators.
+ The RF algorithm gave the best results with a global accuracy of 89%.
+\end_layout
+
+\begin_layout Standard
+As shown in the previously described articles, machine learning has been
+ an accurate way for image classification in field of geosciences.
+ Feature extraction was applied in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Maitre2019"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zhang2019"
+literal "false"
+
+\end_inset
+
+ before the training of supervised machine learnign algorithms to classify
+ mineral samples.
+ These articles presented accuracies from around 90% and were trained with
+ 
 \end_layout
 
 \begin_layout Section
@@ -1936,6 +1934,14 @@ Color extraction
 \begin_layout Standard
 This step describes the process for extracting the dominant colors from
  the rock images.
+\end_layout
+
+\begin_layout Standard
+Finally, the dominant colors of an image are selected grouping the image
+ pixels in a certain number of k groups according to their color in the
+ RGB color space.
+ The average color of each group are the dominant colors and the number
+ of pixels of that groups are the dominant colors´ percentage.
 \end_layout
 
 \begin_layout Standard
