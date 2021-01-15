@@ -1396,7 +1396,7 @@ literal "false"
  In RGB color space, the classification accuracy achieved 98.5%.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Rock classification with machine learning on Android devices
 \end_layout
 
@@ -2376,7 +2376,7 @@ https://github.com/sarah-hs/Color-extraction/tree/main/Rock-images
 \end_inset
 
 .
- Table 1 shows the number of images per class.
+ Table 2 shows the number of images per class.
 \end_layout
 
 \begin_layout Standard
@@ -2861,16 +2861,14 @@ Dominant colors and average color of sample images
 \end_layout
 
 \begin_layout Subsubsection
-Training of the different algorithms with the dominant colors extracted
+Training of the different algorithms with the extracted dominant colors
 \end_layout
 
 \begin_layout Standard
-Five machine learning algorithms were trained for this experiment.
- They are Logistic Regression (LR), K-Nearest Neighbors (KNN), Decision
- Trees (DT), Support Vector Machines (SVM), and a Convolutional Neural Network
- (CNN).
- The notebook showing the training and validation process of the models
- generated is available online
+Five machine learning models were trained for this experiment: LR, KNN,
+ DT, SVM, and a CNN.
+ The notebook showing the training and validation process of the generated
+ models is available online
 \begin_inset Foot
 status collapsed
 
@@ -2932,8 +2930,10 @@ lstparams "language=Python,caption={Splitting the data in train and test},label=
 \end_layout
 
 \begin_layout Standard
-Below, listing 7 presents the training process and the parameters used for
- each algorithm.
+Below, listing 7 presents the training process of LR, KNN, DT, SVM, and
+ CNN models in lines 4, 9, 14, 19, and 37.
+ Table 3 shows the parameters used to set the models listed in lines 3,
+ 8, 13, 18 and 36 respectively.
 \end_layout
 
 \begin_layout Standard
@@ -2971,8 +2971,8 @@ The parameters set in the models
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
 <features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="15col%">
-<column alignment="center" valignment="middle" width="15col%">
+<column alignment="center" valignment="middle" width="13col%">
+<column alignment="center" valignment="middle" width="13col%">
 <column alignment="center" valignment="middle" width="31col%">
 <row>
 <cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
@@ -3104,6 +3104,10 @@ SVM
 \begin_inset Text
 
 \begin_layout Plain Layout
+Kernel
+\end_layout
+
+\begin_layout Plain Layout
 Gamma
 \end_layout
 
@@ -3111,6 +3115,10 @@ Gamma
 </cell>
 <cell alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Plain Layout
+RBF
+\end_layout
 
 \begin_layout Plain Layout
 Auto
@@ -3133,14 +3141,6 @@ CNN
 \begin_inset Text
 
 \begin_layout Plain Layout
-Epochs
-\end_layout
-
-\begin_layout Plain Layout
-Batch_size
-\end_layout
-
-\begin_layout Plain Layout
 Loss
 \end_layout
 
@@ -3152,14 +3152,6 @@ Optimizer
 </cell>
 <cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\begin_layout Plain Layout
-32
-\end_layout
 
 \begin_layout Plain Layout
 Categorical_crossentropy
@@ -3184,12 +3176,13 @@ Adam
 
 \end_layout
 
-\begin_layout Standard
-LR algorithm utilize in line 3 the Limited-memory Broyden–Fletcher–Goldfarb–Shan
-no (L-BFGS) solver parameter.
- This optimizer starts iterating at a random point (xt) to calculate a new
- point (xt+1) that is the minimum from the second derivate of original function
- at the starting point (xt).
+\begin_layout Itemize
+The L-BFGS (Limited-memory Broyden–Fletcher–Goldfarb–Shanno) solver is one
+ of the quasi-Newton methods that approximate the BFGS algorithm, which
+ utilizes a limited amount of computer memory.
+ The solver's methodology starts iterating at a random point (xt) to calculate
+ the minimum from the second derivate of the original function at that point
+ and assign it to a new point (xt+1).
  The new point will become the starting point for the next iteration.
  In this way, L-BFGS quickly converges on the solution 
 \begin_inset CommandInset citation
@@ -3202,18 +3195,17 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Standard
-KNN was declared in line 8 with 3 n_neighbors.
- This number represents the number of neighbors used to classify a new sample
- into the class to which most of the neighbors belong.
+\begin_layout Itemize
+The number of neighbors used in KNN represents the neighbor samples analyzed
+ from the dataset to classify a new sample into the class to which most
+ of their neighbors belong.
 \end_layout
 
-\begin_layout Standard
-DT algorithm was tuned specifying the class weights as 'balanced' in line
- 13.
- By utilizing class weights, we can increase the importance of a particular
- class and the balanced mode in class weight parameter uses the values of
- ytrain to automatically adjust the node weights inversely proportional
+\begin_layout Itemize
+By utilizing class weights, we can increase the importance of a particular
+ class during training.
+ The balanced mode for class weight uses the values of the labels in the
+ train set to automatically adjust the node weights inversely proportional
  to the class frequencies in the input data 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -3225,17 +3217,58 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Standard
-SVM in line 18 was created with the Radial Basis Function (RBF) kernel to
- eliminate the computational requirement of the algorithm.
- Also the gamma value is used to scale the features when using the RBF kernel.
- This is very important because small gamma will give you low bias and high
- variance solutions.
- The 'auto' paramater is a small gamma represented by 
+\begin_layout Itemize
+The Radial Basis Function (RBF) kernel is useful to eliminate the computational
+ requirement of an algorithm.
+ When it is used, the features need to be scaled and the gamma value is
+ setting for 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dangeti2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The auto value in gamma paremeter of scikit learn is represented by 
 \begin_inset Formula $1/numberOfFeatures$
 \end_inset
 
+.
+ An small gamma will give you low bias and high variance solutions 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dangeti2017,Scikit-SVC"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Categorical cross-entropy is the most diffused classification cost function,
+ adopted by logistic regression and the majority of neural architectures.
+ This convex function can be easily optimized using stochastic gradient
+ descent techniques and is an excellent choice for classification problems
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Bonaccorso2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Adam (adaptive moment estimation) algorithm is an efficient optimization
+ method that computes adaptive learning rates for each parameter to optimize
+ the weights of the model 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Dangeti2017"
