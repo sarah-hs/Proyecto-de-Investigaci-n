@@ -658,17 +658,6 @@
   publisher = {{MDPI} {AG}},
 }
 
-@Standard{CocoaPods,
-  organization = {CocoaPods},
-  title        = {What is {CocoaPods}},
-  author       = {CocoaPods},
-  language     = {English},
-  note         = {Access date: 01/15/2021},
-  type         = {software},
-  url          = {https://guides.cocoapods.org/using/getting-started.html},
-  groups       = {2.1 Underpinnings of our Approach},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:

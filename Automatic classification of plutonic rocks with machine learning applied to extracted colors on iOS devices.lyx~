@@ -4722,19 +4722,6 @@ Five machine learning algorithms were trained with just the four dominant
  and the average color in new images and detect changes in rock colors.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Falta probar la applicación con nuevas muestras.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Conclusions and Future Work
 \end_layout
