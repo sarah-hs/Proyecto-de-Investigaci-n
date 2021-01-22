@@ -2335,9 +2335,7 @@ Android application accuracy results: 70% for gabbro, 28.5% for diorite,
 
 \begin_layout Standard
 As evidenced in these articles, machine learning has been an effective way
- for image classification in the field of geosciences ans there are no works
- presenting the evaluation results of the deployment of machine learning
- on iOS devices.
+ for image classification in the field of geosciences.
 \end_layout
 
 \begin_layout Standard

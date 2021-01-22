@@ -10,6 +10,64 @@
   groups       = {2.1 Underpinnings of our Approach},
 }
 
+@Standard{Geology-Granite,
+  organization = {Geology.com},
+  title        = {Granite},
+  author       = {Hobart M. King},
+  language     = {English},
+  note         = {Access date: 12/15/2020},
+  url          = {https://geology.com/rocks/granite.shtml},
+  groups       = {2.1 Underpinnings of our Approach},
+}
+
+@Standard{Britannica-Quartz,
+  organization = {Encyclop{æ}dia Britannica},
+  title        = {Quartz},
+  author       = {{Encyclopædia Britannica}},
+  language     = {English},
+  month        = may,
+  note         = {Access date: 12/15/2020},
+  url          = {https://www.britannica.com/science/quartz},
+  year         = {2020},
+  groups       = {2.1 Underpinnings of our Approach},
+}
+
+@Standard{Britannica-Granite,
+  organization = {Encyclop{æ}dia Britannica},
+  title        = {Granite},
+  author       = {{Encyclopædia Britannica}},
+  language     = {English},
+  month        = jul,
+  note         = {Access date: 12/15/2020},
+  url          = {https://www.britannica.com/science/granite},
+  year         = {2020},
+  groups       = {2.1 Underpinnings of our Approach},
+}
+
+@Standard{Britannica-Granodiorite,
+  organization = {Encyclop{æ}dia Britannica},
+  title        = {Granodiorite},
+  author       = {{Encyclopædia Britannica}},
+  language     = {English},
+  month        = jul,
+  note         = {Access date: 12/15/2020},
+  url          = {https://www.britannica.com/science/granodiorite},
+  year         = {1998},
+  groups       = {2.1 Underpinnings of our Approach},
+}
+
+@Standard{Britannica-Gabbro,
+  organization = {Encyclop{æ}dia Britannica},
+  title        = {Gabbro},
+  author       = {{Encyclopædia Britannica}},
+  language     = {English},
+  month        = feb,
+  note         = {Access date: 12/15/2020},
+  url          = {https://www.britannica.com/science/gabbro},
+  year         = {2014},
+  groups       = {2.1 Underpinnings of our Approach},
+}
+
 @Standard{Britannica-Diorite,
   organization = {Encyclop{æ}dia Britannica},
   title        = {Diorite},
