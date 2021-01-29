@@ -1,0 +1,19 @@
+#	Convolutional Neural Network
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten, Dropout, Conv1D, MaxPooling1D
+from tensorflow.keras import optimizers
+from livelossplot.inputs.tf_keras import PlotLossesCallback
+
+model = Sequential()
+model.add(Conv1D(32, kernel_size=2, padding="same", input_shape = (16, 1), activation='relu'))
+model.add(MaxPooling1D(pool_size=2))
+model.add(Conv1D(64, kernel_size=2, padding="same", activation='relu'))
+model.add(MaxPooling1D(pool_size=2))
+model.add(Flatten())
+model.add(Dense(64, activation='relu'))
+model.add(Dense(len(classes_dict), activation='softmax'))
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+xtrain2 = np.expand_dims(xtrainNorm, 2)
+ytrain2 = np.expand_dims(ytrain, 1)
+model.fit(xtrain2, ytrain2, epochs=100, batch_size=32)

@@ -3,4 +3,6 @@ for img in images:
 	features = get_dominant_colors(img)
 	extracted_colors.append(features)
 
-np.savetxt(CSV_DIR, np.column_stack((extracted_colors, labels)), delimiter=",")
+data_df = pd.DataFrame(extracted_colors, files)
+data_df[16] = y
+data_df.to_csv(CSV_DIR, header=None)

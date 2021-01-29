@@ -1,0 +1,4 @@
+#	K-Nearest Neighbors
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=1)
+knn.fit(xtrainNorm, ytrain)
