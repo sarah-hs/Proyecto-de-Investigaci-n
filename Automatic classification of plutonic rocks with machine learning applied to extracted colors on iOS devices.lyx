@@ -354,7 +354,7 @@ begin{titlepage}
 The classification of different rocks can provide important information
  about the conditions under they were formed and their tectonic environment.
  Color is a key property for rock classification.
- However, it is difficult to describe color in rocks because the perceived
+ However, it is difficult to describe the colors in rocks because the perceived
  colors depend on the observer's experience.
  Moreover, the equipment for rock classification is expensive, which makes
  this equipment prohibitive to geology students and amateurs.
@@ -367,16 +367,16 @@ The classification of different rocks can provide important information
  Decision Trees (DT), Support Vector Machine (SVM), and a Convolutional
  Neural Network (CNN) algorithms to a dataset with the extracted dominant
  colors.
- The best results were achieved with KNN that were the following: 93% of
- accuracy, 93% of precision, 93% of recall, and 93% of F1-score.
- Third, we present an iOS application that uses machine learning to classify
+ The best results were achieved with the KNN model: 93% of accuracy, 93%
+ of precision, 93% of recall, and 93% of F1-score.
+ Third, we present an iOS application that uses the KNN model to classify
  images of the following plutonic rocks: granite, granodiorite, gabbro,
  and diorite.
- The results of the iOS mobile application in the field were: 85.7% for granite,
- 20% for granodiorite, 70% for gabbro, and 28.5% for diorite.
- Four, we compared the results in the field with our previous work in which
- a CNN was trained using all the images features of the same dataset of
- plutonic rocks and deployed in an Android application.
+ The accuracy results of the iOS mobile application in the field were: 85.7%
+ for granite, 20% for granodiorite, 70% for gabbro, and 28.5% for diorite.
+ Fourth, we compared the results in the field with our previous work in
+ which a CNN was trained using all the images features of the same dataset
+ of plutonic rocks and deployed in an Android application.
 \end_layout
 
 \begin_layout Keywords
@@ -628,22 +628,24 @@ he classification of different rocks can provide important information about
  They can also tell us much about their tectonic environment, given that
  they are closely linked to the convection of tectonic plates.
  Also, their mineral and chemical makeup can be used to learn about the
- composition, temperature and pressure that exists within the Earth’s mantle
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Williams-2015"
-literal "false"
+ composition, temperature and pressure that exists within the Earth’s mantle.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Se quitó referencia de https://www.universetoday.com/82009/how-are-igneous-rocks-f
+ormed/
+\end_layout
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
-Plutonic rocks are a type of igneous rock (one of the three main types of
- rocks in the world and also the most common) formed when magma in the middle
- of the volcanoes cools and solidifies below the Earth’s surface.
+Plutonic rocks are a type of igneous rocks (one of the three main types
+ of rocks in the world and also the most common) formed when magma in the
+ middle of the volcanoes cools and solidifies below the Earth’s surface.
  They come in many different sizes and colors, and have a wide variety of
  uses 
 \begin_inset CommandInset citation
@@ -677,28 +679,12 @@ literal "false"
  Regression (LR), K-Nearest Neighbors (KNN), Decision Trees (DT), Support
  Vector Machine (SVM), and a Convolutional Neural Network (CNN).
  Third, we deployed the best model in an iOS application that classifies
- extracted colors in images into four types of plutonic rocks: granite,
- granodiorite, gabbro, and diorite.
- Fourth, we compare our approach with our previous work [reference] in which
+ extracted colors in images into four types of plutonic rocks obtaining
+ the following accuracy results in the field: 85.7% for granite, 20% for
+ granodiorite, 70% for gabbro, and 28.5% for diorite.
+ Fourth, we compared our approach with our previous work [ref] in which
  a CNN was trained with the same dataset of plutonic rock using the whole
  set of image pixel features instead of the four dominant colors.
- In that work, the best result was obtained in the model that classifies
- images of gabbro, diorite, granodiorite, and granite with an accuracy value
- of 95%, an average precision of 96%, an average recall of 95%, and an average
- F1-score of 95%.
- Also, an Android mobile application was deployed with this classification
- model which results for diorite and granite were below expectations with
- 28.5% for each class.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-70% for gabbro, 28.5% for diorite, 100% for granodiorite, and 28.5% for granite.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -708,7 +694,7 @@ Problem Statement
 \begin_layout Standard
 The equipment for rock classification is expensive, which makes it prohibitive
  to geology students and amateurs.
- In addtion, there is a lack of mobile tools for plutonic rock classification
+ In addition, there is a lack of mobile tools for plutonic rock classification
  with machine learning.
  Despite the fact that color is a key property for rock classification,
  it is an attribute difficult to describe because perceived colors in rocks
@@ -731,17 +717,18 @@ Justification
 \begin_layout Standard
 There are two reasons to create an iOS mobile application that allows the
  classification of plutonic rocks with machine learning using their dominant
- colors which represent the principal color values of all the pixels in
- an image.
+ colors.
+ The dominant colors represent the principal color values of all the pixels
+ in an image.
  First, no such application exists.
  A mobile application offers the flexibility to carry out the classification
  on real time and could be an alternative to expensive traditional methods
  of rock classification.
- Second, in our previos work we found that the accuracy of the model decreased
+ Second, in our previous work we found that the accuracy of the model decreased
  in the field.
  We extracted the dominant colors to verify if feature reduction leads to
  better results in the field than the obtained with the Android application
- of our previous work using all the rock image features.
+ [ref] of our previous work using all the rock image features.
 \end_layout
 
 \begin_layout Subsection
@@ -749,18 +736,21 @@ Objectives
 \end_layout
 
 \begin_layout Standard
-The main objective of this research is to extract dominant colors from plutonic
- rock images to train several machine learning algorithms and deploy the
- best model in an iOS app.
- In this way we will be able to compare the results in the field with our
- previous work.
+The main objective of this research work is to extract dominant colors from
+ plutonic rock images to train several machine learning algorithms and deploy
+ the best model in an iOS app.
+ The results in the field are compared with our previous work [ref].
  This objective is achieved with the following sub-objectives:
 \end_layout
 
 \begin_layout Itemize
-Determine the best k number of clusters to use in the k-means clustering
- machine learning method to extract the dominant colors from images of plutonic
- rocks.
+Determine the best 
+\shape italic
+k
+\shape default
+ number of clusters to use in the k-means clustering machine learning method
+ to extract the dominant colors in terms of RGB and CIELab color spaces
+ from images of plutonic rocks.
 \end_layout
 
 \begin_layout Itemize
@@ -776,8 +766,9 @@ Validate the models generated to get the best suited model and deploy it
 
 \begin_layout Itemize
 Test the effectiveness of the application with images taken from new plutonic
- rocks to compare the results with our previous work in which a CNN was
- trained with images using the whole set of features.
+ rocks in the field.
+ The results are compared with our previous work in which a CNN was trained
+ with images using the whole set of features.
  
 \end_layout
 
@@ -865,22 +856,11 @@ Plutonic rocks
 \end_layout
 
 \begin_layout Standard
-Plutonic rocks are solidified inside the earth’s crust, usually from magma,
+Plutonic rocks are solidified inside the Earth’s crust, usually from magma,
  although they may have been formed by a different mechanism.
  Plutonic rocks are generally coarse-grained, but not all coarse-grained
- rocks are plutonic 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "RACEFEN-gg"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-According to 
+ rocks are plutonic.
+ According to 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RACEFEN-gg"
@@ -891,14 +871,14 @@ literal "false"
 :
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Granite rocks are plutonic rocks with a granular texture, composed of similar
  amounts of quartz, potassium feldspar, and plagioclase as essential minerals,
  and smaller amounts of one or more minerals, such as biotite, muscovite
  or hornblende.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Granodiorite is a plutonic rock of the granitoid family, characterized by
  quartz because plagioclase constitutes more than 2/3 of the total feldspars.
  Generally, together with granite, it is the most abundant rock of the great
@@ -908,7 +888,7 @@ Granodiorite is a plutonic rock of the granitoid family, characterized by
  more plagioclase.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Gabbro is a plutonic rock composed mainly of calcium plagioclase and clinopyroxe
 ne or orthopiroxene, with or without olivine or amphibole.
  It is the intrusive equivalent of basalt.
@@ -916,8 +896,8 @@ ne or orthopiroxene, with or without olivine or amphibole.
  higher in calcium than in sodium.
 \end_layout
 
-\begin_layout Standard
-Diorite has about the same structural properties as granite but darker colour
+\begin_layout Itemize
+Diorite has about the same structural properties as granite but darker color
  and more limited supply.
  Commonly is composed of about two-thirds plagioclase feldspar and one-third
  dark-coloured minerals, such as hornblende or biotite.
@@ -942,7 +922,7 @@ Machine Learning
 Machine learning is a branch of artificial intelligence that lies at the
  intersection of computer science, engineering and statistics, and often
  appears in other disciplines.
- Machine Learning systems can be classified according to the type of supervision
+ Machine learning systems can be classified according to the type of supervision
  they get during training 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -971,10 +951,7 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Some common algorithms of supervised learning are described as follows:
+ Some common algorithms of supervised learning are described as follows:
 \end_layout
 
 \begin_layout Itemize
@@ -996,9 +973,9 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-K-Nearest Neighbors (KNN) is a simple algorithm in which its priniciple
- is to find a predefined number of training samples closest in distance
- to the new point, and predict the label from these.
+K-Nearest Neighbors (KNN) is a simple algorithm in which its principle is
+ to find a predefined number of training samples closest in distance to
+ the new point, and predict the label from these.
  Being a non-parametric method, it is often successful in classification
  situations where the decision boundary is very irregular 
 \begin_inset CommandInset citation
@@ -1072,9 +1049,17 @@ In unsupervised learning the training data is unlabeled.
  One of the most important unsupervised learning algorithms is k-means.
  K-means is a simple algorithm capable of clustering an unlabeled dataset
  very quickly and efficiently, often in just a few iterations.
- The number of clusters k that the algorithm must find is specified to easily
- label all the instances in the dataset by assigning each of them to the
- cluster whose centroid is closest 
+ Its goal is to group similar instances together into clusters.
+ The number of 
+\shape italic
+k 
+\shape default
+clusters that the algorithm must find is specified to easily assign each
+ instance to one of the 
+\shape italic
+k
+\shape default
+ clusters 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Geron2019"
@@ -1109,6 +1094,26 @@ In RGB (Red, Green, Blue), the light spectra of varying fractions of the
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Wallace2002"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On the other hand, CIELab has the property of being perceptually uniform
+ (useful to measure the similarity between two given colors) and is designed
+ to approximate human vision.
+ The L channel which represents the brightness of each pixel varies between
+ 0 and 100.
+ The a (red/green) and b (yellow/blue) channels which correspond to the
+ chromaticity components contain information about the color of a pixel,
+ independent of its brightness.
+ Their values vary between -127 and 127 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DavidMillanEscriva2019,Young2009"
 literal "false"
 
 \end_inset
@@ -1159,15 +1164,16 @@ https://www.tensorflow.org
 
 \end_inset
 
- is an open-source library developed by Google.
- It has become very popular because it provides Application Programming
- Interfaces (APIs) that facilitates machine learning.
- TensorFlow also has a faster compilation time than other deep learning
- libraries such as Keras and Touch.
- TensorFlow supports both CPU and GPU computing devices 
+ is an interface for expressing machine learning algorithms and an implementatio
+n for executing such algorithms.
+ A computation expressed using TensorFlow can be executed with little or
+ no change on a wide variety of heterogeneous systems, ranging from mobile
+ devices such as phones and tablets up to large-scale distributed systems
+ of hundreds of machines and thousands of computational devices such as
+ GPU cards 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "medium-TF"
+key "Abadi2016"
 literal "false"
 
 \end_inset
@@ -1289,7 +1295,7 @@ literal "false"
 
 .
  It also includes a unified macOS SDK and all the frameworks, compilers,
- debuggers, and other tools necesary to buld applications that run natively
+ debuggers, and other tools necessary to build applications that run natively
  on Apple devices 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1318,7 +1324,7 @@ https://cocoapods.org
 
  is a dependency manager for Swift and Objective-C Cocoa projects.
  The dependencies of the projects just are specified in a single text file
- called Podfile.
+ called Pod file.
  CocoaPods resolves dependencies between libraries, fetches the resulting
  source code, then links it together in an Xcode workspace to build a single
  project 
@@ -1337,222 +1343,8 @@ Related Work
 \end_layout
 
 \begin_layout Standard
-Over the last decade, there has been considerable progress in the application
- of machine learning to geosciences 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lary2018"
-literal "false"
-
-\end_inset
-
-.
- In this section we present relevant research work in three areas: image
- classification of rock lithology using machine learning, rock classification
- with machine learning on Android devices, and recognition of mineral images
- applying machine learning and feature extraction.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-In some of this articles I found about the 
-\begin_inset Quotes eld
-\end_inset
-
-classification of rock lithology on geological surveys
-\begin_inset Quotes erd
-\end_inset
-
-.
- However, I want to ask if it is a different type of rock classification
- than the used in this work.
- What do they mean by lithology?
-\end_layout
-
-\begin_layout Plain Layout
-I searched in web but couldn´t understand.
- I just mentioned it in the articles below as rock classification.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Image classification of rock lithology using machine learning
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Ran2019"
-literal "false"
-
-\end_inset
-
-, Ran et al.
- proposed a CNN model for the classification of six rock types (granite,
- limestone, conglomerate, sandstone, shale, mylonite) and compared their
- results with four other common machine learning models.
- A total of 2,290 images were labeled according to the clarity of the rock
- and cropped into 14,589 sample patches of 512 × 512 pixels compressed to
- 128 × 128 pixels.
- 60% of the patches of each type of rock were selected for the training
- dataset, 20% for the validation dataset, and 20% for the testing dataset.
- Their proposed CNN model achieved the highest overall accuracy of 97.76%
- compared with the other models: SVM, AlexNet, GoogleLeNet Inception v3,
- and VGGNet-16.
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Cheng2017"
-literal "false"
-
-\end_inset
-
-, Cheng and Guo proposed a deep CNN to identify the granularity of feldspar
- sandstone rocks in images under three color spaces: RGB, YCbCr, and HSV.
- A total of 4,200 images were collected from rocks of an oil field in Ordos
- and divided into three types of granularity: coarse, medium granular, and
- fine.
- The RGB images were normalized to 224 × 224 pixels and converted to YCbCr
- and HSV.
- The proposed CNN was a 6-layer structure of 4 convoluted layers with ReLU
- as the activation function and 2 fully connected layers with Softmax as
- the classifier.
- The model was trained for each color space with 75% of the experimental
- data, a batch size of 100, and different kernel sizes and learning rates.
- The lowest error rates were obtained with the learning rate of 0.0005, the
- kernel sizes of 11, 5, 3, and 3 for each convolutional layer respectively,
- and the cross-validation for HSV color space.
- In RGB color space, the classification accuracy achieved 98.5%.
-\end_layout
-
-\begin_layout Subsubsection
-Rock classification with machine learning on Android devices
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Fan2020"
-literal "false"
-
-\end_inset
-
-, Fan et al.
- created a method for rock lithology recognition on Android devices based
- on the two lightweight SqueezeNet and MobileNet CNNs.
- These models were compared with ResNet50, a heavyweight model.
- The images were selected from the China Geological Survey dataset that
- contains images of 28 rock categories taken by a smartphone camera.
- The 3,208 images were reduced to 214 × 214 pixels and the 80% were used
- to train the two CNNs pretrained with ImageNet dataset.
- The achieved occupation sizes were 19.6 M and 36.8 M for MobileNet and SqueezeNet
-, and 232.7 M for ResNet50.
- SqueezeNet was almost two times faster than MobileNet, and 7 times faster
- than ResNet50.
- A rock recognition software based on the trained models was developed for
- Android devices.
- The results for SqueezeNet and MobileNet on Android smartphones were as
- follows: the file sizes of 9.2 MB and 17.6 MB, the execution time from 736
- to 366 and 1,218 to 523 milliseconds, and the recognition accuracies of
- 94.55% and 93.27%.
-\end_layout
-
-\begin_layout Standard
-Also in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Fan2020a"
-literal "false"
-
-\end_inset
-
-, Fan et al.
- improved their work using a model based on ShuffleNet for quick and accurate
- rock lithology recognition with smartphones and compared it with their
- previous work of MobileNet and SqueezeNet.
- They selected 3,795 images of 30 different kinds of rocks collected from
- multiple locations in East China.
- The ShuffleNet model was trained using 80% of the dataset, 3,600 iteration
- steps, a learning rate of 0.008, and the parameters imported by the transfer
- learning method using the ImageNet dataset.
- ShuffleNet occupied a space of 18.2M compared with MobileNet, SqueezeNet,
- and ResNet50 that occupied 34.5M, 25M, and 219.4M respectively.
- An Android application was created using each model and run on three Android
- smartphones (Huawei, Samsung, and Oppo).
- The average recognition time of ShuffleNet for a single rock image was
- 786 milliseconds, the reached accuracy was 97.65% on PC and 95.30% on the
- smartphones.
-\end_layout
-
-\begin_layout Standard
-In our previous work [], we proposed a CNN model trained with several combinatio
-ns of plutonic rocks to deploy the best combination of rocks in an Android
- application.
- The dataset contained 71 images of diorite, gabbro, granite, granodiorite,
- monzodiorite, and tonalite which classification was based on petrographic
- analysis of Cretaceous granitoids collected from Peru.
- To increase the number of images, a new dataset of 846 patches from around
- 450 × 700 to 900 × 1000 pixels was generated from the first dataset.
- A deep neural network was created with 4-layer structure: two convolutional,
- and two fully connected layers.
- After each convolutional layer it was a max pooling layer of 2×2 size,
- and a flatten and a dropout layers before the fisrt and second fully conected
- layers respectively.
- Several combinations of the rock classes were trained with 50% of the image
- patches, 100 epochs and a batch size of 32.
- The best combination was with four classes of plutonic rocks (gabbro, diorite,
- granite and granodiorite) achieving an accuracy of 95%, an average precision
- of 96%, an average recall of 95%, and an average F1-score of 95%.
- Finally, an Android application was developed using the proposed model
- trained with the best combination of rocks.
- The application evaluation results were: 70% for gabbro, 28.5% for diorite,
- 100% for granodiorite, and 28.5% for granite.
-\end_layout
-
-\begin_layout Subsubsection
-Recognition of mineral images applying machine learning and feature extraction
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Zhang2019"
-literal "false"
-
-\end_inset
-
-, Zhang et al.
- worked on the intelligent identification for rock-mineral images using
- ensemble machine learning algorithms (model stacking).
- A total of 481 images of four minerals (K-feldspar, perthite, plagioclase,
- and quartz) were obtained with the camera on the top of a microscope.
- The target RGB images were cropped to cover the minerals and then processed
- to be 299 × 299 pixels.
- A deep learning model based on Inception-v3 was adopted to extract high-level
- features (such as chromatic aberration and texture) from the images and
- train the algorithms of LR, SVM, KNN, Random Forest (RF), Multilayer Perceptron
- (MLP), and Gaussian Naive Bayes (GNB).
- LR, SVM, and MLP had a significant effect on extracted features, with higher
- accuracy (90.0%, 90.6%, and 89.8%) than the other models.
- The new features generated by this three models were employed for the model
- stacking in a new instance of LR.
- The stacking model showed a better performance than the single models,
- with an accuracy of 90.9%.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
-placement t
+placement !t
 wide true
 sideways false
 status collapsed
@@ -1564,7 +1356,7 @@ status collapsed
 Comparison table of the articles described in the related work 
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Comparison-table-of"
+name "tab:Related-work-comparison"
 
 \end_inset
 
@@ -1668,16 +1460,9 @@ Results
 \begin_inset Text
 
 \begin_layout Plain Layout
-Zhang et al.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Zhang2019"
-literal "false"
-
-\end_inset
-
-
+E.
+ Vázquez and H.
+ Alférez [ref]
 \end_layout
 
 \end_inset
@@ -1686,16 +1471,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-2019
-\end_layout
-
-\end_inset
-</cell>
-<cell mroffset="10cm" alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-481 images of four minerals (K-feldspar, perthite, plagioclase, and quartz)
+2021
 \end_layout
 
 \end_inset
@@ -1704,173 +1480,8 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Inception-v3 CNN model
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-High-level features (such as chromatic aberration and texture)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-90% of extracted features
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Stacking model (LR, SVM, and MLP)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Model accuracy: 90.9%
-\end_layout
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Maitre et al.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Maitre2019"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2019
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3,192 sub-images of the view taken to a surface with 27 mineral grains species
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Simple Linear Iterative Clustering (SLIC) algorithm
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Color intensity and Peak intensity of computed histograms from superpixels
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-70% of extracted features
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Random Forest (RF)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Model accuracy: 89%
-\end_layout
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ran et al.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Ran2019"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2019
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14,589 patches from 2,290 images of six rock types (granite, limestone,
- conglomerate, sandstone, shale, mylonite)
+846 patches from 71 images of six plutonic rock types (diorite, gabbro,
+ granite, granodiorite, monzodiorite, and tonalite)
 \end_layout
 
 \end_inset
@@ -1897,7 +1508,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-60% of the patches
+50% of the patches
 \end_layout
 
 \end_inset
@@ -1906,7 +1517,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-3-layer structure CNN
+4-layer structure CNN
 \end_layout
 
 \end_inset
@@ -1915,98 +1526,12 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Model accuracy: 97.76%
+Model accuracy: 95%
 \end_layout
 
 \begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Cheng and Guo 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Cheng2017"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2017
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4,200 images of three feldspar sandstones rock types (coarse, medium granular,
- and fine)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-75% of the images
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6-layer structure CNN
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Model accuracy: 98.5%
-\end_layout
-
-\begin_layout Plain Layout
--
+Android application accuracy results: 70% for gabbro, 28.5% for diorite,
+ 100% for granodiorite, and 28.5% for granite
 \end_layout
 
 \end_inset
@@ -2195,13 +1720,281 @@ Classification time: 786 millisecond
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ran et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ran2019"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14,589 patches from 2,290 images of six rock types (granite, limestone,
+ conglomerate, sandstone, shale, mylonite)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60% of the patches
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3-layer structure CNN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model accuracy: 97.76%
+\end_layout
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zhang et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zhang2019"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2019
+\end_layout
+
+\end_inset
+</cell>
+<cell mroffset="10cm" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+481 images of four minerals (K-feldspar, perthite, plagioclase, and quartz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inception-v3 CNN model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+High-level features (such as chromatic aberration and texture)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90% of extracted features
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stacking model (LR, SVM, and MLP)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model accuracy: 90.9%
+\end_layout
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maitre et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Maitre2019"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,192 sub-images of the view taken to a surface with 27 mineral grains species
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simple Linear Iterative Clustering (SLIC) algorithm
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Color intensity and Peak intensity of computed histograms from superpixels
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70% of extracted features
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Random Forest (RF)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model accuracy: 89%
+\end_layout
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-E.
- Vázquez and H.
- Alférez []
+Cheng and Guo 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cheng2017"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2210,7 +2003,7 @@ E.
 \begin_inset Text
 
 \begin_layout Plain Layout
-2021
+2017
 \end_layout
 
 \end_inset
@@ -2219,8 +2012,8 @@ E.
 \begin_inset Text
 
 \begin_layout Plain Layout
-846 patches from 71 images of six plutonic rock types (diorite, gabbro,
- granite, granodiorite, monzodiorite, and tonalite)
+4,200 images of three feldspar sandstones rock types (coarse, medium granular,
+ and fine)
 \end_layout
 
 \end_inset
@@ -2247,7 +2040,7 @@ E.
 \begin_inset Text
 
 \begin_layout Plain Layout
-50% of the patches
+75% of the images
 \end_layout
 
 \end_inset
@@ -2256,7 +2049,7 @@ E.
 \begin_inset Text
 
 \begin_layout Plain Layout
-4-layer structure CNN
+6-layer structure CNN
 \end_layout
 
 \end_inset
@@ -2265,12 +2058,11 @@ E.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Model accuracy: 95%
+Model accuracy: 98.5%
 \end_layout
 
 \begin_layout Plain Layout
-Android application accuracy results: 70% for gabbro, 28.5% for diorite,
- 100% for granodiorite, and 28.5% for granite
+-
 \end_layout
 
 \end_inset
@@ -2286,6 +2078,205 @@ Android application accuracy results: 70% for gabbro, 28.5% for diorite,
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Over the last decade, there has been considerable progress in the application
+ of machine learning to geochemistry 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lary2018"
+literal "false"
+
+\end_inset
+
+.
+ In this section we present relevant research work in three areas: image
+ classification of rock lithology using machine learning, rock classification
+ with machine learning on Android devices, and recognition of mineral images
+ applying machine learning and feature extraction.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Related-work-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ summarizes the works presented in this section.
+\end_layout
+
+\begin_layout Subsubsection
+Image classification of rock lithology using machine learning
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ran2019"
+literal "false"
+
+\end_inset
+
+, Ran et al.
+ proposed a CNN model for the classification of six rock types (granite,
+ limestone, conglomerate, sandstone, shale, mylonite) and compared their
+ results with four other common machine learning models.
+ A total of 2,290 images were labeled according to the clarity of the rock
+ and cropped into 14,589 sample patches of 512 × 512 pixels compressed to
+ 128 × 128 pixels.
+ 60% of the patches of each type of rock were selected for the training
+ dataset, 20% for the validation dataset, and 20% for the testing dataset.
+ Their proposed CNN model achieved the highest overall accuracy of 97.76%
+ compared with the other models: SVM, AlexNet, GoogleLeNet Inception v3,
+ and VGGNet-16.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cheng2017"
+literal "false"
+
+\end_inset
+
+, Cheng and Guo proposed a deep CNN to identify the granularity of feldspar
+ sandstone rocks in images under three color spaces: RGB, YCbCr, and HSV.
+ A total of 4,200 images were collected from rocks of an oil field in Ordos
+ and divided into three types of granularity: coarse, medium granular, and
+ fine.
+ The RGB images were normalized to 224 × 224 pixels and converted to YCbCr
+ and HSV.
+ The proposed CNN was a 6-layer structure of 4 convoluted layers with ReLU
+ as the activation function and 2 fully connected layers with Softmax as
+ the classifier.
+ The model was trained for each color space with 75% of the experimental
+ data, a batch size of 100, and different kernel sizes and learning rates.
+ The lowest error rates were obtained with the learning rate of 0.0005, the
+ kernel sizes of 11, 5, 3, and 3 for each convolutional layer respectively,
+ and the cross-validation for HSV color space.
+ In RGB color space, the classification accuracy achieved 98.5%.
+\end_layout
+
+\begin_layout Subsubsection
+Rock classification with machine learning on Android devices
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fan2020"
+literal "false"
+
+\end_inset
+
+, Fan et al.
+ created a method for rock lithology recognition on Android devices based
+ on the two lightweight SqueezeNet and MobileNet CNNs.
+ These models were compared with ResNet50, a heavyweight model.
+ The images were selected from the China Geological Survey dataset that
+ contains images of 28 rock categories taken by a smartphone camera.
+ The 3,208 images were reduced to 214 × 214 pixels and the 80% were used
+ to train the two CNNs pretrained with ImageNet dataset.
+ The achieved occupation sizes were 19.6 M and 36.8 M for MobileNet and SqueezeNet
+, and 232.7 M for ResNet50.
+ SqueezeNet was almost two times faster than MobileNet, and 7 times faster
+ than ResNet50.
+ A rock recognition software based on the trained models was developed for
+ Android devices.
+ The results for SqueezeNet and MobileNet on Android smartphones were as
+ follows: the file sizes of 9.2 MB and 17.6 MB, the execution time from 736
+ to 366 and 1,218 to 523 milliseconds, and the recognition accuracies of
+ 94.55% and 93.27%.
+\end_layout
+
+\begin_layout Standard
+Also in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fan2020a"
+literal "false"
+
+\end_inset
+
+, Fan et al.
+ improved their work using a model based on ShuffleNet for quick and accurate
+ rock lithology recognition with smartphones and compared it with their
+ previous work of MobileNet and SqueezeNet.
+ They selected 3,795 images of 30 different kinds of rocks collected from
+ multiple locations in East China.
+ The ShuffleNet model was trained using 80% of the dataset, 3,600 iteration
+ steps, a learning rate of 0.008, and the parameters imported by the transfer
+ learning method using the ImageNet dataset.
+ ShuffleNet occupied a space of 18.2M compared with MobileNet, SqueezeNet,
+ and ResNet50 that occupied 34.5M, 25M, and 219.4M respectively.
+ An Android application was created using each model and run on three Android
+ smartphones (Huawei, Samsung, and Oppo).
+ The average recognition time of ShuffleNet for a single rock image was
+ 786 milliseconds, the reached accuracy was 97.65% on PC and 95.30% on the
+ smartphones.
+\end_layout
+
+\begin_layout Standard
+In our previous work [ref], we proposed a CNN model trained with several
+ combinations of plutonic rocks to deploy the best combination of rocks
+ in an Android application.
+ The dataset contained 71 images of diorite, gabbro, granite, granodiorite,
+ monzodiorite, and tonalite which classification was based on petrographic
+ analysis of Cretaceous granitoids collected from Peru.
+ To increase the number of images, a new dataset of 846 patches from around
+ 450 × 700 to 900 × 1000 pixels was generated from the first dataset.
+ A deep neural network was created with 4-layer structure: two convolutional,
+ and two fully connected layers.
+ After each convolutional layer it was a max pooling layer of 2×2 size,
+ and a flatten and a dropout layers before the first and second fully connected
+ layers respectively.
+ Several combinations of the rock classes were trained with 50% of the image
+ patches, 100 epochs and a batch size of 32.
+ The best combination was with four classes of plutonic rocks (gabbro, diorite,
+ granite and granodiorite) achieving an accuracy of 95%, an average precision
+ of 96%, an average recall of 95%, and an average F1-score of 95%.
+ Finally, an Android application was developed using the proposed model
+ trained with the best combination of rocks.
+ The application evaluation results were: 70% for gabbro, 28.5% for diorite,
+ 100% for granodiorite, and 28.5% for granite.
+\end_layout
+
+\begin_layout Subsubsection
+Recognition of mineral images applying machine learning and feature extraction
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zhang2019"
+literal "false"
+
+\end_inset
+
+, Zhang et al.
+ worked on the intelligent identification for rock-mineral images using
+ ensemble machine learning algorithms (model stacking).
+ A total of 481 images of four minerals (K-feldspar, perthite, plagioclase,
+ and quartz) were obtained with the camera on the top of a microscope.
+ The target RGB images were cropped to cover the minerals and then processed
+ to be 299 × 299 pixels.
+ A deep learning model based on Inception-v3 was adopted to extract high-level
+ features (such as chromatic aberration and texture) from the images and
+ train the algorithms of LR, SVM, KNN, Random Forest (RF), Multilayer Perceptron
+ (MLP), and Gaussian Naive Bayes (GNB).
+ LR, SVM, and MLP had a significant effect on extracted features, with higher
+ accuracy (90.0%, 90.6%, and 89.8%) than the other models.
+ The new features generated by this three models were employed for the model
+ stacking in a new instance of LR.
+ The stacking model showed a better performance than the single models,
+ with an accuracy of 90.9%.
 \end_layout
 
 \begin_layout Standard
@@ -2327,44 +2318,22 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Comparison-table-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- illustrates the comparison of the articles described in this section.
- As evidenced in these articles, machine learning has been an effective
- way for image classification in geochemistry and geosciences.
- 
-\end_layout
-
-\begin_layout Standard
-Feature extraction was applied in 
+Machine learning has been an effective way for image classification in geochemis
+try and geosciences.
+ Specifically, feature extraction was used in 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Maitre2019"
+key "Maitre2019,Zhang2019"
 literal "false"
 
 \end_inset
 
- and 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Zhang2019"
-literal "false"
-
-\end_inset
-
- before the training of several machine learning models to classify images
- of mineral samples.
- These works showed higher accuracies from around 90% but the number of
- extracted features per instance used for training was even too large compared
- with the 16 features used in this work.
+ before training machine learning models to classify images of mineral samples.
+ Although these works showed good results, the number of features extracted
+ was too large and their accuracies were lower than the presented in this
+ work.
+ No works presented the extraction of features in the classification of
+ rocks.
 \end_layout
 
 \begin_layout Standard
@@ -2376,11 +2345,11 @@ literal "false"
 
 \end_inset
 
- introduced the comparison of different CNN model structures to analyze
- the performance of these models for rock lithology classification using
- all the image features.
- Also in our previous work [reference], several combinations of plutonic
- rocks were analyzed using all the image features to train a CNN model rather
+ introduce the comparison of different CNN model structures to analyze the
+ performance of these models for rock lithology classification using all
+ the image features.
+ Also in our previous work [ref], several combinations of plutonic rocks
+ were analyzed using all the image features to train a CNN model rather
  than extracted features.
  In 
 \begin_inset CommandInset citation
@@ -2390,14 +2359,14 @@ literal "false"
 
 \end_inset
 
- and [reference] the created models were implemented on android mobile aplicatio
-ns for the classification of rocks.
- However there are no works presenting the evaluation results of the deployment
+ and [ref] the created models were deployed on an Android mobile application
+ for the classification of rocks.
+ However, there are no works presenting the evaluation results of the deployment
  of machine learning on iOS devices.
 \end_layout
 
 \begin_layout Standard
-The evaluation of the models in 
+Finally, the evaluation of the models in 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Ran2019,Cheng2017,Fan2020,Fan2020a"
@@ -2405,9 +2374,9 @@ literal "false"
 
 \end_inset
 
- showed great results, though all of them were trained with diverse types
- of rocks instead of on type as was made in this work classifying just plutonic
- rocks.
+ showed good results in the field.
+ Nevertheless, all of them were trained with diverse types of rocks instead
+ of use only the plutonic rock type.
  This type of classification becomes more difficult because rocks of a same
  type have very similar characteristics.
 \end_layout
@@ -2433,7 +2402,8 @@ The images of plutonic rocks were provided by the Department of Earth and
  Biological Sciences at Loma Linda University.
  The dataset contains images of four classes of plutonic rocks: granite,
  granodiorite, gabbro, and diorite with a total of 81 images.
- The images used in the following experiments are available online
+ The images used in the following experiments are organized in subfolders
+ according to their class and are available online
 \begin_inset Foot
 status collapsed
 
@@ -2644,11 +2614,35 @@ In this step, the images were processed in order to obtain the color values
 \end_layout
 
 \begin_layout Standard
-First, all files with image extension ('.png', ’.jpg’, ’.jpeg’) in the main
- directory of images were processed in RGB format and labeled according
- to the name of the subfolder containing each one.
- Thereafter, we converted the RGB values of the image pixels to CIELab values
- using the 
+First, all files (
+\begin_inset Quotes eld
+\end_inset
+
+.png
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+.jpg
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+.jpeg
+\begin_inset Quotes erd
+\end_inset
+
+) in the subfolders of the main directory of images were processed in RGB
+ format and labeled according to their container subfolder (e.g.
+ processed images in the granite subfolder are labeled as granite).
+ Thereafter, the RGB values of the image pixels were converted to CIELab
+ values using the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2656,8 +2650,8 @@ rgb2lab
 \begin_inset Quotes erd
 \end_inset
 
- funtion of the color class of Scikit-image module.
- In this way, we can train the models in the two color spaces.
+ function of the color class imported from the Scikit-image module.
+ In this way, it is possible to train the models in the two color spaces.
  The notebook with the source code for data preparation is available online
 \begin_inset Foot
 status collapsed
@@ -2676,16 +2670,24 @@ Determining the best number of color clusters
 \end_layout
 
 \begin_layout Standard
-The k-means algorithm is used to extract the dominant colors from the images.
+The k-means algorithm was used to extract the dominant colors from the images.
  The Elbow method was used to calculate the optimal number of clusters to
  use in k-means.
  This method consists of iterating in a range of possible cluster numbers
  and determine the best one.
- We declared the range of 2 to 20 to obtain the scores of k-means trained
- with each cluster number and the pixel values of a sample image.
- These scores were plotted with their respective k numbers.
- The number at the elbow of the plot is the best k number of clusters which
- is 4 for this experiment 
+ We selected the pixel values of one processed image to train k-means.
+ The range of 2 to 20 was declared to obtain the scores of k-means at each
+ cluster number.
+ Lastly, we plotted these scores with their respective 
+\shape italic
+k
+\shape default
+ number.
+ The number at the elbow of the plot is the best 
+\shape italic
+k
+\shape default
+ number of clusters, which is 4 for this experiment 
 \shape italic
 \emph on
 (see Fig.
@@ -2756,9 +2758,8 @@ Color extraction
 \end_layout
 
 \begin_layout Standard
-This step describes the process for extracting the dominant colors from
- the rock images.
- In listing 
+In this step the dominant colors are extracted from the rock images.
+ In Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:get-dominant-colors"
@@ -2777,19 +2778,23 @@ get_dominant_colors
 \end_inset
 
  function receives the pixel values of an image to train the k-means algorithm
- with 4 clusters, which is the number of clusters selected in the previous
- step.
- In line 6, k-means works by separating the pixels of that image into k
- groups (clusters) of similarly coloured pixels.
- The colors at each cluster center reflect the average of the attributes
+ with 
+\shape italic
+k
+\shape default
+ clusters.
+ In line 6, k-means works by separating the pixels of the image into 4 clusters
+ of similarly colored pixels.
+ The colors at each cluster center reflect the average value of the attributes
  of all members of a cluster.
- The percentage of a cluster calculated in lines 8 to 10 is the number of
- pixels within that cluster.
- From lines 14 to 18, the center color in each cluster and its percentage
- is added to the features list returned in line 20.
- This list has sixteen elements: the four main colors represented by the
- three channels of the selected color format and the percentage of each
- dominant color (see Fig.
+ The percentage of a cluster is the number of pixels within that color cluster
+ and is calculated in lines 8 to 10.
+ Finally, the center color of each cluster and its percentage are sorted
+ in increasing order of percentage and added to a features list in lines
+ 12 to 17.
+ The returned list in line 19 are the sixteen features: the four dominant
+ colors represented by the three channels of the selected color format and
+ the percentage of each dominant color (see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2815,70 +2820,6 @@ lstparams "language=Python,caption={Function to extract the dominant colors from
 \end_layout
 
 \begin_layout Standard
-In listing 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:iterate-to-extract-colors"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, the processed data of the rock images is iterated to extract the dominant
- colors with the previous explained 
-\begin_inset Quotes eld
-\end_inset
-
-get_dominant_colors
-\begin_inset Quotes erd
-\end_inset
-
- function of listing 4.
- These colors are added to a new array called 
-\begin_inset Quotes eld
-\end_inset
-
-extracted_colors
-\begin_inset Quotes erd
-\end_inset
-
-.
- In line 6, the extracted colors are saved together with their respective
- rock label in a CSV file.
- This file is used in the next step to train the machine learning algorithms.
- The CSV is available online
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://github.com/sarah-hs/Color-extraction/blob/main/colors.csv
-\begin_inset CommandInset label
-LatexCommand label
-name "fn:CSV"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/Iterate in data to extract colors.txt"
-lstparams "language=Python,caption={Iterate original data to extract dominant colors},label={list:iterate-to-extract-colors}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -2889,7 +2830,7 @@ status collapsed
 \begin_inset Graphics
 	filename Images/Color extraction.png
 	lyxscale 30
-	width 90col%
+	width 95col%
 
 \end_inset
 
@@ -2915,9 +2856,67 @@ name "fig:Dominant-colors-and"
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
+
+\begin_layout Standard
+In Listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "list:iterate-to-extract-colors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the processed data in RGB format is iterated in lines 4 to 6 and to extract
+ the dominant colors in line 5 with the function of Listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "list:get-dominant-colors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The colors are added to a new list of extracted colors in line 6.
+ This process is also made for the CIELab data in lines 8 to 10.
+ Finally, the extracted colors in RGB and CIELab formats are saved together
+ with their respective rock label in different CSV files.
+ This files were used in the next step to train the machine learning algorithms.
+ The CSVs are available online
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/sarah-hs/Color-extraction/blob/main/colors_RGB.csv
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/sarah-hs/Color-extraction/blob/main/colors_LAB.csv
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Code/Iterate in data to extract colors.txt"
+lstparams "language=Python,caption={Iterate original data to extract dominant colors},label={list:iterate-to-extract-colors}"
 
 \end_inset
 
@@ -2929,13 +2928,27 @@ Data normalization and label encoding
 \end_layout
 
 \begin_layout Standard
-First, in this step we loaded the extracted colors data from the CSV of
- the pixel values into x and y.
- Second, in order to train and test the models, the data was splitted into
- a training set of 80% and a testing set of 20%.
- The extracted feature values were normalized scaling each feature to a
- given range of 0 to 1 and the labels were converted to number data with
- the 
+First, in this step we loaded the extracted colors data from the CSVs.
+ The dominant colors and their percentage are the data features loaded into
+ 
+\shape italic
+x
+\shape default
+, and the rock classes are the data labels loaded into 
+\shape italic
+y
+\shape default
+.
+ Second, in order to train and test the models, the 
+\shape italic
+x
+\shape default
+ and 
+\shape italic
+y
+\shape default
+ data was divided into a train set of 80% and a test set of 20% using the
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2943,7 +2956,30 @@ train_test_split
 \begin_inset Quotes erd
 \end_inset
 
- and the 
+ function of the model_selection class from Scikit-learn.
+ Third, we normalized the 
+\shape italic
+x
+\shape default
+ data using the 
+\begin_inset Quotes eld
+\end_inset
+
+MinMaxScaler
+\begin_inset Quotes erd
+\end_inset
+
+ function imported from the preprocessing class of Scikit-learn.
+ This function scales each feature to a given range of 0 to 1 for data cleaning
+ and better performance in model training.
+ Finally, we encoded the 
+\shape italic
+y
+\shape default
+ data in order to transform the labels into values from 0 to 3 representing
+ the four rock classes of diorite, gabbro, granite, and granodiorite respectivel
+y.
+ The encoding process was made with the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2951,9 +2987,7 @@ LabelEncoder
 \begin_inset Quotes erd
 \end_inset
 
- functions of the model_selection class from scikit-learn module respectively.
- Data normalization is useful to clean the data and obtain better results
- in model training.
+ function of the preprocessing class imported from Scikit-learn module.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2961,9 +2995,9 @@ Training the different algorithms with the extracted dominant colors
 \end_layout
 
 \begin_layout Standard
-Five machine learning models were trained for this experiment: LR, KNN,
- DT, SVM, and a CNN.
- The notebook showing the training and validation process of the generated
+Five machine learning models were trained using the RGB data and after the
+ CIELAb data in this experiment: LR, KNN, DT, SVM, and a CNN.
+ The notebook showing the code for training and validation of the generated
  models is available online
 \begin_inset Foot
 status collapsed
@@ -2978,7 +3012,7 @@ https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
 \end_layout
 
 \begin_layout Standard
-Below, listings 
+Listings 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:train-LR"
@@ -2999,13 +3033,13 @@ noprefix "false"
 \end_inset
 
  present the set and training process of the models.
- Three models (LR, KNN, and CNN) were trained with the normalized data while
- the others (DT and SVM) with non-normalized data.
+ The LR, KNN and CNN models were trained with the normalized data while
+ the DT and SVM models with non-normalized data.
  The following configurations were used to set the models:
 \end_layout
 
 \begin_layout Standard
-LR was set in line 3 of listing 
+LR was created in line 3 of Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:train-LR"
@@ -3037,7 +3071,7 @@ literal "false"
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/train LR.txt"
-lstparams "language=Python,caption={Set and training of LR},label={list:train-LR}"
+lstparams "language=Python,caption={Configuration and training of LR},label={list:train-LR}"
 
 \end_inset
 
@@ -3045,7 +3079,7 @@ lstparams "language=Python,caption={Set and training of LR},label={list:train-LR
 \end_layout
 
 \begin_layout Standard
-The number of neighbors used for KNN in line 3 of listing 
+The number of neighbors used for KNN in line 3 of Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:train-KNN"
@@ -3063,7 +3097,7 @@ noprefix "false"
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/train KNN.txt"
-lstparams "language=Python,caption={Set and training of KNN},label={list:train-KNN}"
+lstparams "language=Python,caption={Configuration and training of KNN},label={list:train-KNN}"
 
 \end_inset
 
@@ -3071,9 +3105,9 @@ lstparams "language=Python,caption={Set and training of KNN},label={list:train-K
 \end_layout
 
 \begin_layout Standard
-By utilizing class weights, we can increase the importance of a particular
- class during training.
- DT is set in line 3 of listing 
+By using class weights, we can increase the importance of a particular class
+ during training.
+ DT is created set in line 3 of Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:train-DT"
@@ -3100,7 +3134,7 @@ literal "false"
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/train DT.txt"
-lstparams "language=Python,caption={Set and training of DT},label={list:train-DT}"
+lstparams "language=Python,caption={Configuration and training of DT},label={list:train-DT}"
 
 \end_inset
 
@@ -3108,7 +3142,7 @@ lstparams "language=Python,caption={Set and training of DT},label={list:train-DT
 \end_layout
 
 \begin_layout Standard
-SVM is set in line 3 of listing 
+SVM is created in line 3 of Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:train-SVM"
@@ -3118,19 +3152,19 @@ noprefix "false"
 
 \end_inset
 
- with the Radial Basis Function (RBF) kernel, useful to eliminate the computatio
-nal requirement of an algorithm.
- When it is used, the features need to be scaled and the gamma value is
- setting for.
- The auto value represents gamma by 
+ with the Radial Basis Function (RBF) kernel which is useful to eliminate
+ the computational requirement of the algorithm.
+ When training an SVM with RBF, the parameter gamma must be considered.
+ The auto value of gamma in Scikit-learn is represented by 
 \begin_inset Formula $1/numberOfFeatures$
 \end_inset
 
 .
- An small gamma will give you low bias and high variance solutions 
+ Gamma defines how much influence a single training example has.
+ The larger gamma is, the closer other examples must be to be affected 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Dangeti2017,Scikit-SVC"
+key "Scikit-SVC"
 literal "false"
 
 \end_inset
@@ -3142,7 +3176,7 @@ literal "false"
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/train SVM.txt"
-lstparams "language=Python,caption={Set and training of SVM},label={list:train-SVM}"
+lstparams "language=Python,caption={Configuration and training of SVM},label={list:train-SVM}"
 
 \end_inset
 
@@ -3150,7 +3184,12 @@ lstparams "language=Python,caption={Set and training of SVM},label={list:train-S
 \end_layout
 
 \begin_layout Standard
-Table 
+The proposed CNN model is a four-layer structure: two one dimensional convolutio
+nal layers and two fully connected layers.
+ There is a maxpooling layer after each convolutional layer and a flatten
+ layer is placed between the two convolutional layers and the fully connected
+ layers.
+ Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:CNN-model-structure"
@@ -3160,7 +3199,7 @@ noprefix "false"
 
 \end_inset
 
- describes the structure of the CNN model set in lines 7-14 of listing 
+ describes the structure of the CNN model created in Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:train-CNN"
@@ -3177,7 +3216,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3207,7 +3246,7 @@ name "tab:CNN-model-structure"
 <column alignment="center" valignment="middle" width="3.2em">
 <column alignment="center" valignment="middle" width="3.4em">
 <column alignment="center" valignment="middle" width="4.7em">
-<column alignment="center" valignment="middle" width="5em">
+<column alignment="center" valignment="middle" width="4.5em">
 <row>
 <cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -3644,8 +3683,75 @@ Softmax
 \end_layout
 
 \begin_layout Standard
-The CNN was compiled in line 15 with the categorical crossentropy loss function
- and the Adam optimizer.
+In line 7 of Listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "list:train-CNN"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the sequential model of the Keras
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://keras.io
+\end_layout
+
+\end_inset
+
+ library from Tensorflow was created.
+ This model is formed by layers where each layer has exactly one input tensor
+ and one output tensor.
+ In lines 8 and 10 two convolutional layers of one dimension were added
+ to the model using RELU as their activation function, 2 as kernel size,
+ and a total of 32 and 64 filters respectively.
+ This kind of layer creates a convolution kernel that is convolved with
+ the layer input to produce a tensor of the output filters dimension.
+ Moreover, RELU applies the Rectified Linear Unit activation function which
+ is used to achieve non-linearity converting the negative values of the
+ output tensor to 0 value after convolution operation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mitchell2019"
+literal "false"
+
+\end_inset
+
+.
+ In lines 9 and 11 the maxpooling layers are added with a size of 2 after
+ each convolutional layer.
+ This kind of layer downsamples the input by taking the maximum value over
+ a window defined by pool size.
+ In line 12 the flatten layer flattens the input to one dimension.
+ In lines 13 and 14 two fully connected layers are added using 64 and 4
+ as their number of filters, the activation functions of RELU and Softmax
+ respectively.
+ The Softmax function is generally used in the output layer because it normalize
+s a vector containing 
+\shape italic
+K
+\shape default
+ elements into a probability distribution over the 
+\shape italic
+K
+\shape default
+ elements.
+ In this case, the last layer 4 filters are the CNN output tensor that contains
+ the probabilities of the four rock classes 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dawani2020"
+literal "false"
+
+\end_inset
+
+.
+ In line 15, the model was compiled with the categorical crossentropy loss
+ function and the Adam optimizer.
  Categorical cross-entropy is the most diffused classification cost function,
  adopted by logistic regression and the majority of neural architectures.
  This convex function can be easily optimized using stochastic gradient
@@ -3659,7 +3765,7 @@ literal "false"
 \end_inset
 
 .
- In the other hand, Adam (adaptive moment estimation) algorithm is an efficient
+ On the other hand, Adam (adaptive moment estimation) algorithm is an efficient
  optimization method that computes adaptive learning rates for each parameter
  to optimize the weights of the model 
 \begin_inset CommandInset citation
@@ -3670,7 +3776,7 @@ literal "false"
 \end_inset
 
 .
- Finally, to train CNN several numbers of epochs and batches were tried
+ Finally, to train the CNN several numbers of epochs and batches were tried
  until the most optimal values were obtained as shown in line 19.
 \end_layout
 
@@ -3678,7 +3784,7 @@ literal "false"
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Code/train CNN.txt"
-lstparams "language=Python,caption={Set and training of CNN},label={list:train-CNN}"
+lstparams "language=Python,caption={Configuration and training of CNN},label={list:train-CNN}"
 
 \end_inset
 
@@ -3690,23 +3796,23 @@ Evaluation of the machine learning algorithms
 \end_layout
 
 \begin_layout Standard
-Evaluating a model is a core part of building an effective machine learning
- project.
- For this purpose are used the following four metrics to evaluate the algorithms
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Mishra2018"
-literal "false"
-
-\end_inset
-
+Evaluating a supervised learning algorithm during the evaluation and testing
+ phases is an essential part of any well-made machine learning pipeline.
+ The following four metrics were used in this project to evaluate the algorithms
 :
 \end_layout
 
 \begin_layout Itemize
-Accuracy is the ratio of number of correct predictions to the total number
- of input samples.
+Accuracy is the ratio of the number of correct predictions made to the number
+ of all predictions made 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Galeone2019"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 Accuracy=\frac{CorrectPredictions}{PredictionsMade}
@@ -3718,8 +3824,16 @@ Accuracy=\frac{CorrectPredictions}{PredictionsMade}
 \end_layout
 
 \begin_layout Itemize
-Precision is the number of correct positive results divided by the number
- of positive results predicted by the classifier.
+Precision is the number of correct positives results, divided by the number
+ of positive results predicted 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Galeone2019"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 Precision=\frac{TP}{TP+FP}
@@ -3731,9 +3845,17 @@ Precision=\frac{TP}{TP+FP}
 \end_layout
 
 \begin_layout Itemize
-Recall is the number of correct positive results divided by the number of
- all relevant samples (all samples that should have been identified as positive).
+Recall is the number of correct positive results, divided by the number
+ of all relevant samples (all the samples that should be classified as positive)
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Galeone2019"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 Recall=\frac{TP}{TP+FN}
@@ -3745,11 +3867,19 @@ Recall=\frac{TP}{TP+FN}
 \end_layout
 
 \begin_layout Itemize
-F1-score is used to measure a test’s accuracy, the Harmonic Mean between
- precision and recall.
- It tells you how precise your classifier is (how many instances it classifies
- correctly), as well as how robust it is (it does not miss a significant
- number of instances).
+F1-score is the harmonic mean between precision and recall.
+ This number, which is in the [0,1] range, indicates how precise the classifier
+ is (precision) and how robust it is (recall).
+ The greater the F1 score, the better the overall performance of the model
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Galeone2019"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Formula 
 \[
 F1=2*\frac{Precision*Recall}{Precision+Recall}
@@ -3757,22 +3887,22 @@ F1=2*\frac{Precision*Recall}{Precision+Recall}
 
 \end_inset
 
-The greater the F1-score, the better is the performance of our model.
+
 \end_layout
 
 \begin_layout Standard
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Results-of-all"
+reference "tab:Results-accuracy"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- shows the accuracy of all the trained algorithms evaluated with the test
- set of the previous step.
+ shows the accuracy results of the algorithms evaluated with the test set
+ of RGB and CIELab dominant colors.
 \end_layout
 
 \begin_layout Standard
@@ -3788,7 +3918,7 @@ status collapsed
 Results of all the algorithms in terms of accuracy 
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Results-of-all"
+name "tab:Results-accuracy"
 
 \end_inset
 
@@ -3803,12 +3933,13 @@ name "tab:Results-of-all"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
+<lyxtabular version="3" rows="7" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="middle" width="8.5em">
 <column alignment="center" valignment="middle" width="4.6em">
+<column alignment="center" valignment="middle" width="4.6em">
 <row>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3820,7 +3951,7 @@ Model
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3828,6 +3959,48 @@ Model
 
 \series bold
 Accuracy
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+CIELab
 \end_layout
 
 \end_inset
@@ -3841,6 +4014,15 @@ Accuracy
 \noindent
 \align left
 Logistic Regression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.63
 \end_layout
 
 \end_inset
@@ -3868,6 +4050,15 @@ KNN
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.79
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -3887,6 +4078,15 @@ KNN
 \noindent
 \align left
 Decision Trees
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.73
 \end_layout
 
 \end_inset
@@ -3914,6 +4114,15 @@ SVM
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.52
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -3933,6 +4142,15 @@ SVM
 \noindent
 \align left
 CNN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.68
 \end_layout
 
 \end_inset
@@ -3964,7 +4182,7 @@ CNN
 Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Results-of-Logistic"
+reference "tab:Results-LR"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3974,7 +4192,7 @@ noprefix "false"
 -
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Results-of-the"
+reference "tab:Results-CNN"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3983,9 +4201,9 @@ noprefix "false"
 
  show the results of each model evaluation in terms of precision, recall
  and F1-score.
- The best results were obtained with the KNN model with the highest average
- values of 93% for accuracy, 93% for precision, 93% for recall, and 93%
- for f1-score.
+ The best results were obtained with the KNN model using the CIELab color
+ space with the highest average values of 93% for accuracy, 93% for precision,
+ 93% for recall, and 93% for f1-score.
 \end_layout
 
 \begin_layout Standard
@@ -4001,7 +4219,7 @@ status collapsed
 Results of Logistic Regression 
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Results-of-Logistic"
+name "tab:Results-LR"
 
 \end_inset
 
@@ -4016,14 +4234,17 @@ name "tab:Results-of-Logistic"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="4">
+<lyxtabular version="3" rows="7" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="5.7em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
+<column alignment="left" valignment="middle" width="5em">
+<column alignment="center" valignment="middle" width="2.5em">
+<column alignment="center" valignment="middle" width="2.5em">
+<column alignment="center" valignment="middle" width="2.5em">
+<column alignment="center" valignment="middle" width="2.5em">
+<column alignment="center" valignment="middle" width="2.5em">
+<column alignment="center" valignment="middle" width="2.5em">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4034,7 +4255,7 @@ Class
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none" width="5em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4045,7 +4266,16 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none" width="5em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4056,7 +4286,16 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none" width="5em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4067,9 +4306,95 @@ F1-score
 
 \end_inset
 </cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4079,7 +4404,16 @@ Granite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4097,6 +4431,24 @@ Granite
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.84
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -4108,7 +4460,7 @@ Granite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4118,7 +4470,16 @@ Granodiorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4131,7 +4492,25 @@ Granodiorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.45
 \end_layout
 
 \end_inset
@@ -4147,7 +4526,7 @@ Granodiorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4157,7 +4536,16 @@ Gabbro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4175,6 +4563,24 @@ Gabbro
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.77
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -4186,7 +4592,7 @@ Gabbro
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4196,7 +4602,16 @@ Diorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4209,7 +4624,25 @@ Diorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.47
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.35
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.55
 \end_layout
 
 \end_inset
@@ -4225,7 +4658,7 @@ Diorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4237,7 +4670,18 @@ Average
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4254,7 +4698,29 @@ Average
 \begin_layout Plain Layout
 
 \series bold
+0.65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
 0.66
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.62
 \end_layout
 
 \end_inset
@@ -4304,14 +4770,17 @@ Results of K-Nearest Neighbors
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="4">
+<lyxtabular version="3" rows="7" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="5.7em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
+<column alignment="center" valignment="top" width="5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4322,7 +4791,7 @@ Class
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4333,7 +4802,16 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4344,13 +4822,108 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 F1-score
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
 \end_layout
 
 \end_inset
@@ -4367,7 +4940,16 @@ Granite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4380,7 +4962,25 @@ Granite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.85
 \end_layout
 
 \end_inset
@@ -4406,7 +5006,16 @@ Granodiorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4420,6 +5029,24 @@ Granodiorite
 
 \begin_layout Plain Layout
 0.79
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.79
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.85
 \end_layout
 
 \end_inset
@@ -4445,7 +5072,16 @@ Gabbro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4458,7 +5094,25 @@ Gabbro
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.77
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.74
 \end_layout
 
 \end_inset
@@ -4484,7 +5138,16 @@ Diorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4497,7 +5160,25 @@ Diorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.76
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.74
 \end_layout
 
 \end_inset
@@ -4525,6 +5206,39 @@ Average
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.79
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -4542,7 +5256,7 @@ Average
 \begin_layout Plain Layout
 
 \series bold
-0.93
+0.79
 \end_layout
 
 \end_inset
@@ -4592,14 +5306,17 @@ Results of Decision Trees
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="4">
+<lyxtabular version="3" rows="7" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="5.7em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
+<column alignment="center" valignment="top" width="5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4610,7 +5327,7 @@ Class
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4621,7 +5338,16 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4632,13 +5358,108 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 F1-score
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
 \end_layout
 
 \end_inset
@@ -4655,7 +5476,16 @@ Granite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4668,7 +5498,25 @@ Granite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.88
 \end_layout
 
 \end_inset
@@ -4694,7 +5542,16 @@ Granodiorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4707,7 +5564,25 @@ Granodiorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.57
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
 \end_layout
 
 \end_inset
@@ -4733,7 +5608,16 @@ Gabbro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4746,7 +5630,25 @@ Gabbro
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.77
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.69
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.71
 \end_layout
 
 \end_inset
@@ -4772,11 +5674,38 @@ Diorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.79
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.71
 \end_layout
 
 \end_inset
@@ -4813,6 +5742,39 @@ Average
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.74
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -4830,7 +5792,7 @@ Average
 \begin_layout Plain Layout
 
 \series bold
-0.72
+0.74
 \end_layout
 
 \end_inset
@@ -4880,14 +5842,17 @@ Results of Support Vector Machine
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="4">
+<lyxtabular version="3" rows="7" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="5.7em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
+<column alignment="left" valignment="middle" width="5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4898,7 +5863,7 @@ Class
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4909,7 +5874,16 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4920,7 +5894,16 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4931,9 +5914,95 @@ F1-score
 
 \end_inset
 </cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4943,7 +6012,16 @@ Granite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4956,7 +6034,25 @@ Granite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.69
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.82
 \end_layout
 
 \end_inset
@@ -4972,7 +6068,7 @@ Granite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4982,7 +6078,16 @@ Granodiorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4995,7 +6100,25 @@ Granodiorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.29
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.57
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.44
 \end_layout
 
 \end_inset
@@ -5011,7 +6134,7 @@ Granodiorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5021,7 +6144,16 @@ Gabbro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5034,7 +6166,25 @@ Gabbro
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
 \end_layout
 
 \end_inset
@@ -5050,7 +6200,7 @@ Gabbro
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5060,7 +6210,16 @@ Diorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5073,7 +6232,25 @@ Diorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.56
 \end_layout
 
 \end_inset
@@ -5089,7 +6266,7 @@ Diorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5101,6 +6278,39 @@ Average
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.82
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.49
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -5118,7 +6328,7 @@ Average
 \begin_layout Plain Layout
 
 \series bold
-0.82
+0.46
 \end_layout
 
 \end_inset
@@ -5160,7 +6370,7 @@ status collapsed
 Results of the Convolutional Neural Network 
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Results-of-the"
+name "tab:Results-CNN"
 
 \end_inset
 
@@ -5175,14 +6385,17 @@ name "tab:Results-of-the"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="4">
+<lyxtabular version="3" rows="7" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="5.7em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
-<column alignment="center" valignment="top" width="4.5em">
+<column alignment="left" valignment="middle" width="5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
+<column alignment="center" valignment="top" width="2.5em">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5193,7 +6406,7 @@ Class
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5204,7 +6417,16 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5215,7 +6437,16 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5226,9 +6457,95 @@ F1-score
 
 \end_inset
 </cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RGB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LAB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5238,7 +6555,16 @@ Granite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5256,6 +6582,24 @@ Granite
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.90
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -5267,7 +6611,7 @@ Granite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5277,7 +6621,16 @@ Granodiorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5290,7 +6643,25 @@ Granodiorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.57
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.58
 \end_layout
 
 \end_inset
@@ -5306,7 +6677,7 @@ Granodiorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5316,7 +6687,16 @@ Gabbro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.61
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5329,7 +6709,25 @@ Gabbro
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.71
 \end_layout
 
 \end_inset
@@ -5345,7 +6743,7 @@ Gabbro
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5355,7 +6753,16 @@ Diorite
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5368,7 +6775,25 @@ Diorite
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.47
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.76
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.53
 \end_layout
 
 \end_inset
@@ -5384,7 +6809,7 @@ Diorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5396,7 +6821,18 @@ Average
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5413,7 +6849,29 @@ Average
 \begin_layout Plain Layout
 
 \series bold
+0.70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
 0.83
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.68
 \end_layout
 
 \end_inset
@@ -5448,17 +6906,18 @@ Results
 
 \begin_layout Standard
 The KNN model was the model deployed in the iOS mobile application to make
- the classification on real-time.
+ the classification of images of four classes of plutonic rocks in real
+ time.
  The Xcode IDE, the Xcode command-line tools, a valid Apple Developer ID,
- and the CocoaPods dependency manager were the main requeriments to develop
- it.
+ and the CocoaPods dependency manager were the main requirements to develop
+ the application.
  The application is written mostly in Swift and uses the following two libraries
  for performing dominant colors extraction and image classification:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement p
+placement t
 wide true
 sideways false
 status collapsed
@@ -5568,7 +7027,15 @@ https://github.com/sarah-hs/Rock-Classifer-iOS
 status open
 
 \begin_layout Plain Layout
-Me falta describir el workflow de la aplicación
+Me falta describir el workflow de la aplicación.
+ No, la figura debe aparecer en esta página o más tardar en la siguiente.
+ No mero al final del documento.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Aquí debes explicar brevemente cad uno de los pasos.
+ 
 \end_layout
 
 \end_inset
@@ -5597,7 +7064,7 @@ noprefix "false"
 \end_inset
 
  presents the comparison of these results and the results of our previous
- approach with a CNN using all the image features.
+ approach with a CNN using all the image features [ref].
 \end_layout
 
 \begin_layout Standard
@@ -5631,11 +7098,11 @@ name "tab:Comparison-of-the"
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="5.7em">
-<column alignment="center" valignment="top" width="8em">
-<column alignment="center" valignment="top" width="8em">
+<column alignment="left" valignment="middle" width="6em">
+<column alignment="center" valignment="middle" width="6em">
+<column alignment="center" valignment="middle" width="8em">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5646,29 +7113,31 @@ Metrics
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-KNN of this work
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-CNN of our previous work
+KNN of this work with four dominant colors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+CNN of our previous work [ref] with all the features used during training
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5678,7 +7147,7 @@ Accuracy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5687,7 +7156,7 @@ Accuracy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5698,7 +7167,7 @@ Accuracy
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5708,7 +7177,7 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5717,7 +7186,7 @@ Precision
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5728,7 +7197,7 @@ Precision
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5738,7 +7207,7 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5747,7 +7216,7 @@ Recall
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5758,7 +7227,7 @@ Recall
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5768,7 +7237,7 @@ F1-score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5777,7 +7246,7 @@ F1-score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5800,12 +7269,8 @@ F1-score
 \end_layout
 
 \begin_layout Standard
-After obtain the best suited algorithm for rock classification with dominant
- colors, an iOS mobile application was developed to classify rock images
- into four classes of plutonic rocks (granite, granodioorite, gabbro and
- diorite).
- This application also allows the user to visualize the dominant colors
- and the average color in new images and detect changes in rock colors.
+This application also allows the user to visualize the dominant colors and
+ the average color in new images and detect changes in rock colors.
  The application was tested in the field and the following results were
  obtained: 85.7% for granite, 20% for granodiorite, 70% for gabbro, and 28.5%
  for diorite.
@@ -5820,11 +7285,36 @@ noprefix "false"
 \end_inset
 
  the results of diorite and gabbro were the same as the obtained in our
- previous work.
+ previous work 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Aqui hay que decir por que se confundio la aplicacion.
+ Confundio granodiorite con granite, por ejemplo? Esto hay que explicarlo
+ muy bien.
+ 
+\end_layout
+
+\end_inset
+
+.
  The results of granodiorite were below expectations compared with our previous
  work.
  An improvement is observed in the results for granite with the dominant
  color approximation.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Mejorar redacci'on.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5858,12 +7348,12 @@ name "tab:Results-comparison-of"
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="5.7em">
-<column alignment="center" valignment="middle" width="4em">
-<column alignment="center" valignment="middle" width="0pt">
-<column alignment="center" valignment="middle" width="4em">
-<column alignment="center" valignment="middle" width="4em">
-<column alignment="center" valignment="middle" width="4em">
+<column alignment="left" valignment="middle" width="5em">
+<column alignment="center" valignment="middle" width="3em">
+<column alignment="center" valignment="middle" width="3em">
+<column alignment="center" valignment="middle" width="3em">
+<column alignment="center" valignment="middle" width="3em">
+<column alignment="center" valignment="middle" width="3em">
 <row>
 <cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -5871,9 +7361,6 @@ name "tab:Results-comparison-of"
 \begin_layout Plain Layout
 
 \series bold
-\begin_inset VSpace defskip
-\end_inset
-
 Class
 \end_layout
 
@@ -5885,7 +7372,7 @@ Class
 \begin_layout Plain Layout
 
 \series bold
-Total of images taken
+Taken images
 \end_layout
 
 \end_inset
@@ -5954,6 +7441,8 @@ Correctly classified in our previous work
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Images
 \end_layout
 
@@ -5963,6 +7452,8 @@ Images
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Percent
 \end_layout
 
@@ -5972,6 +7463,8 @@ Percent
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Images
 \end_layout
 
@@ -5981,6 +7474,8 @@ Images
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Percent
 \end_layout
 
@@ -5988,7 +7483,7 @@ Percent
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6045,7 +7540,7 @@ Granite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6102,7 +7597,7 @@ Granodiorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6159,7 +7654,7 @@ Gabbro
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6216,7 +7711,7 @@ Diorite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6231,6 +7726,8 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 34
 \end_layout
 
@@ -6240,6 +7737,8 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 17
 \end_layout
 
@@ -6249,6 +7748,8 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 50%
 \end_layout
 
@@ -6258,6 +7759,8 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 21
 \end_layout
 
@@ -6267,6 +7770,8 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 61%
 \end_layout
 
@@ -6285,37 +7790,23 @@ Total
 
 \end_layout
 
-\begin_layout Section
-Conclusions and Future Work
-\end_layout
-
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset Newpage clearpage
-\end_inset
-
-
+Mira que de acuerdo a los resultados in the field, la hipótesis no se cumplió.
+ Esto se debe decir en la sección de conclusiones al final del documento.
+ 
 \end_layout
 
 \end_inset
 
 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
-\end_inset
-
-
+\begin_layout Section
+Conclusions and Future Work
 \end_layout
 
 \begin_layout Standard
@@ -6323,7 +7814,6 @@ status collapsed
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "Rocks"
-options "bibtotoc"
 
 \end_inset
 
