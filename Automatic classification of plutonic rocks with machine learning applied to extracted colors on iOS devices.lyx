@@ -630,7 +630,7 @@ he classification of different rocks can provide important information about
  Also, their mineral and chemical makeup can be used to learn about the
  composition, temperature and pressure that exists within the Earth’s mantle.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Se quitó referencia de https://www.universetoday.com/82009/how-are-igneous-rocks-f
@@ -2400,8 +2400,8 @@ Getting the images of the plutonic rocks
 \begin_layout Standard
 The images of plutonic rocks were provided by the Department of Earth and
  Biological Sciences at Loma Linda University.
- The dataset contains images of four classes of plutonic rocks: granite,
- granodiorite, gabbro, and diorite with a total of 81 images.
+ The dataset contains image patches of four classes of plutonic rocks: granite,
+ granodiorite, gabbro, and diorite with a total of 283 images.
  The images used in the following experiments are organized in subfolders
  according to their class and are available online
 \begin_inset Foot
@@ -2498,7 +2498,7 @@ Granite
 \begin_inset Text
 
 \begin_layout Plain Layout
-16
+70
 \end_layout
 
 \end_inset
@@ -2519,7 +2519,7 @@ Granodiorite
 \begin_inset Text
 
 \begin_layout Plain Layout
-21
+70
 \end_layout
 
 \end_inset
@@ -2540,7 +2540,7 @@ Gabbro
 \begin_inset Text
 
 \begin_layout Plain Layout
-19
+65
 \end_layout
 
 \end_inset
@@ -2561,7 +2561,7 @@ Diorite
 \begin_inset Text
 
 \begin_layout Plain Layout
-25
+78
 \end_layout
 
 \end_inset
@@ -2586,7 +2586,7 @@ Total of images
 \begin_layout Plain Layout
 
 \series bold
-81
+283
 \end_layout
 
 \end_inset
@@ -3216,7 +3216,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3902,7 +3902,7 @@ noprefix "false"
 \end_inset
 
  shows the accuracy results of the algorithms evaluated with the test set
- of RGB and CIELab dominant colors.
+ of dominant colors in RGB and CIELab color formats.
 \end_layout
 
 \begin_layout Standard
@@ -3955,7 +3955,6 @@ Model
 \begin_inset Text
 
 \begin_layout Plain Layout
-\noindent
 
 \series bold
 Accuracy
@@ -4200,10 +4199,10 @@ noprefix "false"
 \end_inset
 
  show the results of each model evaluation in terms of precision, recall
- and F1-score.
+ and F1-score for each RGB and CIELab color spaces.
  The best results were obtained with the KNN model using the CIELab color
- space with the highest average values of 93% for accuracy, 93% for precision,
- 93% for recall, and 93% for f1-score.
+ space with the highest average values of accuracy, precision, recall, and
+ F-score equal to 93%.
 \end_layout
 
 \begin_layout Standard
@@ -6900,21 +6899,6 @@ Average
 
 \end_layout
 
-\begin_layout Subsection
-Results
-\end_layout
-
-\begin_layout Standard
-The KNN model was the model deployed in the iOS mobile application to make
- the classification of images of four classes of plutonic rocks in real
- time.
- The Xcode IDE, the Xcode command-line tools, a valid Apple Developer ID,
- and the CocoaPods dependency manager were the main requirements to develop
- the application.
- The application is written mostly in Swift and uses the following two libraries
- for performing dominant colors extraction and image classification:
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 placement t
@@ -6958,6 +6942,21 @@ name "fig:Application-workflow"
 
 \end_layout
 
+\begin_layout Subsection
+Results
+\end_layout
+
+\begin_layout Standard
+The KNN model was the model deployed in the iOS mobile application to make
+ the classification of images of four classes of plutonic rocks in real
+ time.
+ The Xcode IDE, the Xcode command-line tools, a valid Apple Developer ID,
+ and the CocoaPods dependency manager were the main requirements to develop
+ the application.
+ The application is written mostly in Swift and uses the following two libraries
+ for performing the dominant colors extraction and image classification:
+\end_layout
+
 \begin_layout Itemize
 The DominantColor
 \begin_inset Foot
@@ -6971,10 +6970,10 @@ https://github.com/indragiek/DominantColor
 
  dependency is an open source library written in Swift and created by Indragie
  Karunaratne.
- It finds the dominant colors of an image using the CIE LAB color space
- and the k-means clustering algorithm.
+ It finds the dominant colors of an image using the CIELab color space and
+ the k-means clustering algorithm.
  In this project an adaptation of this library was implemented exporting
- the 7 main files from the repository into the application project.
+ code from the 7 main files of the repository into the application project.
 \end_layout
 
 \begin_layout Itemize
@@ -6997,7 +6996,32 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/swift
 \end_layout
 
 \begin_layout Standard
-Shown below is the application process (see Fig.
+As a required step for the deployment of the KNN model in the application
+ it was necessary to export the model by creating and training a concrete
+ function in TensorFlow.
+ This function calculates the Manhattan distance of a new data point to
+ all the points in training data to select the label of the nearest point
+ as the label of the new point.
+ The last step in the model exportation was to create a graph of the trained
+ model from the concrete function.
+ That graph was exported in a file with tflite extension using TensorFlow
+ Lite.
+ The source code of the creation and exportaion of KNN in TensorFlow is
+ available online 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Listed below is the application process (see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7023,24 +7047,51 @@ https://github.com/sarah-hs/Rock-Classifer-iOS
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Me falta describir el workflow de la aplicación.
- No, la figura debe aparecer en esta página o más tardar en la siguiente.
- No mero al final del documento.
+There are two ways of made the classification on the iOS application.
+ The first way is to take a picture with the OpenCamera button that is showed
+ in step 1A of Fig.
  
-\end_layout
-
-\begin_layout Plain Layout
-Aquí debes explicar brevemente cad uno de los pasos.
- 
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Application-workflow"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+.
+ When camera opens, a new scene appears displaying the device camera to
+ take the picture as shown in step 2A.
+ The second way is choosing a photo from the Photo Library.
+ The OpenLibrary button of step 1B opens the photo library screen of the
+ iOS device as is shown in step 2B.
+\end_layout
 
+\begin_layout Standard
+After the image was loaded the extraction is performed with the dominantColorsIn
+Image funtion imported from the DominantColor library.
+ Thereafter, the Classify button in step 3 is enabled to classify the new
+ rock image into: granite, granodiorite, gabbro, and diorite.
+ At this step the previous extracted colors are converted to a buffer of
+ CIELab color data.
+ This colors are sorted in descendet order by their percentage of pixels
+ in the image and used as the input tensor for the tflite file containing
+ the graph of the KNN model.
+ Optionally, the dominant colors and the average colors of the selected
+ image can be displayed pressing the Extracted and Average buttons of steps
+ 4A and 4B respectively as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Application-workflow"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -7049,10 +7100,11 @@ Discussion
 
 \begin_layout Standard
 Five machine learning algorithms were trained with just the four dominant
- colors extracted from rock images.
- The best algorithm in this experiment was K-Nearest Neighbors with an accuracy
- of 82%.
- Its values for precision, recall, and F1 score were 84%, 89%, and 83%.
+ colors extracted from images of plutonic rocks.
+ The best algorithm in this experiment was K-Nearest Neighbors trained with
+ the dominant colors in the CIELAB color format of 283 images.
+ Its values of accuracy, precision, recall, and F-score average were equal
+ to 93%.
  Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7269,12 +7321,10 @@ F1-score
 \end_layout
 
 \begin_layout Standard
-This application also allows the user to visualize the dominant colors and
- the average color in new images and detect changes in rock colors.
- The application was tested in the field and the following results were
- obtained: 85.7% for granite, 20% for granodiorite, 70% for gabbro, and 28.5%
- for diorite.
- As shown in table 
+The application running the K-Nearest Neighbors model was tested in the
+ field with 34 images and the following average accuracy results were obtained:
+ 85.7% for granite, 20% for granodiorite, 70% for gabbro, and 28.5% for diorite.
+ Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Results-comparison-of"
@@ -7284,37 +7334,8 @@ noprefix "false"
 
 \end_inset
 
- the results of diorite and gabbro were the same as the obtained in our
- previous work 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Aqui hay que decir por que se confundio la aplicacion.
- Confundio granodiorite con granite, por ejemplo? Esto hay que explicarlo
- muy bien.
- 
-\end_layout
-
-\end_inset
-
-.
- The results of granodiorite were below expectations compared with our previous
- work.
- An improvement is observed in the results for granite with the dominant
- color approximation.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Mejorar redacci'on.
- 
-\end_layout
-
-\end_inset
-
-
+ shows its comparison with the results of the Android application of our
+ previous work in the field.
 \end_layout
 
 \begin_layout Standard
@@ -7791,18 +7812,18 @@ Total
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Mira que de acuerdo a los resultados in the field, la hipótesis no se cumplió.
- Esto se debe decir en la sección de conclusiones al final del documento.
- 
-\end_layout
-
-\end_inset
-
-
+The high accuracy value when classifying granite samples was because, in
+ general, their dominant colors tend to be noticeably lighter than in the
+ samples of the other three classes.
+ It is also the case for gabbro with dark dominant colors.
+ In contrast, granodiorite share characteristics of both granite and diorite.
+ Therefore, it is more difficult to automatically classify granodiorite
+ based on their dominant colors.
+ Also, diorite tended to be confused with granodiorite.
+ According to the results in the field, our hypothesis was not fulfilled.
+ The results for granodiorite and diorite show the need for improving the
+ classification model with a higher number of images that cover a variety
+ of colors per class.
 \end_layout
 
 \begin_layout Section
