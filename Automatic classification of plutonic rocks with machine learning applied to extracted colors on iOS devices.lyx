@@ -651,18 +651,7 @@ literal "false"
  That is why color is a key property for rock classification.
  
 \begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Se quitó referencia de https://www.universetoday.com/82009/how-are-igneous-rocks-f
-ormed/
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Plutonic rocks are a type of igneous rocks (one of the three main types
@@ -678,6 +667,8 @@ literal "false"
 \end_inset
 
 .
+ Se quitó referencia de https://www.universetoday.com/82009/how-are-igneous-rocks-
+formed/
 \end_layout
 
 \end_inset
@@ -2444,7 +2435,7 @@ literal "false"
  or irrelevant features in the acquired data makes the model learn based
  on irrelevant features
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 doi: https://doi.org/10.1016/B978-0-12-817913-0.00014-6
@@ -6767,7 +6758,17 @@ This paper proposed low-level feature extraction in color-based images for
  Feature extraction serves the function of detecting and separating fundamental
  parts of digital images.
  Moreover, it simplifies a complex input dataset into a set of features
- in a reduced order.
+ in a reduced order
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ISSN: 2278-0181
+\end_layout
+
+\end_inset
+
+.
  The color-dominant approach presented in this work can be useful in classificat
 ions where color is important to differentiate images.
 \end_layout
