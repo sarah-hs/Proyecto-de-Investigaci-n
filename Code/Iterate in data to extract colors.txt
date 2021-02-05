@@ -1,8 +1,9 @@
-extracted_colors = []
-for img in images:
-	features = get_dominant_colors(img)
-	extracted_colors.append(features)
+extracted_rgb = []
+extracted_lab = []
 
-data_df = pd.DataFrame(extracted_colors, files)
-data_df[16] = y
-data_df.to_csv(CSV_DIR, header=None)
+for rgb, lab in zip(x_rgb, x_lab):
+	features = get_dominant_colors(rgb)
+	extracted_rgb.append(features)
+
+	features = get_dominant_colors(lab)
+	extracted_lab.append(features)

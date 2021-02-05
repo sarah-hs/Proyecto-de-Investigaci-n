@@ -5,13 +5,12 @@ def get_dominant_colors(img):
 	reshape = img.reshape((img.shape[0] * img.shape[1], img.shape[2]))
 	cluster = KMeans(n_clusters=CLUSTERS).fit(reshape)
 
-	labels = np.arange(0, len(np.unique(cluster.labels_)) + 1)
-	(hist, _) = np.histogram(cluster.labels_, bins = labels)
+	lb = np.arange(0, len(np.unique(cluster.labels_))+1)
+	(hist, _) = np.histogram(cluster.labels_, bins=lb)
 	hist = hist.astype("float"); hist /= hist.sum()
 
 	features = []
-    
-	colors = sorted([(percent, color) for (percent, color) in zip(hist, cluster.cluster_centers_)])
+	colors = sorted([(percent,color) for (percent,color) in zip(hist,cluster.cluster_centers_)])
     
 	for (percent, color) in colors:
 		features.extend(color)

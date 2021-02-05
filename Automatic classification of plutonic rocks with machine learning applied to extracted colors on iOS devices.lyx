@@ -707,16 +707,6 @@ Our contribution is fourfold.
  Fourth, we compared our approach with our previous work [ref] in which
  a CNN was trained with the same dataset of plutonic rock using the whole
  set of image pixel features instead of the four dominant colors.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Mejorar respecto al abstract
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -1111,7 +1101,7 @@ Dominant colors
 \begin_layout Standard
 The dominant colors refer to the principal colors presented in an image.
  The dominant colors of an image are selected grouping the image pixels
- according to their color in the selected color space (RGB and CIELAB).
+ according to their color in the selected color space (RGB or CIELAB).
  The average color of each group are the dominant colors and the number
  of pixels of that groups are the percentage of the dominant colors.
 \end_layout
@@ -3001,11 +2991,12 @@ noprefix "false"
 
 .
  The colors are added to a new list of extracted colors in line 6.
- This process is also made for the CIELAB data in lines 8 to 10.
+ This process is also made for the CIELAB data in lines 8 and 9.
  Finally, the extracted colors in RGB and CIELAB formats are saved together
  with their respective rock label in different CSV files.
  This files were used in the next step to train the machine learning algorithms.
- The CSVs are available online
+ The CSVs with the extracted dominant colors in RGB and CIELAB color spaces
+ are available online
 \begin_inset Foot
 status collapsed
 
@@ -3044,7 +3035,7 @@ Data normalization and label encoding
 \end_layout
 
 \begin_layout Standard
-First, in this step we loaded the extracted colors data from the CSVs.
+First, in this step we loaded the dominant colors data from the CSVs.
  The dominant colors and their percentage are the data features loaded into
  
 \shape italic
@@ -3073,11 +3064,11 @@ train_test_split
 \end_inset
 
  function of the model_selection class from Scikit-learn.
- Third, we normalized the 
+ Thereafter, we normalized the 
 \shape italic
 x
 \shape default
- data using the 
+ data of train and test sets using the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3092,9 +3083,9 @@ MinMaxScaler
 \shape italic
 y
 \shape default
- data in order to transform the labels into values from 0 to 3 representing
- the four rock classes of diorite, gabbro, granite, and granodiorite respectivel
-y.
+ data in order to train the machine learning models transforming the labels
+ into values from 0 to 3 representing the four rock classes of plutonic
+ rocks: diorite, gabbro, granite, and granodiorite respectively.
  The encoding process was made with the 
 \begin_inset Quotes eld
 \end_inset
@@ -3112,7 +3103,7 @@ Training the different algorithms with the extracted dominant colors
 
 \begin_layout Standard
 Five machine learning models were trained using the RGB data and after the
- CIELAb data in this experiment: LR, KNN, DT, SVM, and a CNN.
+ CIELAB data in this experiment: LR, KNN, DT, SVM, and a CNN.
  The notebook showing the code for training and validation of the generated
  models is available online
 \begin_inset Foot
@@ -5890,7 +5881,7 @@ As a required step for the deployment of the KNN model in the application
  That graph was exported in a file with tflite extension using TensorFlow
  Lite.
  The source code of the creation and exportation of KNN in TensorFlow is
- available online 
+ available online
 \begin_inset Foot
 status collapsed
 
@@ -5972,10 +5963,7 @@ OpenLibrary
 
  button of step 1B opens the photo library screen of the iOS device as is
  shown in step 2B.
-\end_layout
-
-\begin_layout Standard
-After the image was loaded the extraction is performed with the 
+ After the image was loaded the extraction is performed with the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6748,12 +6736,25 @@ Total
 \end_layout
 
 \begin_layout Standard
-The high accuracy when classifying gabbro samples was because they are noticeabl
-e darker than samples of the other three classes.
+The results of our approach with dominant colors were very similar as the
+ obtained in our previous work [ref] using all the image features.
+ The results were good for gabbro and below expectations for diorite for
+ both.
+ On the other hand, granite showed much better results with the dominant
+ color approach.
+ Moreover, these results were not the same with granodiorite showed which
+ was the best performing class in our previous work [ref].
+ The high accuracy when classifying gabbro samples was because they are
+ noticeable darker than samples of the other three classes.
  Similarly, granites were noticeably lighter.
  In contrast, diorite and granodiorite share characteristics of the other
  rock types closest to them in the dark-light sequence; therefore, it is
  more difficult to automatically classify them based on their dominant colors.
+ According to the results of the iOS application in the field, our hypothesis
+ was not fulfilled.
+ The results for granodiorite and diorite show the need for improving the
+ classification model with a higher number of images that cover a variety
+ of colors per class.
 \end_layout
 
 \begin_layout Section
@@ -6761,13 +6762,22 @@ Conclusions and Future Work
 \end_layout
 
 \begin_layout Standard
-According to the results of the iOS application in the field, our hypothesis
- was not fulfilled.
- The results for granodiorite and diorite show the need for improving the
- classification model with a higher number of images that cover a variety
- of colors per class.
- Another important high-level feature in the classification of plutonic
- rocks is the shapes of their crystals.
+This paper proposed low-level feature extraction in color-based images for
+ training several machine learning models.
+ Feature extraction serves the function of detecting and separating fundamental
+ parts of digital images.
+ Moreover, it simplifies a complex input dataset into a set of features
+ in a reduced order.
+ The color-dominant approach presented in this work can be useful in classificat
+ions where color is important to differentiate images.
+\end_layout
+
+\begin_layout Standard
+Future improvements to this work can be made to the results for granodiorite
+ and diorite with a larger number of images covering a variety of colors
+ per class.
+ Furthermore, another important low-level feature in the classification
+ of plutonic rocks is the shapes of their crystals.
  Adding this feature to the training of machine learning models can improve
  the results of plutonic rocks that have similar colors as was the case
  for diorite and granodiorite.
