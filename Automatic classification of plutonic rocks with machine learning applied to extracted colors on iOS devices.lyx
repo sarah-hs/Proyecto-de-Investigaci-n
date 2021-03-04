@@ -219,7 +219,7 @@ Ingeniería en Sistemas Computacionales
 Automatic Classification of Plutonic Rocks with Machine Learning applied
  to Extracted Shades and Colors on iOS Devices
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2921,13 +2921,13 @@ lstparams "language=Python,caption={Function to extract the dominant colors from
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/Color extraction.png
-	lyxscale 30
+	lyxscale 15
 	width 95col%
 
 \end_inset
@@ -2959,7 +2959,7 @@ name "fig:Dominant-colors-and"
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Put these images in order of expected darkest to lightest = gabbro, diorite,
@@ -5799,6 +5799,27 @@ I think we should add a sub-section at the end of the Results section, to
  settings, avoid taking pictures of samples with evidence of weathering
  or cover by vegetation… these details or directions need to be provided
  to the user of the app in order to get good results.
+\end_layout
+
+\begin_layout Plain Layout
+....
+\end_layout
+
+\begin_layout Plain Layout
+In future work, the datasets for training and validation will be extended
+ with a larger number of plutonic rock images taken in the field, not in
+ the lab, under different conditions (e.g., different distances, angles, lighting
+ effects – blue vs.
+ cloudy sky, weathering or alteration, shadows, vegetation, and moss).
+ Also, a larger dataset will allow to avoid the process of image data augmentati
+on in the validation dataset to count on two completely different datasets
+ for training and validation.
+ In addition, we are planning to obtain images for other classes of plutonic
+ rocks.
+ With the larger dataset, we expect to extend our mobile application with
+ a new classification model able to classify rocks for a wide range of classes.
+ Moreover, the results of the classification model will be compared with
+ other convolutional neural networks.
 \end_layout
 
 \end_inset
