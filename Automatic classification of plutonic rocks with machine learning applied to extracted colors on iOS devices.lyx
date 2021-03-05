@@ -2921,7 +2921,7 @@ lstparams "language=Python,caption={Function to extract the dominant colors from
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2939,8 +2939,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dominant colors and average color of sample rocks in darkest to lightest
- order 
+Sample rocks with their dominant colors in percentage order and their average
+ color
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Dominant-colors-and"
@@ -2953,20 +2953,6 @@ name "fig:Dominant-colors-and"
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Put these images in order of expected darkest to lightest = gabbro, diorite,
- granodiorite, granite … also not sure that I understand the banded strips;
- are they in order from darkest to lightest?, or thinnest to fattest? …
- if the second, it seems it should be fattest to thinnest, i.e., “dominant
- colors” first
 \end_layout
 
 \end_inset
@@ -5782,52 +5768,6 @@ Average
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I think we should add a sub-section at the end of the Results section, to
- explain the limitations/bias of our approach.
- For example, the way the picture was taken, the amount of light interacting
- with the rock/outcrop, the weathering/alteration/oxidation of the sample…these
- features will limit the accuracy of the recognition of color/shade in the
- rock.
- You got a comment about this from a reviewer of the paper submitted to
- Applied Computing and Geosciences and Ben and I will work on addressing
- these concerns.
- Basically, it is required to use pictures of rocks taken under good light
- settings, avoid taking pictures of samples with evidence of weathering
- or cover by vegetation… these details or directions need to be provided
- to the user of the app in order to get good results.
-\end_layout
-
-\begin_layout Plain Layout
-....
-\end_layout
-
-\begin_layout Plain Layout
-In future work, the datasets for training and validation will be extended
- with a larger number of plutonic rock images taken in the field, not in
- the lab, under different conditions (e.g., different distances, angles, lighting
- effects – blue vs.
- cloudy sky, weathering or alteration, shadows, vegetation, and moss).
- Also, a larger dataset will allow to avoid the process of image data augmentati
-on in the validation dataset to count on two completely different datasets
- for training and validation.
- In addition, we are planning to obtain images for other classes of plutonic
- rocks.
- With the larger dataset, we expect to extend our mobile application with
- a new classification model able to classify rocks for a wide range of classes.
- Moreover, the results of the classification model will be compared with
- other convolutional neural networks.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement t
 wide true
@@ -6070,6 +6010,71 @@ noprefix "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+Bias of our approach
+\end_layout
+
+\begin_layout Standard
+In order to get good results in the field it is required to use pictures
+ of rocks taken under good light settings, avoid taking pictures of samples
+ with evidence of weathering and oxidation or covered by vegetation, as
+ these features will limit the recognition accuracy of shades and colors
+ in the rock.
+ However, in many cases it is difficult to obtain the proper settings when
+ images are taken at different outdoor locations and times of the day.
+ For this reason, it is necessary to increase our dataset with images taken
+ under the different conditions in which the image could be found such as
+ angles, distance, light, shadows, weathering, vegetation and others.
+ In addition, the classification of more rock types will allow the model
+ to distinguish the most characteristic shadows and colors of each type.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I think we should add a sub-section at the end of the Results section, to
+ explain the limitations/bias of our approach.
+ For example, the way the picture was taken, the amount of light interacting
+ with the rock/outcrop, the weathering/alteration/oxidation of the sample…these
+ features will limit the accuracy of the recognition of color/shade in the
+ rock.
+ You got a comment about this from a reviewer of the paper submitted to
+ Applied Computing and Geosciences and Ben and I will work on addressing
+ these concerns.
+ Basically, it is required to use pictures of rocks taken under good light
+ settings, avoid taking pictures of samples with evidence of weathering
+ or cover by vegetation… these details or directions need to be provided
+ to the user of the app in order to get good results.
+\end_layout
+
+\begin_layout Plain Layout
+....
+\end_layout
+
+\begin_layout Plain Layout
+In future work, the datasets for training and validation will be extended
+ with a larger number of plutonic rock images taken in the field, not in
+ the lab, under different conditions (e.g., different distances, angles, lighting
+ effects – blue vs.
+ cloudy sky, weathering or alteration, shadows, vegetation, and moss).
+ Also, a larger dataset will allow to avoid the process of image data augmentati
+on in the validation dataset to count on two completely different datasets
+ for training and validation.
+ In addition, we are planning to obtain images for other classes of plutonic
+ rocks.
+ With the larger dataset, we expect to extend our mobile application with
+ a new classification model able to classify rocks for a wide range of classes.
+ Moreover, the results of the classification model will be compared with
+ other convolutional neural networks.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -6320,7 +6325,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6808,14 +6813,23 @@ This shows a big difference between granite and granodiorite between the
 \begin_layout Standard
 The results of our approach with dominant colors were very similar as the
  obtained in our previous work [ref] using all the image features.
- The results were good for gabbro and below expectations for diorite for
- both.
- On the other hand, granite showed much better results with the dominant
- color approach.
- Moreover, these results were not the same with granodiorite showed which
- was the best performing class in our previous work [ref].
- The high accuracy when classifying gabbro samples was because they are
- noticeable darker than samples of the other three classes.
+ The results were good for gabbro, and below expectations for diorite.
+ On the other hand, there is a big difference for granite and granodiorite
+ between the two works in which the percentages got switched.
+ Granite showed much better results with the dominant color approach.
+ Moreover, these results were not the same with granodiorite which was the
+ best performing class in our previous work [ref].
+ This is because a classification model such as CNN used in our previous
+ work extracts general rock features, not only shades and colors, which
+ in the case of granite seems a very important feature for its classification.
+ Combining the features extracted by CNN and the dominant colors before
+ training a machine learning model could improve the results of our approach
+ for granodiorite as well.
+\end_layout
+
+\begin_layout Standard
+The high accuracy when classifying gabbro samples was because they are noticeabl
+e darker than samples of the other three classes.
  Similarly, granites were noticeably lighter.
  In contrast, diorite and granodiorite share characteristics of the other
  rock types closest to them in the dark-light sequence; therefore, it is
