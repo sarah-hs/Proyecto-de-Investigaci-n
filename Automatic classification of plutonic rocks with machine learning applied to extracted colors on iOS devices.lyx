@@ -391,21 +391,12 @@ Plutonic rocks are formed when magma cools and solidifies below the Earth’s
  The experiments were executed first with the dominant colors in RGB and
  then in CIELAB.
  Afterwards, the best model in terms of accuracy, precision, recall and
- F
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-
--score was deployed after validation on an iOS application that classifies
+ F1-score was deployed after validation on an iOS application that classifies
  the extracted colors in new images of the four rock types.
  The best results during validation were for the model generated using KNN
  trained with 283 images in the CIELAB color space that gave accuracy, precision
 , recall, and F1-score average values of 93%.
- Finally, we compared these validation results with the obtained in our
+ Finally, we compared the KNN validation results with the obtained in our
  previous work [ref] in which a CNN was trained using all the image features
  of the same dataset of plutonic rocks.
 \end_layout
@@ -2831,14 +2822,14 @@ lstparams "language=Python,caption={Function to extract the dominant colors from
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/Color extraction.png
 	lyxscale 15
-	width 90col%
+	width 100col%
 
 \end_inset
 
