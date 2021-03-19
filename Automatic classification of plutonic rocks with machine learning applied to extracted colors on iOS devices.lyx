@@ -216,7 +216,7 @@ Ingeniería en Sistemas Computacionales
 
 \series bold
 \size huge
-Automatic Classification of Plutonic Rocks with Machine Learning applied
+Automatic Classification of Plutonic Rocks with Machine Learning Applied
  to Extracted Shades and Colors on iOS Devices
 \begin_inset Note Note
 status open
@@ -396,9 +396,9 @@ Plutonic rocks are formed when magma cools and solidifies below the Earth’s
  The best results during validation were for the model generated using KNN
  trained with 283 images in the CIELAB color space that gave accuracy, precision
 , recall, and F1-score average values of 93%.
- Finally, we compared the KNN validation results with the obtained in our
- previous work [ref] in which a CNN was trained using all the image features
- of the same dataset of plutonic rocks.
+ Finally, we compared these results with our previous work in which an improveme
+nt of 2% was obtained by training a CNN using all the image features of
+ the same dataset of plutonic rocks.
 \end_layout
 
 \begin_layout Keywords
@@ -480,7 +480,7 @@ end{titlepage}
 \end_layout
 
 \begin_layout Title
-Automatic Classification of Plutonic Rocks with Machine Learning applied
+Automatic Classification of Plutonic Rocks with Machine Learning Applied
  to Extracted Shades and Colors on iOS Devices
 \end_layout
 
@@ -506,6 +506,10 @@ Alférez,
 \end_inset
 
 Benjamin
+\begin_inset space ~
+\end_inset
+
+L.
 \begin_inset space ~
 \end_inset
 
@@ -577,7 +581,8 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-Benjamin Clausen, Ph.D., is a professor at the Department of Earth and Biological
+Benjamin L.
+ Clausen, Ph.D., is a professor at the Department of Earth and Biological
  Sciences and at the Geoscience Research Institute, Loma Linda University,
  Loma Linda, California, USA, e-mail: 
 \begin_inset CommandInset href
@@ -1348,7 +1353,7 @@ Related Work
 placement !t
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1542,6 +1547,18 @@ Recall: 95%
 F1-score: 95%
 \end_layout
 
+\begin_layout Plain Layout
+Training time: 120 min
+\end_layout
+
+\begin_layout Plain Layout
+Execution time: 353.74 ms
+\end_layout
+
+\begin_layout Plain Layout
+File size: 2.6 MB
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -1625,6 +1642,14 @@ SqueezeNet
 Accuracy: 94.55%
 \end_layout
 
+\begin_layout Plain Layout
+File size: 9.2 MB
+\end_layout
+
+\begin_layout Plain Layout
+Execution time: from 736 to 366
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -1706,6 +1731,14 @@ ShuffleNet
 
 \begin_layout Plain Layout
 Accuracy: 95.30%
+\end_layout
+
+\begin_layout Plain Layout
+File size: 18.2 MB
+\end_layout
+
+\begin_layout Plain Layout
+Execution time: 786 ms
 \end_layout
 
 \end_inset
@@ -2822,7 +2855,7 @@ lstparams "language=Python,caption={Function to extract the dominant colors from
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3802,49 +3835,6 @@ Creation of the iOS application
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement t
-wide true
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Images/Workflow.png
-	lyxscale 50
-	width 85page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Application workflow 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Application-workflow"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The best model was deployed in an iOS mobile application to make the classificat
 ion of images of four classes of plutonic rocks in real time.
  The source code of the application is available online
@@ -3933,38 +3923,12 @@ https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
 .
 \end_layout
 
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Application-workflow"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the application process.
-\end_layout
-
 \begin_layout Subsection
 Results
 \end_layout
 
 \begin_layout Standard
 The following metrics were used in this project to evaluate the models:
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Evaluating a supervised learning algorithm during the evaluation and testing
- phases is an essential part of any well-made machine learning pipeline.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -4772,6 +4736,49 @@ CNN
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Workflow.png
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Application workflow 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Application-workflow"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4791,7 +4798,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5036,7 +5043,7 @@ Granite
 \end_layout
 
 \begin_layout Standard
-The KNN was deployed on the iOS application (see Fig.
+The KNN model was deployed on the iOS application (see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5048,12 +5055,12 @@ noprefix "false"
 \end_inset
 
 ).
- There are two ways of making the classification on the application.
+ There are two ways to make the classification of new rocks on the application.
  The first way is to take a picture with the 
 \begin_inset Quotes eld
 \end_inset
 
-OpenCamera
+Open Camera
 \begin_inset Quotes erd
 \end_inset
 
@@ -5083,7 +5090,7 @@ Photo Library
 \begin_inset Quotes eld
 \end_inset
 
-OpenLibrary
+Open Library
 \begin_inset Quotes erd
 \end_inset
 
@@ -5106,8 +5113,16 @@ DominantColor
 \end_inset
 
  library.
- Thereafter, the Classify button in step 3 is enabled to classify the new
- rock image into: granite, granodiorite, gabbro, and diorite.
+ Thereafter, the 
+\begin_inset Quotes eld
+\end_inset
+
+Classify
+\begin_inset Quotes erd
+\end_inset
+
+ button in step 3 is enabled to classify the new rock image into: granite,
+ granodiorite, gabbro, and diorite.
  At this step the previous extracted colors are converted to a buffer of
  CIELAB color data.
  The colors are sorted in descending order by their percentage of pixels
@@ -5173,6 +5188,67 @@ noprefix "false"
 
  presents the comparison of these results and the results of the CNN of
  our previous work [ref] that used all the image features.
+ Although the results of our previous work were 2% better in terms of accuracy,
+ recall, and f1-score, and 3% in precision, it is noteworthy that this dominant
+ colors approach did not apply data augmentation technique to image data
+ as in our previous work.
+ Furthermore, a training time of 0.068 s, an execution time of 339.87 ms,
+ and a file size of 0.018 MB were obtained in this work compared with
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 2 hrs, 353.74 ms, and 2.6 MB of 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+our previous work
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+These computational metrics were better with the dominant colors approach
+ being the training and execution times were 96% and 4% faster than in our
+ previous work, and the file size was 99.3% lighter.
 \end_layout
 
 \begin_layout Standard
@@ -5204,7 +5280,7 @@ name "tab:Comparison-of-the"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="middle" width="6em">
 <column alignment="center" valignment="middle" width="9em">
@@ -5335,7 +5411,7 @@ Recall
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5345,7 +5421,7 @@ F1-score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5354,11 +5430,98 @@ F1-score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 95%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Training time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.33 min
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+120 min
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Execution time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+339.87 ms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+353.74 ms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+File size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.018 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.6 MB
 \end_layout
 
 \end_inset
@@ -5377,10 +5540,10 @@ F1-score
 \end_layout
 
 \begin_layout Standard
-Results obtained in both approaches are similar.
- Although the results were slightly better in our previous work, it is noteworth
-y that the dominant colors approach only used the 283 images of plutonic
- rocks without applying data augmentation.
+The dominant color approach is very useful in terms of processing time and
+ memory.
+ In addition, it is much faster than other models presented in the related
+ work.
 \end_layout
 
 \begin_layout Section
@@ -5407,6 +5570,8 @@ ISSN: 2278-0181
  The dominant colors approach presented in this work can be useful in classifica
 tions where color is important to differentiate images.
  CIELAB color format is an excellent option to do this.
+ In addition, feature reduction can be applied when there is not enough
+ memory and it is necessary to reduce the execution time of a model.
 \end_layout
 
 \begin_layout Standard
@@ -5425,8 +5590,9 @@ In order to get good results in the field it is required to use pictures
  of plutonic rocks is the shapes of their crystals.
  Adding this feature to the training of machine learning models can improve
  the results.
- In addition, the classification of more rock types will allow the model
- to distinguish the most characteristic shadows and colors of each type.
+ Finally, the classification of more rock types also could improve this
+ work results allowing the model to distinguish the most characteristic
+ shadows and colors of each type.
 \begin_inset Note Note
 status collapsed
 
