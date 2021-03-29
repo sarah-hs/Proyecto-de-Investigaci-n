@@ -8,6 +8,7 @@
 \begin_preamble
 % for subfigures/subtables
 \usepackage{titlesec}
+\usepackage[multiple]{footmisc}
 \titlespacing{\subsubsection}{0pt}{0.6em}{0pt}
 \usepackage[caption=false,font=footnotesize]{subfig}
 \usepackage{diagbox}
@@ -17,6 +18,7 @@
 \usepackage{color}
 \definecolor{lightgray}{RGB}{246,246,246}
 \definecolor{darkgray}{RGB}{128,128,128}
+\raggedbottom
 \end_preamble
 \options journal
 \use_default_options false
@@ -116,7 +118,7 @@ Automatic Classification of Plutonic Rocks with Machine Learning Applied
 \end_layout
 
 \begin_layout Author
-\paragraph_spacing single
+\paragraph_spacing other 0.8
 Germán
 \begin_inset space ~
 \end_inset
@@ -150,7 +152,7 @@ Serrano
 \begin_inset script superscript
 
 \begin_layout Plain Layout
-2
+1
 \end_layout
 
 \end_inset
@@ -215,32 +217,20 @@ status open
 
 \begin_layout Plain Layout
 
-\size tiny
-1
 \size scriptsize
- Institute of Data Science, Montemorelos University, PO Box 16-5, Montemorelos,
- N.L.
- 67515, México.
- E-mail: 
+1 Facultad de Ingeniería y Tecnología, Universidad de Motemorelos, Apartado
+ 16-5, Montemorelos, N.L.
+ 67500, Mexico.
+ E-mails: 
 \begin_inset CommandInset href
 LatexCommand href
 target "harveyalferez@um.edu.mx"
+type "mailto:"
 literal "false"
 
 \end_inset
 
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\size tiny
-2
-\size scriptsize
- School of Engineering and Technology, Montemorelos University, Montemorelos,
- N.L.
- 67515, México.
- E-mail: 
+, 
 \begin_inset CommandInset href
 LatexCommand href
 target "1170469@alumno.um.edu.mx"
@@ -253,11 +243,7 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-
-\size tiny
-3
-\size scriptsize
- Geoscience Research Institute, Loma Linda University, 11060 Campus Street,
+2 Geoscience Research Institute, Loma Linda University, 11060 Campus Street,
  Loma Linda, CA 92350, USA.
  E-mail: 
 \begin_inset CommandInset href
@@ -272,11 +258,7 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-
-\size tiny
-4
-\size scriptsize
- Department of Earth and Biological Sciences, Loma Linda University, Griggs
+3 Department of Earth and Biological Sciences, Loma Linda University, Griggs
  Hall, 11065 Campus Street, CA 92350, USA.
  E-mail: 
 \begin_inset CommandInset href
@@ -308,13 +290,14 @@ Lightness and color are properties used for the classification of plutonic
  of the observer.
  Moreover, the classification of plutonic rocks using various instrumental
  techniques tend to be expensive and time-consuming.
- We extracted dominant shades and colors from 283 plutonic rock images in
- RGB and CIELAB formats to train several machine learning models.
+ To face this situation, we extracted dominant shades and colors from 283
+ plutonic rock images in RGB and CIELAB formats to train several machine
+ learning models.
  The best model was deployed on an iOS application that classifies four
  classes of plutonic rocks from darkest to lightest: gabbro, diorite, granodiori
 te, and granite.
  The best results were for the K-Nearest Neighbors model using CIELAB dominant
- colors data with accuracy, precision, recall, and F1-score of 93%
+ colors data with accuracy, precision, recall, and F-score of 93%.
 \end_layout
 
 \begin_layout Keywords
@@ -367,18 +350,19 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-This research extracts dominant shades and colors from plutonic rock images
- to train several machine learning algorithms and deploy the best model
- on an iOS application for the automatic classification of four classes
- of plutonic rocks: gabbro, diorite, granodiorite, and granite.
- We created this application because no such application exists.
+Our contribution in this research work is to extract dominant shades and
+ colors from plutonic rock images to train several machine learning algorithms
+ and deploy the best model on an iOS application for the automatic classificatio
+n of four classes of plutonic rocks: gabbro, diorite, granodiorite, and
+ granite.
+ No such application exists.
  A mobile application offers the flexibility to carry out the classification
  in real time and could be an alternative to expensive traditional methods
  of rock classification.
 \end_layout
 
 \begin_layout Standard
-The main contributions of this paper are three-folds:
+Specifically, our three objectives are as follows:
 \end_layout
 
 \begin_layout Itemize
@@ -394,7 +378,7 @@ k
 \begin_layout Itemize
 Use the extracted dominant colors and their percentage of pixels in the
  images to train the following machine learning algorithms: Logistic Regression
- (LR), K-Nearest Neighbors (KNN), Decision Trees (DT), Support Vector Machine
+ (LR), K-Nearest Neighbors (KNN), Decision Trees (DT), Support Vector Machines
  (SVM), and a Convolutional Neural Network (CNN).
 \end_layout
 
@@ -404,11 +388,13 @@ Validate the generated models and deploy the best model in an iOS mobile
 \end_layout
 
 \begin_layout Standard
-This article is organized as follows: section 2 introduces the underpinnings
- of our approach, section 3 presents a brief state of the art of mineral
- and rock classification with machine learning, section 4 describes the
- dataset and the proposed method, section 5 presents and discusses the results,
- and section 6 presents the conclusions and future works.
+This article is organized as follows: Section 2 introduces the underpinnings
+ of our approach.
+ Section 3 presents the state-of-the-art of mineral and rock classification
+ with machine learning.
+ Section 4 describes the methodology.
+ Section 5 presents and discusses the results.
+ Finally, Section 6 presents the conclusions and future work.
 \end_layout
 
 \begin_layout Section
@@ -416,7 +402,7 @@ Underpinnings of our Approach
 \end_layout
 
 \begin_layout Standard
-Our approach is based on these concepts 
+Our approach is based on the following concepts 
 \shape italic
 \emph on
 (see Fig.
@@ -448,7 +434,7 @@ status collapsed
 \begin_inset Graphics
 	filename Images/Springer - Map of concepts.png
 	lyxscale 20
-	width 90col%
+	width 100col%
 
 \end_inset
 
@@ -548,7 +534,7 @@ Machine learning is a branch of artificial intelligence that lies at the
  they get during training 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Geron2019"
+key "Harrington2012,Geron2019"
 literal "false"
 
 \end_inset
@@ -601,7 +587,7 @@ K-Nearest Neighbors (KNN) is used to predict the label of a new point finding
  where the decision boundary is very irregular 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Buitinck2013"
+key "KNN-sklearn"
 literal "false"
 
 \end_inset
@@ -627,13 +613,13 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-Support Vector Machine (SVM) is a powerful and versatile algorithm, particularly
- well suited for classification of complex small- or medium-sized datasets.
+Support Vector Machines (SVM) is a powerful and versatile algorithm, particularl
+y well suited for classification of complex small- or medium-sized datasets.
  The data is plotted in a n-dimensional space (number of features) and a
  decision boundary (hyperplane) splits that space into classes 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Geron2019"
+key "Harrington2012,Geron2019"
 literal "false"
 
 \end_inset
@@ -644,7 +630,7 @@ literal "false"
 \begin_layout Itemize
 Convolutional Neural Networks (CNNs) emerged from the study of the brain’s
  visual cortex.
- The CNN´s architecture consists of several connected layers allowing the
+ The CNN's architecture consists of several connected layers allowing the
  network to concentrate on small low-level features in the first hidden
  layer to assemble them into larger higher-level features in the next layers.
  Their most important building block is the convolutional layer 
@@ -664,8 +650,9 @@ Unsupervised learning
 
 \begin_layout Standard
 In unsupervised learning the training data is unlabeled.
- K-means is one of the most important algorithms capable of clustering unlabeled
- data very quickly and efficiently, often in a few iterations.
+ K-means is one of the most important unsupervised learning algorithms.
+ K-means can cluster unlabeled data very quickly and efficiently, often
+ in a few iterations.
  Its goal is to group similar instances together into a 
 \shape italic
 k
@@ -688,35 +675,30 @@ Dominant colors
 \begin_layout Standard
 The dominant colors refer to the principal colors presented in an image.
  These colors are selected grouping the image pixels according to their
- color in the selected color space (RGB or CIELAB) represented as a three-value
- vector.
+ color in the color space (RGB or CIELAB).
+ The colors are represented as a three-value vector.
  The average color of each group is a dominant color and its percentage
  is the number of pixels in that group.
 \end_layout
 
 \begin_layout Standard
-In RGB (Red, Green, Blue), the light spectra of varying fractions of the
- three primary color channels combine to make new colors.
+On one hand, in RGB (Red, Green, Blue) the light spectra of varying fractions
+ of the three primary color channels combine to make new colors.
  Each channel has intensity values from 0 to 1 scaled by the number of bits
  used to represent it.
- The 24-bit color cube used in this research scales the channel values in
- the range of 0–255 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Wallace2002"
-literal "false"
-
-\end_inset
-
-.
+ The 24-bit color cube used in this research work scales the channel values
+ in the range of 0–255.
 \end_layout
 
 \begin_layout Standard
 On the other hand, CIELAB has the property of being perceptually uniform
  (useful to measure the similarity between two colors) and is designed to
  approximate human vision.
- The L channel represents the brightness of each pixel varying between 0
- and 100.
+ The 
+\shape italic
+L
+\shape default
+ channel represents the brightness of each pixel varying between 0 and 100.
  The 
 \shape italic
 a
@@ -727,15 +709,7 @@ b
 \shape default
  (yellow/blue) channels correspond to the chromaticity components and contain
  information about the color of a pixel, independent of its brightness.
- Their values vary between -127 and 127 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "DavidMillanEscriva2019,Young2009"
-literal "false"
-
-\end_inset
-
-.
+ Their values vary between -127 and 127.
 \end_layout
 
 \begin_layout Subsection
@@ -747,9 +721,18 @@ Scikit-learn
 \end_layout
 
 \begin_layout Standard
-Scikit-learn is a Python module that integrates a wide range of state-of-the-art
- machine learning algorithms for medium-scale supervised and unsupervised
- problems.
+Scikit-learn
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.scikit-learn.org
+\end_layout
+
+\end_inset
+
+ is a Python module that integrates a wide range of state-of-the-art machine
+ learning algorithms for medium-scale supervised and unsupervised problems.
  This library focuses on bringing machine learning to non-specialists using
  a general-purpose high-level language.
  Emphasis is put on ease of use, performance, documentation, and API consistency.
@@ -768,6 +751,163 @@ literal "false"
 
 \begin_layout Paragraph
 Tensorflow
+\end_layout
+
+\begin_layout Standard
+TensorFlow
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.tensorflow.org
+\end_layout
+
+\end_inset
+
+ is an interface for expressing machine learning algorithms and an implementatio
+n for executing such algorithms.
+ A computation expressed using TensorFlow can be executed with little or
+ no change on a wide variety of heterogeneous systems, ranging from mobile
+ devices such as phones and tablets up to large-scale distributed systems
+ with hundreds of machines and thousands of computational devices such as
+ GPUs 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Abadi2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Tensorflow Lite
+\end_layout
+
+\begin_layout Standard
+TensorFlow Lite
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://www.tensorflow.org/lite
+\end_layout
+
+\end_inset
+
+ is a set of tools to help developers run TensorFlow machine learning models
+ on mobile, embedded, and Internet of Things (IoT) devices 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TF-TFLite"
+literal "false"
+
+\end_inset
+
+.
+ TensorFlow Lite consists of two main components:
+\end_layout
+
+\begin_layout Itemize
+The interpreter, which runs specially optimized models on many different
+ hardware types.
+\end_layout
+
+\begin_layout Itemize
+The converter, which converts TensorFlow models into an efficient form for
+ use by the interpreter, and can introduce optimizations to improve them.
+\end_layout
+
+\begin_layout Paragraph
+Swift
+\end_layout
+
+\begin_layout Standard
+Swift
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://swift.org
+\end_layout
+
+\end_inset
+
+ is an open source programming language designed by Apple for Apple platforms
+ and is better in type safety, security, and hardware performance than Objective
+-C.
+ Community members actively work to port it even to more platforms like
+ Linux 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Apple-Swift"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+CocoaPods
+\end_layout
+
+\begin_layout Standard
+CocoaPods
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://cocoapods.org
+\end_layout
+
+\end_inset
+
+ is a dependency manager for Swift and Objective-C Cocoa projects.
+ It resolves dependencies between libraries, fetches the resulting source
+ code, then links it together in an Xcode workspace to build a single project
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "CocoaPods"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Related Work
+\end_layout
+
+\begin_layout Standard
+Over the last decade, there has been considerable progress in the application
+ of machine learning to geochemistry 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lary2018"
+literal "false"
+
+\end_inset
+
+.
+ In this section we present relevant research work in three areas: image
+ classification of rock lithology using machine learning, rock classification
+ with machine learning on mobile devices, and recognition of mineral images
+ applying machine learning and feature extraction.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Related-work-comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ summarizes the works presented in this section.
 \end_layout
 
 \begin_layout Standard
@@ -801,14 +941,14 @@ name "tab:Related-work-comparison"
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="8">
 <features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="3.3em">
-<column alignment="center" valignment="middle" width="2em">
-<column alignment="center" valignment="middle" width="11.1em">
-<column alignment="center" valignment="middle" width="5.2em">
-<column alignment="center" valignment="middle" width="7.8em">
+<column alignment="center" valignment="middle" width="2.8em">
+<column alignment="center" valignment="middle" width="1.2em">
+<column alignment="center" valignment="middle" width="9.6em">
 <column alignment="center" valignment="middle" width="3.8em">
-<column alignment="center" valignment="middle" width="5.8em">
-<column alignment="center" valignment="middle" width="11.8em">
+<column alignment="center" valignment="middle" width="7.2em">
+<column alignment="center" valignment="middle" width="3.6em">
+<column alignment="center" valignment="middle" width="4.3em">
+<column alignment="center" valignment="middle" width="9.7em">
 <row>
 <cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -877,7 +1017,7 @@ Best model
 \begin_inset Text
 
 \begin_layout Plain Layout
-Model results
+Results
 \end_layout
 
 \end_inset
@@ -1199,7 +1339,7 @@ Inception-v3 CNN model
 \begin_inset Text
 
 \begin_layout Plain Layout
-High-level features (chromatic aberration, texture, and more)
+High-level features like chromatic aberration and texture
 \end_layout
 
 \end_inset
@@ -1411,195 +1551,6 @@ Accuracy: 98.5%
 
 \end_layout
 
-\begin_layout Standard
-TensorFlow
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://www.tensorflow.org
-\end_layout
-
-\end_inset
-
- is an interface for expressing machine learning algorithms and an implementatio
-n for executing such algorithms.
- A computation expressed using TensorFlow can be executed with little or
- no change on a wide variety of heterogeneous systems, ranging from mobile
- devices such as phones and tablets up to large-scale distributed systems
- with hundreds of machines and thousands of computational devices such as
- Graphics Processing Unit (GPU) cards 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Abadi2016"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-Tensorflow Lite
-\end_layout
-
-\begin_layout Standard
-TensorFlow Lite 
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://www.tensorflow.org/lite
-\end_layout
-
-\end_inset
-
- is a set of tools to help developers run TensorFlow machine learning models
- on mobile, embedded, and Internet of Thnigs (IoT) devices 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "TF-TFLite"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-TensorFlow Lite consists of two main components:
-\end_layout
-
-\begin_layout Itemize
-The interpreter, which runs specially optimized models on many different
- hardware types.
-\end_layout
-
-\begin_layout Itemize
-The converter, which converts TensorFlow models into an efficient form for
- use by the interpreter, and can introduce optimizations to improve them.
-\end_layout
-
-\begin_layout Paragraph
-Swift
-\end_layout
-
-\begin_layout Standard
-Swift
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://swift.org
-\end_layout
-
-\end_inset
-
- is an open source programming language designed by Apple for Apple platforms
- and is better in type safety, security, and hardware performance than Objective
--C.
- Community members actively work to port it even to more platforms like
- Linux 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Apple-Xcode"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-Xcode
-\end_layout
-
-\begin_layout Standard
-Xcode
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://developer.apple.com/xcode/
-\end_layout
-
-\end_inset
-
- consists of a suite of tools that developers use to build apps for Apple
- platforms.
- It is used to manage entire development workflows from creating an application
- to testing, optimizing, and submitting it to the App Store 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Apple-Xcode"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-CocoaPods
-\end_layout
-
-\begin_layout Standard
-CocoaPods
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://cocoapods.org
-\end_layout
-
-\end_inset
-
- is a dependency manager for Swift and Objective-C Cocoa projects.
- It resolves dependencies between libraries, fetches the resulting source
- code, then links it together in an Xcode workspace to build a single project
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "CocoaPods"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Related Work
-\end_layout
-
-\begin_layout Standard
-Over the last decade, there has been considerable progress in the application
- of machine learning to geochemistry 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lary2018"
-literal "false"
-
-\end_inset
-
-.
- In this section we present relevant research work in three areas: image
- classification of rock lithology using machine learning, rock classification
- with machine learning on mobile devices, and recognition of mineral images
- applying machine learning and feature extraction.
- Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Related-work-comparison"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- summarizes the works presented in this section.
-\end_layout
-
 \begin_layout Paragraph
 Image classification of rock lithology using machine learning
 \end_layout
@@ -1673,11 +1624,11 @@ literal "false"
  These models were compared with ResNet50, a heavyweight model.
  The images were selected from the China Geological Survey dataset that
  contains images of 28 rock categories taken by a smartphone camera.
- The 3,208 images were reduced to 214 × 214 pixels and the 80% were used
- to train the two CNNs pretrained with ImageNet dataset.
+ The 3,208 images were reduced to 214 × 214 pixels and the 80% of those
+ images was used to train the two CNNs pretrained with the ImageNet dataset.
  The achieved occupation sizes were 19.6, 36.8, and 232.7 MB for MobileNet,
  SqueezeNet, and ResNet50.
- SqueezeNet was almost two times faster than MobileNet, and 7 times faster
+ SqueezeNet was almost two times faster than MobileNet and 7 times faster
  than ResNet50.
  A rock recognition software based on the trained models was developed for
  Android devices.
@@ -1704,12 +1655,12 @@ literal "false"
  The ShuffleNet model was trained using 80% of the dataset, 3,600 iteration
  steps, a learning rate of 0.008, and the parameters imported by the transfer
  learning method using the ImageNet dataset.
- ShuffleNet occupied a space of 18.2 MB compared with MobileNet, SqueezeNet,
+ ShuffleNet occupied a space of 18.2 MB compared to MobileNet, SqueezeNet,
  and ResNet50 that occupied 34.5, 25, and 219.4 MB respectively.
  An Android application was created using each model.
  The average recognition time for a single rock in ShuffleNet was 786 millisecon
 ds.
- It reached an accuracy of 97.65% on PC.
+ It reached an accuracy of 97.65% on a PC.
 \end_layout
 
 \begin_layout Paragraph
@@ -1729,9 +1680,9 @@ literal "false"
  worked on the intelligent identification of rock-mineral images using ensemble
  machine learning algorithms (model stacking).
  A total of 481 images of four minerals (K-feldspar, perthite, plagioclase,
- and quartz) were obtained with the camera on top of a microscope.
+ and quartz) were obtained with a camera on top of a microscope.
  The target RGB images were cropped to cover the minerals and then processed
- to be 299 × 299 pixels.
+ to have 299 × 299 pixels.
  A deep learning model based on Inception-v3 was adopted to extract high-level
  features (such as chromatic aberration and texture) from the images and
  train the algorithms of LR, SVM, KNN, Random Forest (RF), Multilayer Perceptron
@@ -1759,8 +1710,7 @@ literal "false"
  (plagioclase, augite, background, hypersthene, ilmenite, magnetite, titanite,
  hornblende, etc.).
  The surface was scanned with an automated Scanning Electron Microscopy
- (SEM) that assigned to each grain a mineral specie based on its chemical
- signature.
+ (SEM).
  Several views of the same surface were taken with a stereo-zoom binocular
  microscope to construct a large mosaic RGB image.
  Both images were divided into 3,192 sub-images of 600 × 600 pixels.
@@ -1774,7 +1724,7 @@ literal "false"
  for each superpixels.
  KNN, RF, and Classification and Regression Trees (CART) algorithms were
  trained with 70% of the extracted features, and tested with the other 30%
- using the kappa statistics, precision, recall, and f1-score indicators.
+ using the kappa statistics, precision, recall, and F-score indicators.
  The RF algorithm gave the best results with a global accuracy of 89%.
 \end_layout
 
@@ -1812,24 +1762,9 @@ literal "false"
  introduce CNN topologies and analyze the performance of the models generated
  for rock lithology classification using all the image features rather than
  extracted features.
- The occurrence of redundant or irrelevant features in the acquired data
- makes the model learn based on irrelevant features
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-doi: https://doi.org/10.1016/B978-0-12-817913-0.00014-6
-\end_layout
-
-\end_inset
-
-.
- The evaluation of the models showed good results for the four articles
- in the classification of rock lithology.
- Nevertheless, all of them were trained with diverse types of rocks instead
- of using only the plutonic rock type.
- Classification of one rock type becomes more difficult because rocks of
- the same type have very similar characteristics.
+ The evaluation of the models showed good results.
+ Also, the models in the research works were trained with diverse types
+ of rocks instead of using only plutonic rocks.
  Finally, in 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1841,11 +1776,11 @@ literal "false"
  the created models were deployed on an Android mobile application for the
  classification of rocks.
  However, there are no works presenting the deployment of machine learning
- models on iOS devices.
+ for the classification of plutonic rocks on iOS devices.
 \end_layout
 
 \begin_layout Section
-Materials and Methods
+Methodology
 \end_layout
 
 \begin_layout Standard
@@ -1864,13 +1799,15 @@ The images of plutonic rocks were provided by the Department of Earth and
  Specifically, the dataset contains 283 image patches selected from the
  81 original images of four classes of plutonic rocks: gabbro, diorite,
  granodiorite, and granite.
- The images used in the following experiments are organized in subfolders
+ In the experiments we used clean rock samples with negligible weathering
+ or alteration visible to the naked eye.
+ The images used in the following experiments were organized in subfolders
  according to their class and are available online
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-https://github.com/sarah-hs/Color-extraction/tree/main/Rock-images
+https://bit.ly/2P9JLEc
 \end_layout
 
 \end_inset
@@ -2076,34 +2013,10 @@ In this step, the images were processed in order to obtain the color values
 \end_layout
 
 \begin_layout Standard
-First, all files (
-\begin_inset Quotes eld
-\end_inset
-
-.png
-\begin_inset Quotes erd
-\end_inset
-
-, 
-\begin_inset Quotes eld
-\end_inset
-
-.jpg
-\begin_inset Quotes erd
-\end_inset
-
-, and 
-\begin_inset Quotes eld
-\end_inset
-
-.jpeg
-\begin_inset Quotes erd
-\end_inset
-
-) in the subfolders of the main directory of images were processed in RGB
- format and labeled according to their container subfolder (e.g.
- processed images in the granite subfolder are labeled as granite).
- Thereafter, the RGB values of the image pixels were converted to CIELAB
+First, all files in the subfolders were processed in RGB format and labeled
+ according to their container subfolder (e.g.
+ images in the granite subfolder are labeled as granite).
+ Afterwards, the RGB values of the image pixels were converted to CIELAB
  values using the 
 \begin_inset Quotes eld
 \end_inset
@@ -2112,7 +2025,15 @@ rgb2lab
 \begin_inset Quotes erd
 \end_inset
 
- function of the color class imported from the Scikit-image module.
+ function of the 
+\begin_inset Quotes eld
+\end_inset
+
+color
+\begin_inset Quotes erd
+\end_inset
+
+ class of the Scikit-image module.
  In this way, it is possible to train the models in the two color spaces
  and determine which color format is the most appropriate for classifying
  the dominant colors of the 4 classes of plutonic rocks.
@@ -2126,7 +2047,7 @@ http://bit.ly/3pyh3JL
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2135,14 +2056,16 @@ Determining the best number of color clusters
 
 \begin_layout Standard
 The K-means algorithm was used to extract the dominant colors from the images.
- The Elbow method was used to calculate the optimal number of clusters to
- use in K-means.
+ The Elbow method was used to calculate the optimal number of clusters 
+\shape italic
+k
+\shape default
+ to use by the K-means algorithm.
  This method consists of iterating in a range of possible cluster numbers
  and determine the best one.
- We selected the pixel values of one processed image to train K-means.
- The range of 2 to 20 was declared to obtain the scores of K-means at each
- cluster number.
- Finally, we plotted these scores with their respective 
+ The k value ranged from 2 to 20 was declared to obtain the scores of K-means
+ at each cluster number.
+ Finally, we plotted the scores with their respective 
 \shape italic
 k
 \shape default
@@ -2175,14 +2098,14 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/Elbow curve.png
-	lyxscale 30
-	width 80col%
+	lyxscale 20
+	width 100col%
 
 \end_inset
 
@@ -2193,7 +2116,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The Elbow method showing the optimal k number of clusters 
+The Elbow method returned the optimal 
+\shape italic
+k
+\shape default
+ number of clusters 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Elbow-method"
@@ -2218,7 +2145,7 @@ Color extraction
 \end_layout
 
 \begin_layout Standard
-In this step, the dominant colors are extracted from the rock images.
+In this step, the dominant colors were extracted from the rock images.
  In Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2283,14 +2210,14 @@ lstparams "language=Python,caption={Function to extract the dominant colors from
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Images/Color extraction.png
-	lyxscale 15
-	width 80col%
+	lyxscale 10
+	width 100col%
 
 \end_inset
 
@@ -2333,8 +2260,8 @@ noprefix "false"
 
 \end_inset
 
-, the processed data in RGB format is iterated in lines 4 to 6 and to extract
- the dominant colors in line 5 with the function of Listing 
+, the processed data in RGB format is iterated in lines 4 to 6 and the dominant
+ colors are extracted in line 5 with the function described in Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "list:get-dominant-colors"
@@ -2350,8 +2277,8 @@ noprefix "false"
  Finally, the extracted colors in RGB and CIELAB formats are saved together
  with their respective rock label in different CSV files.
  These files were used in the next step to train the machine learning algorithms.
- The CSVs with the extracted dominant colors in RGB and CIELAB color spaces
- are available online
+ The CSV files with the extracted dominant colors in RGB and CIELAB color
+ spaces are available online
 \begin_inset Foot
 status collapsed
 
@@ -2390,13 +2317,13 @@ Data normalization and label encoding
 \end_layout
 
 \begin_layout Standard
-First, in this step we loaded the dominant colors data from the CSVs.
- The dominant colors and their percentage are the data features loaded into
- 
+First, in this step we loaded the dominant colors data from the CSV files
+ generated in the previous step.
+ The dominant colors data are the features loaded into 
 \shape italic
 x
 \shape default
-, and the rock classes are the data labels loaded into 
+, and the rock classes are the labels loaded into 
 \shape italic
 y
 \shape default
@@ -2418,8 +2345,16 @@ train_test_split
 \begin_inset Quotes erd
 \end_inset
 
- function of the model_selection class from Scikit-learn.
- Thereafter, we normalized the 
+ function of the 
+\begin_inset Quotes eld
+\end_inset
+
+model_selection
+\begin_inset Quotes erd
+\end_inset
+
+ class of Scikit-learn.
+ Afterwards, we normalized the 
 \shape italic
 x
 \shape default
@@ -2431,9 +2366,16 @@ MinMaxScaler
 \begin_inset Quotes erd
 \end_inset
 
- function imported from the preprocessing class of Scikit-learn.
- This function scales each feature to a given range of 0 to 1 for data cleaning
- and better performance in model training.
+ function of the 
+\begin_inset Quotes eld
+\end_inset
+
+preprocessing
+\begin_inset Quotes erd
+\end_inset
+
+ class of Scikit-learn.
+ This function scales each feature to a given range of 0 to 1.
  Finally, we encoded the 
 \shape italic
 y
@@ -2449,7 +2391,15 @@ LabelEncoder
 \begin_inset Quotes erd
 \end_inset
 
- function of the preprocessing class imported from Scikit-learn module.
+ function of the 
+\begin_inset Quotes eld
+\end_inset
+
+preprocessing
+\begin_inset Quotes erd
+\end_inset
+
+ class of Scikit-learn.
 \end_layout
 
 \begin_layout Subsection
@@ -2457,308 +2407,37 @@ Training the different algorithms with the extracted dominant colors
 \end_layout
 
 \begin_layout Standard
-Five machine learning models were trained in this experiment using the RGB
- and afterwards the CIELAB dominant colors data: LR, KNN, DT, SVM, and a
- CNN.
- The notebook showing the code for training and validation of the generated
- models is available online
+The following five machine learning models were trained in this experiment
+ using the RGB and afterwards the CIELAB dominant colors data: LR, KNN,
+ DT, SVM, and a sequencial CNN topology with four layers: a convolutional
+ layer (32 filters, kernel size = 2, padding = same, input shape = 16 x
+ 1, and activation = RELU); a max pooling layer (pool size = 2); a convolutional
+ layer (64 filters, kernel size = 2, padding = same, and activation = RELU);
+ a max pooling layer (pool size = 2); a flatten layer; and two dense layers,
+ one with 64 filters and RELU activation and another one with 4 filters,
+ one per class, and a SOFTMAX activation function.
+ The notebooks showing the code for training and validation of the generated
+ models with RGB and CIELAB data are available online
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
+https://github.com/sarah-hs/Color-extraction/blob/main/train-RGB.ipynb
 \end_layout
 
 \end_inset
 
-.
-\end_layout
 
-\begin_layout Standard
-Listings 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-LR"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-CNN"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- present the set and training process of the models.
- The LR, KNN and CNN models were trained with the normalized data while
- the DT and SVM models with non-normalized data.
- The following configurations were used to set the models:
-\end_layout
-
-\begin_layout Standard
-LR was created in line 3 of Listing 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-LR"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- with the L-BFGS (Limited-memory Broyden–Fletcher–Goldfarb–Shanno) solver.
- L-BFGS is one of the quasi-Newton methods that approximate the BFGS algorithm
- which utilizes a limited amount of computer memory.
- The solver's methodology starts iterating at a random point (
-\shape italic
-xt
-\shape default
-) to calculate the minimum from the second derivate of the original function
- at that point and assign it to a new point (xt+1).
- The new point will become the starting point for the next iteration.
- In this way, L-BFGS quickly converges on the solution 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dangeti2017"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/train LR.txt"
-lstparams "language=Python,caption={Configuration and training of LR},label={list:train-LR}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The number of neighbors used for KNN in line 3 of Listing 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-KNN"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- represents the neighbor samples analyzed from the dataset to classify a
- new sample into the class to which most of their neighbors belong.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/train KNN.txt"
-lstparams "language=Python,caption={Configuration and training of KNN},label={list:train-KNN}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-By using class weights, we can increase the importance of a particular class
- during training.
- DT is created in line 3 of Listing 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-DT"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- with the balanced mode for class weight.
- This mode uses the label values of the training set to automatically adjust
- the node weights inversely proportional to the class frequencies in the
- input data 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dangeti2017"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/train DT.txt"
-lstparams "language=Python,caption={Configuration and training of DT},label={list:train-DT}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-SVM is created in line 3 of Listing 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-SVM"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- with the Radial Basis Function (RBF) kernel which is useful to eliminate
- the computational requirement of the algorithm.
- When training an SVM with RBF, the parameter gamma must be considered.
- It defines how much influence a single training sample has.
- The larger gamma is, the closer other examples must be to be affected.
- The auto gamma value in Scikit-learn is represented by 
-\begin_inset Formula $1/number\ of\ features$
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Buitinck2013"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/train SVM.txt"
-lstparams "language=Python,caption={Configuration and training of SVM},label={list:train-SVM}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The proposed CNN model is a four-layer structure: two one-dimensional convolutio
-nal layers and two fully-connected layers.
- There is a maxpooling layer after each convolutional layer.
- Also a flatten layer is placed after the last maxpooling layer.
- In line 7 of Listing 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "list:train-CNN"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- the sequential model of the Keras
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-https://keras.io
+https://github.com/sarah-hs/Color-extraction/blob/main/train-LAB.ipynb
 \end_layout
 
 \end_inset
 
- library from Tensorflow was defined.
- This model is formed by layers where each layer has exactly one input tensor
- and one output tensor.
- In lines 8 and 10 two convolutional layers of one dimension were added
- to the model using RELU as their activation function, 2 as kernel size,
- and a total of 32 and 64 filters respectively.
- This kind of layer creates a convolution kernel that is convolved with
- the input layer to produce a output tensor of the filters dimension.
- Moreover, Rectified Linear Unit (RELU) activation function is used to achieve
- non-linearity converting the negative values of the output tensor to 0
- after convolution operation 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Mitchell2019"
-literal "false"
-
-\end_inset
-
 .
- In lines 9 and 11 the maxpooling layers are added with a size of 2 after
- each convolutional layer.
- Maxpooling layer downsamples the input by taking the maximum value over
- a window defined by pool size.
- In line 12 the flatten layer flattens the input to one dimension.
- In lines 13 and 14 two fully connected layers are added with 64 and 4 filters
- using RELU and Softmax activation functions respectively.
- The Softmax function is generally used in the output layer to normalize
- a vector containing 
-\shape italic
-k
-\shape default
- elements into a probability distribution over the 
-\shape italic
-k
-\shape default
- elements.
- In this case, the last layer output contains the probabilities of the four
- rock classes 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dawani2020"
-literal "false"
-
-\end_inset
-
-.
- In line 15, the model was compiled with the categorical cross-entropy loss
- function and the Adam optimizer.
- Categorical cross-entropy is the most diffused classification cost function,
- adopted by LR and the majority of CNN architectures.
- This convex function is an excellent choice for classification problems
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Bonaccorso2018"
-literal "false"
-
-\end_inset
-
-.
- On the other hand, Adam (adaptive moment estimation) algorithm is an efficient
- method to optimize the weights of a model computing the adaptive learning
- rates for each parameter 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dangeti2017"
-literal "false"
-
-\end_inset
-
-.
- Finally, to train the CNN several numbers of epochs and batches were tried
- until the most optimal values were obtained as shown in line 19.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "Code/train CNN.txt"
-lstparams "language=Python,caption={Configuration and training of CNN},label={list:train-CNN}"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -2766,29 +2445,18 @@ Creation of the iOS application
 \end_layout
 
 \begin_layout Standard
-The best model was deployed in an iOS mobile application to make the classificat
-ion of images of four classes of plutonic rocks in real time.
- The source code of the application is available online
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://github.com/sarah-hs/Rock-Classifer-iOS
-\end_layout
-
-\end_inset
-
-.
- 
+The best model was exported with Tensorflow Lite and deployed in an iOS
+ mobile application to make the classification of images of four classes
+ of plutonic rocks in real time.
 \end_layout
 
 \begin_layout Standard
 The main requirements to develop the application were the Xcode IDE, the
  Xcode command-line tools, a valid Apple Developer ID, and the CocoaPods
  dependency manager.
- The application is written mostly in Swift and uses the following two libraries
- to perform the extraction of the dominant colors and the rock image classificat
-ion:
+ The application was written mostly in Swift and uses the following two
+ libraries to perform the extraction of the dominant colors and the rock
+ image classification:
 \end_layout
 
 \begin_layout Itemize
@@ -2802,11 +2470,8 @@ https://github.com/indragiek/DominantColor
 
 \end_inset
 
- dependency is an open source library written in Swift and created by Indragie
- Karunaratne.
+ dependency is an open source library written in Swift.
  It finds the dominant colors of an image using the K-means clustering algorithm.
- In this project an adaptation of this library was implemented exporting
- code from the 7 main files of the repository into the application project.
 \end_layout
 
 \begin_layout Itemize
@@ -2828,37 +2493,6 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/swift
  project by the CocoaPods dependency manager.
 \end_layout
 
-\begin_layout Standard
-In order to deploy a machine learning model in the application, we exported
- the best model by creating a concrete function in TensorFlow using the
- training set of dominant colors.
- This function calculates the Manhattan distance between a new sample and
- all the points in the training data to assign the label of the nearest
- point to the new point.
- The last step in the model exportation was to export the graph of the concrete
- function in a 
-\begin_inset Quotes eld
-\end_inset
-
-tflite
-\begin_inset Quotes erd
-\end_inset
-
- file using TensorFlow Lite.
- The source code of the creation and exportation of the model in TensorFlow
- is available online
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://github.com/sarah-hs/Color-extraction/blob/main/ML-training.ipynb
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Section
 Results
 \end_layout
@@ -2878,14 +2512,15 @@ noprefix "false"
 
 \end_inset
 
- shows the average accuracy, precision, recall, and F1-score results of
- each model evaluated with the test sets of dominant colors in RGB and CIELAB
+ shows the average accuracy, precision, recall, and F-score results of each
+ model evaluated with the test sets of dominant colors in RGB and CIELAB
  color formats.
  The models generated with the KNN, SVM, LR, and CNN algorithms gave better
- results for CIELAB than RGB data.
- DT results were better in RGB.
+ results with CIELAB data than with RGB data.
+ The results with the DT model were better in RGB.
  The best results were for the KNN model using the CIELAB dominant colors
- data with an accuracy, precision, recall, and F1-score of 93%.
+ data with an accuracy, precision, recall, and F-score of 93%.
+ The training time of the KNN model was 4.33 minutes.
 \end_layout
 
 \begin_layout Standard
@@ -2898,7 +2533,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Results of the models in terms of accuracy, precision, recall, and F1-score
+Results of the models in terms of accuracy, precision, recall, and F-score
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Models-results"
@@ -2974,7 +2609,7 @@ Recall
 \begin_layout Plain Layout
 
 \series bold
-F1-score
+F-score
 \end_layout
 
 \end_inset
@@ -3022,6 +2657,156 @@ with CIELAB dominant colors
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+\align left
+CNN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+0.82
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.82
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.83
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.82
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+\align left
+DT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+0.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.72
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+\align left
+KNN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+0.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.93
 \end_layout
 
 \end_inset
@@ -3084,106 +2869,6 @@ LR
 \begin_layout Plain Layout
 \noindent
 \align left
-KNN
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-0.93
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.93
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.93
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.93
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-\align left
-DT
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-0.72
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.72
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.72
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.72
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-\align left
 SVM
 \end_layout
 
@@ -3222,56 +2907,6 @@ SVM
 
 \begin_layout Plain Layout
 0.80
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-\align left
-CNN
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-0.82
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.82
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.83
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.82
 \end_layout
 
 \end_inset
@@ -3331,7 +2966,7 @@ with RGB dominant colors
 \begin_layout Plain Layout
 \noindent
 \align left
-LR
+CNN
 \end_layout
 
 \end_inset
@@ -3340,16 +2975,7 @@ LR
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.63
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.64
+0.68
 \end_layout
 
 \end_inset
@@ -3358,7 +2984,16 @@ LR
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.65
+0.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.70
 \end_layout
 
 \end_inset
@@ -3367,56 +3002,7 @@ LR
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.62
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\noindent
-\align left
-KNN
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.79
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.80
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.79
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.79
+0.68
 \end_layout
 
 \end_inset
@@ -3478,7 +3064,7 @@ DT
 \begin_layout Plain Layout
 \noindent
 \align left
-SVM
+KNN
 \end_layout
 
 \end_inset
@@ -3487,7 +3073,7 @@ SVM
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.52
+0.79
 \end_layout
 
 \end_inset
@@ -3496,7 +3082,7 @@ SVM
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.60
+0.80
 \end_layout
 
 \end_inset
@@ -3505,7 +3091,7 @@ SVM
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.49
+0.79
 \end_layout
 
 \end_inset
@@ -3514,7 +3100,56 @@ SVM
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.46
+0.79
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+\align left
+LR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.63
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
 \end_layout
 
 \end_inset
@@ -3527,7 +3162,7 @@ SVM
 \begin_layout Plain Layout
 \noindent
 \align left
-CNN
+SVM
 \end_layout
 
 \end_inset
@@ -3536,7 +3171,7 @@ CNN
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.68
+0.52
 \end_layout
 
 \end_inset
@@ -3545,7 +3180,7 @@ CNN
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.68
+0.60
 \end_layout
 
 \end_inset
@@ -3554,7 +3189,7 @@ CNN
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.70
+0.49
 \end_layout
 
 \end_inset
@@ -3563,56 +3198,13 @@ CNN
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.68
+0.46
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement t
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Images/Workflow.png
-	lyxscale 50
-	width 80page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Application workflow 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Application-workflow"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -3636,7 +3228,7 @@ noprefix "false"
 \end_inset
 
  shows the evaluation results of the KNN model for each rock class in terms
- of precision, recall, and F1-score using the CIELAB dominant colors data.
+ of precision, recall, and F-score using the CIELAB dominant colors data.
 \end_layout
 
 \begin_layout Standard
@@ -3649,7 +3241,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Results of KNN for each rock class
+Results of KNN for each rock class with CIELAB data
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:KNN-results"
@@ -3713,7 +3305,7 @@ Recall
 \begin_layout Plain Layout
 
 \series bold
-F1-score
+F-score
 \end_layout
 
 \end_inset
@@ -3888,6 +3480,49 @@ Granite
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Workflow.png
+	lyxscale 50
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Application workflow 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Application-workflow"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The KNN model was deployed on the iOS application (see Fig.
  
 \begin_inset CommandInset ref
@@ -3909,7 +3544,8 @@ Open Camera
 \begin_inset Quotes erd
 \end_inset
 
- button shown in step 1A of figure 
+ button shown in step 1A of Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Application-workflow"
@@ -3991,11 +3627,12 @@ Average
 \end_inset
 
  buttons of steps 4A and 4B respectively.
- A training time of 4.33 minutes, an execution time of 339.87 milliseconds,
- and a file size of 0.018 MegaBytes were obtained by the KNN model exported
- with Tensorflow in this work.
- These results are much better than the obtained in the works presented
- in the related work for rock lithology classification.
+\end_layout
+
+\begin_layout Standard
+At runtime, the classification with the KNN exported model took 339.87 millisecon
+ds.
+ The size of the model was 0.018 MB.
 \end_layout
 
 \begin_layout Section
@@ -4003,116 +3640,21 @@ Conclusions and future work
 \end_layout
 
 \begin_layout Standard
-Five machine learning algorithms were trained with just the four dominant
- colors extracted from images of plutonic rocks.
- The best algorithm in this experiment was K-Nearest Neighbors trained with
- the dominant colors in the CIELAB color format of 283 images.
- The computational performance of our model was better in execution time
- and file size than
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- others works classifying rock lithology.
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-The execution time was 4% faster and the file size was 99.3% lighter.
- In conclusion, the dominant colors approach presented in this paper is
- useful in classifications where color is important to differentiate images.
- CIELAB color format is an excellent option to do this.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Feature extraction serves the function of detecting and separating fundamental
- parts of digital images.
- Moreover, it simplifies a complex input dataset into a set of features
- in a reduced order
-\end_layout
-
-\begin_layout Plain Layout
-ISSN: 2278-0181
-\end_layout
-
-\end_inset
-
- In addition, feature reduction can be applied when it is necessary to improve
- the computational performance of a model.
+In this research work, five machine learning algorithms were trained with
+ just the four dominant colors extracted from images of plutonic rocks.
+ The best model was found with the KNN algorithm trained with the dominant
+ colors in the CIELAB color format of 283 images.
+ The KNN model has an accuracy, precision, recall, and F-score values of
+ 93%.
 \end_layout
 
 \begin_layout Standard
-Future improvements to this work can be made increasing our dataset with
- images taken under different conditions in which the rock could be found
- (such as angles, distance, light, shadows, weathering, vegetation and others).
- Furthermore, another important low-level feature in the classification
- of plutonic rocks is the shapes of their crystals.
- Adding this feature to the dominant colors using transfer learning before
- train the machine learning algorithms can improve the results.
- Finally, using more rock types in our dataset also could allow the model
- to distinguish the most characteristic shadows and colors of each rock
- type and improve the classification of plutonic rocks.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-I think we should add a sub-section at the end of the Results section, to
- explain the limitations/bias of our approach.
- For example, the way the picture was taken, the amount of light interacting
- with the rock/outcrop, the weathering/alteration/oxidation of the sample…these
- features will limit the accuracy of the recognition of color/shade in the
- rock.
- You got a comment about this from a reviewer of the paper submitted to
- Applied Computing and Geosciences and Ben and I will work on addressing
- these concerns.
- Basically, it is required to use pictures of rocks taken under good light
- settings, avoid taking pictures of samples with evidence of weathering
- or cover by vegetation… these details or directions need to be provided
- to the user of the app in order to get good results.
-\end_layout
-
-\begin_layout Plain Layout
-....
-\end_layout
-
-\begin_layout Plain Layout
-In future work, the datasets for training and validation will be extended
- with a larger number of plutonic rock images taken in the field, not in
- the lab, under different conditions (e.g., different distances, angles, lighting
- effects – blue vs.
- cloudy sky, weathering or alteration, shadows, vegetation, and moss).
- Also, a larger dataset will allow to avoid the process of image data augmentati
-on in the validation dataset to count on two completely different datasets
- for training and validation.
- In addition, we are planning to obtain images for other classes of plutonic
- rocks.
- With the larger dataset, we expect to extend our mobile application with
- a new classification model able to classify rocks for a wide range of classes.
- Moreover, the results of the classification model will be compared with
- other convolutional neural networks.
-\end_layout
-
-\end_inset
-
-
+As future work, the datasets for training and validation will be extended
+ with a larger number of plutonic rock images taken in the field, rather
+ than in the lab.
+ Also, images will be taken under different conditions – different distances,
+ angles, and lighting effects, e.g., blue vs.
+ cloudy sky, with weathering or alteration, shadows, vegetation, and moss.
 \end_layout
 
 \begin_layout Standard
