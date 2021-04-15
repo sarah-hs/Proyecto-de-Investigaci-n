@@ -315,7 +315,7 @@ Montemorelos, Nuevo León, México
 
 \series bold
 \size larger
-00 de mayo de 2021
+4 de mayo de 2021
 \end_layout
 
 \begin_layout Standard
@@ -1417,8 +1417,9 @@ Results
 
 \begin_layout Plain Layout
 E.
- Vázquez and H.
- Alférez 
+ L.
+ Vázquez et al.
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ref"
@@ -1435,7 +1436,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-2021
+2020
 \end_layout
 
 \end_inset
@@ -3253,7 +3254,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3802,9 +3803,9 @@ literal "false"
 \end_inset
 
 .
- On the other hand, Adam (adaptive moment estimation) algorithm is an efficient
- optimization method that computes adaptive learning rates for each parameter
- to optimize the weights of the model 
+ On the other hand, the Adam (adaptive moment estimation) algorithm is an
+ efficient optimization method that computes adaptive learning rates for
+ each parameter to optimize the weights of the model 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Dangeti2017"
@@ -5578,20 +5579,17 @@ ISSN: 2278-0181 - Feature extraction serves the function of detecting and
  CIELAB color format is an excellent option to do this.
  In addition, feature reduction can be applied when a quicker and lighter
  solution is needed.
- Although the images are not as many as in other papers, the results are
- very promising and can be improved with techniques such as data augmentation
- and extracting crystal shapes from rock images in addition to the dominant
- colors.
- In order to get good results in the field, it is required to use pictures
- of rocks taken under good light and condition settings, without evidence
- of weathering and oxidation or covered by vegetation, as these features
- will limit the recognition accuracy of shades and colors in the rock.
- As future work, the datasets for training and validation will be extended
+\end_layout
+
+\begin_layout Standard
+As future work, the datasets for training and validation will be extended
  with a larger number of plutonic rock images taken in the field, rather
  than in the lab.
  Also, images will be taken under different conditions – different distances,
  angles, and lighting effects, e.g., blue vs.
  cloudy sky, with weathering or alteration, shadows, vegetation, and moss.
+ Also, the mobile application will be tested in the field under several
+ conditions.
 \begin_inset Note Note
 status collapsed
 
