@@ -1,4 +1,0 @@
-#	Logistic Regression
-from sklearn.linear_model import LogisticRegression
-logReg = LogisticRegression(solver='lbfgs')
-logReg.fit(xtrainNorm, ytrain)

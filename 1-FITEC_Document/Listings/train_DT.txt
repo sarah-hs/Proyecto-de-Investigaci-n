@@ -1,0 +1,4 @@
+#	Decision Trees
+from sklearn.tree import DecisionTreeClassifier
+dTree = DecisionTreeClassifier(class_weight='balanced')
+dTree.fit(xtrain, ytrain)

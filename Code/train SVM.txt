@@ -1,4 +1,0 @@
-#	Support Vector Machines
-from sklearn.svm import SVC
-svmc = SVC(kernel='rbf', gamma='auto')
-svmc.fit(xtrain, ytrain)

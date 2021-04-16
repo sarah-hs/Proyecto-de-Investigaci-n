@@ -1,0 +1,7 @@
+extracted_rgb = []; extracted_lab = []
+
+for rgb, lab in zip(x_rgb, x_lab):
+	features = get_dominant_colors(rgb)
+	extracted_rgb.append(features)
+	features = get_dominant_colors(lab)
+	extracted_lab.append(features)
