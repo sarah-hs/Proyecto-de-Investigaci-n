@@ -3601,6 +3601,17 @@ name "fig:Application-workflow"
 At runtime, the classification with the KNN exported model took 339.87 millisecon
 ds.
  The size of the model was 0.018 MB.
+ The video demonstration of the mobile application is available online
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://vimeo.com/536916151
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
