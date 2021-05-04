@@ -2996,7 +2996,7 @@ Training the different algorithms with the extracted dominant colors
 
 \begin_layout Standard
 Five machine learning models were trained using the RGB data and afterwards
- the CIELAB data: CNN, DT, KNN, LR, SVM.
+ the CIELAB data: CNN, DT, KNN, LR, and SVM.
  The notebooks showing the code for training and validation of the generated
  models with RGB and CIELAB data are available online
 \begin_inset Foot
@@ -3025,7 +3025,7 @@ https://github.com/sarah-hs/Color-extraction/blob/main/train-LAB.ipynb
 Listings 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "list:train-LR"
+reference "list:train-DT"
 plural "false"
 caps "false"
 noprefix "false"
