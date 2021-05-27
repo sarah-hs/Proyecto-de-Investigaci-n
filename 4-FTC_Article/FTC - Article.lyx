@@ -118,6 +118,13 @@ status open
 
 
 \backslash
+begin{document}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 title{Automatic Classification of Plutonic Rocks with Machine Learning Applied
  to Extracted Shades and Colors on iOS Devices}
 \end_layout
@@ -126,14 +133,99 @@ title{Automatic Classification of Plutonic Rocks with Machine Learning Applied
 
 
 \backslash
-titlerunning{Automatic Classification of Plutonic Rocks}
+titlerunning{Automatic Classification of Plutonic Rocks with Machine Learning}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{document}
+authorrunning{Alf
+\backslash
+'{e}rez et al.}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Germ
+\backslash
+'{a}n H.
+ Alf
+\backslash
+'{e}rez, Ph.D.
+\backslash
+inst{1}
+\backslash
+and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sarah Hern
+\backslash
+'{a}ndez Serrano
+\backslash
+inst{1}
+\backslash
+and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	Benjamin L.
+ Clausen, Ph.D.
+\backslash
+inst{2}
+\backslash
+and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ana Mar
+\backslash
+'{i}a Mart
+\backslash
+'{i}nez Ardila, Ph.D.
+\backslash
+inst{2}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+institute{
+\end_layout
+
+\begin_layout Plain Layout
+
+	School of Engineering and Technology of Montemorelos University, NL, Mexico,
+ 
+\backslash
+email{harveyalferez@um.edu.mx, 1170469@alumno.um.edu.mx}
+\backslash
+and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	Department of Earth and Biological Sciences of Loma Linda University, CA,
+ USA, 
+\backslash
+email{bclausen@llu.edu, anmartinez@llu.edu}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \begin_layout Plain Layout
@@ -398,7 +490,7 @@ status open
 \begin_inset Graphics
 	filename Figures/Underpinnings_of_our_approach.png
 	lyxscale 20
-	height 52theight%
+	height 45theight%
 
 \end_inset
 
