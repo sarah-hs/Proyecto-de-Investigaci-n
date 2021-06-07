@@ -159,21 +159,9 @@ author{
 '{a}n H.
  Alf
 \backslash
-'{e}rez, Ph.D.
+'{e}rez
 \backslash
-inst{1}
-\backslash
-thanks{Corresponding author: Germ
-\backslash
-'{a}n H.
- Alf
-\backslash
-'{e}rez, Universidad de Montemorelos, Apartado 16-5, 67500, Montemorelos,
- N.L., Mexico, 
-\backslash
-email{harveyalferez@um.edu.mx}}
-\backslash
-and 
+inst{1},
 \end_layout
 
 \begin_layout Plain Layout
@@ -182,19 +170,7 @@ and
 \backslash
 '{a}ndez Serrano
 \backslash
-inst{1}
-\backslash
-and 
-\end_layout
-
-\begin_layout Plain Layout
-
-	Benjamin L.
- Clausen, Ph.D.
-\backslash
-inst{2}
-\backslash
-and 
+inst{1}, 
 \end_layout
 
 \begin_layout Plain Layout
@@ -203,9 +179,17 @@ and
 \backslash
 '{i}a Mart
 \backslash
-'{i}nez Ardila, Ph.D.
+'{i}nez Ardila
 \backslash
-inst{2}}
+inst{2},
+\end_layout
+
+\begin_layout Plain Layout
+
+	Benjamin L.
+ Clausen
+\backslash
+inst{3}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -217,16 +201,58 @@ institute{
 
 \begin_layout Plain Layout
 
-	School of Engineering and Technology, Montemorelos University, N.L.
- 67515, Mexico
+	Facultad de Ingenier
 \backslash
-and 
+'{i}a y Tecnolog
+\backslash
+'{i}a, Universidad de Montemorelos, Av.
+ Libertad 1300 Poniente, Barrio Matamoros, 67530, Montemorelos, N.L., Mexico
 \end_layout
 
 \begin_layout Plain Layout
 
-	Department of Earth and Biological Sciences, Loma Linda University, CA
- 92354, USA
+
+\backslash
+email{harveyalferez@um.edu.mx}, 
+\backslash
+email{1170469@alumno.um.edu.mx} 
+\backslash
+and
+\end_layout
+
+\begin_layout Plain Layout
+
+	Department of Earth and Biological Sciences, Loma Linda University, Griggs
+ Hall, 11065 Campus Street, Loma Linda, CA, 92350, USA
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+email{anmartinez@llu.edu}
+\backslash
+and
+\end_layout
+
+\begin_layout Plain Layout
+
+	Geoscience Research Institute, 11060 Campus Street, Loma Linda, CA, 92350,
+ USA
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+email{bclausen@llu.edu}
 \end_layout
 
 \begin_layout Plain Layout
@@ -348,115 +374,6 @@ This article is organized as follows: Section 2 introduces the underpinnings
  Section 4 describes the methodology.
  Section 5 presents and discusses the results.
  Finally, Section 6 presents the conclusions and future work.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\backslash
-begin{abstract}
-\end_layout
-
-\begin_layout Plain Layout
-Lightness and color are properties used for the classification of plutonic
- rocks but are difficult to describe because they depend on the experience
- of the observer.
- Moreover, the classification of plutonic rocks using various instrumental
- techniques tend to be expensive and time-consuming.
- To face this situation, we extracted dominant shades and colors from 283
- plutonic rock images in RGB and CIELAB formats to train several machine
- learning models.
- The best model was deployed on an iOS application that classifies four
- classes of plutonic rocks from darkest to lightest: gabbro, diorite, granodiori
-te, and granite.
- The best results were for the K-Nearest Neighbors model using CIELAB dominant
- colors data with accuracy, precision, recall, and F-score of 93%.
- Plutonic Rock Classification, Feature Extraction, Dominant Colors, Machine
- Learning, iOS Application.
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-keywords{Plutonic Rock Classification, Feature Extraction, Dominant Colors,
- Machine Learning, iOS Application}
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-end{abstract}
-\end_layout
-
-\begin_layout Abstract
-Lightness and color are properties used for the classification of plutonic
- rocks but are difficult to describe because they depend on the experience
- of the observer.
- Moreover, the classification of plutonic rocks using various instrumental
- techniques tend to be expensive and time-consuming.
- To face this situation, we extracted dominant shades and colors from 283
- plutonic rock images in RGB and CIELAB formats to train several machine
- learning models.
- The best model was deployed on an iOS application that classifies four
- classes of plutonic rocks from darkest to lightest: gabbro, diorite, granodiori
-te, and granite.
- The best results were for the K-Nearest Neighbors model using CIELAB dominant
- colors data with accuracy, precision, recall, and F-score of 93%.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-keywords{Plutonic Rock Classification, Feature Extraction, Dominant Colors,
- Machine Learning, iOS Application}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\backslash
-title{Automatic Classification of Plutonic Rocks with Machine Learning Applied
- to Extracted Shades and Colors on iOS Devices}
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-titlerunning{Automatic Classification of Plutonic Rocks}
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-begin{document}
-\end_layout
-
-\begin_layout Plain Layout
-
-\backslash
-maketitle
-\end_layout
-
-\begin_layout Title
-Automatic Classification of Plutonic Rocks with Machine Learning Applied
- to Extracted Shades and Colors on iOS Devices
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -486,7 +403,7 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement h
 wide false
 sideways false
 status open
@@ -974,7 +891,6 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float table
-placement H
 wide false
 sideways false
 status open
@@ -2563,10 +2479,6 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/swift
 Results
 \end_layout
 
-\begin_layout Subsection
-Results
-\end_layout
-
 \begin_layout Standard
 Table 
 \begin_inset CommandInset ref
@@ -3699,17 +3611,7 @@ name "fig:Application-workflow"
 At runtime, the classification with the KNN exported model took 339.87 millisecon
 ds.
  The size of the model was 0.018 MB.
- The video demonstration of the mobile application is available online
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-https://vimeo.com/536916151
-\end_layout
-
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Section

@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: FTC - Article.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: FTC_-_Article-blx.bib
+Database file #2: References.bib
+Biblatex version: 3.13
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 21 entries,
+            6365 wiz_defined-function locations,
+            1367 strings with 18765 characters,
+and the built_in function-call counts, 256767 in all, are:
+= -- 19534
+> -- 6738
+< -- 1199
++ -- 9773
+- -- 3913
+* -- 19169
+:= -- 32371
+add.period$ -- 0
+call.type$ -- 21
+change.case$ -- 540
+chr.to.int$ -- 211
+cite$ -- 40
+duplicate$ -- 26128
+empty$ -- 19236
+format.name$ -- 3018
+if$ -- 49253
+int.to.chr$ -- 0
+int.to.str$ -- 70
+missing$ -- 0
+newline$ -- 1276
+num.names$ -- 1224
+pop$ -- 8401
+preamble$ -- 1
+purify$ -- 940
+quote$ -- 0
+skip$ -- 6078
+stack$ -- 0
+substring$ -- 35458
+swap$ -- 4943
+text.length$ -- 950
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 690
+warning$ -- 0
+while$ -- 4335
+width$ -- 0
+write$ -- 1256

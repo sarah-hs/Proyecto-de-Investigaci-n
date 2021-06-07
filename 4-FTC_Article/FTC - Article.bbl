@@ -1,0 +1,1341 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{NRCS-2012}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=N}{%
+         family={{Natural Resources Conservation Service}},
+         familyi={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{N1}
+    \strng{fullhash}{N1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{National Engineering Handbook}
+    \field{chapter}{4}
+    \field{number}{210-VI}
+    \field{pages}{7}
+    \field{title}{Part 631: Geology}
+    \verb{url}
+    \verb https://directives.sc.egov.usda.gov/OpenNonWebContent.aspx?content=31
+    \verb 848.wba
+    \endverb
+    \field{year}{2012}
+  \endentry
+
+  \entry{RACEFEN-gg}{standard}{}
+    \name{author}{26}{}{%
+      {{hash=VJ}{%
+         family={Vera},
+         familyi={V\bibinitperiod},
+         given={Juan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Alonso},
+         familyi={A\bibinitperiod},
+         given={Belén},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=AE}{%
+         family={Ancochea},
+         familyi={A\bibinitperiod},
+         given={Eumenio},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Capote},
+         familyi={C\bibinitperiod},
+         given={Ramón},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CE}{%
+         family={Custodio},
+         familyi={C\bibinitperiod},
+         given={Emilio},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gutiérrez},
+         familyi={G\bibinitperiod},
+         given={Mateo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Pérez},
+         familyi={P\bibinitperiod},
+         given={Andrés},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Sahuquillo},
+         familyi={S\bibinitperiod},
+         given={Andrés},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SX}{%
+         family={Solans},
+         familyi={S\bibinitperiod},
+         given={Xavier},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=VF}{%
+         family={Vázquez},
+         familyi={V\bibinitperiod},
+         given={Fernando},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=ZC}{%
+         family={Zazo},
+         familyi={Z\bibinitperiod},
+         given={Caridad},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Bastida},
+         familyi={B\bibinitperiod},
+         given={Fernando},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Bea},
+         familyi={B\bibinitperiod},
+         given={Fernando},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=FF}{%
+         family={Fernández},
+         familyi={F\bibinitperiod},
+         given={Francisco},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Galindo},
+         familyi={G\bibinitperiod},
+         given={Jesús},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={García},
+         familyi={G\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={González},
+         familyi={G\bibinitperiod},
+         given={Francisco},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={González},
+         familyi={G\bibinitperiod},
+         given={Pilar},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HMJ}{%
+         family={Huertas},
+         familyi={H\bibinitperiod},
+         given={María\bibnamedelima José},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MJR}{%
+         family={Martínez},
+         familyi={M\bibinitperiod},
+         given={José\bibnamedelima Ramón},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=MJM}{%
+         family={Molina},
+         familyi={M\bibinitperiod},
+         given={José\bibnamedelima Miguel},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Morales},
+         familyi={M\bibinitperiod},
+         given={José},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Prieto},
+         familyi={P\bibinitperiod},
+         given={Manuel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VF}{%
+         family={Velasco},
+         familyi={V\bibinitperiod},
+         given={Francisco},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Martínez},
+         familyi={M\bibinitperiod},
+         given={Pilar},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CP}{%
+         family={Cuesta},
+         familyi={C\bibinitperiod},
+         given={Paloma},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {Spanish}%
+    }
+    \list{organization}{1}{%
+      {Real academia de ciencias exactas, físicas y naturales}%
+    }
+    \strng{namehash}{VJABAECRCEGMPASASXVFZCBFBFFFGJGAGFGPHMJMJRMJMMJPMVFMPCP1}
+    \strng{fullhash}{VJABAECRCEGMPASASXVFZCBFBFFFGJGAGFGPHMJMJRMJMMJPMVFMPCP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{RACEFEN G}losario de geología}
+    \verb{url}
+    \verb http://www.ugr.es/~agcasco/personal/rac_geologia/0_rac.htm
+    \endverb
+    \list{location}{1}{%
+      {España}%
+    }
+    \list{institution}{1}{%
+      {U. de Granada}%
+    }
+  \endentry
+
+  \entry{Britannica-Diorite}{standard}{}
+    \name{author}{1}{}{%
+      {{hash=E}{%
+         family={{Encyclopædia Britannica}},
+         familyi={E\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{organization}{1}{%
+      {Encyclop{æ}dia Britannica}%
+    }
+    \strng{namehash}{E1}
+    \strng{fullhash}{E1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Diorite}
+    \verb{url}
+    \verb https://www.britannica.com/science/diorite
+    \endverb
+    \field{month}{01}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Harrington2012}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HP}{%
+         family={Harrington},
+         familyi={H\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MANNING PUBN}%
+    }
+    \strng{namehash}{HP1}
+    \strng{fullhash}{HP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{1617290181}
+    \field{pagetotal}{384}
+    \field{title}{Machine {L}earning in {A}ction}
+    \verb{url}
+    \verb https://www.manning.com/books/machine-learning-in-action
+    \endverb
+    \field{day}{01}
+    \field{month}{04}
+    \field{year}{2012}
+    \warn{\item Can't use 'date' + 'year'}
+  \endentry
+
+  \entry{Geron2019}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GA}{%
+         family={Géron},
+         familyi={G\bibinitperiod},
+         given={Aurélien},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {O'Reilly UK Ltd.}%
+    }
+    \strng{namehash}{GA1}
+    \strng{fullhash}{GA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{1492032646}
+    \field{pagetotal}{819}
+    \field{title}{{Hands-on} {M}achine {L}earning with {Scikit-Learn}, {K}eras,
+  and {T}ensor{F}low}
+    \field{day}{01}
+    \field{month}{10}
+    \field{year}{2019}
+    \warn{\item Can't use 'date' + 'year'}
+  \endentry
+
+  \entry{REINDERS201965}{incollection}{}
+    \name{author}{4}{}{%
+      {{hash=RC}{%
+         family={Reinders},
+         familyi={R\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Ackermann},
+         familyi={A\bibinitperiod},
+         given={Hanno},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YMY}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Michael\bibnamedelima Ying},
+         giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Rosenhahn},
+         familyi={R\bibinitperiod},
+         given={Bodo},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=YMY}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Michael\bibnamedelima Ying},
+         giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Rosenhahn},
+         familyi={R\bibinitperiod},
+         given={Bodo},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Murino},
+         familyi={M\bibinitperiod},
+         given={Vittorio},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press}%
+    }
+    \keyw{Object detection, Convolutional neural networks, Random forests,
+  Localization}
+    \strng{namehash}{RCAHYMYRB1}
+    \strng{fullhash}{RCAHYMYRB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In recent years, convolutional neural networks have shown great success in
+  various computer vision tasks such as classification, object detection, and
+  scene analysis. These algorithms are usually trained on large datasets
+  consisting of thousands or millions of labeled training examples. The
+  availability of sufficient data, however, limits possible applications. While
+  large amounts of data can be quickly collected, supervised learning further
+  requires labeled data. Labeling data, unfortunately, is usually very
+  time-consuming and literally expensive. This chapter addresses the problem of
+  learning with very little labeled data for extracting information about the
+  infrastructure in urban areas. The aim is to recognize particular traffic
+  signs in crowdsourced data to collect information which is of interest to
+  cyclists. The presented system for object detection is trained with very few
+  training examples. To achieve this, the advantages of convolutional neural
+  networks and random forests are combined to learn a patch-wise classifier. In
+  the next step, the random forest is mapped to a neural network and the
+  classifier is transformed to a fully convolutional network. Thereby, the
+  processing of full images is significantly accelerated and bounding boxes can
+  be predicted. Finally, GPS-data is integrated to localize the predictions on
+  the map and multiple observations are merged to further improve the
+  localization accuracy. In comparison to faster R-CNN and other networks for
+  object detection or algorithms for transfer learning, the required amount of
+  labeled data is considerably reduced.%
+    }
+    \field{booktitle}{Multimodal Scene Understanding}
+    \verb{doi}
+    \verb https://doi.org/10.1016/B978-0-12-817358-9.00010-X
+    \endverb
+    \field{isbn}{978-0-12-817358-9}
+    \field{pages}{65\bibrangedash 100}
+    \field{title}{Chapter 4 - {L}earning {C}onvolutional {N}eural {N}etworks
+  for {O}bject {D}etection with {V}ery {L}ittle {T}raining {D}ata}
+    \field{year}{2019}
+  \endentry
+
+  \entry{TAN2015493}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=TL}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={Lin},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=BC}{%
+         family={Bird},
+         familyi={B\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Menzies},
+         familyi={M\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=ZT}{%
+         family={Zimmermann},
+         familyi={Z\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Morgan Kaufmann}%
+    }
+    \keyw{Code comment analysis, Text analytics, Natural language processing,
+  Machine learning, Bug detection, Specification mining, Software quality,
+  Annotations}
+    \strng{namehash}{TL1}
+    \strng{fullhash}{TL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{The Art and Science of Analyzing Software Data}
+    \verb{doi}
+    \verb https://doi.org/10.1016/B978-0-12-411519-4.00017-3
+    \endverb
+    \field{isbn}{978-0-12-411519-4}
+    \field{pages}{493\bibrangedash 517}
+    \field{title}{Chapter 17 - {C}ode {C}omment {A}nalysis for {I}mproving
+  {S}oftware {Q}uality}
+    \list{location}{1}{%
+      {Boston}%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{KNN-sklearn}{standard}{}
+    \name{author}{1}{}{%
+      {{hash=Sl}{%
+         family={Scikit-learn},
+         familyi={S\bibinithyphendelim l\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{organization}{1}{%
+      {Scikit-learn}%
+    }
+    \strng{namehash}{Sl1}
+    \strng{fullhash}{Sl1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Nearest Neighbors}}
+    \verb{url}
+    \verb https://scikit-learn.org/stable/modules/neighbors.html#id5
+    \endverb
+  \endentry
+
+  \entry{scikit-learn}{article}{}
+    \name{author}{16}{}{%
+      {{hash=PF}{%
+         family={Pedregosa},
+         familyi={P\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=VG}{%
+         family={Varoquaux},
+         familyi={V\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gramfort},
+         familyi={G\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Michel},
+         familyi={M\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=TB}{%
+         family={Thirion},
+         familyi={T\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GO}{%
+         family={Grisel},
+         familyi={G\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Blondel},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Prettenhofer},
+         familyi={P\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DV}{%
+         family={Dubourg},
+         familyi={D\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=VJ}{%
+         family={Vanderplas},
+         familyi={V\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Passos},
+         familyi={P\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cournapeau},
+         familyi={C\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Brucher},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Perrot},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DE}{%
+         family={Duchesnay},
+         familyi={D\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PFVGGAMVTBGOBMPPWRDVVJPACDBMPMDE1}
+    \strng{fullhash}{PFVGGAMVTBGOBMPPWRDVVJPACDBMPMDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{85}
+    \field{pages}{2825\bibrangedash 2830}
+    \field{title}{Scikit-learn: {M}achine {L}earning in {P}ython}
+    \verb{url}
+    \verb http://jmlr.org/papers/v12/pedregosa11a.html
+    \endverb
+    \field{volume}{12}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Abadi2016}{article}{}
+    \name{author}{40}{}{%
+      {{hash=AM}{%
+         family={Abadi},
+         familyi={A\bibinitperiod},
+         given={Martín},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Agarwal},
+         familyi={A\bibinitperiod},
+         given={Ashish},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BP}{%
+         family={Barham},
+         familyi={B\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BE}{%
+         family={Brevdo},
+         familyi={B\bibinitperiod},
+         given={Eugene},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Zhifeng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Citro},
+         familyi={C\bibinitperiod},
+         given={Craig},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CGS}{%
+         family={Corrado},
+         familyi={C\bibinitperiod},
+         given={Greg\bibnamedelima S.},
+         giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Davis},
+         familyi={D\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Dean},
+         familyi={D\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Devin},
+         familyi={D\bibinitperiod},
+         given={Matthieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Ghemawat},
+         familyi={G\bibinitperiod},
+         given={Sanjay},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GI}{%
+         family={Goodfellow},
+         familyi={G\bibinitperiod},
+         given={Ian},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Harp},
+         familyi={H\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=IG}{%
+         family={Irving},
+         familyi={I\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=IM}{%
+         family={Isard},
+         familyi={I\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JY}{%
+         family={Jia},
+         familyi={J\bibinitperiod},
+         given={Yangqing},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=JR}{%
+         family={Jozefowicz},
+         familyi={J\bibinitperiod},
+         given={Rafal},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KL}{%
+         family={Kaiser},
+         familyi={K\bibinitperiod},
+         given={Lukasz},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kudlur},
+         familyi={K\bibinitperiod},
+         given={Manjunath},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Levenberg},
+         familyi={L\bibinitperiod},
+         given={Josh},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mane},
+         familyi={M\bibinitperiod},
+         given={Dan},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Monga},
+         familyi={M\bibinitperiod},
+         given={Rajat},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Moore},
+         familyi={M\bibinitperiod},
+         given={Sherry},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Murray},
+         familyi={M\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=OC}{%
+         family={Olah},
+         familyi={O\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Schuster},
+         familyi={S\bibinitperiod},
+         given={Mike},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shlens},
+         familyi={S\bibinitperiod},
+         given={Jonathon},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Steiner},
+         familyi={S\bibinitperiod},
+         given={Benoit},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Sutskever},
+         familyi={S\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=TK}{%
+         family={Talwar},
+         familyi={T\bibinitperiod},
+         given={Kunal},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TP}{%
+         family={Tucker},
+         familyi={T\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vanhoucke},
+         familyi={V\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vasudevan},
+         familyi={V\bibinitperiod},
+         given={Vijay},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=VF}{%
+         family={Viegas},
+         familyi={V\bibinitperiod},
+         given={Fernanda},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=VO}{%
+         family={Vinyals},
+         familyi={V\bibinitperiod},
+         given={Oriol},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Warden},
+         familyi={W\bibinitperiod},
+         given={Pete},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wattenberg},
+         familyi={W\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wicke},
+         familyi={W\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Yuan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Xiaoqiang},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.DC, cs.LG}
+  \strng{namehash}{AMAABPBECZCCCGSDADJDMGSGIHAIGIMJYJRKLKMLJMDMRMSMDOCSMSJSBSITKTPVVVVVFVOWPWMWMYYZX1}
+  \strng{fullhash}{AMAABPBECZCCCGSDADJDMGSGIHAIGIMJYJRKLKMLJMDMRMSMDOCSMSJSBSITKTPVVVVVFVOWPWMWMYYZX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    TensorFlow is an interface for expressing machine learning algorithms, and
+  an implementation for executing such algorithms. A computation expressed
+  using TensorFlow can be executed with little or no change on a wide variety
+  of heterogeneous systems, ranging from mobile devices such as phones and
+  tablets up to large-scale distributed systems of hundreds of machines and
+  thousands of computational devices such as GPU cards. The system is flexible
+  and can be used to express a wide variety of algorithms, including training
+  and inference algorithms for deep neural network models, and it has been used
+  for conducting research and for deploying machine learning systems into
+  production across more than a dozen areas of computer science and other
+  fields, including speech recognition, computer vision, robotics, information
+  retrieval, natural language processing, geographic information extraction,
+  and computational drug discovery. This paper describes the TensorFlow
+  interface and an implementation of that interface that we have built at
+  Google. The TensorFlow API and a reference implementation were released as an
+  open-source package under the Apache 2.0 license in November, 2015 and are
+  available at www.tensorflow.org.%
+    }
+    \verb{eprint}
+    \verb 1603.04467
+    \endverb
+    \field{title}{{TensorFlow: Large-Scale Machine Learning on Heterogeneous
+  Distributed Systems}}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1603.04467v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.DC}
+    \field{day}{14}
+    \field{month}{03}
+    \field{year}{2016}
+  \endentry
+
+  \entry{TF-TFLite}{standard}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={TensorFlow},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{organization}{1}{%
+      {TensorFlow}%
+    }
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{TensorFlow Lite} guide}
+    \verb{url}
+    \verb https://www.tensorflow.org/lite/guide
+    \endverb
+    \field{type}{software}
+    \field{month}{03}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Apple-Swift}{standard}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Apple},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{organization}{1}{%
+      {Apple}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Swift. The powerful programming language that is also easy to
+  learn.}
+    \verb{url}
+    \verb https://developer.apple.com/swift/
+    \endverb
+    \field{type}{techreport}
+  \endentry
+
+  \entry{CocoaPods}{standard}{}
+    \name{author}{1}{}{%
+      {{hash=C}{%
+         family={CocoaPods},
+         familyi={C\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{organization}{1}{%
+      {CocoaPods}%
+    }
+    \strng{namehash}{C1}
+    \strng{fullhash}{C1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{What is {CocoaPods}}
+    \verb{url}
+    \verb https://guides.cocoapods.org/using/getting-started.html
+    \endverb
+    \field{type}{software}
+  \endentry
+
+  \entry{Lary2018}{incollection}{}
+    \name{author}{11}{}{%
+      {{hash=LDJ}{%
+         family={Lary},
+         familyi={L\bibinitperiod},
+         given={David\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=ZGK}{%
+         family={Zewdie},
+         familyi={Z\bibinitperiod},
+         given={Gebreab\bibnamedelima K.},
+         giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Xun},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Daji},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LE}{%
+         family={Levetin},
+         familyi={L\bibinitperiod},
+         given={Estelle},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=ARJ}{%
+         family={Allee},
+         familyi={A\bibinitperiod},
+         given={Rebecca\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Malakar},
+         familyi={M\bibinitperiod},
+         given={Nabin},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=WA}{%
+         family={Walker},
+         familyi={W\bibinitperiod},
+         given={Annette},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Mussa},
+         familyi={M\bibinitperiod},
+         given={Hamse},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mannino},
+         familyi={M\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AD}{%
+         family={Aurin},
+         familyi={A\bibinitperiod},
+         given={Dirk},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=MCPPA}{%
+         family={Mathieu},
+         familyi={M\bibinitperiod},
+         suffix={Pierre-Philippeand\bibnamedelima Aubrecht},
+         suffixi={P\bibinithyphendelim P\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer International Publishing}%
+    }
+    \strng{namehash}{LDJZGKLXWDLEARJMNWAMHMAAD1}
+    \strng{fullhash}{LDJZGKLXWDLEARJMNWAMHMAAD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Machine learning has found many applications in remote sensing. These
+  applications range from retrieval algorithms to bias correction, from code
+  acceleration to detection of disease in crops, from classification of pelagic
+  habitats to rock type classification. As a broad subfield of artificial
+  intelligence, machine learning is concerned with algorithms and techniques
+  that allow computers to ``learn'' by example. The major focus of machine
+  learning is to extract information from data automatically by computational
+  and statistical methods. Over the last decade there has been considerable
+  progress in developing a machine learning methodology for a variety of Earth
+  Science applications involving trace gases, retrievals, aerosol products,
+  land surface products, vegetation indices, and most recently, ocean
+  applications. In this chapter, we will review some examples of how machine
+  learning has already been useful for remote sensing and some likely future
+  applications.%
+    }
+    \field{booktitle}{Earth Observation Open Science and Innovation}
+    \verb{doi}
+    \verb https://doi.org/10.1007/978-3-319-65633-5_8
+    \endverb
+    \field{isbn}{978-3-319-65633-5}
+    \field{pages}{165\bibrangedash 218}
+    \field{title}{Machine {Learning Applications for Earth Observation}}
+    \list{location}{1}{%
+      {Cham}%
+    }
+    \field{year}{2018}
+  \endentry
+
+  \entry{Fan2020}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FG}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Guangpeng},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Feixiang},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Danyu},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DY}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Yanqi},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Institute of Electrical}%
+      {Electronics Engineers ({IEEE})}%
+    }
+    \strng{namehash}{FGCFCDDY1}
+    \strng{fullhash}{FGCFCDDY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1109/access.2020.2982017
+    \endverb
+    \field{pages}{55269\bibrangedash 55278}
+    \field{title}{Recognizing {M}ultiple {T}ypes of {R}ocks {Q}uickly and
+  {A}ccurately {B}ased on {L}ightweight {CNNs} {M}odel}
+    \field{volume}{8}
+    \field{journaltitle}{{IEEE} Access}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Fan2020a}{article}{}
+    \name{author}{5}{}{%
+      {{hash=FG}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Guangpeng},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Feixiang},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Danyu},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=DY}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Yanqi},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Hindawi Limited}%
+    }
+    \strng{namehash}{FGCFCDLYDY1}
+    \strng{fullhash}{FGCFCDLYDY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1155/2020/7462524
+    \endverb
+    \field{pages}{1\bibrangedash 14}
+    \field{title}{{A Deep Learning Model for Quick and Accurate Rock
+  Recognition with Smartphones}}
+    \field{volume}{2020}
+    \field{journaltitle}{Mobile Information Systems}
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Ran2019}{article}{}
+    \name{author}{6}{}{%
+      {{hash=RX}{%
+         family={Ran},
+         familyi={R\bibinitperiod},
+         given={Xiangjin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=XL}{%
+         family={Xue},
+         familyi={X\bibinitperiod},
+         given={Linfu},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yanyan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Zeyu},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SX}{%
+         family={Sang},
+         familyi={S\bibinitperiod},
+         given={Xuejia},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Jinxin},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{MDPI} {AG}}%
+    }
+    \strng{namehash}{RXXLZYLZSXHJ1}
+    \strng{fullhash}{RXXLZYLZSXHJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.3390/math7080755
+    \endverb
+    \field{number}{8}
+    \field{pages}{755}
+    \field{title}{Rock {C}lassification from {F}ield {I}mage {P}atches
+  {A}nalyzed {U}sing a {D}eep {C}onvolutional {N}eural {N}etwork}
+    \field{volume}{7}
+    \field{journaltitle}{Mathematics}
+    \field{year}{2019}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Zhang2019}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Ye},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Mingchao},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Shuai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RQ}{%
+         family={Ren},
+         familyi={R\bibinitperiod},
+         given={Qiubing},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{MDPI} {AG}}%
+    }
+    \strng{namehash}{ZYLMHSRQSJ1}
+    \strng{fullhash}{ZYLMHSRQSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.3390/s19183914
+    \endverb
+    \field{number}{18}
+    \field{pages}{3914}
+    \field{title}{{Intelligent Identification for Rock-Mineral Microscopic
+  Images Using Ensemble Machine Learning Algorithms}}
+    \field{volume}{19}
+    \field{journaltitle}{Sensors}
+    \field{year}{2019}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Maitre2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MJ}{%
+         family={Maitre},
+         familyi={M\bibinitperiod},
+         given={Julien},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Bouchard},
+         familyi={B\bibinitperiod},
+         given={K{\'{e}}vin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BLP}{%
+         family={B{\'{e}}dard},
+         familyi={B\bibinitperiod},
+         given={L.\bibnamedelima Paul},
+         giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier {BV}}%
+    }
+    \strng{namehash}{MJBKBLP1}
+    \strng{fullhash}{MJBKBLP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.cageo.2019.05.009
+    \endverb
+    \field{pages}{84\bibrangedash 93}
+    \field{title}{Mineral grains recognition using computer vision and machine
+  learning}
+    \field{volume}{130}
+    \field{journaltitle}{Computers {\&} Geosciences}
+    \field{year}{2019}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Cheng2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CG}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Guojian},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GW}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Wenhui},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{IOP} Publishing}%
+    }
+    \strng{namehash}{CGGW1}
+    \strng{fullhash}{CGGW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1088/1742-6596/887/1/012089
+    \endverb
+    \field{pages}{012089}
+    \field{title}{Rock images classification by using deep convolution neural
+  network}
+    \field{volume}{887}
+    \field{journaltitle}{Journal of Physics: Conference Series}
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\enddatalist
+\endinput
